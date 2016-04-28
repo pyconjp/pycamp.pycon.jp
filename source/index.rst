@@ -6,7 +6,7 @@
 Welcome to Python Bootcamp Text's documentation!
 ================================================
 
-Contents:
+目次:
 
 .. toctree::
    :maxdepth: 2
