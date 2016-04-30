@@ -152,33 +152,6 @@ Pythonでファイルを開くには ``open()`` 関数を使います。
     Hello world
     Hello world
 
-Unicode文字列の場合
-------------------------------
-
-ファイルに書き込まれる内容がUnicode文字列の場合は、 ``.encode()``/``.decode()`` を行う必要があります。
-
-utf-8で書き込まれたファイルを読み込んだ場合は、:numref:`utf8-file-read` のように ``.decode()`` を使います。
-
-.. _utf8-file-read:
-
-.. code-block:: python
-    :caption: utf-8エンコードで書かれたファイルの読み込み
-
-    >>> f = open('readme.txt')
-    >>> readme_text = f.read().decode('utf-8')
-    >>> print readme_text
-    リードミー
-
-Unicode文字列を書き込む場合は ``.encode()`` を使います（:numref:`utf8-file-write`）。
-
-.. _utf8-file-write:
-
-.. code-block:: python
-    :caption: utf-8エンコードでのファイルの書き込み
-
-    >>> f = open('readme.txt', 'w')
-    >>> readme_text = u"リードミー"
-    >>> f.write(readme_text.encode('utf-8'))
 
 .. _guide-module:
 

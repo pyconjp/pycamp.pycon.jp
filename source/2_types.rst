@@ -288,54 +288,7 @@ Pythonのスライスを使えば、 :numref:`slice-string` のように、2、3
     >>> '-'.join(['pain', 'de', 'campagne'])
     'pain-de-campagne'
 
-Unicode文字列型（unicode）
-==========================================
 
-Unicode文字列型を使えば、マルチバイトの文字列を扱えます。
-先頭に ``u`` を付けたシングルクォート（``'``）、ダブルクォート（``"``）で指定します（:numref:`guide-unicode`）。
-
-.. _guide-unicode:
-
-.. code-block:: python
-    :caption: Unicode文字列型
-
-    >>> u"日本"
-    u'\u65e5\u672c'
-    >>> print u"日本"
-    日本
-
-Unicode文字列型もシーケンス型なので、インデックス表記やスライスが使えます。
-
-エンコードとデコード
-------------------------
-
-Unicode文字列型は `Unicode <http://www.unicode.org/>`_ を扱うデータ型です。
-
-Unicode文字列を通常の8ビット文字列にするには、エンコーディング（utf-8やeuc-jpなど）を指定して変換する必要があります。
-
-Unicodeから8ビット文字列に変換する処理を「エンコード」、逆に8ビット文字列からUnicodeに変換する処理を「デコード」と呼びます。
-
-Python でUnicode 文字列をエンコードするには、Unicode文字列型の ``.encode()`` メソッドを呼び出します。
-
-引数にはエンコーディングを指定します。utf-8でエンコーディングするには、 :numref:`encode-unicode` のように指定します。
-
-.. _encode-unicode:
-
-.. code-block:: python
-    :caption: Unicode文字列のエンコード
-
-    >>> u"日本".encode('utf-8')
-    '\xe6\x97\xa5\xe6\x9c\xac'
-
-文字列からUnicode 文字列型に変換するには、文字列型の ``.decode()`` メソッドを、エンコーディングを指定して呼び出します（:numref:`decode-string`）。
-
-.. _decode-string:
-
-.. code-block:: python
-    :caption: 文字列のデコード
-
-    >>> '\xe6\x97\xa5'.decode('utf-8')
-    u'\u65e5'
 
 まとめ
 ===========
