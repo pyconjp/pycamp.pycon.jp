@@ -6,11 +6,18 @@
 Welcome to Python Bootcamp Text's documentation!
 ================================================
 
-目次:
+本テキストは日本各地での初心者向けPythonチュートリアルイベント「Python Boot Camp」で使用するために、
+Pythonの開発環境構築、基礎的な文法や実践応用についてまとめたものです。
+
+
 
 .. toctree::
    :maxdepth: 2
 
+   1_intro
+   2_types
+   3_collections
+   4_files_and_module
 
 
 Indices and tables
