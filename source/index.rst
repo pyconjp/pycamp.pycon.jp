@@ -17,7 +17,7 @@ Pythonの開発環境構築、基礎的な文法や実践応用についてま�
    1_intro
    2_types
    3_collections
-   4_files_and_module
+   4_module
 
 
 Indices and tables
