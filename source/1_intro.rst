@@ -35,7 +35,7 @@ Ubuntu 14.04では標準でPython 2.7.6がインストールされています�
 ソースビルドでのインストール
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Ubuntu 14.04にソースコードからPython 2.7.9をインストールします（:numref:`package-install`）。
+Ubuntu 14.04にソースコードからPython 3.5.1をインストールします（:numref:`package-install`）。
 
 まずパッケージ全体をアップグレードし、Pythonによる開発で必要になるパッケージをインストールします。
 
@@ -66,16 +66,16 @@ Pythonのソースコードをビルドし、インストールします（:numr
 .. _python-build:
 
 .. code-block:: bash
-    :caption: Python 2.7.9のソースからのインストール
+    :caption: Python 3.5.1のソースからのインストール
 
-    $ wget https://www.python.org/ftp/python/2.7.9/Python-2.7.9.tgz
-    $ tar axvf ./Python-2.7.9.tgz
-    $ cd ./Python-2.7.9/
+    $ wget https://www.python.org/ftp/python/3.5.1/Python-3.5.1.tgz
+    $ tar axvf ./Python-3.5.1.tgz
+    $ cd ./Python-3.5.1/
     $ LDFLAGS="-L/usr/lib/x86_64-linux-gnu" ./configure --with-ensurepip
     $ make
     $ sudo make install
 
-インストールが完了したらPythonのバージョンが2.7.9になっていることを確認します。
+インストールが完了したらPythonのバージョンが3.5.1になっていることを確認します。
 
 インストール直後は、 ``hash -r`` を実行してコマンドのパスを再読み込みします（:numref:`check-version`）。
 
@@ -86,7 +86,7 @@ Pythonのソースコードをビルドし、インストールします（:numr
 
     $ hash -r
     $ python -V
-    Python 2.7.9
+    Python 3.5.1
 
 .. admonition:: コラム: インストール先の指定
 
@@ -98,13 +98,13 @@ Pythonのソースコードをビルドし、インストールします（:numr
     .. code-block:: python
         :caption: prefixオプション付きconfigure
 
-        LDFLAGS="-L/usr/lib/x86_64-linux-gnu" ./configure --prefix=/opt/python2.7.9 --with-ensurepip
+        LDFLAGS="-L/usr/lib/x86_64-linux-gnu" ./configure --prefix=/opt/python3.5.1 --with-ensurepip
 
 OS Xでの場合
 -------------------------------------
 OS XでPythonを利用する場合は、Pythonの公式サイトで配布されているビルド済みのパッケージをインストールします。
 
-次のページで「Latest Python 2 Release - Python 2.7.9」をクリックすると詳細画面に移動します。64 ビット版（Mac OS X 64-bit/32-bit installer）または32 ビット版（Mac OS X 32-bit i386/PPC installer）をダウンロードしてインストールします。
+次のページで「atest Python 3 Release - Python 3.5.1」をクリックすると詳細画面に移動します。64 ビット版（Mac OS X 64-bit/32-bit installer）または32 ビット版（Mac OS X 32-bit i386/PPC installer）をダウンロードしてインストールします。
 
 - `Python Releases for Mac OS X <https://www.python.org/downloads/mac-osx/>`_ 
 
