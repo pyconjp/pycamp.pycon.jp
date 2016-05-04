@@ -115,8 +115,9 @@ Windowsでの場合
 
 WindowsでPythonを利用する場合は、Pythonの公式サイトで配布されているWindowsインストーラを利用します。
 
-次のページで「Latest Python 2 Release - Python 2.7.9」をクリックすると詳細画面に移動します。64ビット版（Windows x86-64 MSI Installer）または32 ビット版（Windows x86 MSI Installer）をダウンロードし、ウィザードに従ってインストールします（:numref:`windows-install`）。
+次のページで「Latest Python 3 Release - Python 3.5.1」をクリックすると詳細画面に移動します。64ビット版（Windows x86-64 Installer）または32 ビット版（Windows x86 Installer）をダウンロードし、ウィザードに従ってインストールします（:numref:`windows-install`）。
 
+この時、「Add Python 3.5 to PATH」にチェックを入れておきましょう。自動的に必要な環境変数が設定されます。
 - `Python Releases for Windows <https://www.python.org/downloads/windows/>`_
 
 .. _windows-install:
@@ -126,14 +127,6 @@ WindowsでPythonを利用する場合は、Pythonの公式サイトで配布さ�
 
    Python for Windowsのインストール画面
 
-pathの設定
-^^^^^^^^^^^^^^^^^^^^^
-
-コマンドプロンプトなどから ``python`` と打ち込んだだけでプログラムを実行できるようにするため、環境変数pathの設定を行います。
-
-コントロールパネルを開き、［システムとセキュリティ］→［システム］→［システムの詳細設定］をクリックすると、［システムのプロパティ］が表示されます。
-
-［詳細設定］タブの［環境変数］ボタンをクリックし、［ユーザー環境変数］の「PATH」に、 ``C:¥Python27¥;C:¥Python27¥Scripts;`` という値を新規追加します。
 
 .. _enjoy-python:
 
