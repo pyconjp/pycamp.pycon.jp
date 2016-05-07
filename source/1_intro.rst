@@ -105,7 +105,7 @@ OS XでPythonを利用する場合は、Pythonの公式サイトで配布され�
 
 - `Python Releases for Mac OS X <https://www.python.org/downloads/mac-osx/>`_ 
 
-詳しくはPythonの公式ドキュメントの「 `MacintoshでPythonを使う <http://docs.python.jp/2/using/mac.html>`_ 」を参考にしてください。
+詳しくはPythonの公式ドキュメントの「 `MacintoshでPythonを使う <http://docs.python.jp/3.5/using/mac.html>`_ 」を参考にしてください。
 
 Windowsでの場合
 -------------------------------------
