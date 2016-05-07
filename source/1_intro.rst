@@ -115,6 +115,7 @@ WindowsでPythonを利用する場合は、Pythonの公式サイトで配布さ�
 次のページで「Latest Python 3 Release - Python 3.5.1」をクリックすると詳細画面に移動します。64ビット版（Windows x86-64 Installer）または32 ビット版（Windows x86 Installer）をダウンロードし、ウィザードに従ってインストールします（:numref:`windows-install`）。
 
 この時、「Add Python 3.5 to PATH」にチェックを入れておきましょう。自動的に必要な環境変数が設定されます。
+
 - `Python Releases for Windows <https://www.python.org/downloads/windows/>`_
 
 .. _windows-install:
