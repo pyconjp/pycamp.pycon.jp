@@ -25,14 +25,14 @@ Linux、OS X、Windows の3 つの環境でのインストール手順を説明�
 Linux (Ubuntu Server) での場合
 -------------------------------------
 
-本書では、動作環境 `Ubuntu Server 14.04 <https://wiki.ubuntu.com/TrustyTahr/ReleaseNotes>`_ 、
+本書では、動作環境 `Ubuntu Server 16.04 <https://wiki.ubuntu.com/XenialXerus/ReleaseNotes>`_ 、
 Pythonは3系の最新版3.5.1を想定しています。
 
 
 ソースビルドでのインストール
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Ubuntu 14.04にソースコードからPython 3.5.1をインストールします（:numref:`package-install`）。
+Ubuntu 16.04にソースコードからPython 3.5.1をインストールします（:numref:`package-install`）。
 
 まずパッケージ全体をアップグレードし、Pythonによる開発で必要になるパッケージをインストールします。
 
