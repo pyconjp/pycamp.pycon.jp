@@ -41,7 +41,6 @@ Pythonインタープリタを起動して、 ``calc.py`` をインポートし�
 
     >>> import calc
     >>> calc
-    <module 'calc' from 'calc.py'>
 
 ``calc`` というモジュールがインポートされました。
 
@@ -146,7 +145,7 @@ Python自体も標準でモジュールを提供しています。これら標�
     >>> import re
     >>> m = re.search('(P(yth|l)|Z)o[pn]e?', 'Python')
     >>> m
-    <_sre.SRE_Match object at 0x7f4061d53308>
+    <_sre.SRE_Match object; span=(0, 6), match='Python'>
 
 正規表現にマッチした場合、 ``re.search()`` は結果を表すマッチオブジェクトを返します。
 マッチオブジェクトから値を取り出すには、 ``.group()`` メソッドを呼び出します（:numref:`match-object`）。
@@ -196,9 +195,9 @@ Python自体も標準でモジュールを提供しています。これら標�
 その他便利なモジュールについては、一部を「 :ref:`standard-library` 」で扱います。
 
 ``re`` モジュールには、ここで説明していない有効な使い方があります。
-Pythonの公式ドキュメントの「 `reモジュール <http://docs.python.jp/2.7/library/re.html>`_ 」を参考にしてください。
+Pythonの公式ドキュメントの「 `reモジュール <http://docs.python.jp/3.5/library/re.html>`_ 」を参考にしてください。
 
-また、他のPython標準ライブラリについては、「 `Python標準ライブラリ <http://docs.python.jp/2.7/library/index.html>`_ 」を参考にしてください。
+また、他のPython標準ライブラリについては、「 `Python標準ライブラリ <http://docs.python.jp/3.5/library/index.html>`_ 」を参考にしてください。
 
 まとめ
 ==========

@@ -10,11 +10,11 @@ Pythonのデータ型（基本編）
 
 はじめに
 ========
-本節では整数型（``int``）、浮動小数点型（``float``）、文字列型（``str``）とUnicode文字列型（``unicode``）を扱います。
+本節では整数型（``int``）、浮動小数点型（``float``）、文字列型（``str``）を扱います。
 
 データ型については、Pythonの公式ドキュメントも参考にしてください。
 
-* 組み込み型 http://docs.python.jp/2.7/library/stdtypes.html
+* 組み込み型 http://docs.python.jp/3.5/library/stdtypes.html
 
 整数型（int）
 ======================
@@ -35,15 +35,13 @@ Pythonのデータ型（基本編）
     >>> 6 * 9
     54
     >>> 8 / 2
-    4
+    4.0
     >>> 5 % 2
     1
     >>> 5 ** 2
     25
 
-整数型と整数型の商も整数型になることに注意してください。
-
-小数点以下は切り捨てられます（:numref:`divide-int`）。
+小数点以下も出力されます（:numref:`divide-int`）。
 
 .. _divide-int:
 
@@ -51,9 +49,9 @@ Pythonのデータ型（基本編）
     :caption: 整数型同士の商
 
     >>> 10 / 3
-    3
+    3.3333333333333335
     >>> 10 / 4
-    2
+    2.5
 
 浮動小数点型（float）
 =========================
@@ -108,9 +106,9 @@ Pythonのデータ型（基本編）
 .. code-block:: python
     :caption: 文字列中のエスケープ
 
-    >>> print 'I\'m Hiroki'
+    >>> print('I\'m Hiroki')
     I'm Hiroki
-    >>> print 'Hello\nworld'
+    >>> print('Hello\nworld')
     Hello
     world
 
@@ -121,7 +119,7 @@ Pythonのデータ型（基本編）
 .. code-block:: python
     :caption: シングルクォートを含む文字列
 
-    >>> print "I'm Hiroki"
+    >>> print("I'm Hiroki")
     I'm Hiroki
 
 三重クォート

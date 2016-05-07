@@ -56,7 +56,7 @@ for文
     :caption: for文とリスト
 
     >>> for animal in ['cat', 'dog', 'snake']:
-    ...     print animal
+    ...     print(animal)
     ...
     cat
     dog
@@ -119,7 +119,7 @@ for文
 
 他にも役に立つ書き方があるので、Pythonのドキュメントを参考にしてください。
 
-* リストの内包表記 http://docs.python.jp/2/tutorial/datastructures.html#id6
+* リストの内包表記 http://docs.python.jp/3.5/tutorial/datastructures.html#id6
 
 しかし、複雑になりすぎる場合はループ処理で書きましょう。
 
@@ -333,7 +333,7 @@ in
     >>> user_info.get('user_name')
     'hirokiky'
     >>> bio = user_info.get('bio')
-    >>> print bio
+    >>> print(bio)
     None
 
 ``None`` は、Pythonの組み込み定数の1つで、何も値がないことを表します。
@@ -369,7 +369,7 @@ in
 
     >>> d = {'foo': 'spam', 'bar': 'ham'}
     >>> d.items()
-    [('foo', 'spam'), ('bar', 'ham')]
+    dict_items([('foo', 'spam'), ('bar', 'ham')])
 
 ``.items()`` の結果を ``for`` 文に渡せば、辞書内のすべての値を使った繰り返し処理を書けます。
 
@@ -382,7 +382,7 @@ in
 
     >>> d = {'foo': 'spam', 'bar': 'ham'}
     >>> for key, value in d.items():
-    ...     print key, value
+    ...     print(key, value)
     ...
     foo spam
     bar ham
@@ -408,9 +408,9 @@ in
     :caption: 集合の定義
 
     >>> {'spam', 'ham'}
-    set(['ham', 'spam'])
+    {'spam', 'ham'}
     >>> {'spam', 'spam', 'spam'}
-    set(['spam'])
+    {'spam'}
 
 .add()メソッド
 --------------
@@ -426,7 +426,7 @@ in
     >>> unique_users = {'dog', 'cat'}
     >>> unique_users.add('snake')
     >>> unique_users
-    set(['dog', 'snake', 'cat'])
+    {'dog', 'cat', 'snake'}
 
 集合の長さも ``len()`` 関数で取得できます（:numref:`len-with-set`）。
 
@@ -464,7 +464,7 @@ in
     >>> allowed_permissions = {'edit', 'view'}
     >>> requested_permissions = {'view', 'delete'}
     >>> allowed_permissions & requested_permissions
-    set(['view'])
+    {'view'}
 
 :numref:`product-of-sets` では、アプリケーションから許可された権限の一覧 ``allowed_permissions`` を使って、ユーザに要求された権限 ``requested_permissions`` のフィルタリングを行う状況を想定しています。
 結果としてユーザに許可された権限は ``'view'`` のみとなりました。
@@ -481,7 +481,7 @@ in
     >>> editor = {'edit', 'comment'}
     >>> reviewer = {'comment', 'approve'}
     >>> editor | reviewer
-    set(['comment', 'edit', 'approve'])
+    {'comment', 'approve', 'edit'}
 
 :numref:`sum-of-sets` では、``editor`` と ``reviewer`` はロール（役割）を想定しています。
 この2つのロールを持つユーザは、``'edit'``、``'comment'`` と ``'approve'`` の権限を持つことを算出しました。

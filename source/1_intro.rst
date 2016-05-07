@@ -90,7 +90,7 @@ Pythonのソースコードをビルドし、インストールします（:numr
 
    ソースコードのビルドで ``configure`` を実行する際に、 ``--prefix`` オプションを付けるとインストール先のディレクトリを指定できます。
 
-   /opt/python2.7.9 ディレクトリ以下にインストールするには、次のように指定します
+   /opt/python3.5.1 ディレクトリ以下にインストールするには、次のように指定します
 
     .. code-block:: python
         :caption: prefixオプション付きconfigure
@@ -150,9 +150,8 @@ Pythonインタープリタ
 .. code-block:: bash
     :caption: Pythonインタープリタの起動
 
-    $ python
-    Python 2.7.9 (default, Dec 29 2014, 17:03:36)
-    [GCC 4.8.2] on linux2
+    C:\Users\user>python
+    Python 3.5.1 (v3.5.1:37a07cee5969, Dec  6 2015, 01:54:25) [MSC v.1900 64 bit (AMD64)] on win32
     Type "help", "copyright", "credits" or "license" for more information.
     >>>
 
@@ -177,7 +176,7 @@ Pythonを電卓にする
     >>> 6 * 9
     54
     >>> 8 / 2
-    4
+    4.0
     >>> 5 % 2
     1
     >>> width = 60
@@ -215,11 +214,11 @@ Pythonを電卓にする
 
 .. admonition:: コラム: シーケンス型
 
-   シーケンス型は順序を持つ型で、Python標準では7つの型があります。
+   シーケンス型は順序を持つ型で、Python標準では3つの型があります。
 
    シーケンス型の詳細はPythonの公式ドキュメントを参照してください。
 
-   * シーケンス型 http://docs.python.jp/2/library/stdtypes.html#typesseq
+   * シーケンス型 http://docs.python.jp/3.5/library/stdtypes.html#typesseq
 
 リスト
 -----------------
@@ -287,11 +286,11 @@ Pythonには標準でいくつか関数が提供されています。これを�
     :caption: 組み込み関数range
 
     >>> range(10)
-    [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    range(0, 10)
 
 組み込み関数の一覧は、次のドキュメントを参照してください。
 
-* 組み込み関数 http://docs.python.jp/2/library/functions.html
+* 組み込み関数 http://docs.python.jp/3.5/library/functions.html
 
 FizzBuzz
 =====================
@@ -334,7 +333,7 @@ Python インタープリタの対話モードを終了し（【Ctrl】＋【D�
     def fizzbuzz(num):
         return num
 
-    print fizzbuzz(4)
+    print(fizzbuzz(4))
 
 
 この ``fizzbuzz()`` 関数はなにも処理をせず引数をそのまま返します。これから処理を追加していくので安心してください。
@@ -371,7 +370,7 @@ for文
         return num
 
     for num in range(1, 101):
-        print fizzbuzz(num)
+        print(fizzbuzz(num))
 
 
 .. _fizzbuzz-2:
