@@ -22,35 +22,12 @@ pip install requests
 
 pip install beautifulsoup4
 
-終了
-
-
-参考：下記はwindowsの場合
-
-C:\Users\akira\AppData\Local\Programs\Python\Python35\Scripts>pip install reques
-ts
-Collecting requests
-  Downloading requests-2.10.0-py2.py3-none-any.whl (506kB)
-    100% |################################| 512kB 1.2MB/s
-Installing collected packages: requests
-Successfully installed requests-2.10.0
-
-
-C:\Users\akira\AppData\Local\Programs\Python\Python35\Scripts>pip install bs4
-Collecting bs4
-  Downloading bs4-0.0.1.tar.gz
-Collecting beautifulsoup4 (from bs4)
-  Downloading beautifulsoup4-4.4.1-py3-none-any.whl (81kB)
-    100% |################################| 81kB 844kB/s
-Installing collected packages: beautifulsoup4, bs4
-  Running setup.py install for bs4 ... done
-Successfully installed beautifulsoup4-4.4.1 bs4-0.0.1
-
 
 
 ではやってみよう
 =====================
 目的：
+
 #. スクレイピングでpypiの新着パッケージ情報を取得する
 #. 取得した情報をjsonで保存する
 
