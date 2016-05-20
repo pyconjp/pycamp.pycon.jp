@@ -13,60 +13,124 @@ WWWから自動的に情報を収集する処理。
 wiki(https://ja.wikipedia.org/wiki/%E3%82%A6%E3%82%A7%E3%83%96%E3%82%B9%E3%82%AF%E3%83%AC%E3%82%A4%E3%83%94%E3%83%B3%E3%82%B0)より抜粋
 
 
-scrapyとは
-=====================
-スクレイピングをするためのフレームワーク。
-フレームワークなので、以下の作業を肩代わりしてくれて、ユーザーはスクレイピングをするための実装に集中することができます。
-
-１．スクレイピング対象ページのリンクの抜き出し
-２．重複するURLのクロール防止
-３．ドメインごと、IPごとのクロール時間間隔の調整
-
-
 環境構築
 =====================
 
 下記コマンドを実行
-pip install scrapy
-scrapy startproject ${project_name}
 
-終わり
+pip install requests
+
+pip install beautifulsoup4
+
+終了
+
+
+参考：下記はwindowsの場合
+
+C:\Users\akira\AppData\Local\Programs\Python\Python35\Scripts>pip install reques
+ts
+Collecting requests
+  Downloading requests-2.10.0-py2.py3-none-any.whl (506kB)
+    100% |################################| 512kB 1.2MB/s
+Installing collected packages: requests
+Successfully installed requests-2.10.0
+
+
+C:\Users\akira\AppData\Local\Programs\Python\Python35\Scripts>pip install bs4
+Collecting bs4
+  Downloading bs4-0.0.1.tar.gz
+Collecting beautifulsoup4 (from bs4)
+  Downloading beautifulsoup4-4.4.1-py3-none-any.whl (81kB)
+    100% |################################| 81kB 844kB/s
+Installing collected packages: beautifulsoup4, bs4
+  Running setup.py install for bs4 ... done
+Successfully installed beautifulsoup4-4.4.1 bs4-0.0.1
+
 
 
 ではやってみよう
 =====================
-クックパッドのレシピをスクレイピングで収集してみよう
+目的：
+#. スクレイピングでpypiの新着パッケージ情報を取得する
+#. 取得した情報をjsonで保存する
 
-１．プロジェクトフォルダの作成
-scrapy startproject recipe_collector
 
-フォルダ構成と初期のファイルの説明をここに記述
+用語説明
+=====================
+* pypiとは：(pypiの説明)
+* jsonとは：(jsonの説明)
 
-２．items.pyの修正
-必要なら記述
 
-３．pipelines.pyの修正
-必要なら記述
+実際のコード
+=====================
 
-４．settings.pyの修正
-必要なら記述
+下記コードをsimple.pyという名前で保存
 
-５．cookpad.pyの作成
-参考のgithubを理解して、一通りの説明を記述
-参考のgithubはcouchにデータを登録している。
+| #! /usr/bin/env python
+| # -*- coding: utf-8 -*-
+| import sys
+| import json
+| import argparse
+| import requests
+| from bs4 import BeautifulSoup
+|
+|
+| def main(argv=sys.argv[1:]):
+|     parser = argparse.ArgumentParser()
+|     parser.add_argument('-o', '--output', default=sys.stdout, type=argparse.FileType('w'))
+|     args = parser.parse_args(argv)
+|
+|     url = 'https://pypi.python.org/pypi'
+|     res = requests.get(url)
+|     soup = BeautifulSoup(res.content, 'html.parser')
+|     records = soup.select('div.section table.list tr')
+|     iter_records = iter(records)
+|     next(iter_records)  # table header
+|
+|     data = []
+|     for record in iter_records:
+|         tds = record.findAll('td')
+|         if tds[0].get('id') == 'last':
+|             break
+|         atag = tds[1].find('a')
+|         data.append({
+|             'title': atag.text,
+|             'url': atag.get('href'),
+|             'description': tds[2].text,
+|         })
+|
+|     json.dump(data, args.output)
+|
+| if __name__ == '__main__':
+|     sys.exit(main())
 
-結果をCSVにはいてもいいが、(知れているが)余計な労力が日地様なため。
-今回はコンソールに出力するだけでいいのではと考慮。
+
+コードの説明
+=====================
+* 「#! /usr/bin/env python」って何？
+* 「# -*- coding: utf-8 -*-」って何？
+* 「sys.exit」って何？
+* 「[1:]」って何？
+* 「BeautifulSoup」って何？
+* 「json.dump」って何？
+
+
+実行してみよう
+==========
+python simple.py --output output.json
 
 
 まとめ
 ==========
 本節では、Pythonでスクレイピングをする方法を解説しました。
-
-本章では、Pythonでプログラミングするために最低限必要なことを紹介しました。まずはインタープリタを起動して、Pythonに触れてみましょう。
+自動化することにより、作業を効率化することができます。
+目的に応じて処理を記述していきましょう。
 
 
 参考
 ==========
-https://pypi.python.org/pypi/Scrapy
-https://github.com/warau-uichi/recipe_collector
+- requests http://requests-docs-ja.readthedocs.io/en/latest/
+
+- pypi情報取得サンプル https://github.com/TakesxiSximada/happy-scraping/tree/master/pypi.python.org
+
+- Pythonスクレイピングメモ http://qiita.com/TakesxiSximada/items/0944d989e72fa8ac8f3a
