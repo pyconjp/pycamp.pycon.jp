@@ -97,10 +97,18 @@ Pythonを使って実行することができますので、これを機に習�
 
 * 「BeautifulSoup」って何？
 　　HTMLを解析するライブラリになります。
-- 参考 https://www.crummy.com/software/BeautifulSoup/bs4/doc/
+
+.. code-block:: python
+
+    from bs4 import BeautifulSoup
+    soup = BeautifulSoup('<div><h1 id="test">TEST</h1></div>', 'html')
+    soup.select_one('div h1#test').text
+
+    とすると、「'TEST'」と表示されます。
 
 * 「json.dump」って何？
     指定されたオブジェクトをJSON文字列に変換することができます。
+
     この場合、オブジェクト(data)を指定したファイル(--outputオプションの後に指定したファイル)に保存します。
 
 
@@ -124,7 +132,7 @@ pypiの情報がまとめて保存されていることがわかります。
 
 参考
 ==========
-- wikipedia(スクレイピング) https://ja.wikipedia.org/wiki/%E3%82%A6%E3%82%A7%E3%83%96%E3%82%B9%E3%82%AF%E3%83%AC%E3%82%A4%E3%83%94%E3%83%B3%E3%82%B0
+- wikipedia(スクレイピング) https://ja.wikipedia.org/wiki/ウェブスクレイピング
 
 - wikipedia(pip) https://ja.wikipedia.org/wiki/Pip
 
