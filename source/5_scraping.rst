@@ -100,6 +100,7 @@ Pythonを使って実行することができますので、これを機に習�
 
 .. code-block:: python
     :caption: BeautifulSoup利用例
+
     >>> from bs4 import BeautifulSoup
     >>> soup = BeautifulSoup('<div><h1 id="test">TEST</h1></div>', 'html')
     >>> soup.select_one('div h1#test').text
