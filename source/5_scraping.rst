@@ -99,12 +99,11 @@ Pythonを使って実行することができますので、これを機に習�
 　　HTMLを解析するライブラリになります。
 
 .. code-block:: python
-
-    from bs4 import BeautifulSoup
-    soup = BeautifulSoup('<div><h1 id="test">TEST</h1></div>', 'html')
-    soup.select_one('div h1#test').text
-.. code-block:: python
-    とすると、「'TEST'」と表示されます。
+    :caption: BeautifulSoup利用例
+    >>> from bs4 import BeautifulSoup
+    >>> soup = BeautifulSoup('<div><h1 id="test">TEST</h1></div>', 'html')
+    >>> soup.select_one('div h1#test').text
+    >>>'TEST'
 
 * 「json.dump」って何？
     指定されたオブジェクトをJSON文字列に変換することができます。
