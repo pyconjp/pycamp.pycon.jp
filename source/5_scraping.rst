@@ -96,7 +96,7 @@ Pythonを使って実行することができますので、これを機に習�
     この場合だと、配列の2番目以降の情報をすべて取得することができます。
 
 * 「BeautifulSoup」って何？
-　　HTMLを解析するライブラリになります。
+    HTMLを解析するライブラリになります。
 
 .. code-block:: python
     :caption: BeautifulSoup利用例
