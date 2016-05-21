@@ -22,6 +22,8 @@ import os
 
 # -- General configuration ------------------------------------------------
 
+numfig = True
+
 # If your documentation needs a minimal Sphinx version, state it here.
 #needs_sphinx = '1.0'
 
