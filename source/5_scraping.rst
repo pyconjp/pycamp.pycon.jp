@@ -14,7 +14,8 @@ Pythonを使って実行することができますので、これを機に習�
 環境構築
 =====================
 
-下記コマンドを実行を実行すれば、完了です。
+前章の環境構築を参考にして、pyvenvを実行し、新しい環境を構築してください。
+その後、pipコマンドを実行し、下記ライブラリを利用可能な状態にしてください。
 
 * pip install requests
 * pip install beautifulsoup4
@@ -22,13 +23,8 @@ Pythonを使って実行することができますので、これを機に習�
 
 目的
 =====================
-#. スクレイピングでpypiの新着パッケージ情報を取得してみましょう
-#. 取得した情報をjsonで保存して見ましょう
-
-
-用語説明
-=====================
-* json：データを記述する書式です。
+#. スクレイピングでPythonに関する新着ニュース情報を取得してみましょう
+#. 取得した情報をコンソールに出力してみよう
 
 
 実際のコード
@@ -39,42 +35,22 @@ Pythonを使って実行することができますので、これを機に習�
 .. code-block:: python
 
     #! /usr/bin/env python
-    # -*- coding: utf-8 -*-
-    import sys
-    import json
-    import argparse
     import requests
     from bs4 import BeautifulSoup
 
 
-    def main(argv=sys.argv[1:]):
-        parser = argparse.ArgumentParser()
-        parser.add_argument('-o', '--output', default=sys.stdout, type=argparse.FileType('w'))
-        args = parser.parse_args(argv)
-
-        url = 'https://pypi.python.org/pypi'
+    def main():
+        url = 'https://www.python.org/news/'
         res = requests.get(url)
         soup = BeautifulSoup(res.content, 'html.parser')
-        records = soup.select('div.section table.list tr')
+        records = soup.select('h2.news')
         iter_records = iter(records)
-        next(iter_records)  # table header
 
-        data = []
         for record in iter_records:
-            tds = record.findAll('td')
-            if tds[0].get('id') == 'last':
-                break
-            atag = tds[1].find('a')
-            data.append({
-                'title': atag.text,
-                'url': atag.get('href'),
-                'description': tds[2].text,
-            })
-
-        json.dump(data, args.output)
+            print(record.text)
 
     if __name__ == '__main__':
-        sys.exit(main())
+        main()
 
 
 コードの説明
@@ -82,17 +58,6 @@ Pythonを使って実行することができますので、これを機に習�
 * 「#! /usr/bin/env python」って何？
     Pythonを簡単に実行するためのおまじないのようなものです。
     詳しくはShebang(シェバン)といいます。
-
-* 「# -*- coding: utf-8 -*-」って何？
-    このソースががUTF-8で書かれていることを示します。
-    エディター(Emacs)等で開く際に参照されます。
-
-* 「sys.exit」って何？
-    明示的にプログラムを終了させるコードになります。
-
-* 「[1:]」って何？
-    配列から値を取得する際の記述方法のうちのひとつです。
-    この場合だと、配列の2番目以降の情報をすべて取得することができます。
 
 * 「BeautifulSoup」って何？
     HTMLを解析するライブラリになります。
@@ -105,20 +70,13 @@ Pythonを使って実行することができますので、これを機に習�
     >>> soup.select_one('div h1#test').text
     >>>'TEST'
 
-* 「json.dump」って何？
-    指定されたオブジェクトをJSON文字列に変換することができます。
-
-    この場合、オブジェクト(data)を指定したファイル(--outputオプション)に保存します。
-
 
 実行してみよう
 ==============
-simple.py --output output.json
+作成した環境にactivateした後、下記のコマンドを実行してみましょう
+python simple.py
 
-
-実行したら、output.jsonが作成されていますので、中身を参照してみてください。
-
-pypiの情報がまとめて保存されていることがわかります。
+実行すると、Pythonに関する新着ニュースが表示されることが確認できます。
 
 
 まとめ
@@ -138,6 +96,3 @@ pypiの情報がまとめて保存されていることがわかります。
 
 - requests http://requests-docs-ja.readthedocs.io/en/latest/
 
-- pypi情報取得サンプル https://github.com/TakesxiSximada/happy-scraping/tree/master/pypi.python.org
-
-- Pythonスクレイピングメモ http://qiita.com/TakesxiSximada/items/0944d989e72fa8ac8f3a
