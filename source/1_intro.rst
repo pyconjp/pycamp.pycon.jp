@@ -339,11 +339,11 @@ Python インタープリタの対話モードを終了し（【Ctrl】＋【D�
 
 この ``fizzbuzz()`` 関数はなにも処理をせず引数をそのまま返します。これから処理を追加していくので安心してください。
 
-``print`` 文を使っているのは実行結果を表示するためです。
+``print`` 関数を使っているのは実行結果を表示するためです。
 
 対話モードでは、変数の値や関数の戻り値を変数に代入しない場合に、自動的に値を表示してくれました。
 
-Python ファイルを作成して実行する場合は、 ``print`` 文が必要です。
+Python ファイルを作成して実行する場合は、 ``print`` 関数が必要です。
 
 ``fizzbuzz.py`` を実行するには、 ``python`` コマンドに引数として渡します（:numref:`exec-fizzbuzz`）。
 
@@ -404,7 +404,7 @@ for文は次のように書きます。
 
 繰り返しのための変数は ``range(1, 101)`` の実行結果（1から100までのリスト）です。
 
-``range()`` 関数の結果リストが返され、ひとつひとつの数字が繰り返し用の変数（``num``）に渡され、 ``for`` のブロックが実行されます
+関数の結果として数値が順番に返され、ひとつひとつの数字が繰り返し用の変数（``num``）に渡され、 ``for`` のブロックが実行されます
 
 if文
 ----------------
@@ -509,11 +509,11 @@ Python 2.7
 - Python 2.7 チュートリアル http://docs.python.jp/2/tutorial/
 - Python HOWTO http://docs.python.jp/2/howto/
 
-Python 3.4
+Python 3.5
 
-- Python 3.4 チュートリアル http://docs.python.jp/3.4/tutorial/
+- Python 3.5 チュートリアル http://docs.python.jp/3.5/tutorial/
 - Dive into Python 3 日本語版 http://diveintopython3-ja.rdy.jp/
-- Python HOWTO http://docs.python.jp/3.4/howto/
+- Python HOWTO http://docs.python.jp/3.5/howto/
 
 書籍
 --------
