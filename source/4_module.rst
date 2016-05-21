@@ -199,6 +199,39 @@ Pythonの公式ドキュメントの「 `reモジュール <http://docs.python.j
 
 また、他のPython標準ライブラリについては、「 `Python標準ライブラリ <http://docs.python.jp/3.5/library/index.html>`_ 」を参考にしてください。
 
+
+環境構築
+------------------
+開発モジュールやプロジェクトごとに開発環境を分割したい場合があります。
+
+Pythonにはpyvenvというコマンドがあり、それを使うことにより可能になります。
+
+
+.. code-block:: python
+    :caption: pyvenv使用例
+
+    pyvenv sample                 #sampleという名前の環境を構築
+    source sample/bin/activate    #構築した環境にactivate(有効化)
+
+
+次にpipというコマンドを使い、pypiから必要なパッケージをインストールしてみましょう。
+
+pypiとは、Python公式のパッケージリポジトリです。
+
+また、pipというPythonで書かれたパッケージ管理システムを使うことにより、
+
+pypiから便利なライブラリをすぐに取得して利用することができます。
+
+また、ライブラリは構築した環境のみにインポートされるため、他の環境に影響を与えません。
+
+.. code-block:: python
+    :caption: pip使用例
+
+    pip install requests         #requestsというhttpレスポンスを処理するライブラリをインストール
+
+
+上記手順は次のスクレイピングの章で必要になりますので、覚えておいてください。
+
 まとめ
 ==========
 
