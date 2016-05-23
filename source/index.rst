@@ -15,12 +15,13 @@ Pythonの開発環境構築、基礎的な文法や実践応用についてま�
 .. toctree::
    :maxdepth: 2
 
-   0_install
-   1_intro
-   2_types
-   3_collections
-   4_module
-   5_scraping
+   0_about
+   1_install
+   2_intro
+   3_types
+   4_collections
+   5_module
+   6_scraping
 
 
 Indices and tables
