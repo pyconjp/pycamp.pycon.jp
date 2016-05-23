@@ -21,7 +21,8 @@ Pythonの開発環境構築、基礎的な文法や実践応用についてま�
    3_types
    4_collections
    5_module
-   6_scraping
+   6_pyvenv
+   7_scraping
 
 
 Indices and tables
