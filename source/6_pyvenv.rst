@@ -1,6 +1,6 @@
 .. -*- coding: utf-8 -*-
 
-.. _virtualenv-section:
+.. _pyvenv-section:
 
 ============
  pyvenv
@@ -32,7 +32,7 @@ pyvenv環境を作成します。
 
 カレントディレクトリに、envというディレクトリが作成されます。
 
-virtualenv環境の有効化
+pyvenv環境の有効化
 ======================
 
 作成した ``pyvenv`` 環境を有効化（activate）します。
