@@ -40,7 +40,6 @@ Pythonインタープリタを起動して、 ``calc.py`` をインポートし�
     :caption: calcのインポート
 
     >>> import calc
-    >>> calc
 
 ``calc`` というモジュールがインポートされました。
 
