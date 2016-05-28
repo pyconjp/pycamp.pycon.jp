@@ -98,7 +98,7 @@ OS Xでの場合
 -------------------------------------
 OS XでPythonを利用する場合は、Pythonの公式サイトで配布されているビルド済みのパッケージをインストールします。
 
-次のページで「atest Python 3 Release - Python 3.5.1」をクリックすると詳細画面に移動します。64 ビット版（Mac OS X 64-bit/32-bit installer）または32 ビット版（Mac OS X 32-bit i386/PPC installer）をダウンロードしてインストールします。
+次のページで「Latest Python 3 Release - Python 3.5.1」をクリックすると詳細画面に移動します。64 ビット版（Mac OS X 64-bit/32-bit installer）または32 ビット版（Mac OS X 32-bit i386/PPC installer）をダウンロードしてインストールします。
 
 - `Python Releases for Mac OS X <https://www.python.org/downloads/mac-osx/>`_ 
 
