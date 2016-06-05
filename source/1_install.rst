@@ -79,7 +79,7 @@ Pythonのソースコードをビルドし、インストールします（:numr
     :caption: Pythonのバージョン確認
 
     $ hash -r
-    $ python -V
+    $ python3 -V
     Python 3.5.1
     
 最後に、以下のコマンドでpipをインストールします。（ :numref:`install-pip`）
