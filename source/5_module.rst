@@ -1,7 +1,155 @@
 ==================================
-モジュール
+ファイル操作とモジュール
 ==================================
 
+本節では、Pythonでファイルを読み書きする方法と、
+Pythonファイルの分割と再利用のためモジュールについて説明します。
+
+.. _guide-files:
+
+ファイル操作
+===============
+
+プログラムには何らかの入出力が不可欠です。ここでは入力元、出力先としてファイルを操作する方法を説明します。
+
+ファイルのオープン
+------------------------
+
+Pythonからファイルを読み込む前に、現在のディレクトリ直下に ``todo.txt`` というファイルを作成しましょう。
+
+内容は、:numref:`todo-txt` のようにします。
+
+.. _todo-txt:
+
+.. code-block:: none
+   :caption: todo.txt
+
+   Write the book
+   Try new python libraries
+
+Pythonでファイルを開くには ``open()`` 関数を使います。
+第1引数にファイルのパスを指定します。
+
+:numref:`todo-txt` のtodo.txtを開くには、:numref:`file-open` のように指定します
+
+.. _file-open:
+
+.. code-block:: python
+    :caption: ファイルを開く
+
+    >>> f = open('todo.txt')
+    >>> f
+    <_io.TextIOWrapper name='todo.txt' mode='r' encoding='UTF-8'>
+
+``open()`` 関数は、ファイルオブジェクト（:numref:`file-open` の場合はf）を返します。
+ファイルオブジェクトは実際のファイルに対応するオブジェクトです。
+
+ファイルの読み込み
+----------------------
+
+ファイルの内容を読み込むには、ファイルオブジェクトの ``.read()`` メソッドを呼び出します（:numref:`read-file`）。
+
+.. _read-file:
+
+.. code-block:: python
+    :caption: ファイル内容の読み込み
+
+    >>> todo_str = f.read()
+    >>> print(todo_str)
+    Write the book
+    Try new python libraries
+
+``.read()`` メソッドは、ファイルの内容の文字列（``str``）を返します。
+
+ファイルのクローズ
+------------------
+ファイルを使った後は閉じる必要があります。クローズにより、ファイルを開くために使われていたシステム資源を解放します。
+
+ファイルを閉じるには、ファイルオブジェクトの ``.close()`` メソッドを呼び出します。
+
+.. code-block:: python
+    :caption: ファイルを閉じる
+
+    >>> f.close()
+
+ファイルを扱う際には、 `with文 <http://docs.python.jp/2.7/reference/compound_stmts.html#with>`_ を使うと便利です。
+``with`` 文を使うことで、ファイルのクローズを自動で行えます。処理中に例外が発生しても必ずファイルを閉じることができます。
+
+``with`` 文を使うと、ファイルのオープン、読み込み、クローズの処理は、:numref:`with-statement` のように書き換えられます。
+
+.. _with-statement:
+
+.. code-block:: python
+    :caption: ファイルオープンとwith文
+
+    >>> with open('todo.txt') as f:
+    ...     todo_str = f.read()
+    ...
+    >>> print(todo_str)
+
+ファイルへの書き込み
+----------------------------
+ファイルへ書き込む場合にも、最初に ``open()`` 関数を使ってファイルを開きます。
+その際、第2引数に ``'w'`` を渡します。これでファイルを「書き込みモード」で開けます
+（第2引数を渡さない場合は、読み込みモード（``'r'``）で開かれます）。
+
+``memo.txt`` というファイルを実行環境直下に作る例を :numref:`write-mode` に示します。
+
+.. _write-mode:
+
+.. code-block:: python
+    :caption: 書き込みモードでファイルを開く
+
+    >>> f = open('memo.txt', 'w')
+    >>> f
+    <_io.TextIOWrapper name='memo.txt' mode='w' encoding='UTF-8'>
+
+書き込みを行うには ``.write()`` メソッドを使います。
+引数に文字列を渡して書き込みます（:numref:`write-string`）。
+
+.. _write-string:
+
+.. code-block:: python
+    :caption: ファイル内容の書き込み
+
+    >>> f.write('Hello')
+    5
+    >>> f.write(' world\n')
+    7
+
+:numref:`write-mode`、:numref:`write-string` の結果、実行環境直下に ``memo.txt`` というファイルが次のような内容で作成されます。
+
+.. code-block:: none
+    :caption: 新規作成されたmemo.txtの内容
+
+    Hello world
+
+追記モードでの書き込み
+-------------------------------
+
+書き込みモードでファイルを開くと、ファイルの内容は常に新しく上書きされます。
+
+:numref:`write-string` の書き込みをもう一度行っても、ファイルの内容は ``'Hello world'`` になります。
+
+すでに存在するファイルを対象に、末尾に追記するには、ファイルを追記モードで開きます。
+追記モードでファイルを開くには、 ``open()`` 関数の第2引数に ``'a'`` を指定します（:numref:`append-mode`）。
+
+.. _append-mode:
+
+.. code-block:: python
+    :caption: 追記モードでファイルを開く
+
+    >>> f = open('memo.txt', 'a')
+    >>> f.write('こんにちは世界\n')
+    8
+
+:numref:`append-mode` の結果、追記後の ``memo.txt`` の内容は次のようになります
+
+.. code-block:: none
+    :caption: 追記されたmemo.txtの内容
+
+    Hello world
+    こんにちは世界
 
 .. _guide-module:
 
@@ -202,4 +350,4 @@ Pythonの公式ドキュメントの「 `reモジュール <http://docs.python.j
 まとめ
 ==========
 
-本章では、Pythonでプログラミングするために最低限必要なことを紹介しました。まずはインタープリタを起動して、Pythonに触れてみましょう。
+本節では、Pythonでファイルを読み書きする方法、Pythonファイルを分割して再利用する方法を解説しました。
