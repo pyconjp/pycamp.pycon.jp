@@ -18,6 +18,7 @@ Pythonを使って実行することができますので、これを機に習�
 その後、pipコマンドを実行し、スクレイピングに使用する requests と beautifulsoup4 を利用可能な状態にしてください。
 
 .. code-block:: sh
+   :caption: スクレイピング用の環境を構築
 
    $ mkdir scraping
    $ cd scraping
@@ -38,6 +39,7 @@ Pythonを使って実行することができますので、これを機に習�
 下記コードをsimple.pyという名前で保存してみましょう
 
 .. code-block:: python
+   :caption: simple.py
 
     #! /usr/bin/env python
     import requests
@@ -68,7 +70,7 @@ Pythonを使って実行することができますので、これを機に習�
     HTMLを解析するライブラリになります。
 
 .. code-block:: python
-    :caption: BeautifulSoup利用例
+   :caption: BeautifulSoup利用例
 
     >>> from bs4 import BeautifulSoup
     >>> soup = BeautifulSoup('<div><h1 id="test">TEST</h1></div>', 'html')
@@ -82,6 +84,7 @@ Pythonを使って実行することができますので、これを機に習�
 作成した環境にactivateした後、下記のコマンドを実行してみましょう
 
 .. code-block:: python
+   :caption: simple.py 実行例
 
    (env) $ python simple.py
    The first release candidate for Python 3.4
@@ -176,9 +179,10 @@ BeautifulSoup4 の主な使い方
         soup = BeautifulSoup(res.content, 'html.parser')
 
 
-また、 ``find()`` ``findall()`` などでタグを探す場合には、タグの属性などを条件として指定できます。
+また、 ``find()`` ``find_all()`` などでタグを探す場合には、タグの属性などを条件として指定できます。
 
 .. code-block:: pycon
+   :caption: find/find_all の使用例
 
    >>> len(soup.find_all('h1')) # 指定したタグを検索
    3
