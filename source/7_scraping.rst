@@ -15,11 +15,16 @@ Pythonを使って実行することができますので、これを機に習�
 =====================
 
 前章の環境構築を参考にして、pyvenvを実行し、新しい環境を構築してください。
-その後、pipコマンドを実行し、下記ライブラリを利用可能な状態にしてください。
+その後、pipコマンドを実行し、スクレイピングに使用する requests と beautifulsoup4 を利用可能な状態にしてください。
 
-* pip install requests
-* pip install beautifulsoup4
+.. code-block:: sh
 
+   $ mkdir scraping
+   $ cd scraping
+   $ pyvenv env
+   $ source env/bin/activate
+   (env) $ pip install requests
+   (env) $ pip install beautifulsoup4
 
 目的
 =====================
@@ -70,15 +75,28 @@ Pythonを使って実行することができますので、これを機に習�
     >>> soup.select_one('div h1#test').text
     >>>'TEST'
 
-
 実行してみよう
 ==============
 作成した環境にactivateした後、下記のコマンドを実行してみましょう
 
-python simple.py
+.. code-block:: python
+
+   (env) $ python simple.py
+   The first release candidate for Python 3.4
+   Python 3.3.4 released
+   EuroPython Call for Proposals
+   Python 3.3.4 release candidate has been released
+   Python 3.4.0 beta 3 has been released
+   Python 3.4.0 beta 2 has been released
+   (以下省略)
 
 実行すると、Pythonに関する新着ニュースが表示されることが確認できます。
 
+Reqeusts や BeautifulSoup の動作を変えて、さまざまなWebページからさまざまな要素を取得できます。
+以下にドキュメントへのリンクを載せるので参考にしてください。
+
+- `Requests: HTTP for Humans — Requests 2.10.0 documentation<http://docs.python-requests.org/en/master/>`_
+- `Beautiful Soup Documentation <https://www.crummy.com/software/BeautifulSoup/bs4/doc/>`_
 
 まとめ
 ==========
