@@ -59,7 +59,7 @@ Pythonを使って実行することができますので、これを機に習�
 
 
 コードの説明
-=====================
+------------
 * 「#! /usr/bin/env python」って何？
     Pythonを簡単に実行するためのおまじないのようなものです。
     詳しくはShebang(シェバン)といいます。
@@ -74,6 +74,8 @@ Pythonを使って実行することができますので、これを機に習�
     >>> soup = BeautifulSoup('<div><h1 id="test">TEST</h1></div>', 'html')
     >>> soup.select_one('div h1#test').text
     >>>'TEST'
+
+* ``if __name__ == '__main__':`` と書いた部分がコード実行時に呼び出されます。
 
 実行してみよう
 ==============
@@ -92,11 +94,62 @@ Pythonを使って実行することができますので、これを機に習�
 
 実行すると、Pythonに関する新着ニュースが表示されることが確認できます。
 
+作り変えてみよう
+================
 Reqeusts や BeautifulSoup の動作を変えて、さまざまなWebページからさまざまな要素を取得できます。
-以下にドキュメントへのリンクを載せるので参考にしてください。
+以下に簡単なライブラリの使い方を載せます。それ以外にもいろいろな使用方法があるので、ドキュメントを参考にしてください。
 
-- `Requests: HTTP for Humans — Requests 2.10.0 documentation<http://docs.python-requests.org/en/master/>`_
-- `Beautiful Soup Documentation <https://www.crummy.com/software/BeautifulSoup/bs4/doc/>`_
+requests の主なメソッド
+-----------------------
+以下は認証つきのURLにアクセスして、結果を取得する例です。
+
+.. code-block:: pycon
+   :caption: requests の使用例
+
+   >>> import requests
+   >>> r = requests.get('https://api.github.com/user', auth=('user', 'pass'))
+   >>> r.status_code
+   200
+   >>> r.headers['content-type']
+   'application/json; charset=utf8'
+   >>> r.encoding
+   'utf-8'
+   >>> r.text
+   u'{"type":"User"...'
+   >>> r.json()
+   {u'private_gists': 419, u'total_private_repos': 77, ...}
+
+POST を行う場合は以下のように実行します。
+
+.. code-block:: pycon
+   :caption: requests で POST する例
+
+   >>> data = {'key': 'value'} # POST するパラメーター
+   >>> r = requests.post('http://httpbin.org/post', data=data)
+
+GET に `?key1=value1&key2=value2` のようなパラメーター付きでアクセスする場合は以下のように書きます。
+
+.. code-block:: pycon
+   :caption: requests でパラメーター付で GET する例
+
+   >>> payload = {'key1': 'value1', 'key2': 'value2'}
+   >>> r = requests.get('http://httpbin.org/get', params=payload)
+   print(r.url)
+   http://httpbin.org/get?key2=value2&key1=value1
+   >>> payload = {'key1': 'value1', 'key2': ['value2', 'value3']}
+   >>> r = requests.get('http://httpbin.org/get', params=payload)
+   >>> print(r.url)
+   http://httpbin.org/get?key1=value1&key2=value2&key2=value3
+
+- 公式ドキュメント: `Requests: HTTP for Humans — Requests 2.10.0 documentation <http://docs.python-requests.org/en/master/>`_
+
+beautifulsoup4 の主なメソッド
+-----------------------------
+
+.. code-block:: python
+
+- 公式ドキュメント: `Beautiful Soup Documentation <https://www.crummy.com/software/BeautifulSoup/bs4/doc/>`_
+
 
 まとめ
 ==========
@@ -110,8 +163,7 @@ Reqeusts や BeautifulSoup の動作を変えて、さまざまなWebページ�
 参考
 ==========
 - wikipedia(スクレイピング) https://ja.wikipedia.org/wiki/ウェブスクレイピング
-
 - wikipedia(pip) https://ja.wikipedia.org/wiki/Pip
-
-- requests http://requests-docs-ja.readthedocs.io/en/latest/
+- `Requests: HTTP for Humans — Requests 2.10.0 documentation <http://docs.python-requests.org/en/master/>`_
+- `Beautiful Soup Documentation <https://www.crummy.com/software/BeautifulSoup/bs4/doc/>`_
 
