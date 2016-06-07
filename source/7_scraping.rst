@@ -97,10 +97,15 @@ Pythonを使って実行することができますので、これを機に習�
 作り変えてみよう
 ================
 Reqeusts や BeautifulSoup の動作を変えて、さまざまなWebページからさまざまな要素を取得できます。
-以下に簡単なライブラリの使い方を載せます。それ以外にもいろいろな使用方法があるので、ドキュメントを参考にしてください。
+以下に簡単なライブラリの使い方を載せます。それ以外にもいろいろな使用方法があるので、ドキュメントを参考にしていろいろ作り変えてみてください。
 
-requests の主なメソッド
------------------------
+Requests の主な使い方
+---------------------
+ここでは Requests の主な使い方の例をいくつか載せます。
+詳細については以下の公式ドキュメントを参照してください。
+
+- 公式ドキュメント: `Requests: HTTP for Humans — Requests 2.10.0 documentation <http://docs.python-requests.org/en/master/>`_
+
 以下は認証つきのURLにアクセスして、結果を取得する例です。
 
 .. code-block:: pycon
@@ -141,15 +146,46 @@ GET に `?key1=value1&key2=value2` のようなパラメーター付きでアク
    >>> print(r.url)
    http://httpbin.org/get?key1=value1&key2=value2&key2=value3
 
-- 公式ドキュメント: `Requests: HTTP for Humans — Requests 2.10.0 documentation <http://docs.python-requests.org/en/master/>`_
-
-beautifulsoup4 の主なメソッド
------------------------------
-
-.. code-block:: python
+BeautifulSoup4 の主な使い方
+---------------------------
+ここでは BeautifulSoup4 の主な使い方の例をいくつか載せます。
+詳細については以下の公式ドキュメントを参照してください。
 
 - 公式ドキュメント: `Beautiful Soup Documentation <https://www.crummy.com/software/BeautifulSoup/bs4/doc/>`_
 
+.. code-block:: pycon
+   :caption: BeautifulSoup4 の使用例
+
+   >>> import requests
+   >>> from bs4 import BeautifulSoup
+   >>> r = requests.get('https://www.python.org/news/')
+   >>> soup = BeautifulSoup(r.content, 'html.parser') # 取得したHTMLを解析
+   >>> soup.title # titleタグの情報を取得
+   <title>Python News | Python.org</title>
+   >>> soup.title.name
+   'title'
+   >>> soup.title.string # titleタグの文字列を取得
+   'Python News | Python.org'
+   >>> soup.a
+   <a href="#content" title="Skip to content">Skip to content</a>
+   >>> len(soup.find_all('a')) # 全ての a タグを取得しt len() で件数を取得
+   164
+
+        url = 'https://www.python.org/news/'
+        res = requests.get(url)
+        soup = BeautifulSoup(res.content, 'html.parser')
+
+
+また、 ``find()`` ``findall()`` などでタグを探す場合には、タグの属性などを条件として指定できます。
+
+.. code-block:: pycon
+
+   >>> len(soup.find_all('h1')) # 指定したタグを検索
+   3
+   >>> len(soup.find_all(['h1', 'h2', 'h3'])) # 複数のタグのいずれかにマッチ
+   24
+   >>> len(soup.find_all('div', {'class': 'pubdate'})) # <div class="pubdate"> にマッチ
+   21
 
 まとめ
 ==========
