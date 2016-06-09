@@ -64,7 +64,7 @@ Pythonを使って実行することができますので、これを機に習�
 ------------
 * 「#! /usr/bin/env python」って何？
     Pythonを簡単に実行するためのおまじないのようなものです。
-    詳しくはShebang(シェバン)といいます。
+    詳しくはShebang（シェバン）といいます。
 
 * 「BeautifulSoup」って何？
     HTMLを解析するライブラリになります。
@@ -202,8 +202,8 @@ BeautifulSoup4 の主な使い方
 
 参考
 ==========
-- wikipedia(スクレイピング) https://ja.wikipedia.org/wiki/ウェブスクレイピング
-- wikipedia(pip) https://ja.wikipedia.org/wiki/Pip
+- wikipedia（スクレイピング） https://ja.wikipedia.org/wiki/ウェブスクレイピング
+- wikipedia（pip） https://ja.wikipedia.org/wiki/Pip
 - `Requests: HTTP for Humans — Requests 2.10.0 documentation <http://docs.python-requests.org/en/master/>`_
 - `Beautiful Soup Documentation <https://www.crummy.com/software/BeautifulSoup/bs4/doc/>`_
 

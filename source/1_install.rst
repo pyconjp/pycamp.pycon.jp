@@ -19,7 +19,7 @@ Pythonのインストール
 
 Linux、OS X、Windows の3 つの環境でのインストール手順を説明します。
 
-Linux (Ubuntu Server) での場合
+Linux （Ubuntu Server） での場合
 -------------------------------------
 
 本書では、動作環境 `Ubuntu Server 16.04 <https://wiki.ubuntu.com/XenialXerus/ReleaseNotes>`_ 、
@@ -87,7 +87,7 @@ Pythonのソースコードをビルドし、インストールします（:numr
 .. _install-pip:
 
 .. code-block:: bash
-    :caption: pipのインストール(最後のx.x.xにはインストール時のpipの最新バージョン番号が入ります)
+    :caption: pipのインストール（最後のx.x.xにはインストール時のpipの最新バージョン番号が入ります）
 
     $ wget https://bootstrap.pypa.io/get-pip.py
     $ sudo python3 get-pip.py

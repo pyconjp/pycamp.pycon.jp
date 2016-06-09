@@ -7,7 +7,7 @@
 1. 遠方に住んでいるためPyCon JPのチュートリアルに参加できずにいた方
 2. Pythonを使っている人が周りにいなくてなかなか始められなかった方
 
-Python Boot Camp (PyCamp)企画案
+Python Boot Camp （PyCamp）企画案
 https://www.pycon.jp/support/bootcamp.html
 
 

@@ -14,7 +14,7 @@
 ==========================
 Python は標準ライブラリだけでもいろいろなことができますが、さらに便利なサードパーティ製のパッケージも提供されています。
 
-サードパーティ製パッケージは `PyPI <https://pypi.python.org>`_ (the Python Package Index、パイピーアイと読む)というサイトで情報が共有されています。
+サードパーティ製パッケージは `PyPI <https://pypi.python.org>`_ （the Python Package Index、パイピーアイと読む）というサイトで情報が共有されています。
 
 .. figure:: images/pypi.png
    :width: 600
