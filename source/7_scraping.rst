@@ -83,7 +83,7 @@ Pythonを使って実行することができますので、これを機に習�
 ==============
 作成した環境にactivateした後、下記のコマンドを実行してみましょう
 
-.. code-block:: python
+.. code-block:: sh
    :caption: simple.py 実行例
 
    (env) $ python simple.py
