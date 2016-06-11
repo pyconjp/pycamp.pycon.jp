@@ -14,6 +14,13 @@ https://www.pycon.jp/support/bootcamp.html
 このテキストの作成趣旨・利用について
 ====================================
 
-このテキストはPython Boot Campのチュートリアルのために作成されたものです。Pythgon Boot Campの他にも、チュートリアルやその他の学習の場で自由に活用していただいて構いません。
+このテキストはPython Boot Campのチュートリアルのために作成されたものです。Pythgon Boot Campの他にも、チュートリアルやその他の学習の場でいろいろな方に活用していただくことを想定しています。
+
+権利・ライセンスについてはクリエイティブ・コモンズのCC-BYで管理しています。
+条件や活用していただくときに留意する点については下記ドキュメントを参照ください。
+
+* [クリエイティブ・コモンズ CC-BY 要約]('http://creativecommons.org/licenses/by/4.0/deed.ja')
+* [クリエイティブ・コモンズ CC-BY 詳細]('http://creativecommons.org/licenses/by/4.0/legalcode.ja')
+* 参考：[その他のクリエイティブ・コモンズ　ライセンスの種類]('https://creativecommons.jp/licenses/')
 
 内容について誤りやすでに古くなってしまった表記を見つけた際には、修正内容をgithubレポジトリにpull requestとしてお送りください。
