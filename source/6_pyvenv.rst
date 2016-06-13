@@ -59,9 +59,14 @@ pyvenv環境を作成します。
 作成には ``pyvenv`` コマンドを使用します。引数には作成する環境の名前を指定します。
 
 .. code-block:: sh
-   :caption: pyvenv環境の作成
+   :caption: pyvenv環境の作成(Linux・Mac)
 
     $ pyvenv env
+
+.. code-block:: sh
+   :caption: pyvenv環境の作成(Windows)
+
+    $ python -m venv env
 
 カレントディレクトリに、envというディレクトリが作成されます。
 
@@ -70,14 +75,22 @@ pyvenv環境の有効化
 
 作成した ``pyvenv`` 環境を有効化（activate）します。
 
-そのためにはbashスクリプトの ``env/bin/activate`` を ``source`` コマンドで実行します（:numref:`pyvenv-activate`）。
+そのためにはbashスクリプトの ``env/bin/activate`` を ``source`` コマンドで実行します（:numref:`pyvenv-activate-linux-or-mac` :numref:`pyvenv-activate-windows` ）。
 
-.. _pyvenv-activate:
+.. _pyvenv-activate-linux-or-mac:
 
 .. code-block:: sh
-   :caption:  pyvenv環境の有効化
+   :caption:  pyvenv環境の有効化(Linux・Mac)
 
     $ source env/bin/activate
+    (env)$
+
+.. _pyvenv-activate-windows:
+
+.. code-block:: sh
+   :caption:  pyvenv環境の有効化(Windows)
+
+    $ env\Scripts\activate.bat
     (env)$
 
 ``pyvenv`` 環境を有効化すると、プロンプトの前に環境名（ここでは ``env`` ）が表示されます。そして、環境変数 ``PATH`` の先頭にenv/binが追加され、 ``pyvenv`` 環境のPythonが実行されるようになります。
