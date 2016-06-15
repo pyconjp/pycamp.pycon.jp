@@ -3,8 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Python Boot Camp Text's documentation!
-=================================================
+Python Boot Camp Text
+=====================
 
 
 本テキストは日本各地での初心者向けPythonチュートリアルイベント「Python Boot Camp」で使用するために、
