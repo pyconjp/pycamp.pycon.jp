@@ -268,9 +268,9 @@ for文
 .. code-block:: python
     :caption: 辞書
 
-    >>> user_info = {'user_name': 'hirokiky', 'last_name': 'Kiyohara'}
+    >>> user_info = {'user_name': 'taro', 'last_name': 'Yamada'}
     >>> user_info
-    {'last_name': 'Kiyohara', 'user_name': 'hirokiky'}
+    {'last_name': 'Yamada', 'user_name': 'taro'}
 
 :numref:`guide-dict` の ``user_info`` から ``'user_name'`` の値を取り出す処理は、 :numref:`get-dict-value` になります。
 
@@ -280,7 +280,7 @@ for文
     :caption: 辞書からの値の取り出し
 
     >>> user_info['user_name']
-    'hirokiky'
+    'taro'
 
 既存の辞書に値を設定するには、 ``辞書[＜キー＞]`` に直接代入します（:numref:`set-dict-value`）。
 
@@ -289,9 +289,9 @@ for文
 .. code-block:: python
     :caption: 辞書への値の設定
 
-    >>> user_info['first_name'] = 'Hiroki'
+    >>> user_info['first_name'] = 'Taro'
     >>> user_info
-    {'first_name': 'Hiroki', 'last_name': 'Kiyohara', 'user_name': 'hirokiky'}
+    {'first_name': 'Taro', 'last_name': 'Yamada', 'user_name': 'taro'}
 
 in
 ----
@@ -331,7 +331,7 @@ in
     :caption: 存在しないキーへのget
 
     >>> user_info.get('user_name')
-    'hirokiky'
+    'taro'
     >>> bio = user_info.get('bio')
     >>> print(bio)
     None
