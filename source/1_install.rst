@@ -23,13 +23,13 @@ Linux （Ubuntu Server） での場合
 -------------------------------------
 
 本書では、動作環境 `Ubuntu Server 16.04 <https://wiki.ubuntu.com/XenialXerus/ReleaseNotes>`_ 、
-Pythonは3系の最新版3.5.1を想定しています。
+Pythonは3系の最新版3.5.2を想定しています。
 
 
 ソースビルドでのインストール
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Ubuntu 16.04にソースコードからPython 3.5.1をインストールします（:numref:`package-install`）。
+Ubuntu 16.04にソースコードからPython 3.5.2をインストールします（:numref:`package-install`）。
 
 まずパッケージ全体をアップグレードし、Pythonによる開発で必要になるパッケージをインストールします。
 
@@ -60,11 +60,11 @@ Pythonのソースコードをビルドし、インストールします（:numr
 .. _python-build:
 
 .. code-block:: bash
-    :caption: Python 3.5.1のソースからのインストール
+    :caption: Python 3.5.2のソースからのインストール
 
-    $ wget https://www.python.org/ftp/python/3.5.1/Python-3.5.1.tgz
-    $ tar axvf ./Python-3.5.1.tgz
-    $ cd ./Python-3.5.1/
+    $ wget https://www.python.org/ftp/python/3.5.2/Python-3.5.2.tgz
+    $ tar axvf ./Python-3.5.2.tgz
+    $ cd ./Python-3.5.2/
     $ LDFLAGS="-L/usr/lib/x86_64-linux-gnu" ./configure --with-ensurepip --with-zlib
     $ make
     $ sudo make install
@@ -80,7 +80,7 @@ Pythonのソースコードをビルドし、インストールします（:numr
 
     $ hash -r
     $ python3 -V
-    Python 3.5.1
+    Python 3.5.2
     
 最後に、以下のコマンドでpipをインストールします。（ :numref:`install-pip`）
 
@@ -101,18 +101,18 @@ Pythonのソースコードをビルドし、インストールします（:numr
 
    ソースコードのビルドで ``configure`` を実行する際に、 ``--prefix`` オプションを付けるとインストール先のディレクトリを指定できます。
 
-   /opt/python3.5.1 ディレクトリ以下にインストールするには、次のように指定します
+   /opt/python3.5.2 ディレクトリ以下にインストールするには、次のように指定します
 
     .. code-block:: python
         :caption: prefixオプション付きconfigure
 
-        LDFLAGS="-L/usr/lib/x86_64-linux-gnu" ./configure --prefix=/opt/python3.5.1 --with-ensurepip
+        LDFLAGS="-L/usr/lib/x86_64-linux-gnu" ./configure --prefix=/opt/python3.5.2 --with-ensurepip
 
 OS Xでの場合
 -------------------------------------
 OS XでPythonを利用する場合は、Pythonの公式サイトで配布されているビルド済みのパッケージをインストールします。
 
-次のページで「Latest Python 3 Release - Python 3.5.1」をクリックすると詳細画面に移動します。64 ビット版（Mac OS X 64-bit/32-bit installer）または32 ビット版（Mac OS X 32-bit i386/PPC installer）をダウンロードしてインストールします。
+次のページで「Latest Python 3 Release - Python 3.5.2」をクリックすると詳細画面に移動します。64 ビット版（Mac OS X 64-bit/32-bit installer）または32 ビット版（Mac OS X 32-bit i386/PPC installer）をダウンロードしてインストールします。
 
 - `Python Releases for Mac OS X <https://www.python.org/downloads/mac-osx/>`_ 
 
@@ -123,7 +123,7 @@ Windowsでの場合
 
 WindowsでPythonを利用する場合は、Pythonの公式サイトで配布されているWindowsインストーラを利用します。
 
-次のページで「Latest Python 3 Release - Python 3.5.1」をクリックすると詳細画面に移動します。64ビット版（Windows x86-64 Installer）または32 ビット版（Windows x86 Installer）をダウンロードし、ウィザードに従ってインストールします（:numref:`windows-install`）。
+次のページで「Latest Python 3 Release - Python 3.5.2」をクリックすると詳細画面に移動します。64ビット版（Windows x86-64 Installer）または32 ビット版（Windows x86 Installer）をダウンロードし、ウィザードに従ってインストールします（:numref:`windows-install`）。
 
 この時、「Add Python 3.5 to PATH」にチェックを入れておきましょう。自動的に必要な環境変数が設定されます。
 
