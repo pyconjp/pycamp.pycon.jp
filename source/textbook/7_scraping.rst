@@ -41,7 +41,6 @@ Pythonを使って実行することができますので、これを機に習�
 .. code-block:: python
    :caption: simple.py
 
-    #! /usr/bin/env python
     import requests
     from bs4 import BeautifulSoup
 
@@ -62,10 +61,6 @@ Pythonを使って実行することができますので、これを機に習�
 
 コードの説明
 ------------
-* 「#! /usr/bin/env python」って何？
-    Pythonを簡単に実行するためのおまじないのようなものです。
-    詳しくはShebang（シェバン）といいます。
-
 * 「BeautifulSoup」って何？
     HTMLを解析するライブラリになります。
 
@@ -96,6 +91,16 @@ Pythonを使って実行することができますので、これを機に習�
    (以下省略)
 
 実行すると、Pythonに関する新着ニュースが表示されることが確認できます。
+
+.. admonition:: コラム: Shebang（シェバン）
+
+   頻繁に利用するプログラムであれば、実行を簡単にするShebang（シェバン）を使うと便利です。コードの先頭に ``#! /usr/bin/env python`` を入れて、 ``chmod +x simple.py`` でファイルに実行権限を与えておくと、以下のように ``simple.py`` の指定だけでプログラムを実行することができます。
+
+.. code-block:: sh
+   :caption: simple.py 実行例(Shebangを使った場合)
+
+   (env) $ ./simple.py
+   (以下省略)
 
 作り変えてみよう
 ================
