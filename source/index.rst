@@ -17,20 +17,13 @@ Pythonの開発環境構築、基礎的な文法や実践応用についてま�
    :maxdepth: 2
    :numbered:
 
-   0_about
-   1_install
-   2_intro
-   3_types
-   4_collections
-   5_module
-   6_pyvenv
-   7_scraping
+   organize/index
+   textbook/index
 
 
 Indices and tables
 ==================
 
 * :ref:`genindex`
-* :ref:`modindex`
 * :ref:`search`
 
