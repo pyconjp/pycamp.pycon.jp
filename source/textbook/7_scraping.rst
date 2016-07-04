@@ -94,7 +94,7 @@ Pythonを使って実行することができますので、これを機に習�
 
 .. admonition:: コラム: Shebang（シェバン）
 
-   頻繁に利用するプログラムであれば、実行を簡単にするShebang（シェバン）を使うと便利です。コードの先頭に ``#! /usr/bin/env python`` を入れて、 ``chmod +x simple.py`` でファイルに実行権限を与えておくと、以下のように ``simple.py`` の指定だけでプログラムを実行することができます。
+   頻繁に利用するプログラムであれば、実行を簡単にするShebang（シェバン）を使うと便利です。コードの先頭に ``#!/usr/bin/env python`` を入れて、 ``chmod +x simple.py`` でファイルに実行権限を与えておくと、以下のように ``simple.py`` の指定だけでプログラムを実行することができます。
 
 .. code-block:: sh
    :caption: simple.py 実行例(Shebangを使った場合)
