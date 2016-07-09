@@ -132,6 +132,20 @@ pyvenv環境の無効化
     >>> # エラーが出力される
 
 
+conda の場合
+============
+`Anaconda <https://www.continuum.io/downloads>`_ を使っている場合は **pip** 、 **pyvenv** の代わりに `Conda <http://conda.pydata.org/docs/>`_ というパッケージ管理ツールを使用します。
+
+condaではそれぞれ以下のコマンドで、サードパーティー製パッケージのインストール、環境の作成、有効化、無効化が行えます。
+
+.. code-block:: sh
+   :caption: conda コマンドの例
+
+   $ conda create --name env python # 環境を作成
+   $ source activate env # 環境の有効化
+   (env) $ conda install requests # パッケージのインストール
+   (env) $ source deactivate # 環境の無効化
+
 まとめ
 =======
 
