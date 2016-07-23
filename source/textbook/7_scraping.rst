@@ -41,22 +41,21 @@ Pythonを使って実行することができますので、これを機に習�
 .. code-block:: python
    :caption: simple.py
 
-    import requests
-    from bs4 import BeautifulSoup
+   import requests
+   from bs4 import BeautifulSoup
 
+   def main():
+       url = 'https://www.python.org/news/'
+       res = requests.get(url)
+       soup = BeautifulSoup(res.content, 'html.parser')
+       records = soup.select('h2.news')
+       iter_records = iter(records)
 
-    def main():
-        url = 'https://www.python.org/news/'
-        res = requests.get(url)
-        soup = BeautifulSoup(res.content, 'html.parser')
-        records = soup.select('h2.news')
-        iter_records = iter(records)
+       for record in iter_records:
+           print(record.text)
 
-        for record in iter_records:
-            print(record.text)
-
-    if __name__ == '__main__':
-        main()
+   if __name__ == '__main__':
+       main()
 
 
 コードの説明
@@ -67,10 +66,10 @@ Pythonを使って実行することができますので、これを機に習�
 .. code-block:: python
    :caption: BeautifulSoup利用例
 
-    >>> from bs4 import BeautifulSoup
-    >>> soup = BeautifulSoup('<div><h1 id="test">TEST</h1></div>', 'html')
-    >>> soup.select_one('div h1#test').text
-    >>>'TEST'
+   >>> from bs4 import BeautifulSoup
+   >>> soup = BeautifulSoup('<div><h1 id="test">TEST</h1></div>', 'html')
+   >>> soup.select_one('div h1#test').text
+   >>>'TEST'
 
 * ``if __name__ == '__main__':`` と書いた部分がコード実行時に呼び出されます。
 
@@ -211,4 +210,3 @@ BeautifulSoup4 の主な使い方
 - wikipedia（pip） https://ja.wikipedia.org/wiki/Pip
 - `Requests: HTTP for Humans — Requests 2.10.0 documentation <http://docs.python-requests.org/en/master/>`_
 - `Beautiful Soup Documentation <https://www.crummy.com/software/BeautifulSoup/bs4/doc/>`_
-
