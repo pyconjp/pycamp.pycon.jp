@@ -67,8 +67,8 @@ Pythonを使って実行することができますので、これを機に習�
    :caption: BeautifulSoup利用例
 
    >>> from bs4 import BeautifulSoup
-   >>> soup = BeautifulSoup('<div><h1 id="test">TEST</h1></div>', 'html')
-   >>> soup.select_one('div h1#test').text
+   >>> soup = BeautifulSoup('<div><h1 id="test">TEST</h1></div>', 'html.parser')
+   >>> soup.select('div h1#test')[0].text
    >>>'TEST'
 
 * ``if __name__ == '__main__':`` と書いた部分がコード実行時に呼び出されます。
