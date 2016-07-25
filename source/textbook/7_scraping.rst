@@ -49,9 +49,8 @@ Pythonを使って実行することができますので、これを機に習�
        res = requests.get(url)
        soup = BeautifulSoup(res.content, 'html.parser')
        records = soup.select('h2.news')
-       iter_records = iter(records)
 
-       for record in iter_records:
+       for record in records:
            print(record.text)
 
    if __name__ == '__main__':
