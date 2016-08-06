@@ -209,3 +209,14 @@ BeautifulSoup4 の主な使い方
 - wikipedia（pip） https://ja.wikipedia.org/wiki/Pip
 - `Requests: HTTP for Humans — Requests 2.10.0 documentation <http://docs.python-requests.org/en/master/>`_
 - `Beautiful Soup Documentation <https://www.crummy.com/software/BeautifulSoup/bs4/doc/>`_
+
+次の一歩
+============
+
+スクレイピングの例の実行ができたら、以下の様な改造を自習してみください。
+
+- 別のサイトから同様に情報を抜き出してみる　＞URL変更とCSSセレクタの変更
+- RSS(XML)から必要な情報を抜き出してみる　＞パーサの変更
+- 抜き出したものを、ファイルに保存してみる　＞別の章との組み合わせ
+- ログインが必要なサイトにログインして情報を抜き出してみる　＞requestsの応用
+- 抜き出したものを、HTMLに加工して、ファイルに保存、出力してみる　＞各種応用
