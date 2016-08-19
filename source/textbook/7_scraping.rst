@@ -44,6 +44,7 @@ Pythonを使って実行することができますので、これを機に習�
    import requests
    from bs4 import BeautifulSoup
 
+
    def main():
        url = 'https://www.python.org/news/'
        res = requests.get(url)
