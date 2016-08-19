@@ -57,6 +57,19 @@ Pythonを使って実行することができますので、これを機に習�
        main()
 
 
+.. admonition:: コラム: Pythonのコーディング規約「pep8」
+
+    Pythonには `pep8（ペップエイト） <https://www.python.org/dev/peps/pep-0008/>`_ というコーディング規約があります。
+
+    複数の人で開発する際、人によって書き方がバラバラだと非常に読みにくいコードになってしまうので、pep8のルールに従う習慣を身につけておくとよいでしょう。
+
+    自分のコードがpep8のルールに従っているかは、 `pycodestyle <http://pep8.readthedocs.io/en/latest/index.html#>`_ というツールを使って検証できます。
+
+    pycodestyleは ``pip install pycodestyle`` でインストールできます。
+
+    上記の例 ``simple.py`` を検証するなら、 ``pycodestyle --first simple.py`` を実行します。
+
+
 コードの説明
 ------------
 * 「BeautifulSoup」って何？
