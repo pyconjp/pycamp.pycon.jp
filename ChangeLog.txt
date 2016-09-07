@@ -14,4 +14,5 @@ Not released
 
 2016-09-07
 ----------
+* #69 upgrade Sphinx version(1.4.4 -> 1.4.6)
 * #68 add ChangeLog.txt
