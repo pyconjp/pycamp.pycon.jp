@@ -25,3 +25,9 @@
 * `参考：[その他のクリエイティブ・コモンズ　ライセンスの種類 <https://creativecommons.jp/licenses/>`_
 
 内容について誤りやすでに古くなってしまった表記を見つけた際には、修正内容を `githubレポジトリ <https://github.com/pyconjp/bootcamp-text/>`_ にpull requestとしてお送りください。
+
+開催実績
+========
+Python Boot Camp の開催実績は下記のページを参照してください。
+
+- `Python Boot Camp(初心者向けPythonチュートリアル) <https://www.pycon.jp/support/bootcamp.html#id5>`_

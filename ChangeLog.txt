@@ -14,5 +14,6 @@ Not released
 
 2016-09-07
 ----------
+* ISSHA-349 開催実績へのリンクを追加
 * #69 upgrade Sphinx version(1.4.4 -> 1.4.6)
 * #68 add ChangeLog.txt
