@@ -15,6 +15,7 @@ Not released
 2016-10-03
 ----------
 * ISSHA-358 upgrade Sphinx 1.4.8
+* #71 open() 関数に encoding を追加
 
 2016-09-07
 ----------
