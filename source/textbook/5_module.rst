@@ -37,9 +37,9 @@ Pythonでファイルを開くには ``open()`` 関数を使います。
 .. code-block:: python
     :caption: ファイルを開く
 
-    >>> f = open('todo.txt', encoding='utf8')
+    >>> f = open('todo.txt', encoding='utf-8')
     >>> f
-    <_io.TextIOWrapper name='todo.txt' mode='r' encoding='utf8'>
+    <_io.TextIOWrapper name='todo.txt' mode='r' encoding='utf-8'>
 
 ``open()`` 関数は、ファイルオブジェクト（:numref:`file-open` の場合はf）を返します。
 ファイルオブジェクトは実際のファイルに対応するオブジェクトです。
@@ -82,7 +82,7 @@ Pythonでファイルを開くには ``open()`` 関数を使います。
 .. code-block:: python
     :caption: ファイルオープンとwith文
 
-    >>> with open('todo.txt', encoding='utf8') as f:
+    >>> with open('todo.txt', encoding='utf-8') as f:
     ...     todo_str = f.read()
     ...
     >>> print(todo_str)
@@ -100,9 +100,9 @@ Pythonでファイルを開くには ``open()`` 関数を使います。
 .. code-block:: python
     :caption: 書き込みモードでファイルを開く
 
-    >>> f = open('memo.txt', 'w', encoding='utf8')
+    >>> f = open('memo.txt', 'w', encoding='utf-8')
     >>> f
-    <_io.TextIOWrapper name='memo.txt' mode='w' encoding='utf8'>
+    <_io.TextIOWrapper name='memo.txt' mode='w' encoding='utf-8'>
 
 書き込みを行うには ``.write()`` メソッドを使います。
 引数に文字列を渡して書き込みます（:numref:`write-string`）。
@@ -139,7 +139,7 @@ Pythonでファイルを開くには ``open()`` 関数を使います。
 .. code-block:: python
     :caption: 追記モードでファイルを開く
 
-    >>> f = open('memo.txt', 'a', encoding='utf8')
+    >>> f = open('memo.txt', 'a', encoding='utf-8')
     >>> f.write('こんにちは世界\n')
     8
 
