@@ -37,9 +37,9 @@ Pythonでファイルを開くには ``open()`` 関数を使います。
 .. code-block:: python
     :caption: ファイルを開く
 
-    >>> f = open('todo.txt')
+    >>> f = open('todo.txt', encoding='utf8')
     >>> f
-    <_io.TextIOWrapper name='todo.txt' mode='r' encoding='UTF-8'>
+    <_io.TextIOWrapper name='todo.txt' mode='r' encoding='utf8'>
 
 ``open()`` 関数は、ファイルオブジェクト（:numref:`file-open` の場合はf）を返します。
 ファイルオブジェクトは実際のファイルに対応するオブジェクトです。
@@ -72,7 +72,7 @@ Pythonでファイルを開くには ``open()`` 関数を使います。
 
     >>> f.close()
 
-ファイルを扱う際には、 `with文 <http://docs.python.jp/2.7/reference/compound_stmts.html#with>`_ を使うと便利です。
+ファイルを扱う際には、 `with文 <http://docs.python.jp/3.5/reference/compound_stmts.html#with>`_ を使うと便利です。
 ``with`` 文を使うことで、ファイルのクローズを自動で行えます。処理中に例外が発生しても必ずファイルを閉じることができます。
 
 ``with`` 文を使うと、ファイルのオープン、読み込み、クローズの処理は、:numref:`with-statement` のように書き換えられます。
@@ -82,7 +82,7 @@ Pythonでファイルを開くには ``open()`` 関数を使います。
 .. code-block:: python
     :caption: ファイルオープンとwith文
 
-    >>> with open('todo.txt') as f:
+    >>> with open('todo.txt', encoding='utf8') as f:
     ...     todo_str = f.read()
     ...
     >>> print(todo_str)
@@ -100,9 +100,9 @@ Pythonでファイルを開くには ``open()`` 関数を使います。
 .. code-block:: python
     :caption: 書き込みモードでファイルを開く
 
-    >>> f = open('memo.txt', 'w')
+    >>> f = open('memo.txt', 'w', encoding='utf8')
     >>> f
-    <_io.TextIOWrapper name='memo.txt' mode='w' encoding='UTF-8'>
+    <_io.TextIOWrapper name='memo.txt' mode='w' encoding='utf8'>
 
 書き込みを行うには ``.write()`` メソッドを使います。
 引数に文字列を渡して書き込みます（:numref:`write-string`）。
@@ -139,7 +139,7 @@ Pythonでファイルを開くには ``open()`` 関数を使います。
 .. code-block:: python
     :caption: 追記モードでファイルを開く
 
-    >>> f = open('memo.txt', 'a')
+    >>> f = open('memo.txt', 'a', encoding='utf8')
     >>> f.write('こんにちは世界\n')
     8
 
