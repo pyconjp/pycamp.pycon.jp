@@ -6,7 +6,7 @@ Python Boot Camp の演習で使用するテキストです。
 
 .. toctree::
    :maxdepth: 2
-   :numbered:
+   :numbered: 3
 
    1_install
    2_intro

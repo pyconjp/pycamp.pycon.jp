@@ -14,6 +14,7 @@ Not released
 
 2016-10-03
 ----------
+* #73 章、節の番号の深さを指定
 * ISSHA-358 upgrade Sphinx 1.4.8
 * #71 open() 関数に encoding を追加
 

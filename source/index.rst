@@ -15,7 +15,6 @@ Pythonの開発環境構築、基礎的な文法や実践応用についてま�
 
 .. toctree::
    :maxdepth: 2
-   :numbered:
 
    organize/index
    textbook/index

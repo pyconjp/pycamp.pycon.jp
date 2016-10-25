@@ -6,7 +6,7 @@ Python Boot Camp のテキストの扱いや、運営方法についてまとめ
 
 .. toctree::
    :maxdepth: 2
-   :numbered:
+   :numbered: 3
 
    0_about
    1_manual
