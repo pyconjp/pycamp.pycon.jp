@@ -46,10 +46,10 @@ Pythonを使って実行することができますので、これを機に習�
 
 
    def main():
-       url = 'https://www.python.org/news/'
+       url = 'https://www.python.org/blogs/'
        res = requests.get(url)
        soup = BeautifulSoup(res.content, 'html.parser')
-       records = soup.select('h2.news')
+       records = soup.select('.event-title')
 
        for record in records:
            print(record.text)
