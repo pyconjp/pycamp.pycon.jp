@@ -8,7 +8,7 @@
 ## How to build
 
 ```
-$ clone git@github.com:pyconjp/bootcamp-text.git
+$ git clone git@github.com:pyconjp/bootcamp-text.git
 $ cd bootcamp-text
 $ virtualenv env
 $ . env/bin/activate
