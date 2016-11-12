@@ -1,9 +1,10 @@
-# bootcamp-text
+# pycamp.pycon.jp
 
 [![Documentation Status](https://readthedocs.org/projects/bootcamp-text/badge/?version=latest)](http://bootcamp-text.readthedocs.io/?badge=latest)
 
-* https://readthedocs.org/projects/bootcamp-text/
-* http://bootcamp-text.readthedocs.io/
+* ビルドされたページ: http://pycamp.pycon.jp/
+* Read the Docs のプロジェクトページ: Read https://readthedocs.org/projects/bootcamp-text/
+* www.pycon.jp の説明ページ: https://www.pycon.jp/support/bootcamp.html
 
 ## How to build
 
