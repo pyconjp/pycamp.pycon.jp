@@ -132,7 +132,7 @@ Pythonを電卓にする
 
 ``#`` より右以降の文字列は「コメント」となり、プログラムとして実行されません。
 
-.. _python-calc:
+.. _python-comment:
 
 .. code-block:: python
     :caption: コメントの書き方
@@ -145,7 +145,7 @@ Pythonを電卓にする
 
 関数は、 ``def`` を使って定義します。
 
-.. code-block:: python
+.. code-block:: none
 
    def ＜関数名＞(＜引数の変数名＞):
 
@@ -306,7 +306,7 @@ range(1, 101)のように記述すると、1から100までの数字を順番に
 
 for文は次のように書きます。
 
-.. code-block:: python
+.. code-block:: none
 
    for ＜変数名＞ in ＜シーケンス＞:
 

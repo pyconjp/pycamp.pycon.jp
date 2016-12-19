@@ -13,7 +13,6 @@ Python Boot Camp（略称 PyCamp）の運営をする際の手順をしめす。
 * 現地スタッフ
 * TA
 
-
 役割分担
 ========
 
@@ -187,13 +186,10 @@ TA申込者
 ================
 
 * Slack - pyconjp.slack.com
-    * #bootcamp チャネル：Python Boot Campメインチャネル。全体の運営に関する議論や、講師を募ったり、会場提供者とのやりとりなどを行う。
-    * #bootcamp-instructor チャネル：講師のためのチャネル。テキストの執筆やレビュー、または講師募集など。
-    * #bootcamp-venue チャネル：会場募集や開催スケジュールの調整など。
-    * #bootcamp-staff チャネル：各開催をまたいだ現地スタッフ用のチャネル。運営のノウハウなどを共有。
-    * #bootcamp-xxxxx チャネル：各開催のための個別チャネル。Python Boot Camp全体に関わらないイベント個別の議論はこちらで行う。
+
+  * #pycamp チャネル：Python Boot Camp 全体のチャネル。全体の運営に関する議論や、講師を募ったり、会場提供者とのやりとりなどを行う。
 * Google Drive: `Python Boot Camp用のフォルダ <https://drive.google.com/drive/u/1/folders/0B9xgFsw7nWw9b3pDWHpKRHJ5QmM>`_ でドキュメント共有に活用
-* Twitter: `PyCon JP公式アカウント <https://twitter.com/pyconj>`_ での告知・拡散用
-* Facebook: `PyCon JP公式アカウント <https://www.facebook.com/PyConJP/>`_ での告知・拡散用
-* Connpass：`PyCon JPイベントシリーズ <http://pyconjp.connpass.com>`_ でPyCon JPイベントやその他の関連イベントとあわせて管理している。
+* Twitter: `@PyConJ <https://twitter.com/pyconj>`_ での告知・拡散用
+* Facebook: `PyCon JP Facebookページ <https://www.facebook.com/PyConJP/>`_ での告知・拡散用
+* Connpass： `PyCon JPイベントシリーズ <http://pyconjp.connpass.com>`_ でPyCon JPイベントやその他の関連イベントとあわせて管理している。
 * Blogpost: `PyCon JP公式ブログ <https://pyconjp.blogspot.jp>`_ での告知や開催報告レポート用
