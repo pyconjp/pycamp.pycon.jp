@@ -66,7 +66,7 @@ venvはプロジェクトごとに隔離されたPython環境を作成します�
 
  pyvenvスクリプトが廃止になった経緯は下記URLを参照してください。
 
- https://docs.python.org/dev/whatsnew/3.6.html#id8
+ http://docs.python.jp/3/whatsnew/3.6.html#id8
 
 
 venv環境の作成
