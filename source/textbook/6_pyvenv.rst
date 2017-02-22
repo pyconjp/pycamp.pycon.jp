@@ -1,14 +1,14 @@
 .. -*- coding: utf-8 -*-
 
-.. _pyvenv-section:
+.. _venv-section:
 
 =====================================
- サードパーティ製パッケージと pyvenv
+ サードパーティ製パッケージと venv
 =====================================
 
 :節サブタイトル: 隔離されたPythonの実行環境で便利なサードパーティ製パッケージを利用する。
 
-本節では、Pythonをより便利にするサードパーティ製パッケージのインストール方法と、環境を壊さずにインストールするための pyvenv コマンドの使い方を説明します。
+本節では、Pythonをより便利にするサードパーティ製パッケージのインストール方法と、環境を壊さずにインストールするための venv モジュールの使い方を説明します。
 
 サードパーティ製パッケージ
 ==========================
@@ -36,7 +36,7 @@ pipもpipコマンドでアップグレードを行えます。まずは、現�
 
    $ sudo pip install pip --upgrade
 
-**以下はpipコマンドのサンプルです** ここでは実行しないで、以下のpyvenv環境を作ってから実行しましょう。
+**以下はpipコマンドのサンプルです** ここでは実行しないで、以下のvenv環境を作ってから実行しましょう。
 pip コマンドを利用すると以下の様なコマンドで簡単にサードパーティ製パッケージをインストールできます。
 
 .. code-block:: sh
@@ -44,67 +44,73 @@ pip コマンドを利用すると以下の様なコマンドで簡単にサー�
 
    $ pip install requests
 
-次に、独立したPython環境を構築する **pyvenv** について説明します。
+次に、独立したPython環境を構築する **venv** モジュールについて説明します。
 
 .. admonition:: コラム: Windows環境でpip実行時にエラーになる場合
 
     PATH環境変数を確認し、Python3 をインストールしているPATHが設定されているかどうか確認してみてください。
 
-
-pyvenvとは
+venvとは
 ==========
 
 複数のプロジェクトで異なるサードパーティ製パッケージを利用することはよくあります。その場合、プロジェクトごとにインストールするパッケージを切り替えられると便利です。
 
-pyvenvはプロジェクトごとに隔離されたPython環境を作成します。
+venvはプロジェクトごとに隔離されたPython環境を作成します。
 
-pyvenv環境の作成
+.. note:: pyvenvスクリプトについて
+
+ 以前は pyvenvスクリプトを利用したPython実行環境の作成方法を紹介していました。
+
+ ですが、Python3.6 から pyvenvスクリプトが非推奨となり将来的に削除されるので一部説明を変更をいたしました。
+ 今後は「python -m venv」を利用するようにしてください。
+
+ pyvenvスクリプトが廃止になった経緯は下記URLを参照してください。
+
+ http://docs.python.jp/3/whatsnew/3.6.html#id8
+
+
+venv環境の作成
 ----------------
 
-pyvenv環境を作成します。
+venv環境を作成します。
 
-作成には ``pyvenv`` コマンドを使用します。引数には作成する環境の名前を指定します。
-
-.. code-block:: sh
-   :caption: pyvenv環境の作成(Linux・Mac)
-
-    $ pyvenv env
+作成には ``venv`` モジュールを使用します。引数には作成する環境の名前を指定します。
 
 .. code-block:: sh
-   :caption: pyvenv環境の作成(Windows)
+   :caption: venv環境の作成(Linux・Mac・Windows)
 
     $ python -m venv env
 
 カレントディレクトリに、envというディレクトリが作成されます。
 
-pyvenv環境の有効化
-------------------
+venv環境の有効化
+----------------
 
-作成した ``pyvenv`` 環境を有効化（activate）します。
+作成した ``venv`` 環境を有効化（activate）します。
 
-そのためにはbashスクリプトの ``env/bin/activate`` を ``source`` コマンドで実行します（:numref:`pyvenv-activate-linux-or-mac` :numref:`pyvenv-activate-windows` ）。
+そのためにはbashスクリプトの ``env/bin/activate`` を ``source`` コマンドで実行します（:numref:`venv-activate-linux-or-mac` :numref:`venv-activate-windows` ）。
 
-.. _pyvenv-activate-linux-or-mac:
+.. _venv-activate-linux-or-mac:
 
 .. code-block:: sh
-   :caption:  pyvenv環境の有効化(Linux・Mac)
+   :caption:  venv環境の有効化(Linux・Mac)
 
     $ source env/bin/activate
     (env)$
 
-.. _pyvenv-activate-windows:
+.. _venv-activate-windows:
 
 .. code-block:: sh
-   :caption:  pyvenv環境の有効化(Windows)
+   :caption:  venv環境の有効化(Windows)
 
     $ env\Scripts\activate.bat
     (env)$
 
-``pyvenv`` 環境を有効化すると、プロンプトの前に環境名（ここでは ``env`` ）が表示されます。そして、環境変数 ``PATH`` の先頭にenv/binが追加され、 ``pyvenv`` 環境のPythonが実行されるようになります。
+``venv`` 環境を有効化すると、プロンプトの前に環境名（ここでは ``env`` ）が表示されます。そして、環境変数 ``PATH`` の先頭にenv/binが追加され、 ``venv`` 環境のPythonが実行されるようになります。
 
-ここでは、 ``pip`` コマンドで ``requests`` （HTTPクライアントのパッケージ）をインストールします（:numref:`pyvenv-install-requests`）。
+ここでは、 ``pip`` コマンドで ``requests`` （HTTPクライアントのパッケージ）をインストールします（:numref:`venv-install-requests`）。
 
-.. _pyvenv-install-requests:
+.. _venv-install-requests:
 
 .. code-block:: sh
    :caption: パッケージのインストール
@@ -118,16 +124,16 @@ pyvenv環境の有効化
 
 またPythonパッケージの中にはコマンドとして実行可能なファイルが含まれている場合があります。それらのファイルは ``env/bin`` 配下にインストールされます。
 
-pyvenv環境の無効化
+venv環境の無効化
 ------------------
-``pyvenv`` 環境を無効化（deactivate）するには、 ``deactivate`` コマンドを実行します（:numref:`pyvenv-deactivate`）。
+``venv`` 環境を無効化（deactivate）するには、 ``deactivate`` コマンドを実行します（:numref:`venv-deactivate`）。
 
-無効化した後、元の環境で ``requests`` をインポートするとエラーとなり、 ``pyvenv`` 環境でのみ ``requests`` がインストールされていることがわかります。
+無効化した後、元の環境で ``requests`` をインポートするとエラーとなり、 ``venv`` 環境でのみ ``requests`` がインストールされていることがわかります。
 
-.. _pyvenv-deactivate:
+.. _venv-deactivate:
 
 .. code-block:: sh
-   :caption: pyvenv環境を無効化
+   :caption: venv環境を無効化
 
     (env)$ deactivate
     $
@@ -141,7 +147,7 @@ pyvenv環境の無効化
 
 conda の場合
 ============
-`Anaconda <https://www.continuum.io/downloads>`_ を使っている場合は **pip** 、 **pyvenv** の代わりに `Conda <http://conda.pydata.org/docs/>`_ というパッケージ管理ツールを使用します。
+`Anaconda <https://www.continuum.io/downloads>`_ を使っている場合は **pip** 、 **venv** の代わりに `Conda <http://conda.pydata.org/docs/>`_ というパッケージ管理ツールを使用します。
 
 condaではそれぞれ以下のコマンドで、サードパーティー製パッケージのインストール、環境の作成、有効化、無効化が行えます。
 
@@ -160,6 +166,6 @@ condaではそれぞれ以下のコマンドで、サードパーティー製パ
 
 - 便利なサードパーティ製パッケージのサイト **PyPI**
 - パッケージをインストールする **pipコマンド**
-- プロジェクトごとに隔離したPython環境を、 **pyvenvコマンド** を使って作成、有効化、無効化する方法
+- プロジェクトごとに隔離したPython環境を、 **venvモジュール** を使って作成、有効化、無効化する方法
 
-次節では、pyvenv環境にパッケージをインストールして、スクレイピングを行う方法を説明します。
+次節では、venv環境にパッケージをインストールして、スクレイピングを行う方法を説明します。

@@ -14,7 +14,7 @@ Pythonを使って実行することができますので、これを機に習�
 環境構築
 =====================
 
-前章の環境構築を参考にして、pyvenvを実行し、新しい環境を構築してください。
+前章の環境構築を参考にして、venvモジュールを利用して、新しい環境を構築してください。
 その後、pipコマンドを実行し、スクレイピングに使用する requests と beautifulsoup4 を利用可能な状態にしてください。
 
 .. code-block:: sh
@@ -22,7 +22,7 @@ Pythonを使って実行することができますので、これを機に習�
 
    $ mkdir scraping
    $ cd scraping
-   $ pyvenv env
+   $ python -m venv env
    $ source env/bin/activate
    (env) $ pip install requests
    (env) $ pip install beautifulsoup4
