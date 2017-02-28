@@ -4,8 +4,8 @@
 
 :節サブタイトル: 自動でデータを収集する方法
 
-そもそもスクレイピングとは
-==========================
+スクレイピングとは
+==================
 ウェブサイトから情報を抽出する、コンピュータソフトウェア技術のことをいいます。
 
 Pythonを使って実行することができますので、これを機に習得してみましょう。
@@ -27,16 +27,27 @@ Pythonを使って実行することができますので、これを機に習�
    (env) $ pip install requests
    (env) $ pip install beautifulsoup4
 
+reuqestsとbeautifulsoup4
+------------------------
+スクレイピングを行うために2つのサードパーティ製パッケージをインストールしています。
+
+`Requests <http://docs.python-requests.org/en/master/>`_ はウェブサイトにアクセスしてHTMLなどのデータを取得するためのライブラリです。
+Pythonの標準ライブラリ `urllib.request <https://docs.python.jp/3/library/urllib.request.html>`_ でも同様のことは行なえますが、より便利な requests をここでは使用しま。
+
+`Beautiful <https://www.crummy.com/software/BeautifulSoup/bs4/doc/>`_ はHTMLやXMLの中身を解析して、任意の情報を取得するためのライブラリです。
+Pythonの標準ライブラリ `html.parser <https://docs.python.jp/3/library/html.parser.html>`_ でも土曜のことは行なえますが、より便利なのでここでは使用します。
+なお、beautifulsoupとbeautifulsoup4が存在しますが、新しい **beautifulsoup4** を使うようにしてください。
+
 目的
 =====================
-#. スクレイピングでPythonに関する新着ニュース情報を取得してみよう
-#. 取得した情報をコンソールに出力してみよう
+* スクレイピングでPythonに関する新着ニュース情報を取得してみよう
+* 取得した情報をコンソールに出力してみよう
 
 
-実際のコード
-=====================
+シンプルなスクレイピングのコード
+================================
 
-下記コードをsimple.pyという名前で保存してみましょう
+下記コードをsimple.pyという名前で保存します。
 
 .. code-block:: python
    :caption: simple.py
@@ -53,6 +64,7 @@ Pythonを使って実行することができますので、これを機に習�
 
        for record in records:
            print(record.text)
+
 
    if __name__ == '__main__':
        main()
@@ -73,8 +85,7 @@ Pythonを使って実行することができますので、これを機に習�
 
 コードの説明
 ------------
-* 「BeautifulSoup」って何？
-    HTMLを解析するライブラリになります。
+TODO: コードの説明をもうちょい詳細に書く
 
 .. code-block:: python
    :caption: BeautifulSoup利用例
@@ -87,8 +98,9 @@ Pythonを使って実行することができますので、これを機に習�
 * ``if __name__ == '__main__':`` と書いた部分がコード実行時に呼び出されます。
 
 実行してみよう
-==============
-作成した環境にactivateした後、下記のコマンドを実行してみましょう
+--------------
+先程作成したvenv環境をactivateし、simple.pyを実行します。
+すると、Pythonに関する新着ニュースをウェブサイトから取得して表示します。
 
 .. code-block:: sh
    :caption: simple.py 実行例
@@ -102,29 +114,29 @@ Pythonを使って実行することができますので、これを機に習�
    Python 3.4.0 beta 2 has been released
    (以下省略)
 
-実行すると、Pythonに関する新着ニュースが表示されることが確認できます。
-
 .. admonition:: コラム: Shebang（シェバン）
 
-   頻繁に利用するプログラムであれば、実行を簡単にするShebang（シェバン）を使うと便利です。コードの先頭に ``#!/usr/bin/env python`` を入れて、 ``chmod +x simple.py`` でファイルに実行権限を与えておくと、以下のように ``simple.py`` の指定だけでプログラムを実行することができます。
+   頻繁に利用するプログラムであれば、実行を簡単にするShebang（シェバン）を使うと便利です。
 
-.. code-block:: sh
-   :caption: simple.py 実行例(Shebangを使った場合)
+   コードの先頭に ``#!/usr/bin/env python`` を入れて、 ``chmod +x simple.py`` でファイルに実行権限を与えておくと、以下のように ``simple.py`` の指定だけでプログラムを実行することができます。
 
-   (env) $ ./simple.py
-   (以下省略)
+   .. code-block:: sh
+      :caption: simple.py 実行例(Shebangを使った場合)
+
+      (env) $ ./simple.py
+      (以下省略)
 
 作り変えてみよう
 ================
 Reqeusts や BeautifulSoup の動作を変えて、さまざまなWebページからさまざまな要素を取得できます。
-以下に簡単なライブラリの使い方を載せます。それ以外にもいろいろな使用方法があるので、ドキュメントを参考にしていろいろ作り変えてみてください。
+以下にそれぞれのライブラリの簡単な使い方を載せます。それ以外にもいろいろな使用方法があるので、ドキュメントを参考にしていろいろ作り変えてみてください。
 
 Requests の主な使い方
 ---------------------
 ここでは Requests の主な使い方の例をいくつか載せます。
 詳細については以下の公式ドキュメントを参照してください。
 
-- 公式ドキュメント: `Requests: HTTP for Humans — Requests 2.10.0 documentation <http://docs.python-requests.org/en/master/>`_
+:公式ドキュメント: `Requests: HTTP for Humans <http://docs.python-requests.org/en/master/>`_
 
 以下は認証つきのURLにアクセスして、結果を取得する例です。
 
@@ -171,7 +183,7 @@ BeautifulSoup4 の主な使い方
 ここでは BeautifulSoup4 の主な使い方の例をいくつか載せます。
 詳細については以下の公式ドキュメントを参照してください。
 
-- 公式ドキュメント: `Beautiful Soup Documentation <https://www.crummy.com/software/BeautifulSoup/bs4/doc/>`_
+:公式ドキュメント: `Beautiful Soup Documentation <https://www.crummy.com/software/BeautifulSoup/bs4/doc/>`_
 
 .. code-block:: pycon
    :caption: BeautifulSoup4 の使用例
@@ -212,17 +224,17 @@ BeautifulSoup4 の主な使い方
 ==========
 本節では、Pythonでスクレイピングをする方法を解説しました。
 
-自動化することにより、作業を効率化することができます。
+requestsとbeautifulsoup4を使いこなすことにより、さまざまなウェブサイトから情報を取得できるようになります。
 
-目的に応じて処理を記述していきましょう。
+ただし、ウェブサイトにスクレイピングのために短時間に大量にアクセスをすると迷惑となるので、そういうことがないように注意してください。
 
-
-参考
+参考書籍
 ==========
-- wikipedia（スクレイピング） https://ja.wikipedia.org/wiki/ウェブスクレイピング
-- wikipedia（pip） https://ja.wikipedia.org/wiki/Pip
-- `Requests: HTTP for Humans — Requests 2.10.0 documentation <http://docs.python-requests.org/en/master/>`_
-- `Beautiful Soup Documentation <https://www.crummy.com/software/BeautifulSoup/bs4/doc/>`_
+Pythonでのスクレイピングについてもいくつか書籍が出てきます。
+
+- `PythonによるWebスクレイピング <https://www.oreilly.co.jp/books/9784873117614/>`_
+- `Pythonクローリング＆スクレイピング ―データ収集・解析のための実践開発ガイド <http://gihyo.jp/book/2017/978-4-7741-8367-1>`_
+- `Pythonによるスクレイピング＆機械学習 開発テクニックBeautifulSoup、scikit-learn、TensorFlowを使ってみよう <http://www.socym.co.jp/book/1079>`_
 
 次の一歩
 ============
