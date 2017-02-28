@@ -1,5 +1,5 @@
 ==================================
-Pythonのデータ型［コレクション編］
+Pythonのデータ型（コレクション編）
 ==================================
 
 :節サブタイトル: データ型をまとめるコレクションの紹介
@@ -32,17 +32,17 @@ Pythonのデータ型のうち、複数のデータ型をひとまとめにし�
 .. code-block:: python
     :caption: リストの基本的な使い方
 
-    >>> ['spam', 'ham'] + ['egg']
+    >>> ['spam', 'ham'] + ['egg']              # リストの結合
     ['spam', 'ham', 'egg']
-    >>> ['spam'] * 5
+    >>> ['spam'] * 5                           # リストの繰り返し
     ['spam', 'spam', 'spam', 'spam', 'spam']
-    >>> ['spam', 'ham', 'egg'][0]
+    >>> ['spam', 'ham', 'egg'][0]              # リストのスライス(0番目)
     'spam'
-    >>> ['spam', 'ham', 'egg'][1:]
+    >>> ['spam', 'ham', 'egg'][1:]             # リストのスライス(1番目以降)
     ['ham', 'egg']
-    >>> len(['spam', 'ham', 'egg'])
+    >>> len(['spam', 'ham', 'egg'])            # リストの長さ
     3
-    >>> 'ham' in ['spam', 'ham', 'egg']
+    >>> 'ham' in ['spam', 'ham', 'egg']        # リストに文字列が含まれるか
     True
 
 for文
@@ -61,6 +61,10 @@ for文
     cat
     dog
     snake
+
+.. hint::
+
+   `listのfor文での繰り返し動作を確認 <http://pythontutor.com/live.html#code=for%20animal%20in%20%5B'cat',%20'dog',%20'snake'%5D%3A%0A%20%20%20%20print%28animal%29&cumulative=false&curInstr=7&heapPrimitives=false&mode=display&origin=opt-live.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false>`_
 
 要素の追加
 -----------------
@@ -81,6 +85,10 @@ for文
 リストは変更可能なオブジェクトです。
 ``.append()`` メソッドによって、 ``animals`` というリストの内容が変更されます。
 
+.. hint::
+
+   `listへの要素の追加の動作を確認 <http://pythontutor.com/live.html#code=animals%20%3D%20%5B'cat',%20'dog',%20'snake'%5D%0Aanimals.append%28'elephant'%29%0Aprint%28animals%29&cumulative=false&curInstr=0&heapPrimitives=false&mode=display&origin=opt-live.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false>`_
+   
 リスト内包表記
 ----------------
 リスト内包表記はリストの定義方法の1つです。
@@ -120,12 +128,12 @@ for文
 
 リスト内包表記は、条件文や複数回のループ処理も記述できます。
 複雑にしすぎると、かえって可読性を落としますので、ほどほどに使用することをおすすめします。複雑になりすぎる場合はループ処理で書きましょう。
-リスト内包表記の仲間に、辞書(後述)を生成す辞書内法表記や、セット(後述)を生成するセット内包表記やジェネレータ式(本チュートリアルでは取り扱わない)などもあります。
+リスト内包表記の仲間に、辞書(後述)を生成する辞書内法表記や、セット(後述)を生成するセット内包表記やジェネレータ式(本チュートリアルでは取り扱わない)などもあります。
 内包表記はPythonの強力な機能の1つなのでぜひ覚えておくとよいでしょう。
 
 他にも役に立つ書き方があるので、Pythonのドキュメントを参考にしてください。
 
-* リストの内包表記 http://docs.python.jp/3.5/tutorial/datastructures.html#id6
+* リストの内包表記 http://docs.python.jp/3.5/tutorial/datastructures.html#list-comprehensions
 
 
 複数変数への代入
@@ -180,17 +188,17 @@ for文
 .. code-block:: python
     :caption: タプルの基本的な使い方
 
-    >>> ('spam', 'ham') + ('egg',)
+    >>> ('spam', 'ham') + ('egg',)             # タプルの結合
     ('spam', 'ham', 'egg')
-    >>> ('spam',) * 5
+    >>> ('spam',) * 5                          # タプルの繰り返し
     ('spam', 'spam', 'spam', 'spam', 'spam')
-    >>> ('spam', 'ham', 'egg')[0]
+    >>> ('spam', 'ham', 'egg')[0]              # タプルのスライス(0番目)
     'spam'
-    >>> ('spam', 'ham', 'egg')[1:]
+    >>> ('spam', 'ham', 'egg')[1:]             # タプルのスライス(1番目以降)
     ('ham', 'egg')
-    >>> len(('spam', 'ham', 'egg'))
+    >>> len(('spam', 'ham', 'egg'))            # タプルの長さ
     3
-    >>> 'ham' in ('spam', 'ham', 'egg')
+    >>> 'ham' in ('spam', 'ham', 'egg')        # タプルに文字列が含まれるか
     True
 
 要素が1つのタプルを定義する際にもカンマが必要な点に注意してください。
@@ -316,7 +324,7 @@ in
 .get()メソッド
 --------------
 
-　辞書から値を取得するときに、キーが存在しない場合はエラーになります（:numref:`dict-keyerror`）。
+辞書から値を取得するときに、キーが存在しない場合はエラー(KeyError)になります（:numref:`dict-keyerror`）。
 
 .. _dict-keyerror:
 
@@ -355,15 +363,37 @@ in
 
     >>> user_info.get('bio', '')
     ''
+for文
+-----
+辞書を ``for`` 文の繰り返し用変数として使用すると、変数にはキーが入ります(:numref:`dict-for`)。
+
+.. _dict-for:
+
+.. code-block:: python
+   :caption: 辞書を使用したfor文
+
+   >>> user_info = {'user_name': 'taro', 'last_name': 'Yamada'}
+   >>> for key in user_info:
+   ...     print(key)
+   ...     print(user_info[key])
+   ... 
+   user_name
+   taro
+   last_name
+   Yamada
+
+.. hint::
+
+   `辞書のfor文の動作を確認 <http://pythontutor.com/live.html#code=user_info%20%3D%20%7B'user_name'%3A%20'taro',%20'last_name'%3A%20'Yamada'%7D%0Afor%20key%20in%20user_info%3A%0A%20%20%20%20print%28key%29%0A%20%20%20%20print%28user_info%5Bkey%5D%29%0A&cumulative=false&curInstr=0&heapPrimitives=false&mode=display&origin=opt-live.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false>`_
 
 .keys()メソッド、.values()メソッド、.items()メソッド
 ----------------------------------------------------
 
 すべてのキー、値の要素をリストで取得するには、 ``.keys()`` 、 ``.values()`` 、 ``.items()`` メソッドを使います。
 
-* ``.keys()`` ：すべてのキーを取得
-* ``.values()`` ：すべての値を取得
-* ``.items()`` ：すべてのキーと値を、要素が2つのタプルで取得
+* ``.keys()``: すべてのキーを取得
+* ``.values()``: すべての値を取得
+* ``.items()``: すべてのキーと値を、要素が2つのタプルで取得
 
 たとえば、辞書内のすべてのキーと値を取得するには、 :numref:`get-all-items` のようにします。
 
