@@ -39,13 +39,42 @@ Pythonのインストール
 
 ここではPythonのインストール方法を説明します。
 
-Linux、OS X、Windows の3 つの環境でのインストール手順を説明します。
+Linux、macOS、Windows の3 つの環境でのインストール手順を説明します。
+
+macOSの場合
+-------------------------------------
+macOSでPythonを利用する場合は、Pythonの公式サイトで配布されているビルド済みのパッケージをインストールします。
+
+「 `Python Releases for Mac OS X <https://www.python.org/downloads/mac-osx/>`_ 」をブラウザで開きます。
+「 `Mac OS X 64-bit/32-bit installer <https://www.python.org/ftp/python/3.5.3/python-3.5.3-macosx10.6.pkg>`_ 」をダウンロードして実行し、Pythonをインストールします。
+
+詳しくはPythonの公式ドキュメントの「 `MacintoshでPythonを使う <http://docs.python.jp/3.5/using/mac.html>`_ 」を参考にしてください。
+
+Windowsの場合
+-------------------------------------
+
+WindowsでPythonを利用する場合は、Pythonの公式サイトで配布されているWindowsインストーラを利用します。
+
+「 `Python Releases for Windows <https://www.python.org/downloads/windows/>`_ 」をブラウザで開きます。
+OSによって以下のいずれかのインストーラーをダウンロードし、ウィザードに従ってインストールします。
+
+- 64ビット版: `Windows x86 executable installer <https://www.python.org/ftp/python/3.5.3/python-3.5.3.exe>`_
+- 32ビット版: `Windows x86-64 executable installer <https://www.python.org/ftp/python/3.5.3/python-3.5.3-amd64.exe>`_
+
+この時、「Add Python 3.5 to PATH」にチェックを入れておきましょう。自動的に必要な環境変数が設定されます（:numref:`windows-install`）。
+
+.. _windows-install:
+
+.. figure:: images/pythonforwindows1.png
+   :width: 400
+
+   Python for Windowsのインストール画面
 
 Linux （Ubuntu Server） での場合
 -------------------------------------
 
 本書では、動作環境 `Ubuntu Server 16.04 <https://wiki.ubuntu.com/XenialXerus/ReleaseNotes>`_ 、
-Pythonは3系の最新版3.5.2を想定しています。
+Pythonは3.5系の最新版3.5.3を想定しています。
 
 
 ソースビルドでのインストール
@@ -129,35 +158,6 @@ Pythonのソースコードをビルドし、インストールします（:numr
         :caption: prefixオプション付きconfigure
 
         LDFLAGS="-L/usr/lib/x86_64-linux-gnu" ./configure --prefix=/opt/python3.5.2 --with-ensurepip
-
-OS Xでの場合
--------------------------------------
-OS XでPythonを利用する場合は、Pythonの公式サイトで配布されているビルド済みのパッケージをインストールします。
-
-次のページで「Latest Python 3 Release - Python 3.5.2」をクリックすると詳細画面に移動します。64 ビット版（Mac OS X 64-bit/32-bit installer）または32 ビット版（Mac OS X 32-bit i386/PPC installer）をダウンロードしてインストールします。
-
-- `Python Releases for Mac OS X <https://www.python.org/downloads/mac-osx/>`_ 
-
-詳しくはPythonの公式ドキュメントの「 `MacintoshでPythonを使う <http://docs.python.jp/3.5/using/mac.html>`_ 」を参考にしてください。
-
-Windowsでの場合
--------------------------------------
-
-WindowsでPythonを利用する場合は、Pythonの公式サイトで配布されているWindowsインストーラを利用します。
-
-次のページで「Latest Python 3 Release - Python 3.5.2」をクリックすると詳細画面に移動します。64ビット版（Windows x86-64 Installer）または32 ビット版（Windows x86 Installer）をダウンロードし、ウィザードに従ってインストールします（:numref:`windows-install`）。
-
-この時、「Add Python 3.5 to PATH」にチェックを入れておきましょう。自動的に必要な環境変数が設定されます。
-
-- `Python Releases for Windows <https://www.python.org/downloads/windows/>`_
-
-.. _windows-install:
-
-.. figure:: images/pythonforwindows1.png
-   :width: 400
-
-   Python for Windowsのインストール画面
-
 
 まとめ
 =============
