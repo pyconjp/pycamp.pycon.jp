@@ -19,7 +19,7 @@ Pythonを楽しもう
 Pythonのインストールはできましたか？
 
 ここではPythonの基本の基本を紹介します。
-Pythonインタープリターに入力し結果を確認したり、Pythonファイル(.py)ファイルを作り実行しながら、Pythonにふれあいましょう。
+Pythonインタープリターに入力し結果を確認したり、Pythonファイル(.pyファイル)を作り実行しながら、Pythonにふれあいましょう。
 
 ここでは、「FizzBuzz」という簡単なプログラム（詳細は後述）を実装できることを目的にします。
 
@@ -31,21 +31,22 @@ Pythonインタープリタ
 
 さっそくPythonで遊んでみましょう。
 
-シェルまたはコマンドプロンプトで ``python`` と入力し、Pythonインタープリタを対話モードで起動しましょう（:numref:`python-interpreter`）。
+シェルまたはコマンドプロンプトで ``python`` (macOSの場合はpython3.5)と入力し、Pythonインタープリタを対話モードで起動しましょう（:numref:`python-interpreter`）。
 
 .. _python-interpreter:
 
 .. code-block:: bash
     :caption: Pythonインタープリタの起動
 
-    C:\Users\user>python
-    Python 3.5.1 (v3.5.1:37a07cee5969, Dec  6 2015, 01:54:25) [MSC v.1900 64 bit (AMD64)] on win32
+    $ python3.5
+    Python 3.5.3 (v3.5.3:1880cb95a742, Jan 16 2017, 08:49:46) 
+    [GCC 4.2.1 (Apple Inc. build 5666) (dot 3)] on darwin
     Type "help", "copyright", "credits" or "license" for more information.
-    >>>
+    >>> 
 
 初めにPythonインタープリタの情報と、大なり記号3つ（``>>>``）が表示されます。
 
-これがPythonのプロンプトです。終了するにはCtrl-Dを入力します（WindowsではCtrl-Z+Enter）。
+この(``>>>``)がPythonのプロンプトです。終了するにはCtrl-Dを入力します（WindowsではCtrl-Z+Enter）。
 
 Pythonを電卓にする
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -76,9 +77,9 @@ Pythonを電卓にする
 
 次に等号（``=``）を使って値を代入しています。
 
-``width`` 、 ``height`` という変数を作成し、2つを掛け合わせています。
+``width`` (幅)、 ``height`` (高さ)という変数を作成し、2つを掛け合わせて面積を求めています。
 
-``変数を作成`` とは、データにラベルを付けておき、後で使用できるようにすることです。
+**変数を作成** とは、データ(ここでは60など)にラベル(ここではwidthなど)を付けて、後で使用できるようにすることです。
 
 文字列
 ---------------
@@ -216,9 +217,9 @@ FizzBuzzとは、複数の人が集まって行うゲームです。
 
     1, 2, Fizz, 4, Buzz, Fizz, 7, 8, Fizz, Buzz, 11, Fizz, 13, 14, FizzBuzz
 
-1から100までのFizzBuzzを表示する処理を作りましょう。
+1から100までのFizzBuzzを表示するPythonプログラムを作りましょう。
 
-FizzBuzzは簡単な問題ですが、実装する言語の制御文を使いこなす必要があり、言語入門の第一歩としてちょうどよい題材です
+FizzBuzzは簡単な問題ですが、実装する言語の制御文(繰り返し、条件分岐)を使いこなす必要があり、言語入門の第一歩としてちょうどよい題材です
 
 .. FizzBuzz Question/Test について書くかどうか http://blog.codinghorror.com/why-cant-programmers-program/_
 
@@ -227,7 +228,7 @@ Pythonファイル
 
 Pythonファイルを作成しFizzBuzzを実装していきましょう。
 
-今まではPythonインタープリタ上で直接処理を実行していましたが、少し長い処理を書くには不便です。
+今まではPythonインタープリタの対話モード上でPythonのコードを直接実行していましたが、少し長い処理を書くには不便です。
 
 Python インタープリタの対話モードを終了し（【Ctrl】＋【D】を押下し）、fizzbuzz.py というファイルを作成します。
 
@@ -262,10 +263,21 @@ Python ファイルを作成して実行する場合は、 ``print`` 関数が�
     $ python fizzbuzz.py
     4
 
+ファイルが存在するフォルダと、ターミナル/コマンドプロンプトの現在位置があっているか注意してください。
+fizzbuzz.pyが見つからない場合は場合は、以下のようなエラーメッセージ(No such file ore directory)が表示されます。
+
+.. _exec-fizzbuzz:
+
+.. code-block:: bash
+    :caption: fizzbuzz.pyの実行
+
+    $ python fizzbuzz.py
+    can't open file 'fizzbuzz.py': [Errno 2] No such file or directory
+
 for文
 ----------------
 
-「1から100までのFizzBuzzを表示する」ために ``fizzbuzz()`` 関数に1から100まで順に値を与えます。
+「1から100までのFizzBuzzを表示する」ために ``fizzbuzz()`` 関数に1から100までの数値を順に与えます。
 
 ``for`` 文を使って繰り返し処理を実装しましょう（:numref:`for`）。
 
@@ -304,6 +316,10 @@ range(1, 101)のように記述すると、1から100までの数字を順番に
 
 現時点の ``fizzbuzz()`` 関数は与えられた引数をそのまま返す実装なので、これで問題ありません。
 
+.. hint::
+
+   `for文の動作を確認(Python Tutor) <http://pythontutor.com/live.html#code=def%20fizzbuzz%28num%29%3A%0A%20%20%20%20return%20num%0A%0Afor%20num%20in%20range%281,%20101%29%3A%0A%20%20%20%20print%28fizzbuzz%28num%29%29%0A&cumulative=false&curInstr=502&heapPrimitives=false&mode=display&origin=opt-live.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false>`_
+   
 for文は次のように書きます。
 
 .. code-block:: none
@@ -372,6 +388,10 @@ Pythonで条件による処理の分岐を扱うにはif文を使います。
 
 引数を文字列に変換して返します。
 
+.. hint::
+
+   `if文の動作を確認(Python Tutor) <http://pythontutor.com/live.html#code=def%20fizzbuzz%28num%29%3A%0A%20%20%20%20if%20num%20%25%203%20%3D%3D%200%20and%20num%20%25%205%20%3D%3D%200%3A%0A%20%20%20%20%20%20%20%20return%20'FizzBuzz'%0A%20%20%20%20elif%20num%20%25%203%20%3D%3D%200%3A%0A%20%20%20%20%20%20%20%20return%20'Fizz'%0A%20%20%20%20elif%20num%20%25%205%20%3D%3D%200%3A%0A%20%20%20%20%20%20%20%20return%20'Buzz'%0A%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20return%20str%28num%29%0A%0Afor%20num%20in%20range%281,%20101%29%3A%0A%20%20%20%20print%28fizzbuzz%28num%29%29%0A&cumulative=false&curInstr=763&heapPrimitives=false&mode=display&origin=opt-live.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false>`_
+
 FizzBuzz処理の実装の完了
 ------------------------
 
@@ -415,11 +435,6 @@ Webや書籍の情報
 
 Web
 ------
-
-Python 2.7
-
-- Python 2.7 チュートリアル http://docs.python.jp/2/tutorial/
-- Python HOWTO http://docs.python.jp/2/howto/
 
 Python 3.5
 
