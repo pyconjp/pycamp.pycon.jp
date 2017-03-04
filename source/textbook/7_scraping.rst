@@ -32,10 +32,10 @@ reuqestsとbeautifulsoup4
 スクレイピングを行うために2つのサードパーティ製パッケージをインストールしています。
 
 `Requests <http://docs.python-requests.org/en/master/>`_ はウェブサイトにアクセスしてHTMLなどのデータを取得するためのライブラリです。
-Pythonの標準ライブラリ `urllib.request <https://docs.python.jp/3/library/urllib.request.html>`_ でも同様のことは行なえますが、より便利な requests をここでは使用します。
+Pythonの標準ライブラリ `urllib.request <https://docs.python.jp/3/library/urllib.request.html>`_ でも同様のことは行なえますが、より便利な Requests をここでは使用します。
 
 `Beautiful Soup <https://www.crummy.com/software/BeautifulSoup/bs4/doc/>`_ はHTMLやXMLの中身を解析して、任意の情報を取得するためのライブラリです。
-Pythonの標準ライブラリ `html.parser <https://docs.python.jp/3/library/html.parser.html>`_ でも同様のことは行なえますが、より便利なのでここでは使用します。
+Pythonの標準ライブラリ `html.parser <https://docs.python.jp/3/library/html.parser.html>`_ でも同様のことは行なえますが、より便利な Beautiful Soup をここでは使用します。
 なお、beautifulsoupとbeautifulsoup4が存在しますが、新しい **beautifulsoup4** を使うようにしてください。
 
 目的

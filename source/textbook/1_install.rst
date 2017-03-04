@@ -80,7 +80,7 @@ Pythonは3.5系の最新版3.5.3を想定しています。
 ソースビルドでのインストール
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Ubuntu 16.04にソースコードからPython 3.5.2をインストールします（:numref:`package-install`）。
+Ubuntu 16.04にソースコードからPython 3.5.3をインストールします（:numref:`package-install`）。
 
 まずパッケージ全体をアップグレードし、Pythonによる開発で必要になるパッケージをインストールします。
 
@@ -111,16 +111,16 @@ Pythonのソースコードをビルドし、インストールします（:numr
 .. _python-build:
 
 .. code-block:: bash
-    :caption: Python 3.5.2のソースからのインストール
+    :caption: Python 3.5.3のソースからのインストール
 
-    $ wget https://www.python.org/ftp/python/3.5.2/Python-3.5.2.tgz
-    $ tar axvf ./Python-3.5.2.tgz
-    $ cd ./Python-3.5.2/
+    $ wget https://www.python.org/ftp/python/3.5.3/Python-3.5.3.tgz
+    $ tar axvf ./Python-3.5.3.tgz
+    $ cd ./Python-3.5.3/
     $ LDFLAGS="-L/usr/lib/x86_64-linux-gnu" ./configure --with-ensurepip --with-zlib
     $ make
     $ sudo make install
 
-インストールが完了したらPythonのバージョンが3.5.2になっていることを確認します。
+インストールが完了したらPythonのバージョンが3.5.3になっていることを確認します。
 
 インストール直後は、 ``hash -r`` を実行してコマンドのパスを再読み込みします（:numref:`check-version`）。
 
@@ -131,7 +131,7 @@ Pythonのソースコードをビルドし、インストールします（:numr
 
     $ hash -r
     $ python3 -V
-    Python 3.5.2
+    Python 3.5.3
     
 最後に、以下のコマンドでpipをインストールします。（ :numref:`install-pip`）
 
@@ -152,12 +152,12 @@ Pythonのソースコードをビルドし、インストールします（:numr
 
    ソースコードのビルドで ``configure`` を実行する際に、 ``--prefix`` オプションを付けるとインストール先のディレクトリを指定できます。
 
-   /opt/python3.5.2 ディレクトリ以下にインストールするには、次のように指定します
+   /opt/python3.5.3 ディレクトリ以下にインストールするには、次のように指定します
 
     .. code-block:: python
         :caption: prefixオプション付きconfigure
 
-        LDFLAGS="-L/usr/lib/x86_64-linux-gnu" ./configure --prefix=/opt/python3.5.2 --with-ensurepip
+        LDFLAGS="-L/usr/lib/x86_64-linux-gnu" ./configure --prefix=/opt/python3.5.3 --with-ensurepip
 
 まとめ
 =============
