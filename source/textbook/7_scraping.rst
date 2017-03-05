@@ -93,7 +93,7 @@ TODO: コードの説明をもうちょい詳細に書く
    >>> from bs4 import BeautifulSoup
    >>> soup = BeautifulSoup('<div><h1 id="test">TEST</h1></div>', 'html.parser')
    >>> soup.select('div h1#test')[0].text
-   >>>'TEST'
+   'TEST'
 
 * ``if __name__ == '__main__':`` と書いた部分がコード実行時に呼び出されます。
 
@@ -171,7 +171,7 @@ GET に `?key1=value1&key2=value2` のようなパラメーター付きでアク
 
    >>> payload = {'key1': 'value1', 'key2': 'value2'}
    >>> r = requests.get('http://httpbin.org/get', params=payload)
-   print(r.url)
+   >>> print(r.url)
    http://httpbin.org/get?key2=value2&key1=value1
    >>> payload = {'key1': 'value1', 'key2': ['value2', 'value3']}
    >>> r = requests.get('http://httpbin.org/get', params=payload)
