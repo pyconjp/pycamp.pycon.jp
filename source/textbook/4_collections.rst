@@ -264,7 +264,7 @@ for文
     >>> username, user_password, user_id, user_permission1, user_permission2 = bad_implementation()
 
 :ref:`many-return-value` のような場合、辞書（後述）、専用のクラスのインスタンス、名前付きタプルなどで返しましょう
-（クラスの定義方法、名前付きタプルについては、この本では説明しません）。
+（クラスの定義方法、名前付きタプルについては、本チュートリアルでは説明しません）。
 
 辞書（dict）
 ==============
