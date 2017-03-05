@@ -266,9 +266,9 @@ Python ファイルを作成して実行する場合は、 ``print`` 関数が�
 ファイルが存在するフォルダと、ターミナル/コマンドプロンプトの現在位置があっているか注意してください。
 fizzbuzz.pyが見つからない場合は場合は、以下のようなエラーメッセージ(No such file ore directory)が表示されます。
 
-.. _exec-fizzbuzz:
+.. _exec-fizzbuzz-error:
 
-.. code-block:: bash
+.. code-block:: guess
     :caption: fizzbuzz.pyの実行
 
     $ python fizzbuzz.py
