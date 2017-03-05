@@ -190,14 +190,14 @@ BeautifulSoup4 の主な使い方
 
    >>> import requests
    >>> from bs4 import BeautifulSoup
-   >>> r = requests.get('https://www.python.org/news/')
+   >>> r = requests.get('https://www.python.org/blogs/')
    >>> soup = BeautifulSoup(r.content, 'html.parser') # 取得したHTMLを解析
    >>> soup.title # titleタグの情報を取得
-   <title>Python News | Python.org</title>
+   <title>Our Blogs | Python.org</title>
    >>> soup.title.name
    'title'
    >>> soup.title.string # titleタグの文字列を取得
-   'Python News | Python.org'
+   'Our Blogs | Python.org'
    >>> soup.a
    <a href="#content" title="Skip to content">Skip to content</a>
    >>> len(soup.find_all('a')) # 全ての a タグを取得しt len() で件数を取得
