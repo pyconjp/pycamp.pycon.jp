@@ -8,17 +8,17 @@
 ==================
 ウェブサイトから情報を抽出する、コンピュータソフトウェア技術のことをいいます。
 
-Pythonを使って実行することができますので、これを機に習得してみましょう。
+ここではPythonを使った実用的なプログラムの例として、スクレイピングを行います。
 
 
 環境構築
 =====================
 
-前章の環境構築を参考にして、venvモジュールを利用して、新しい環境を構築してください。
-その後、pipコマンドを実行し、スクレイピングに使用する requests と beautifulsoup4 を利用可能な状態にしてください。
+前章の「 :ref:`about-venv` 」を参考に、venvモジュールを利用して、スクレイピング用のvenv環境を構築します。
+venv環境をactivateコマンドで有効にし、スクレイピングに使用する requests と beautifulsoup4 をpipコマンドでインストールします。
 
 .. code-block:: sh
-   :caption: スクレイピング用の環境を構築
+   :caption: スクレイピング用のvenv環境を構築
 
    $ mkdir scraping
    $ cd scraping
@@ -27,27 +27,34 @@ Pythonを使って実行することができますので、これを機に習�
    (env) $ pip install requests
    (env) $ pip install beautifulsoup4
 
-reuqestsとbeautifulsoup4
-------------------------
-スクレイピングを行うために2つのサードパーティ製パッケージをインストールしています。
+Reuqests
+--------
+:URL: http://docs.python-requests.org/en/master/
 
-`Requests <http://docs.python-requests.org/en/master/>`_ はウェブサイトにアクセスしてHTMLなどのデータを取得するためのライブラリです。
+Requests について簡単に紹介します。
+Reqeusts はウェブサイトにアクセスしてHTMLなどのデータを取得するためのライブラリです。
 Pythonの標準ライブラリ `urllib.request <https://docs.python.jp/3/library/urllib.request.html>`_ でも同様のことは行なえますが、より便利な Requests をここでは使用します。
 
-`Beautiful Soup <https://www.crummy.com/software/BeautifulSoup/bs4/doc/>`_ はHTMLやXMLの中身を解析して、任意の情報を取得するためのライブラリです。
+Beautiful Soup
+--------------
+:URL: https://www.crummy.com/software/BeautifulSoup/bs4/doc/
+
+Beautiful Soup はHTMLやXMLの中身を解析して、任意の情報を取得するためのライブラリです。
 Pythonの標準ライブラリ `html.parser <https://docs.python.jp/3/library/html.parser.html>`_ でも同様のことは行なえますが、より便利な Beautiful Soup をここでは使用します。
 なお、beautifulsoupとbeautifulsoup4が存在しますが、新しい **beautifulsoup4** を使うようにしてください。
 
-目的
-=====================
-* スクレイピングでPythonに関する新着ニュース情報を取得してみよう
-* 取得した情報をコンソールに出力してみよう
-
-
 シンプルなスクレイピングのコード
 ================================
+スクレイピングの例として、PyCon JP 2016のスポンサー一覧のページ(https://pycon.jp/2016/ja/sponsors/)からスポンサー名とURLの情報を抜き出します。
 
-下記コードをsimple.pyという名前で保存します。
+.. figure:: images/sponsor-list.png
+   :width: 30%
+
+   スポンサー一覧ページ
+
+下記コードをsimple.pyという名前で保存します(:numref:`simple-py`)。
+
+.. _simple-py:
 
 .. code-block:: python
    :caption: simple.py
@@ -57,74 +64,166 @@ Pythonの標準ライブラリ `html.parser <https://docs.python.jp/3/library/ht
 
 
    def main():
-       url = 'https://www.python.org/blogs/'
+       url = 'https://pycon.jp/2016/ja/sponsors/'
        res = requests.get(url)
-       soup = BeautifulSoup(res.content, 'html.parser')
-       records = soup.select('.event-title')
-
-       for record in records:
-           print(record.text)
+       content = res.content
+       soup = BeautifulSoup(content, 'html.parser')
+       sponsors = soup.find_all('div', class_='sponsor-content')
+       for sponsor in sponsors:
+           url = sponsor.h3.a['href']
+           name = sponsor.h4.text
+           print(name, url)
 
 
    if __name__ == '__main__':
        main()
 
 
+このコードを実行すると、以下のようにスポンサー名とURLの一覧が取得できます(:numref:`exec-simple-py`)。
+
+.. _exec-simple-py:
+
+.. code-block:: bash
+   :caption: スクレイピングを実行
+
+   (env) $ python simple.py
+   株式会社フンザ http://hunza.jp/
+   MonotaRO https://www.monotaro.com/
+   Gandi.net https://www.gandi.net/
+   株式会社JX通信社 http://jxpress.net/
+   Port https://www.theport.jp/
+   株式会社HDE https://www.hde.co.jp/
+   :
+
+   
 .. admonition:: コラム: Pythonのコーディング規約「pep8」
 
     Pythonには `pep8（ペップエイト） <https://www.python.org/dev/peps/pep-0008/>`_ というコーディング規約があります。
+    チームで開発をする際、人によってプログラムコードの書き方がバラバラだと読みにくいコードになってしまいます。
+    そのため、pep8のルールに従う習慣を身につけておくとよいでしょう。
 
-    複数の人で開発する際、人によって書き方がバラバラだと非常に読みにくいコードになってしまうので、pep8のルールに従う習慣を身につけておくとよいでしょう。
+    コードがpep8のルールに従っているかは、 `pycodestyle <http://pep8.readthedocs.io/en/latest/index.html#>`_ というツールで検証できます(以前はツールの名前もpep8でした)。
 
-    自分のコードがpep8のルールに従っているかは、 `pycodestyle <http://pep8.readthedocs.io/en/latest/index.html#>`_ というツールを使って検証できます。
-
-    pycodestyleは ``pip install pycodestyle`` でインストールできます。
-
-    上記の例 ``simple.py`` を検証するなら、 ``pycodestyle --first simple.py`` を実行します。
+    pycodestyleは ``pip install pycodestyle`` でインストールして使用します。
+    ``simple.py`` を検証するには、 ``pycodestyle simple.py`` を実行します。
 
 
-コードの説明
+コードの解説
 ------------
-TODO: コードの説明をもうちょい詳細に書く
+上記のコードがどういった内容なのかを解説します。
+
+* 以下のコードはrequestsとbeautifulsoup4をimportして利用できるようにしています。
 
 .. code-block:: python
-   :caption: BeautifulSoup利用例
+   :caption: モジュールのimport
 
-   >>> from bs4 import BeautifulSoup
-   >>> soup = BeautifulSoup('<div><h1 id="test">TEST</h1></div>', 'html.parser')
-   >>> soup.select('div h1#test')[0].text
-   'TEST'
+   import requests
+   from bs4 import BeautifulSoup
 
-* ``if __name__ == '__main__':`` と書いた部分がコード実行時に呼び出されます。
+* メインとなる処理を ``main`` 関数として定義しています。
+  なお、関数の名前に特に決まりはなく、必ずしも ``main`` である必要はありません。
 
-実行してみよう
---------------
-先程作成したvenv環境をactivateし、simple.pyを実行します。
-すると、Pythonに関する新着ニュースをウェブサイトから取得して表示します。
+.. code-block:: python
+   :caption: main()関数の定義
 
-.. code-block:: sh
-   :caption: simple.py 実行例
+   def main():
 
-   (env) $ python simple.py
-   The first release candidate for Python 3.4
-   Python 3.3.4 released
-   EuroPython Call for Proposals
-   Python 3.3.4 release candidate has been released
-   Python 3.4.0 beta 3 has been released
-   Python 3.4.0 beta 2 has been released
-   (以下省略)
+* Requestsを使用して、Webページの内容(HTML)を取得します。res.contentにHTMLの中身が文字列データとして入っています。
+ 
+.. code-block:: python
+   :caption: ページの内容を取得
 
-.. admonition:: コラム: Shebang（シェバン）
+       url = 'https://pycon.jp/2016/ja/sponsors/'
+       res = requests.get(url)
+       content = res.content
 
-   頻繁に利用するプログラムであれば、実行を簡単にするShebang（シェバン）を使うと便利です。
+* 次にHTMLをBeautiful Soupに渡して解析します。HTMLの解析についてはもう少し詳しく説明します。
+       
+.. code-block:: python
+   :caption: WebページをBeautiful Soupで解析
 
-   コードの先頭に ``#!/usr/bin/env python`` を入れて、 ``chmod +x simple.py`` でファイルに実行権限を与えておくと、以下のように ``simple.py`` の指定だけでプログラムを実行することができます。
+       soup = BeautifulSoup(content, 'html.parser')
+       sponsors = soup.find_all('div', class_='sponsor-content')
+       for sponsor in sponsors:
+           url = sponsor.h3.a['href']
+           name = sponsor.h4.text
+           print(name, url)
 
-   .. code-block:: sh
-      :caption: simple.py 実行例(Shebangを使った場合)
 
-      (env) $ ./simple.py
-      (以下省略)
+* 最後に、このスクリプトが実行された時に、main()関数を実行するように指定します。
+       
+.. code-block:: python
+   :caption: main()関数を実行
+
+   if __name__ == '__main__':
+       main()
+
+HTMLの解析の解説
+----------------
+Beautiful SoupでHTMLを解析して、値が取り出せましたが、どのように指定しているのでしょうか?
+スポンサー一覧のHTMLを見てみると、以下のような形式になっています。(:numref:`sponsor-list-html`)
+
+.. _sponsor-list-html:
+
+.. code-block:: html
+   :caption: スポンサー一覧のHTML
+
+   <div class="span12">
+     <h2>Diamond</h2>
+     <div class="row">
+       <div class="span4">
+         <div class="sponsor" id="sponsor-10">
+           <div class="sponsor-content">
+             <h3>
+               <a href="http://hunza.jp/">
+                 <img src="/2016/site_media/media/sponsor_files/Hunza_logo.png.150x80_q85.png" alt="株式会社フンザ" />
+               </a>
+             </h3>
+             <h4>株式会社フンザ</h4>
+             <p><a href="http://hunza.jp/">http://hunza.jp/</a></p>
+             <p><p>フンザは「世の中の文化となるウェブサービスを創る」をビジョンに、国内No.1のC2Cチケット売買サイト「チケットキャンプ」を開発/運営しています。</p></p>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+   <div class="span12">
+     <h2>Platinum</h2>
+       <div class="row">
+         <div class="span4">
+           <div class="sponsor" id="sponsor-4">
+             <div class="sponsor-content">
+               <h3>
+                 <a href="https://www.monotaro.com/">
+                   <img src="/2016/site_media/media/sponsor_files/logo-PyCon.png.150x80_q85.jpg" alt="MonotaRO" />
+                 </a>
+               </h3>
+               <h4>MonotaRO</h4>
+               <p><a href="https://www.monotaro.com/">https://www.monotaro.com/</a></p>
+               <p><p>「ITで、間接資材調達を変革する」<br />モノタロウは、働く現場で必要となる様々な間接資材(最終製品となる原材料を除く全ての資材)約900万点をインターネットで販売しています。<br />様々な現場のニーズにお応えすべく、自社開発の高度な検索システムと精緻なデータベースマーケティングが実現する「お客様ごとの最適化したレコメンドサービス」で、従来の非効率的な間接資材調達を変革し、社会に新しい価値を提供しています。</p></p>
+   (以下続く)
+
+このHTMLを見ると、スポンサーの名前とURLは以下のようにして取得できそうです。
+
+* 一つのスポンサーの情報は ``<div class="sponsor-content">`` の中に入っている
+* スポンサーのURLは ``<h3>`` タグの中の ``<a>`` タグの ``href`` アトリビュートに入っている
+* スポンサー名は ``<h4>`` タグで囲まれた中に入っている
+
+HTMLの構造がわかったところで、もう一度HTMLを解析しているコードを見てみます。
+
+.. code-block:: python
+   :caption: WebページをBeautiful Soupで解析
+
+       soup = BeautifulSoup(content, 'html.parser')
+       sponsors = soup.find_all('div', class_='sponsor-content')
+       for sponsor in sponsors:
+           url = sponsor.h3.a['href']
+           name = sponsor.h4.text
+           print(name, url)
+
+まず、 ``soup.find_all()`` メソッドで、全スポンサーの情報が含まれている div 要素を取得しています。
+次に、各スポンサー情報(sponsor変数に入っている)から値を取り出しています。
+最初にURLを取得して、次にスポンサー名を取得しています。
 
 作り変えてみよう
 ================
