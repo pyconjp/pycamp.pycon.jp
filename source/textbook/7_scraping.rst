@@ -217,8 +217,8 @@ BeautifulSoup4 の主な使い方
    3
    >>> len(soup.find_all(['h1', 'h2', 'h3'])) # 複数のタグのいずれかにマッチ
    24
-   >>> len(soup.find_all('div', {'class': 'pubdate'})) # <div class="pubdate"> にマッチ
-   21
+   >>> len(soup.find_all('h3', {'class': 'event-title'})) # <h3 class="event-title"> にマッチ
+   5
 
 まとめ
 ==========
