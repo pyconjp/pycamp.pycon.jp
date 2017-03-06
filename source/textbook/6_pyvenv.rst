@@ -26,7 +26,7 @@ pipコマンド
 -----------
 サードパーティ製パッケージをインストールするには、 **pipコマンド** を使用します。
 
-Python 3.5.1では ``ensurepip`` という仕組みによって、Pythonのインストール時にpipコマンドがインストールされます。
+Python 3.5.3では ``ensurepip`` という仕組みによって、Pythonのインストール時にpipコマンドがインストールされます。
 
 pipもpipコマンドでアップグレードを行えます。まずは、現在イントールされているpipコマンドを最新にアップグレードしましょう。
 アップグレードは、次のコマンドを実行します。
@@ -34,7 +34,7 @@ pipもpipコマンドでアップグレードを行えます。まずは、現�
 .. code-block:: sh
    :caption: pipをアップグレード
 
-   $ sudo pip install pip --upgrade
+   $ pip install pip --upgrade
 
 **以下はpipコマンドのサンプルです** ここでは実行しないで、以下のvenv環境を作ってから実行しましょう。
 pip コマンドを利用すると以下の様なコマンドで簡単にサードパーティ製パッケージをインストールできます。
@@ -50,23 +50,25 @@ pip コマンドを利用すると以下の様なコマンドで簡単にサー�
 
     PATH環境変数を確認し、Python3 をインストールしているPATHが設定されているかどうか確認してみてください。
 
+.. _about-venv:
+
 venvとは
 ==========
 
 複数のプロジェクトで異なるサードパーティ製パッケージを利用することはよくあります。その場合、プロジェクトごとにインストールするパッケージを切り替えられると便利です。
 
-venvはプロジェクトごとに隔離されたPython環境を作成します。
+venvはプロジェクトごとに隔離されたPythonの仮想環境(Virtual Environments)を作成します。
 
-.. note:: pyvenvスクリプトについて
+.. note:: pyvenvスクリプトの廃止について
 
- 以前は pyvenvスクリプトを利用したPython実行環境の作成方法を紹介していました。
+   以前は pyvenvスクリプトを利用したPython実行環境の作成方法を紹介していました。
 
- ですが、Python3.6 から pyvenvスクリプトが非推奨となり将来的に削除されるので一部説明を変更をいたしました。
- 今後は「python -m venv」を利用するようにしてください。
+   ですが、Python3.6 から pyvenvスクリプトが非推奨となり将来的に削除されるので一部説明を変更をいたしました。
+   今後は「python -m venv」を利用するようにしてください。
 
- pyvenvスクリプトが廃止になった経緯は下記URLを参照してください。
+   pyvenvスクリプトが廃止になった経緯は下記URLを参照してください。
 
- http://docs.python.jp/3/whatsnew/3.6.html#id8
+   http://docs.python.jp/3/whatsnew/3.6.html#id8
 
 
 venv環境の作成
@@ -77,34 +79,37 @@ venv環境を作成します。
 作成には ``venv`` モジュールを使用します。引数には作成する環境の名前を指定します。
 
 .. code-block:: sh
-   :caption: venv環境の作成(Linux・Mac・Windows)
+   :caption: venv環境の作成(macOS、Windows、Linux)
 
     $ python -m venv env
+    $ ls
+    env/
 
-カレントディレクトリに、envというディレクトリが作成されます。
+現在のフォルダに、envというディレクトリが作成されます。
 
 venv環境の有効化
 ----------------
 
 作成した ``venv`` 環境を有効化（activate）します。
 
-そのためにはbashスクリプトの ``env/bin/activate`` を ``source`` コマンドで実行します（:numref:`venv-activate-linux-or-mac` :numref:`venv-activate-windows` ）。
+そのためにはbashスクリプトの ``env/bin/activate`` を ``source`` コマンドで実行します（:numref:`venv-activate-linux-or-mac` ）。
+Windowsの場合はバッチファイルを実行します（ :numref:`venv-activate-windows` ）。
 
 .. _venv-activate-linux-or-mac:
 
 .. code-block:: sh
-   :caption:  venv環境の有効化(Linux・Mac)
+   :caption:  venv環境の有効化(macOS、Linux)
 
     $ source env/bin/activate
-    (env)$
+    (env) $
 
 .. _venv-activate-windows:
 
 .. code-block:: sh
    :caption:  venv環境の有効化(Windows)
 
-    $ env\Scripts\activate.bat
-    (env)$
+    > env\Scripts\activate.bat
+    (env) >
 
 ``venv`` 環境を有効化すると、プロンプトの前に環境名（ここでは ``env`` ）が表示されます。そして、環境変数 ``PATH`` の先頭にenv/binが追加され、 ``venv`` 環境のPythonが実行されるようになります。
 
