@@ -116,7 +116,7 @@ Pythonのソースコードをビルドし、インストールします（:numr
     $ wget https://www.python.org/ftp/python/3.5.3/Python-3.5.3.tgz
     $ tar axvf ./Python-3.5.3.tgz
     $ cd ./Python-3.5.3/
-    $ LDFLAGS="-L/usr/lib/x86_64-linux-gnu" ./configure --with-ensurepip --with-zlib
+    $ LDFLAGS="-L/usr/lib/x86_64-linux-gnu" ./configure --with-ensurepip
     $ make
     $ sudo make install
 
@@ -133,20 +133,6 @@ Pythonのソースコードをビルドし、インストールします（:numr
     $ python3 -V
     Python 3.5.3
     
-最後に、以下のコマンドでpipをインストールします。（ :numref:`install-pip`）
-
-.. _install-pip:
-
-.. code-block:: bash
-    :caption: pipのインストール（最後のx.x.xにはインストール時のpipの最新バージョン番号が入ります）
-
-    $ wget https://bootstrap.pypa.io/get-pip.py
-    $ sudo python3 get-pip.py
-    $ rm get-pip.py
-    $ hash -r
-    $ pip -V
-    pip x.x.x from /usr/local/lib/python3.5/site-packages (python 3.5) 
-
 .. admonition:: コラム: インストール先の指定
 
 

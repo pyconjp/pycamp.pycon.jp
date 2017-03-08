@@ -31,14 +31,14 @@ Pythonインタープリタ
 
 さっそくPythonで遊んでみましょう。
 
-シェルまたはコマンドプロンプトで ``python`` (macOSの場合はpython3.5)と入力し、Pythonインタープリタを対話モードで起動しましょう（:numref:`python-interpreter`）。
+シェルまたはコマンドプロンプトで ``python`` (macOS、Linuxの場合はpython3)と入力し、Pythonインタープリタを対話モードで起動しましょう（:numref:`python-interpreter`）。
 
 .. _python-interpreter:
 
 .. code-block:: bash
     :caption: Pythonインタープリタの起動
 
-    $ python3.5
+    $ python3
     Python 3.5.3 (v3.5.3:1880cb95a742, Jan 16 2017, 08:49:46) 
     [GCC 4.2.1 (Apple Inc. build 5666) (dot 3)] on darwin
     Type "help", "copyright", "credits" or "license" for more information.
@@ -404,7 +404,7 @@ FizzBuzz処理の実装の完了
 .. code-block:: bash
     :caption: 完成したfizzbuzz.pyの実行
 
-    $ python fizzbuzz.py
+    $ python3 fizzbuzz.py
     1
     2
     Fizz
