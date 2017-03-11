@@ -227,8 +227,9 @@ HTMLの構造がわかったところで、もう一度HTMLを解析している
 
 作り変えてみよう
 ================
-Reqeusts や BeautifulSoup の動作を変えて、さまざまなWebページからさまざまな要素を取得できます。
-以下にそれぞれのライブラリの簡単な使い方を載せます。それ以外にもいろいろな使用方法があるので、ドキュメントを参考にしていろいろ作り変えてみてください。
+Reqeusts や Beautiful Soup の動作を変えて、さまざまなWebページから色んな要素を取得できます。
+
+以下にそれぞれのライブラリの簡単な使い方を紹介します。それ以外にもいろいろな使用方法があるので、ドキュメントを参考にしていろいろ作り変えてみてください。
 
 Requests の主な使い方
 ---------------------
@@ -240,33 +241,26 @@ Requests の主な使い方
 以下は認証つきのURLにアクセスして、結果を取得する例です。
 
 .. code-block:: pycon
-   :caption: requests の使用例
+   :caption: 認証付きURLにアクセスする
 
    >>> import requests
-   >>> r = requests.get('https://api.github.com/user', auth=('user', 'pass'))
+   >>> requests.get('https://api.github.com/user', auth=('user', 'pass'))
    >>> r.status_code
    200
-   >>> r.headers['content-type']
-   'application/json; charset=utf8'
-   >>> r.encoding
-   'utf-8'
-   >>> r.text
-   u'{"type":"User"...'
-   >>> r.json()
-   {u'private_gists': 419, u'total_private_repos': 77, ...}
 
-POST を行う場合は以下のように実行します。
+POST を行う場合は以下のように、POSTのパラメーターを辞書で定義します。
 
 .. code-block:: pycon
-   :caption: requests で POST する例
+   :caption: requests で POST する
 
-   >>> data = {'key': 'value'} # POST するパラメーター
-   >>> r = requests.post('http://httpbin.org/post', data=data)
+   >>> payload = {'key1': 'value1', 'key2': 'value2'} # POST するパラメーター
+   >>> r = requests.post('http://httpbin.org/post', data=payload)
+   >>> print(r.text)
 
-GET に `?key1=value1&key2=value2` のようなパラメーター付きでアクセスする場合は以下のように書きます。
+GET に ``?key1=value1&key2=value2`` のようなパラメーター付きでアクセスする場合も同様に、辞書で定義します。
 
 .. code-block:: pycon
-   :caption: requests でパラメーター付で GET する例
+   :caption: requests でパラメーター付で GET する
 
    >>> payload = {'key1': 'value1', 'key2': 'value2'}
    >>> r = requests.get('http://httpbin.org/get', params=payload)
@@ -277,15 +271,15 @@ GET に `?key1=value1&key2=value2` のようなパラメーター付きでアク
    >>> print(r.url)
    http://httpbin.org/get?key1=value1&key2=value2&key2=value3
 
-BeautifulSoup4 の主な使い方
+Beautiful Soup の主な使い方
 ---------------------------
-ここでは BeautifulSoup4 の主な使い方の例をいくつか載せます。
+ここでは Beautiful Soup の主な使い方の例をいくつか載せます。
 詳細については以下の公式ドキュメントを参照してください。
 
 :公式ドキュメント: `Beautiful Soup Documentation <https://www.crummy.com/software/BeautifulSoup/bs4/doc/>`_
 
 .. code-block:: pycon
-   :caption: BeautifulSoup4 の使用例
+   :caption: Beautiful Soup の使用例
 
    >>> import requests
    >>> from bs4 import BeautifulSoup
@@ -323,25 +317,14 @@ BeautifulSoup4 の主な使い方
 ==========
 本節では、Pythonでスクレイピングをする方法を解説しました。
 
-requestsとbeautifulsoup4を使いこなすことにより、さまざまなウェブサイトから情報を取得できるようになります。
+RequestsとBeautiful Soupを使いこなすことにより、さまざまなウェブサイトから情報を取得できるようになります。
 
-ただし、ウェブサイトにスクレイピングのために短時間に大量にアクセスをすると迷惑となるので、そういうことがないように注意してください。
+なお、短時間にWebサイトに大量にアクセスをすると迷惑となるので、そういうことがないようにプログラムを実行するときには注意してください。
 
 参考書籍
 ==========
-Pythonでのスクレイピングについてもいくつか書籍が出てきます。
+Pythonでのスクレイピングについてもいくつか書籍が出ています。
 
 - `PythonによるWebスクレイピング <https://www.oreilly.co.jp/books/9784873117614/>`_
 - `Pythonクローリング＆スクレイピング ―データ収集・解析のための実践開発ガイド <http://gihyo.jp/book/2017/978-4-7741-8367-1>`_
 - `Pythonによるスクレイピング＆機械学習 開発テクニックBeautifulSoup、scikit-learn、TensorFlowを使ってみよう <http://www.socym.co.jp/book/1079>`_
-
-次の一歩
-============
-
-スクレイピングの例の実行ができたら、以下の様な改造を自習してみください。
-
-- 別のサイトから同様に情報を抜き出してみる　＞URL変更とCSSセレクタの変更
-- RSS(XML)から必要な情報を抜き出してみる　＞パーサの変更
-- 抜き出したものを、ファイルに保存してみる　＞別の章との組み合わせ
-- ログインが必要なサイトにログインして情報を抜き出してみる　＞requestsの応用
-- 抜き出したものを、HTMLに加工して、ファイルに保存、出力してみる　＞各種応用
