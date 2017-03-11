@@ -31,7 +31,7 @@ Pythonインタープリタ
 
 さっそくPythonで遊んでみましょう。
 
-シェルまたはコマンドプロンプトで ``python`` (macOS、Linuxの場合はpython3)と入力し、Pythonインタープリタを対話モードで起動しましょう（:numref:`python-interpreter`）。
+ターミナル(Windowsではコマンドプロンプト)を立ち上げて ``python`` (macOS、Linuxの場合はpython3)と入力し、Pythonインタープリタを対話モードで起動しましょう（:numref:`python-interpreter`）。
 
 .. _python-interpreter:
 
@@ -46,7 +46,7 @@ Pythonインタープリタ
 
 初めにPythonインタープリタの情報と、大なり記号3つ（``>>>``）が表示されます。
 
-この(``>>>``)がPythonのプロンプトです。終了するにはCtrl-Dを入力します（WindowsではCtrl-Z+Enter）。
+この(``>>>``)がPythonの対話モードでの入力を促さすプロンプトです。終了するにはCtrl-Dまたは ``quit()`` を入力します（WindowsではCtrl-Z+Enter）。
 
 Pythonを電卓にする
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -144,13 +144,13 @@ Pythonを電卓にする
 関数
 -------------
 
-関数は、 ``def`` を使って定義します。
+関数とはプログラムの中で処理をひとまとめにしたものです。
+Pythonでは関数は、 ``def`` を使って以下のように書きます。
+末尾にはコロン（``:``）が必要です。
 
 .. code-block:: none
 
    def ＜関数名＞(＜引数の変数名＞):
-
-と書きます。末尾にはコロン（``:``）が必要です。
 
 値を返すには、 ``return`` を使います。引数を2つ受け取り、合計値を返す関数は :numref:`function-def` になります。
 
