@@ -58,8 +58,8 @@ WindowsでPythonを利用する場合は、Pythonの公式サイトで配布さ�
 「 `Python Releases for Windows <https://www.python.org/downloads/windows/>`_ 」をブラウザで開きます。
 OSによって以下のいずれかのインストーラーをダウンロードし、ウィザードに従ってインストールします。
 
-- 64ビット版: `Windows x86 executable installer <https://www.python.org/ftp/python/3.5.3/python-3.5.3.exe>`_
-- 32ビット版: `Windows x86-64 executable installer <https://www.python.org/ftp/python/3.5.3/python-3.5.3-amd64.exe>`_
+- 64ビット版: `Windows x86-64 executable installer <https://www.python.org/ftp/python/3.5.3/python-3.5.3-amd64.exe>`_
+- 32ビット版: `Windows x86 executable installer <https://www.python.org/ftp/python/3.5.3/python-3.5.3.exe>`_
 
 この時、「Add Python 3.5 to PATH」にチェックを入れておきましょう。自動的に必要な環境変数が設定されます（:numref:`windows-install`）。
 
