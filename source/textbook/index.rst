@@ -15,4 +15,5 @@ Python Boot Camp の演習で使用するテキストです。
    5_module
    6_pyvenv
    7_scraping
+   8_nextstep
 
