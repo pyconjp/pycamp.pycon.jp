@@ -12,27 +12,38 @@
 
 Webサイト
 =========
+Pythonの使い方などが解説してあるWebサイト
 
 * Python 3.6 チュートリアル http://docs.python.jp/3/tutorial/
-* Python HOWTO http://docs.python.jp/3/howto/
+* Python 標準ライブラリ http://docs.python.jp/3/library/index.html
 * Dive into Python 3 日本語版 http://diveintopython3-ja.rdy.jp/
+* Python HOWTO http://docs.python.jp/3/howto/
 
 プログラミング学習
 ------------------
-* ProjectEuler https://projecteuler.net/
-* Paiza
+プログラミング学習のためのWebサイト
 
-QAサイト
---------
-* `Stack Overflow(スタック・オーバーフロー) <https://ja.stackoverflow.com/>`_
-* `teratail(テラテイル) <https://teratail.com/>`_
+* Paiza https://paiza.jp/
+* ProjectEuler https://projecteuler.net/
+* CheckIO https://checkio.org/
+
+Q&Aサイト
+---------
+プログラミングについてのQ&Aサイト
+
+* Stack Overflow(スタック・オーバーフロー) https://ja.stackoverflow.com/
+* teratail(テラテイル) https://teratail.com/
 
 その他
 ------
-* `Python Tutor <http://pythontutor.com/>`_
+Python プログラムの動作を視覚的に確認できるサイト
+
+* Python Tutor http://pythontutor.com/
 
 書籍
 ====
+Pythonやプログラムの学習におすすめの書籍をいくつか紹介します。
+
 * プログラムの絵本
   
   * http://www.ank.co.jp/books/data/2016/program_ehon.html
@@ -78,16 +89,24 @@ QAサイト
 
 コミュニティ
 ============
+コミュニティに参加して、仲間を作ることもおすすめです。
+みなさんの地域でコミュニティを立ち上げることもおすすめです。
 
-* PyCon JP
-  * PyCon mini
-* Python mini Hack-a-thon
-* PyLadies
+* python.jp https://www.python.jp/
+* PyCon JP http://pycon.jp
+* Python mini Hack-a-thon https://pyhack.connpass.com/
+* PyLadies Tokyo https://pyladies-tokyo.connpass.com/
 
 コミュニティのチャット
 ----------------------
-* pyconjp-fellow.slacl.com
-  http://pyconjp-fellow.herokuapp.com/
+地理的に離れた場所でも、チャットなどを通じでコミュニケーションがとれます。
+
+* pyconjp-fellow.slack.com
+
+  * 招待ページ http://pyconjp-fellow.herokuapp.com/
 * python-jp.slack.com
+
+  * 招待ページ https://www.python.jp/community/
 * pyhack.slack.com
 
+  * 招待ページ http://pyhack.herokuapp.com/
