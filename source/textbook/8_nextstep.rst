@@ -27,6 +27,10 @@ QAサイト
 * `Stack Overflow(スタック・オーバーフロー) <https://ja.stackoverflow.com/>`_
 * `teratail(テラテイル) <https://teratail.com/>`_
 
+その他
+------
+* `Python Tutor <http://pythontutor.com/>`_
+
 書籍
 ====
 * プログラムの絵本
