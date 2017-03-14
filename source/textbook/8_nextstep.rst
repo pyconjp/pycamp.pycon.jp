@@ -103,6 +103,7 @@ Pythonやプログラムの学習におすすめの書籍をいくつか紹介�
 
 * pyconjp-fellow.slack.com(PyCon JPに興味のある人達)
 
+  * Python Boot Camp について話す ``#pycamp`` チャンネルもあります
   * 招待ページ http://pyconjp-fellow.herokuapp.com/
 * python-jp.slack.com
 
