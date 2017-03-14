@@ -99,14 +99,20 @@ Pythonやプログラムの学習におすすめの書籍をいくつか紹介�
 
 コミュニティのチャット
 ----------------------
-地理的に離れた場所でも、チャットなどを通じでコミュニケーションがとれます。
+地理的に離れた場所でも、チャットなどを通じてコミュニケーションがとれます。
 
-* pyconjp-fellow.slack.com
+* pyconjp-fellow.slack.com(PyCon JPに興味のある人達)
 
   * 招待ページ http://pyconjp-fellow.herokuapp.com/
 * python-jp.slack.com
 
   * 招待ページ https://www.python.jp/community/
-* pyhack.slack.com
+* pyhack.slack.com(Python mini Hack-a-thon参加者など)
 
   * 招待ページ http://pyhack.herokuapp.com/
+* pydata-jp.slack.com(Python + Data を通じて Pythonistaと データ分析者が交流するコミュニティ)
+
+  * 招待ページ https://pydata-jp.herokuapp.com/
+* PyLadies Japan(女性Pythonistaのコミュニティ)
+
+  * `Slackアカウント申請 - PyLadies Japan <https://docs.google.com/forms/d/e/1FAIpQLSelRdBGus7o6MsijTZiTt1kFAoFYQlwYgrBPQOrGVwGlAmHNg/viewform>`_
