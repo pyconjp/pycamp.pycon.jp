@@ -260,7 +260,7 @@ Python ファイルを作成して実行する場合は、 ``print`` 関数が�
 .. code-block:: bash
     :caption: fizzbuzz.pyの実行
 
-    $ python fizzbuzz.py
+    $ python3 fizzbuzz.py
     4
 
 ファイルが存在するフォルダと、ターミナル/コマンドプロンプトの現在位置があっているか注意してください。
@@ -271,7 +271,7 @@ fizzbuzz.pyが見つからない場合は場合は、以下のようなエラー
 .. code-block:: guess
     :caption: fizzbuzz.pyの実行
 
-    $ python fizzbuzz.py
+    $ python3 fizzbuzz.py
     can't open file 'fizzbuzz.py': [Errno 2] No such file or directory
 
 for文
@@ -298,7 +298,7 @@ for文
 .. code-block:: bash
     :caption: fizzbuzz.pyの実行(2)
 
-    $ python fizzbuzz.py
+    $ python3 fizzbuzz.py
     1
     2
     3

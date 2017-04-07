@@ -81,7 +81,7 @@ venv環境を作成します。
 .. code-block:: sh
    :caption: venv環境の作成(macOS、Windows、Linux)
 
-    $ python -m venv env
+    $ python3 -m venv env
     $ ls
     env/
 
