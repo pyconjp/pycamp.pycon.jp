@@ -22,7 +22,7 @@ venv環境をactivateコマンドで有効にし、スクレイピングに使�
 
    $ mkdir scraping
    $ cd scraping
-   $ python -m venv env
+   $ python3 -m venv env
    $ source env/bin/activate
    (env) $ pip install requests
    (env) $ pip install beautifulsoup4
@@ -86,7 +86,7 @@ Pythonの標準ライブラリ `html.parser <https://docs.python.jp/3/library/ht
 .. code-block:: bash
    :caption: スクレイピングを実行
 
-   (env) $ python simple.py
+   (env) $ python3 simple.py
    株式会社フンザ http://hunza.jp/
    MonotaRO https://www.monotaro.com/
    Gandi.net https://www.gandi.net/
