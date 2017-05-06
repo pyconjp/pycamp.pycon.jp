@@ -9,11 +9,11 @@
 ## How to build
 
 ```
-$ git clone git@github.com:pyconjp/bootcamp-text.git
-$ cd bootcamp-text
-$ virtualenv env
+$ git clone git@github.com:pyconjp/pycamp.pycon.jp.git
+$ cd pycamp.pycon.jp
+$ python3.6 -m venv env
 $ . env/bin/activate
-(env)$ pip install -r requirements.txt
-(env)$ make html
-(env)$ open build/html/index.html
+(env) $ pip install -r requirements.txt
+(env) $ make html
+(env) $ open build/html/index.html
 ```
