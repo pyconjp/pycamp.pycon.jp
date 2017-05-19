@@ -140,7 +140,7 @@ Pythonのソースコードをビルドし、インストールします（:numr
 
    /opt/python3.5.3 ディレクトリ以下にインストールするには、次のように指定します
 
-    .. code-block:: python
+    .. code-block:: none
         :caption: prefixオプション付きconfigure
 
         LDFLAGS="-L/usr/lib/x86_64-linux-gnu" ./configure --prefix=/opt/python3.5.3 --with-ensurepip

@@ -25,7 +25,7 @@ Pythonのデータ型（基本編）
 
 .. _type-int:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: 整数型
 
     >>> 2 + 2
@@ -45,7 +45,7 @@ Pythonのデータ型（基本編）
 
 .. _divide-int:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: 整数型同士の商
 
     >>> 10 / 3
@@ -60,7 +60,7 @@ Pythonのデータ型（基本編）
 
 .. _double-slash:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: //での割り算
 
     >>> 10 // 3
@@ -79,7 +79,7 @@ Pythonのデータ型（基本編）
 
 .. _type-float:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: 浮動小数点型
 
     >>> 5.0
@@ -103,7 +103,7 @@ Pythonのデータ型（基本編）
 
 .. _type-str:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: 文字列型
 
     >>> 'Hello,world'
@@ -120,7 +120,7 @@ Pythonのデータ型（基本編）
 
 .. _escape-string:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: 文字列中のエスケープ
 
     >>> print('I\'m Hiroki')
@@ -133,7 +133,7 @@ Pythonのデータ型（基本編）
 
 .. _single-quote:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: シングルクォートを含む文字列
 
     >>> print("I'm Hiroki")
@@ -148,7 +148,7 @@ Pythonのデータ型（基本編）
 
 .. _triple-quote:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: 三重クォート
 
     >>> """ foo
@@ -168,7 +168,7 @@ Pythonのデータ型（基本編）
 
 .. _join-string:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: 文字列の結合
 
     >>> 'Mt.' + 'Fuji'
@@ -176,7 +176,7 @@ Pythonのデータ型（基本編）
 
 .. _multi-string:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: 文字列の繰り返し
 
     >>> 'spam' * 5
@@ -189,7 +189,7 @@ Pythonのデータ型（基本編）
 
 .. _string-index:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: 文字列から1文字取り出し
 
     >>> 'python'[1]
@@ -216,7 +216,7 @@ Pythonのスライスを使えば、 :numref:`slice-string` のように、2、3
 
 .. _slice-string:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: 文字列のスライス
 
     >>> 'python'[2:5]
@@ -232,7 +232,7 @@ Pythonのスライスを使えば、 :numref:`slice-string` のように、2、3
 
 .. _slice-stirng2:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: 先頭末尾からのスライス
 
     >>> 'python'[:3]
@@ -248,7 +248,7 @@ Pythonのスライスを使えば、 :numref:`slice-string` のように、2、3
 
 .. _guide-len:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: 文字列長の取得
 
     >>> len('python')
@@ -261,7 +261,7 @@ Pythonのスライスを使えば、 :numref:`slice-string` のように、2、3
 
 .. _guide-in:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: 文字列中にある文字列が存在するかのチェック
 
     >>> 't' in 'python'
@@ -282,7 +282,7 @@ Pythonのスライスを使えば、 :numref:`slice-string` のように、2、3
 
 .. _guide-split:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: 文字列の分割
 
     >>> 'pain-au-chocolat'.split('-')
@@ -297,7 +297,7 @@ Pythonのスライスを使えば、 :numref:`slice-string` のように、2、3
 
 .. _guide-join:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: 文字列の結合
 
     >>> '-'.join(['pain', 'de', 'campagne'])
