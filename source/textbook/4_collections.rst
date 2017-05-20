@@ -133,7 +133,7 @@ for文
 
 他にも役に立つ書き方があるので、Pythonのドキュメントを参考にしてください。
 
-* リストの内包表記 http://docs.python.jp/3.5/tutorial/datastructures.html#list-comprehensions
+* リストの内包表記 http://docs.python.jp/3/tutorial/datastructures.html#list-comprehensions
 
 
 複数変数への代入

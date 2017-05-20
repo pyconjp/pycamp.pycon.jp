@@ -74,7 +74,7 @@ Pythonでファイルを開くには ``open()`` 関数を使います。
 
     >>> f.close()
 
-ファイルを扱う際には、 `with文 <http://docs.python.jp/3.5/reference/compound_stmts.html#with>`_ を使うと便利です。
+ファイルを扱う際には、 `with文 <http://docs.python.jp/3/reference/compound_stmts.html#with>`_ を使うと便利です。
 ``with`` 文を使うことで、ファイルのクローズを自動で行えます。処理中に例外が発生しても必ずファイルを閉じることができます。
 
 ``with`` 文を使うと、ファイルのオープン、読み込み、クローズの処理は、:numref:`with-statement` のように書き換えられます。
@@ -343,9 +343,9 @@ Python自体も標準でモジュールを提供しています。これら標�
 
 
 ``re`` モジュールには、ここで説明していない有効な使い方があります。
-Pythonの公式ドキュメントの「 `reモジュール <http://docs.python.jp/3.5/library/re.html>`_ 」を参考にしてください。
+Pythonの公式ドキュメントの「 `reモジュール <http://docs.python.jp/3/library/re.html>`_ 」を参考にしてください。
 
-また、他のPython標準ライブラリについては、「 `Python標準ライブラリ <http://docs.python.jp/3.5/library/index.html>`_ 」を参考にしてください。
+また、他のPython標準ライブラリについては、「 `Python標準ライブラリ <http://docs.python.jp/3/library/index.html>`_ 」を参考にしてください。
 
 
 まとめ
