@@ -135,10 +135,10 @@ venv環境の無効化
 
 無効化した後、元の環境で ``requests`` をインポートするとエラーとなり、 ``venv`` 環境でのみ ``requests`` がインストールされていることがわかります。
 
-.. _venv-deactivate:
+.. _venv-deactivate-linux-or-mac:
 
 .. code-block:: sh
-   :caption: venv環境を無効化
+   :caption: venv環境を無効化(macOS、Linux)
 
     (env)$ deactivate
     $
@@ -149,6 +149,13 @@ venv環境の無効化
     ImportError: No module named requests
     >>> # エラーが出力される
 
+.. _venv-deactivate-windows:
+
+.. code-block:: sh
+   :caption:  venv環境の無効化(Windows)
+
+    (env) > env\Scripts\deactivate.bat
+    >
 
 conda の場合
 ============
