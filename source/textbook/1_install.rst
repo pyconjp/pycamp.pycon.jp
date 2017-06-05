@@ -46,9 +46,9 @@ macOSの場合
 macOSでPythonを利用する場合は、Pythonの公式サイトで配布されているビルド済みのパッケージをインストールします。
 
 「 `Python Releases for Mac OS X <https://www.python.org/downloads/mac-osx/>`_ 」をブラウザで開きます。
-「 `Mac OS X 64-bit/32-bit installer <https://www.python.org/ftp/python/3.5.3/python-3.5.3-macosx10.6.pkg>`_ 」をダウンロードして実行し、Pythonをインストールします。
+「 `Mac OS X 64-bit/32-bit installer <https://www.python.org/ftp/python/3.6.1/python-3.6.1-macosx10.6.pkg>`_ 」をダウンロードして実行し、Pythonをインストールします。
 
-詳しくはPythonの公式ドキュメントの「 `MacintoshでPythonを使う <http://docs.python.jp/3.5/using/mac.html>`_ 」を参考にしてください。
+詳しくはPythonの公式ドキュメントの「 `MacintoshでPythonを使う <http://docs.python.jp/3/using/mac.html>`_ 」を参考にしてください。
 
 Windowsの場合
 -------------------------------------
@@ -58,10 +58,10 @@ WindowsでPythonを利用する場合は、Pythonの公式サイトで配布さ�
 「 `Python Releases for Windows <https://www.python.org/downloads/windows/>`_ 」をブラウザで開きます。
 OSによって以下のいずれかのインストーラーをダウンロードし、ウィザードに従ってインストールします。
 
-- 64ビット版: `Windows x86-64 executable installer <https://www.python.org/ftp/python/3.5.3/python-3.5.3-amd64.exe>`_
-- 32ビット版: `Windows x86 executable installer <https://www.python.org/ftp/python/3.5.3/python-3.5.3.exe>`_
+- 64ビット版: `Windows x86-64 executable installer <https://www.python.org/ftp/python/3.6.1/python-3.6.1-amd64.exe>`_
+- 32ビット版: `Windows x86 executable installer <https://www.python.org/ftp/python/3.6.1/python-3.6.1.exe>`_
 
-この時、「Add Python 3.5 to PATH」にチェックを入れておきましょう。自動的に必要な環境変数が設定されます（:numref:`windows-install`）。
+この時、「Add Python 3.6 to PATH」にチェックを入れておきましょう。自動的に必要な環境変数が設定されます（:numref:`windows-install`）。
 
 .. _windows-install:
 
@@ -74,13 +74,13 @@ Linux （Ubuntu Server） での場合
 -------------------------------------
 
 本書では、動作環境 `Ubuntu Server 16.04 <https://wiki.ubuntu.com/XenialXerus/ReleaseNotes>`_ 、
-Pythonは3.5系の最新版3.5.3を想定しています。
+Pythonは3.6系の最新版3.6.1を想定しています。
 
 
 ソースビルドでのインストール
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Ubuntu 16.04にソースコードからPython 3.5.3をインストールします（:numref:`package-install`）。
+Ubuntu 16.04にソースコードからPython 3.6.1をインストールします（:numref:`package-install`）。
 
 まずパッケージ全体をアップグレードし、Pythonによる開発で必要になるパッケージをインストールします。
 
@@ -111,16 +111,16 @@ Pythonのソースコードをビルドし、インストールします（:numr
 .. _python-build:
 
 .. code-block:: bash
-    :caption: Python 3.5.3のソースからのインストール
+    :caption: Python 3.6.1のソースからのインストール
 
-    $ wget https://www.python.org/ftp/python/3.5.3/Python-3.5.3.tgz
-    $ tar axvf ./Python-3.5.3.tgz
-    $ cd ./Python-3.5.3/
+    $ wget https://www.python.org/ftp/python/3.6.1/Python-3.6.1.tgz
+    $ tar axvf ./Python-3.6.1.tgz
+    $ cd ./Python-3.6.1/
     $ LDFLAGS="-L/usr/lib/x86_64-linux-gnu" ./configure --with-ensurepip
     $ make
     $ sudo make install
 
-インストールが完了したらPythonのバージョンが3.5.3になっていることを確認します。
+インストールが完了したらPythonのバージョンが3.6.1になっていることを確認します。
 
 インストール直後は、 ``hash -r`` を実行してコマンドのパスを再読み込みします（:numref:`check-version`）。
 
@@ -131,19 +131,19 @@ Pythonのソースコードをビルドし、インストールします（:numr
 
     $ hash -r
     $ python3 -V
-    Python 3.5.3
+    Python 3.6.1
     
 .. admonition:: コラム: インストール先の指定
 
 
    ソースコードのビルドで ``configure`` を実行する際に、 ``--prefix`` オプションを付けるとインストール先のディレクトリを指定できます。
 
-   /opt/python3.5.3 ディレクトリ以下にインストールするには、次のように指定します
+   /opt/python3.6.1 ディレクトリ以下にインストールするには、次のように指定します
 
     .. code-block:: none
         :caption: prefixオプション付きconfigure
 
-        LDFLAGS="-L/usr/lib/x86_64-linux-gnu" ./configure --prefix=/opt/python3.5.3 --with-ensurepip
+        LDFLAGS="-L/usr/lib/x86_64-linux-gnu" ./configure --prefix=/opt/python3.6.1 --with-ensurepip
 
 まとめ
 =============

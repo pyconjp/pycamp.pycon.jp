@@ -37,7 +37,7 @@ Pythonインタープリタ
     :caption: Pythonインタープリタの起動
 
     $ python3
-    Python 3.5.3 (v3.5.3:1880cb95a742, Jan 16 2017, 08:49:46) 
+    Python 3.6.1 (v3.6.1:69c0db5050, Mar 21 2017, 01:21:04)
     [GCC 4.2.1 (Apple Inc. build 5666) (dot 3)] on darwin
     Type "help", "copyright", "credits" or "license" for more information.
     >>> 
@@ -107,7 +107,7 @@ Pythonを電卓にする
 
    繰返し可能な型(シーケンス)の詳細はPythonの公式ドキュメントを参照してください。
 
-   * シーケンス http://docs.python.jp/3.5/library/stdtypes.html#typesseq
+   * シーケンス http://docs.python.jp/3/library/stdtypes.html#typesseq
 
 リスト
 -----------------
@@ -197,7 +197,7 @@ Pythonには標準でいくつか関数が提供されています。これを�
 
 組み込み関数の一覧は、次のドキュメントを参照してください。
 
-* 組み込み関数 http://docs.python.jp/3.5/library/functions.html
+* 組み込み関数 http://docs.python.jp/3/library/functions.html
 
 FizzBuzz
 =====================
