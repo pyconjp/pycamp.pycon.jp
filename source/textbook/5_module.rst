@@ -34,7 +34,7 @@ Pythonでファイルを開くには ``open()`` 関数を使います。
 
 .. _file-open:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: ファイルを開く
 
     >>> f = open('todo.txt', encoding='utf-8')
@@ -53,7 +53,7 @@ Pythonでファイルを開くには ``open()`` 関数を使います。
 
 .. _read-file:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: ファイル内容の読み込み
 
     >>> todo_str = f.read()
@@ -69,7 +69,7 @@ Pythonでファイルを開くには ``open()`` 関数を使います。
 
 ファイルを閉じるには、ファイルオブジェクトの ``.close()`` メソッドを呼び出します。
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: ファイルを閉じる
 
     >>> f.close()
@@ -81,7 +81,7 @@ Pythonでファイルを開くには ``open()`` 関数を使います。
 
 .. _with-statement:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: ファイルオープンとwith文
 
     >>> with open('todo.txt', encoding='utf-8') as f:
@@ -99,7 +99,7 @@ Pythonでファイルを開くには ``open()`` 関数を使います。
 
 .. _write-mode:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: 書き込みモードでファイルを開く
 
     >>> f = open('memo.txt', 'w', encoding='utf-8')
@@ -111,7 +111,7 @@ Pythonでファイルを開くには ``open()`` 関数を使います。
 
 .. _write-string:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: ファイル内容の書き込み
 
     >>> f.write('Hello')
@@ -138,7 +138,7 @@ Pythonでファイルを開くには ``open()`` 関数を使います。
 
 .. _append-mode:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: 追記モードでファイルを開く
 
     >>> f = open('memo.txt', 'a', encoding='utf-8')
@@ -186,7 +186,7 @@ Pythonインタープリタを起動して、 ``calc.py`` をインポートし�
 
 .. _import-calc:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: calcのインポート
 
     >>> import calc
@@ -199,7 +199,7 @@ Pythonファイルをインポートすることでモジュール（module）�
 
 .. _call-calc-add:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: 別モジュールの関数を利用
 
     >>> calc.add(1, 2)
@@ -214,7 +214,7 @@ Pythonファイルをインポートすることでモジュール（module）�
 
 .. _import-function:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: 関数のインポート
 
     >>> from calc import add
@@ -232,7 +232,7 @@ Pythonファイルをインポートすることでモジュール（module）�
 
 .. _import-as:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: インポート対象に別名をつける
 
     >>> import calc as c
@@ -247,7 +247,7 @@ Pythonファイルをインポートすることでモジュール（module）�
 
 .. _import-functions:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: 複数の対象をインポート
 
     >>> from calc import add, sub
@@ -261,7 +261,7 @@ Pythonファイルをインポートすることでモジュール（module）�
 
 .. _import-functions2:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: 括弧を使った複数のインポート
 
     >>> from calc import (
@@ -288,7 +288,7 @@ Python自体も標準でモジュールを提供しています。これら標�
 
 .. _re-module:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: reモジュールの利用
 
     >>> import re
@@ -301,7 +301,7 @@ Python自体も標準でモジュールを提供しています。これら標�
 
 .. _match-object:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: 正規表現にマッチした文字列の取得
 
     >>> m.group()
@@ -312,7 +312,7 @@ Python自体も標準でモジュールを提供しています。これら標�
 
 .. _match-group:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: グループを指定して文字列の取得
 
     >>> m = re.search('py(thon)', 'python')
@@ -327,7 +327,7 @@ Python自体も標準でモジュールを提供しています。これら標�
 
 .. _not-match:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: 正規表現にマッチしない場合
 
     >>> re.search('py', 'ruby')

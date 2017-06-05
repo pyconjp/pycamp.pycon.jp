@@ -53,7 +53,7 @@ Pythonを電卓にする
 
 .. _python-calc:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: 四則演算と代入
 
     >>> 2 + 2
@@ -88,7 +88,7 @@ Pythonを電卓にする
 
 .. _string-type:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: 文字列型
 
     >>> 'Hello,world'
@@ -116,7 +116,7 @@ Pythonを電卓にする
 
 .. _list:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: リスト
 
     >>> ['Hello', 3]
@@ -133,7 +133,7 @@ Pythonを電卓にする
 
 .. _python-comment:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: コメントの書き方
 
     >>> # ここはコメント文
@@ -154,7 +154,7 @@ Pythonでは関数は、 ``def`` を使って以下のように書きます。
 
 .. _function-def:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: 関数定義と呼び出し
 
     >>> def add(a, b):
@@ -189,7 +189,7 @@ Pythonには標準でいくつか関数が提供されています。これを�
 たとえば、指定された小数点を丸めた値を作成する ``round()`` 関数は、 このように使います。
 
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: 組み込み関数round
 
     >>> round(10.4)

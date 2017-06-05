@@ -19,7 +19,7 @@ Pythonのデータ型のうち、複数のデータ型をひとまとめにし�
 
 .. _define-list:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: リストの定義
 
     >>> ['spam', 'egg', 0.5]
@@ -29,7 +29,7 @@ Pythonのデータ型のうち、複数のデータ型をひとまとめにし�
 
 .. _use-list:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: リストの基本的な使い方
 
     >>> ['spam', 'ham'] + ['egg']              # リストの結合
@@ -52,7 +52,7 @@ for文
 
 .. _for-list:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: for文とリスト
 
     >>> for animal in ['cat', 'dog', 'snake']:
@@ -74,7 +74,7 @@ for文
 
 .. _list-append:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: リストへの要素追加
 
     >>> animals = ['cat', 'dog', 'snake']
@@ -98,7 +98,7 @@ for文
 
 .. _general-for:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: 一般的なfor文
 
     >>> ret = []
@@ -112,7 +112,7 @@ for文
 
 .. _list-comprehension:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: リスト内包表記
 
     >>> [len(animal) for animal in animals]
@@ -143,7 +143,7 @@ for文
 
 .. _multi-substitute:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: シーケンス型から複数変数への代入
 
     >>> dog, cat = ['dog', 'cat']
@@ -157,7 +157,7 @@ for文
 .. たとえば文字列を ``.split()`` メソッドで分割し、それぞれの変数へ代入すると便利です。
    HTTPのAuthorizationヘッダーをauth_type、auth_stringに分割する処理は以下のように書けます。
 
-   .. code-block:: python
+   .. code-block:: pycon
        :caption: splitメソッドと各要素個別の代入
 
        >>> authorization_header = 'Bearer ABCDEF'
@@ -175,7 +175,7 @@ for文
 
 .. _define-tuple:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: タプルの定義
 
     >>> ('spam', 'ham', 4)
@@ -185,7 +185,7 @@ for文
 
 .. _use-tuple:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: タプルの基本的な使い方
 
     >>> ('spam', 'ham') + ('egg',)             # タプルの結合
@@ -206,7 +206,7 @@ for文
 
 .. _single-tuple:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: 1要素のタプル
 
     >>> ('spam',)
@@ -218,7 +218,7 @@ for文
 
 .. _omit-parenthesis-tuple:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: 括弧を省略したタプル
 
     >>> 'dog', 'cat'
@@ -239,7 +239,7 @@ for文
 
 .. _return-tuple:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: タプルを返す関数
 
     >>> def head_splitter(seq):
@@ -255,7 +255,7 @@ for文
 
 .. _many-return-value:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: 要素数の多いタプルを返す関数
 
     >>> def bad_implementation():
@@ -278,7 +278,7 @@ for文
 
 .. _guide-dict:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: 辞書
 
     >>> user_info = {'user_name': 'taro', 'last_name': 'Yamada'}
@@ -289,7 +289,7 @@ for文
 
 .. _get-dict-value:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: 辞書からの値の取り出し
 
     >>> user_info['user_name']
@@ -299,7 +299,7 @@ for文
 
 .. _set-dict-value:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: 辞書への値の設定
 
     >>> user_info['first_name'] = 'Taro'
@@ -313,7 +313,7 @@ in
 
 .. _dict-in:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: 辞書のin
 
     >>> 'user_name' in user_info
@@ -328,7 +328,7 @@ in
 
 .. _dict-keyerror:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: 存在しないキーの参照
 
     >>> user_info['bio']
@@ -340,7 +340,7 @@ in
 
 .. _get-from-dict:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: 存在しないキーへのget
 
     >>> user_info.get('user_name')
@@ -358,7 +358,7 @@ in
 
 .. _get-with-default:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: デフォルト値付きのget
 
     >>> user_info.get('bio', '')
@@ -370,7 +370,7 @@ for文
 
 .. _dict-for:
 
-.. code-block:: python
+.. code-block:: pycon
    :caption: 辞書を使用したfor文
 
    >>> user_info = {'user_name': 'taro', 'last_name': 'Yamada'}
@@ -400,7 +400,7 @@ for文
 
 .. _get-all-items:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: 辞書内のすべてのキーと値を取得
 
     >>> d = {'foo': 'spam', 'bar': 'ham'}
@@ -413,7 +413,7 @@ for文
 
 .. _for-with-dict-items:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: for文で辞書のキーと値を使う
 
     >>> d = {'foo': 'spam', 'bar': 'ham'}
@@ -444,7 +444,7 @@ for文
 
 .. _define-set:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: 集合の定義
 
     >>> {'spam', 'ham'}
@@ -460,7 +460,7 @@ for文
 
 .. _set-add-method:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: 集合への要素の追加
 
     >>> unique_users = {'dog', 'cat'}
@@ -472,7 +472,7 @@ for文
 
 .. _len-with-set:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: 集合によるユニーク数管理
 
     >>> len(unique_users)
@@ -498,7 +498,7 @@ for文
 
 .. _product-of-sets:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: 2集合の積
 
     >>> allowed_permissions = {'edit', 'view'}
@@ -515,7 +515,7 @@ for文
 
 .. _sum-of-sets:
 
-.. code-block:: python
+.. code-block:: pycon
     :caption: 2つの集合の和
 
     >>> editor = {'edit', 'comment'}
