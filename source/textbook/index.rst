@@ -13,7 +13,7 @@ Python Boot Camp の演習で使用するテキストです。
    3_types
    4_collections
    5_module
-   6_pyvenv
+   6_venv
    7_scraping
    8_nextstep
 
