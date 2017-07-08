@@ -14,25 +14,42 @@ Webサイト
 =========
 Pythonの使い方などが解説してあるWebサイト
 
-* Python 3.6 チュートリアル http://docs.python.jp/3/tutorial/
-* Python 標準ライブラリ http://docs.python.jp/3/library/index.html
-* Dive into Python 3 日本語版 http://diveintopython3-ja.rdy.jp/
-* Python HOWTO http://docs.python.jp/3/howto/
+.. list-table::
+   
+   * - Python 3.6 チュートリアル
+     - http://docs.python.jp/3/tutorial/
+   * - Python 標準ライブラリ
+     - http://docs.python.jp/3/library/index.html
+   * - Dive into Python 3 日本語版
+     - http://diveintopython3-ja.rdy.jp/
+   * - Python HOWTO
+     - http://docs.python.jp/3/howto/
 
 プログラミング学習
 ------------------
 プログラミング学習のためのWebサイト
 
-* Paiza https://paiza.jp/
-* ProjectEuler https://projecteuler.net/
-* CheckIO https://checkio.org/
+.. list-table::
+   
+   * - PyQ
+     - https://pyq.jp/
+   * - Paiza
+     - https://paiza.jp/
+   * - ProjectEuler
+     - https://projecteuler.net/
+   * - CheckIO
+     - https://checkio.org/
 
 Q&Aサイト
 ---------
 プログラミングについてのQ&Aサイト
 
-* Stack Overflow(スタック・オーバーフロー) https://ja.stackoverflow.com/
-* teratail(テラテイル) https://teratail.com/
+.. list-table::
+   
+   * - Stack Overflow
+     - https://ja.stackoverflow.com/
+   * - teratail
+     - https://teratail.com/
 
 その他
 ------
