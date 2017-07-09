@@ -149,6 +149,46 @@ venv環境の無効化
     ImportError: No module named requests
     >>> # エラーが出力される
 
+.. admonition:: コラム: 仮想環境の共有(pip freezeとrequirements.txt)
+
+   venvで仮想環境を作成できることの必要性はわかってもらえたと思います。
+   あるプロジェクトを複数人で開発する場合に、インストールしているパッケージ情報はどのように共有するのでしょうか?
+
+   pipにはそのための機能があります。
+   ``pip freeze`` コマンドを実行すると、インストールしたパッケージの一覧が出力されます。
+   この情報をファイルに保存して、プログラムのソースコードと一緒にバージョン管理します。
+   ファイル名としては **requirements.txt** がよく知られている名前なので、他の人にパッケージの一覧が入っているという意図が伝わりやすいです。
+
+   .. code-block:: sh
+      :caption: pip freeze コマンドでパッケージの情報を書き出す
+
+      (env) $ pip install requests
+      (env) $ pip freeze > requirements.txt
+      (env) $ cat requirements.txt
+      certifi==2017.4.17
+      chardet==3.0.4
+      idna==2.5
+      requests==2.18.1
+      urllib3==1.21.1
+
+   プロジェクトの他のメンバーは、ソースコードをダウンロードした後、以下の手順で仮想環境に同じパッケージをインストールします。
+
+   .. code-block:: sh
+      :caption: pip install で同じ環境を作る
+
+      $ git clone some-project-source-code
+      $ cd some-project
+      $ python3 -m venv env
+      $ source env/bin/activate
+      (env) $ pip install -r requirements.txt
+      Collecting certifi==2017.4.17 (from -r hoge.txt (line 1))
+        Using cached certifi-2017.4.17-py2.py3-none-any.whl
+      (中略)
+      Installing collected packages: certifi, chardet, idna, urllib3, requests
+      Successfully installed certifi-2017.4.17 chardet-3.0.4 idna-2.5 requests-2.18.1 urllib3-1.21.1
+      (env) $
+
+   このようにして、同一の環境をプロジェクトメンバー全体で共有します。
 
 conda の場合
 ============
