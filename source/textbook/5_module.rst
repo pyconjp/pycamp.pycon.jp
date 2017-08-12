@@ -12,39 +12,55 @@ Pythonファイルの分割と再利用のためモジュールについて説�
 
 プログラムには何らかの入出力が不可欠です。ここでは入力元、出力先としてファイルを操作する方法を説明します。
 
-ファイルのオープン
-------------------------
+ファイルのオープン(書き込みモード)
+----------------------------------
 
-Pythonからファイルを読み込む前に、現在のディレクトリ直下に ``todo.txt`` というファイルを作成しましょう。
-
-内容は、:numref:`todo-txt` のようにします。
-
-.. _todo-txt:
-
-.. code-block:: none
-   :caption: todo.txt
-
-   Write the book
-   Try new python libraries
-
+Pythonでファイルに書き込む前に、ファイルを **書き込みモード** で開きます。
 Pythonでファイルを開くには ``open()`` 関数を使います。
-第1引数にファイルのパスを指定します。
+引数は以下のように指定します。
 
-:numref:`todo-txt` のtodo.txtを開くには、:numref:`file-open` のように指定します
+* 第1引数: ファイルのパス
+* 第2引数: ファイルのモード(この場合は `'w'` で書き込みモード)
+* encoding引数: ファイルの文字コード(この場合は utf-8)
+
+以下のように指定して ``pycamp.txt`` というファイルを書き込みモードで開きます( :numref:`file-open` )。
 
 .. _file-open:
 
 .. code-block:: pycon
     :caption: ファイルを開く
 
-    >>> f = open('todo.txt', encoding='utf-8')
+    >>> f = open('pycamp.txt', 'w', encoding='utf-8')
     >>> f
-    <_io.TextIOWrapper name='todo.txt' mode='r' encoding='utf-8'>
+    <_io.TextIOWrapper name='pycamp.txt' mode='w' encoding='utf-8'>
 
-``open()`` 関数は、ファイルオブジェクト（:numref:`file-open` の場合はf）を返します。
+``open()`` 関数は、ファイルオブジェクト（:numref:`file-open` の場合は ``f`` ）を返します。
 ファイルオブジェクトは実際のファイルに対応するオブジェクトです。
 
-**encoding** 引数にはファイルの文字コード(この場合は utf-8)を指定します。
+ファイルへの書き込み
+--------------------
+ファイルへ書き込みを行うには ``.write()`` メソッドを使います。
+引数に文字列を渡して書き込みます（:numref:`write-string`）。
+
+.. _write-string:
+
+.. code-block:: pycon
+    :caption: ファイル内容の書き込み
+
+    >>> f.write('Hello')
+    5
+    >>> f.write(' Python\n')
+    8
+    >>> f.write('こんにちはPython\n')
+    12
+
+:numref:`write-mode`、:numref:`write-string` の結果、実行環境直下に ``pycamp.txt`` というファイルが次のような内容で作成されます。
+
+.. code-block:: none
+   :caption: 新規作成されたpycamp.txtの内容
+
+   Hello Python
+   こんにちはPython
 
 ファイルの読み込み
 ----------------------
@@ -88,43 +104,6 @@ Pythonでファイルを開くには ``open()`` 関数を使います。
     ...     todo_str = f.read()
     ...
     >>> print(todo_str)
-
-ファイルへの書き込み
-----------------------------
-ファイルへ書き込む場合にも、最初に ``open()`` 関数を使ってファイルを開きます。
-その際、第2引数に ``'w'`` を渡します。これでファイルを「書き込みモード」で開けます
-（第2引数を渡さない場合は、読み込みモード（``'r'``）で開かれます）。
-
-``memo.txt`` というファイルを実行環境直下に作る例を :numref:`write-mode` に示します。
-
-.. _write-mode:
-
-.. code-block:: pycon
-    :caption: 書き込みモードでファイルを開く
-
-    >>> f = open('memo.txt', 'w', encoding='utf-8')
-    >>> f
-    <_io.TextIOWrapper name='memo.txt' mode='w' encoding='utf-8'>
-
-書き込みを行うには ``.write()`` メソッドを使います。
-引数に文字列を渡して書き込みます（:numref:`write-string`）。
-
-.. _write-string:
-
-.. code-block:: pycon
-    :caption: ファイル内容の書き込み
-
-    >>> f.write('Hello')
-    5
-    >>> f.write(' world\n')
-    7
-
-:numref:`write-mode`、:numref:`write-string` の結果、実行環境直下に ``memo.txt`` というファイルが次のような内容で作成されます。
-
-.. code-block:: none
-    :caption: 新規作成されたmemo.txtの内容
-
-    Hello world
 
 追記モードでの書き込み
 -------------------------------
