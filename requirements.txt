@@ -1,8 +1,8 @@
 alabaster==0.7.10
 Babel==2.4.0
-certifi==2017.4.17
+certifi==2017.7.27.1
 chardet==3.0.4
-docutils==0.13.1
+docutils==0.14
 idna==2.5
 imagesize==0.7.1
 Jinja2==2.9.6
@@ -10,9 +10,9 @@ MarkupSafe==1.0
 pycodestyle==2.3.1
 Pygments==2.2.0
 pytz==2017.2
-requests==2.17.3
+requests==2.18.3
 six==1.10.0
 snowballstemmer==1.2.1
-Sphinx==1.6.2
+Sphinx==1.6.3
 sphinxcontrib-websupport==1.0.1
-urllib3==1.21.1
+urllib3==1.22
