@@ -15,13 +15,15 @@ Pythonファイルの分割と再利用のためモジュールについて説�
 ファイルのオープン(書き込みモード)
 ----------------------------------
 
-Pythonでファイルに書き込む前に、ファイルを **書き込みモード** で開きます。
-Pythonでファイルを開くには ``open()`` 関数を使います。
-引数は以下のように指定します。
+まずはPythonでファイルに書き込んでみます。
 
-* 第1引数: ファイルのパス
-* 第2引数: ファイルのモード(この場合は `'w'` で書き込みモード)
-* encoding引数: ファイルの文字コード(この場合は utf-8)
+Pythonでファイルを書き込む前に、ファイルを開く必要があります。
+Pythonでファイルを開くには ``open()`` 関数を使います。
+ファイルを書き込む場合には、以下のように引数を指定してファイルを **書き込みモード** で開きます。
+
+:第1引数: ファイルのパス
+:第2引数: ファイルのモード(この場合は ``w`` で書き込みモード)
+:encoding引数: ファイルの文字コード(この場合は ``utf-8``)
 
 以下のように指定して ``pycamp.txt`` というファイルを書き込みモードで開きます( :numref:`file-open` )。
 
@@ -34,27 +36,28 @@ Pythonでファイルを開くには ``open()`` 関数を使います。
     >>> f
     <_io.TextIOWrapper name='pycamp.txt' mode='w' encoding='utf-8'>
 
-``open()`` 関数は、ファイルオブジェクト（:numref:`file-open` の場合は ``f`` ）を返します。
+``open()`` 関数は、ファイルオブジェクトを返します（:numref:`file-open` の場合は ``f`` へ代入しています）。
 ファイルオブジェクトは実際のファイルに対応するオブジェクトです。
 
 ファイルへの書き込み
 --------------------
-ファイルへ書き込みを行うには ``.write()`` メソッドを使います。
-引数に文字列を渡して書き込みます（:numref:`write-string`）。
+ファイルへ書き込みを行うには、ファイルオブジェクトの ``.write()`` メソッドを使用します。
+引数に書き込む文字列を指定します（:numref:`write-string`）。
+``.write()`` メソッドを実行すると、書き込んだ文字数が返されます。
 
 .. _write-string:
 
 .. code-block:: pycon
-    :caption: ファイル内容の書き込み
+    :caption: ファイルへ書き込み
 
     >>> f.write('Hello')
     5
-    >>> f.write(' Python\n')
+    >>> f.write(' Python\n')  # 改行を書き込むには \n を指定する
     8
-    >>> f.write('こんにちはPython\n')
+    >>> f.write('こんにちはPython\n')  # 日本語も書き込み可能
     12
 
-:numref:`write-mode`、:numref:`write-string` の結果、実行環境直下に ``pycamp.txt`` というファイルが次のような内容で作成されます。
+:numref:`file-open`、:numref:`write-string` の結果、実行環境直下に ``pycamp.txt`` というファイルが次のような内容で作成されます。
 
 .. code-block:: none
    :caption: 新規作成されたpycamp.txtの内容
@@ -62,55 +65,76 @@ Pythonでファイルを開くには ``open()`` 関数を使います。
    Hello Python
    こんにちはPython
 
-ファイルの読み込み
-----------------------
-
-ファイルの内容を読み込むには、ファイルオブジェクトの ``.read()`` メソッドを呼び出します（:numref:`read-file`）。
-
-.. _read-file:
-
-.. code-block:: pycon
-    :caption: ファイル内容の読み込み
-
-    >>> todo_str = f.read()
-    >>> print(todo_str)
-    Write the book
-    Try new python libraries
-
-``.read()`` メソッドは、ファイルの内容の文字列（``str``）を返します。
-
 ファイルのクローズ
 ------------------
-ファイルを使った後は閉じる必要があります。クローズにより、ファイルを開くために使われていたシステム資源を解放します。
+ファイルを開いた後は閉じる必要があります。ファイルを閉じることにより、ファイルを開くために使われていたシステム資源を解放します。
 
 ファイルを閉じるには、ファイルオブジェクトの ``.close()`` メソッドを呼び出します。
 
 .. code-block:: pycon
-    :caption: ファイルを閉じる
+   :caption: ファイルを閉じる
 
-    >>> f.close()
+   >>> f.close()
 
-ファイルを扱う際には、 `with文 <http://docs.python.jp/3/reference/compound_stmts.html#with>`_ を使うと便利です。
-``with`` 文を使うことで、ファイルのクローズを自動で行えます。処理中に例外が発生しても必ずファイルを閉じることができます。
+ファイルの読み込み
+------------------
+ファイルの中身を読み込むには、ファイルを読み込みモード(``r``)で開きます。
+その後ファイルオブジェクトの ``.read()`` メソッドでファイルの中身を読み込みます（:numref:`read-file`）。
 
-``with`` 文を使うと、ファイルのオープン、読み込み、クローズの処理は、:numref:`with-statement` のように書き換えられます。
-
-.. _with-statement:
+.. _read-file:
 
 .. code-block:: pycon
-    :caption: ファイルオープンとwith文
+   :caption: ファイル内容の読み込み
 
-    >>> with open('todo.txt', encoding='utf-8') as f:
-    ...     todo_str = f.read()
-    ...
-    >>> print(todo_str)
+   >>> f = open('pycamp.txt', 'r', encoding='utf-8')
+   >>> f
+   <_io.TextIOWrapper name='pycamp.txt' mode='r' encoding='utf-8'>
+   >>> txt = f.read()
+   >>> print(txt)
+   Hello Python
+   こんにちはPython
+   >>> f.close()
+
+``.read()`` メソッドは、ファイルの内容の文字列（``str``）を返します。
+
+なお、第2引数を省略しても、デフォルトで読み込みモードで開きます(:numref:`read-file2`)。
+
+.. _read-file2:
+
+.. code-block:: pycon
+   :caption: 第2引数を省略してファイルを開く
+
+   >>> f = open('pycamp.txt', encoding='utf-8')
+   >>> f
+   <_io.TextIOWrapper name='pycamp.txt' mode='r' encoding='utf-8'>
+
+.. note::
+   
+   with文でのファイルオープン
+
+   ファイルを扱う際には、 `with文 <http://docs.python.jp/3/reference/compound_stmts.html#with>`_ を使うと便利です。
+   ``with`` 文を使うことで、ファイルのクローズを自動で行えます。処理中に例外が発生しても必ずファイルを閉じることができます。
+
+   ``with`` 文を使うと、ファイルのオープン、読み込み、クローズの処理は、:numref:`with-statement` のように書き換えられます。
+
+   .. _with-statement:
+
+   .. code-block:: pycon
+      :caption: ファイルオープンとwith文
+
+      >>> with open('pycamp.txt', encoding='utf-8') as f:
+      ...     txt = f.read()
+      ...
+      >>> print(txt)
+      Hello Python
+      こんにちはPython
 
 追記モードでの書き込み
 -------------------------------
 
-書き込みモードでファイルを開くと、ファイルの内容は常に新しく上書きされます。
+書き込みモード(``'w'``)でファイルを開くと、ファイルの内容は常に新しく上書きされます。
 
-:numref:`write-string` の書き込みをもう一度行っても、ファイルの内容は ``'Hello world'`` になります。
+:numref:`write-string` の書き込みをもう一度行っても、ファイルの内容は ``'Hello Python\nこんにちはPython\n'`` となります。
 
 すでに存在するファイルを対象に、末尾に追記するには、ファイルを追記モードで開きます。
 追記モードでファイルを開くには、 ``open()`` 関数の第2引数に ``'a'`` を指定します（:numref:`append-mode`）。
@@ -118,19 +142,20 @@ Pythonでファイルを開くには ``open()`` 関数を使います。
 .. _append-mode:
 
 .. code-block:: pycon
-    :caption: 追記モードでファイルを開く
+   :caption: 追記モードでファイルを開く
 
-    >>> f = open('memo.txt', 'a', encoding='utf-8')
-    >>> f.write('こんにちは世界\n')
-    8
+   >>> f = open('pycamp.txt', 'a', encoding='utf-8')
+   >>> f.write('こんにちは世界\n')
+   8
 
-:numref:`append-mode` の結果、追記後の ``memo.txt`` の内容は次のようになります
+:numref:`append-mode` の結果、追記後の ``pycamp.txt`` の内容は次のようになります
 
 .. code-block:: none
-    :caption: 追記されたmemo.txtの内容
+   :caption: 追記されたpycamp.txtの内容
 
-    Hello world
-    こんにちは世界
+   Hello Python
+   こんにちはPython
+   こんにちは世界
 
 .. _guide-module:
 
