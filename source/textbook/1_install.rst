@@ -46,7 +46,7 @@ macOSの場合
 macOSでPythonを利用する場合は、Pythonの公式サイトで配布されているビルド済みのパッケージをインストールします。
 
 「 `Python Releases for Mac OS X <https://www.python.org/downloads/mac-osx/>`_ 」をブラウザで開きます。
-「 `Mac OS X 64-bit/32-bit installer <https://www.python.org/ftp/python/3.6.1/python-3.6.1-macosx10.6.pkg>`_ 」をダウンロードして実行し、Pythonをインストールします。
+「 `Mac OS X 64-bit/32-bit installer <https://www.python.org/ftp/python/3.6.2/python-3.6.2-macosx10.6.pkg>`_ 」をダウンロードして実行し、Pythonをインストールします。
 
 詳しくはPythonの公式ドキュメントの「 `MacintoshでPythonを使う <http://docs.python.jp/3/using/mac.html>`_ 」を参考にしてください。
 
@@ -58,8 +58,8 @@ WindowsでPythonを利用する場合は、Pythonの公式サイトで配布さ�
 「 `Python Releases for Windows <https://www.python.org/downloads/windows/>`_ 」をブラウザで開きます。
 OSによって以下のいずれかのインストーラーをダウンロードし、ウィザードに従ってインストールします。
 
-- 64ビット版: `Windows x86-64 executable installer <https://www.python.org/ftp/python/3.6.1/python-3.6.1-amd64.exe>`_
-- 32ビット版: `Windows x86 executable installer <https://www.python.org/ftp/python/3.6.1/python-3.6.1.exe>`_
+- 64ビット版: `Windows x86-64 executable installer <https://www.python.org/ftp/python/3.6.2/python-3.6.2-amd64.exe>`_
+- 32ビット版: `Windows x86 executable installer <https://www.python.org/ftp/python/3.6.2/python-3.6.2.exe>`_
 
 この時、「Add Python 3.6 to PATH」にチェックを入れておきましょう。自動的に必要な環境変数が設定されます（:numref:`windows-install`）。
 
@@ -73,78 +73,29 @@ OSによって以下のいずれかのインストーラーをダウンロード
 Linux （Ubuntu Server） での場合
 -------------------------------------
 
-本書では、動作環境 `Ubuntu Server 16.04 <https://wiki.ubuntu.com/XenialXerus/ReleaseNotes>`_ 、
-Pythonは3.6系の最新版3.6.1を想定しています。
+ここではLinuxとしてUbuntu 17.04にPython3.6をインストールする方法を説明します。
 
+Ubuntu 17.04 にPython 3.6をインストールするには、apt-getコマンドを実行します。
+さらに必要に応じて、Python 本体のほかに静的ライブラリや開発ツールの入ったパッケージや、以降で使う仮想環境を使うためのパッケージもインストールします（:numref:`ubuntu-install`）。
 
-ソースビルドでのインストール
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. _ubuntu-install:
 
-Ubuntu 16.04にソースコードからPython 3.6.1をインストールします（:numref:`package-install`）。
+.. code-block:: sh
+   :caption: Python 3.6のインストール
 
-まずパッケージ全体をアップグレードし、Pythonによる開発で必要になるパッケージをインストールします。
+   $ sudo apt-get update
+   $ sudo apt-get -y install python3.6 python3.6-dev python3.6-venv
 
-.. _package-install:
-
-.. code-block:: bash
-    :caption: パッケージの更新と必要なパッケージのインストール
-
-    $ sudo apt-get -y update
-    $ sudo apt-get -y upgrade
-    $ sudo apt-get -y install build-essential
-    $ sudo apt-get -y install libsqlite3-dev
-    $ sudo apt-get -y install libreadline6-dev
-    $ sudo apt-get -y install libgdbm-dev
-    $ sudo apt-get -y install zlib1g-dev
-    $ sudo apt-get -y install libbz2-dev
-    $ sudo apt-get -y install sqlite3
-    $ sudo apt-get -y install tk-dev
-    $ sudo apt-get -y install zip
-    $ sudo apt-get -y install libssl-dev
-    $ sudo apt-get -y install gfortran
-    $ sudo apt-get -y install liblapack-dev
-
-.. g++はbuild-essentialsで、opensslは標準で入る。
-
-Pythonのソースコードをビルドし、インストールします（:numref:`python-build`）。
-
-.. _python-build:
-
-.. code-block:: bash
-    :caption: Python 3.6.1のソースからのインストール
-
-    $ wget https://www.python.org/ftp/python/3.6.1/Python-3.6.1.tgz
-    $ tar axvf ./Python-3.6.1.tgz
-    $ cd ./Python-3.6.1/
-    $ LDFLAGS="-L/usr/lib/x86_64-linux-gnu" ./configure --with-ensurepip
-    $ make
-    $ sudo make install
-
-インストールが完了したらPythonのバージョンが3.6.1になっていることを確認します。
-
-インストール直後は、 ``hash -r`` を実行してコマンドのパスを再読み込みします（:numref:`check-version`）。
+インストールが完了したらPythonのバージョンが3.6.1になっていることを確認します（:numref:`check-version`）。
 
 .. _check-version:
 
 .. code-block:: bash
-    :caption: Pythonのバージョン確認
+   :caption: Pythonのバージョン確認
 
-    $ hash -r
-    $ python3 -V
-    Python 3.6.1
+   $ python3.6 -V
+   Python 3.6.1
     
-.. admonition:: コラム: インストール先の指定
-
-
-   ソースコードのビルドで ``configure`` を実行する際に、 ``--prefix`` オプションを付けるとインストール先のディレクトリを指定できます。
-
-   /opt/python3.6.1 ディレクトリ以下にインストールするには、次のように指定します
-
-    .. code-block:: none
-        :caption: prefixオプション付きconfigure
-
-        LDFLAGS="-L/usr/lib/x86_64-linux-gnu" ./configure --prefix=/opt/python3.6.1 --with-ensurepip
-
 まとめ
 =============
 本節では、事前準備としてエディタ、コマンドラインとPython のインストール方法を紹介しました。
