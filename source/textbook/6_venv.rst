@@ -125,7 +125,7 @@ Windowsの場合はバッチファイルを実行します（ :numref:`venv-acti
     >>> import requests
     >>> # requestsがインポートできる
 
-``requests`` が ``env/lib/python3.5/site-packages`` 配下にインストールされます。
+``requests`` が ``env/lib/python3.6/site-packages`` 配下にインストールされます。
 
 またPythonパッケージの中にはコマンドとして実行可能なファイルが含まれている場合があります。それらのファイルは ``env/bin`` 配下にインストールされます。
 
