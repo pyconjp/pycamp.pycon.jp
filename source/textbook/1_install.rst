@@ -46,7 +46,7 @@ macOSの場合
 macOSでPythonを利用する場合は、Pythonの公式サイトで配布されているビルド済みのパッケージをインストールします。
 
 「 `Python Releases for Mac OS X <https://www.python.org/downloads/mac-osx/>`_ 」をブラウザで開きます。
-「 `Mac OS X 64-bit/32-bit installer <https://www.python.org/ftp/python/3.6.2/python-3.6.2-macosx10.6.pkg>`_ 」をダウンロードして実行し、Pythonをインストールします。
+「 `Mac OS X 64-bit/32-bit installer <https://www.python.org/ftp/python/3.6.3/python-3.6.3-macosx10.6.pkg>`_ 」をダウンロードして実行し、Pythonをインストールします。
 
 詳しくはPythonの公式ドキュメントの「 `MacintoshでPythonを使う <http://docs.python.jp/3/using/mac.html>`_ 」を参考にしてください。
 
@@ -58,8 +58,8 @@ WindowsでPythonを利用する場合は、Pythonの公式サイトで配布さ�
 「 `Python Releases for Windows <https://www.python.org/downloads/windows/>`_ 」をブラウザで開きます。
 OSによって以下のいずれかのインストーラーをダウンロードし、ウィザードに従ってインストールします。
 
-- 64ビット版: `Windows x86-64 executable installer <https://www.python.org/ftp/python/3.6.2/python-3.6.2-amd64.exe>`_
-- 32ビット版: `Windows x86 executable installer <https://www.python.org/ftp/python/3.6.2/python-3.6.2.exe>`_
+- 64ビット版: `Windows x86-64 executable installer <https://www.python.org/ftp/python/3.6.3/python-3.6.3-amd64.exe>`_
+- 32ビット版: `Windows x86 executable installer <https://www.python.org/ftp/python/3.6.3/python-3.6.3.exe>`_
 
 この時、「Add Python 3.6 to PATH」にチェックを入れておきましょう。自動的に必要な環境変数が設定されます（:numref:`windows-install`）。
 
