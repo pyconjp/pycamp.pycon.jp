@@ -15,7 +15,7 @@
 =====================
 
 前章の「 :ref:`about-venv` 」を参考に、venvモジュールを利用して、スクレイピング用のvenv環境を構築します。
-venv環境をactivateコマンドで有効にし、スクレイピングに使用する requests と beautifulsoup4 をpipコマンドでインストールします。
+venv環境を ``activate`` コマンドで有効にし、スクレイピングに使用するRequestsとBeautiful Soup 4を ``pip`` コマンドでインストールします。
 
 .. code-block:: sh
    :caption: スクレイピング用のvenv環境を構築
@@ -35,17 +35,17 @@ Requests について簡単に紹介します。
 Reqeusts はウェブサイトにアクセスしてHTMLなどのデータを取得するためのライブラリです。
 Pythonの標準ライブラリ `urllib.request <https://docs.python.jp/3/library/urllib.request.html>`_ でも同様のことは行なえますが、より便利な Requests をここでは使用します。
 
-Beautiful Soup
---------------
+Beautiful Soup 4
+----------------
 :URL: https://www.crummy.com/software/BeautifulSoup/bs4/doc/
 
-Beautiful Soup はHTMLやXMLの中身を解析して、任意の情報を取得するためのライブラリです。
-Pythonの標準ライブラリ `html.parser <https://docs.python.jp/3/library/html.parser.html>`_ でも同様のことは行なえますが、より便利な Beautiful Soup をここでは使用します。
+Beautiful Soup 4はHTMLやXMLの中身を解析して、任意の情報を取得するためのライブラリです。
+Pythonの標準ライブラリ `html.parser <https://docs.python.jp/3/library/html.parser.html>`_ でも同様のことは行なえますが、より便利な Beautiful Soup 4 をここでは使用します。
 なお、beautifulsoupとbeautifulsoup4が存在しますが、新しい **beautifulsoup4** を使うようにしてください。
 
 シンプルなスクレイピングのコード
 ================================
-スクレイピングの例として、PyCon JP 2016のスポンサー一覧のページ(https://pycon.jp/2016/ja/sponsors/)からスポンサー名とURLの情報を抜き出します。
+スクレイピングの例として、PyCon JP 2017のスポンサー一覧のページ(https://pycon.jp/2017/ja/sponsors/)からスポンサー名とURLの情報を抜き出します。
 
 .. figure:: images/sponsor-list.png
    :width: 30%
@@ -64,7 +64,7 @@ Pythonの標準ライブラリ `html.parser <https://docs.python.jp/3/library/ht
 
 
    def main():
-       url = 'https://pycon.jp/2016/ja/sponsors/'
+       url = 'https://pycon.jp/2017/ja/sponsors/'
        res = requests.get(url)
        content = res.content
        soup = BeautifulSoup(content, 'html.parser')
@@ -86,23 +86,23 @@ Pythonの標準ライブラリ `html.parser <https://docs.python.jp/3/library/ht
 .. code-block:: bash
    :caption: スクレイピングを実行
 
-   (env) $ python3 simple.py
-   株式会社フンザ http://hunza.jp/
-   MonotaRO https://www.monotaro.com/
-   Gandi.net https://www.gandi.net/
-   株式会社JX通信社 http://jxpress.net/
-   Port https://www.theport.jp/
-   株式会社HDE https://www.hde.co.jp/
+   (env) $ python simple.py
+   株式会社SQUEEZE https://squeeze-inc.co.jp/
+   株式会社MonotaRO https://recruit.monotaro.com/?utm_medium=outside_flier&utm_source=pycon.jp&utm_campaign=PyConJP2017
+   LINE株式会社 https://engineering.linecorp.com/
+   Retty株式会社 http://corp.retty.me/
+   iRidge, Inc. https://iridge.jp/
+   株式会社いい生活 http://www.e-seikatsu.info/recruit/graduate/
    :
 
    
-.. admonition:: コラム: Pythonのコーディング規約「pep8」
+.. admonition:: コラム: Pythonのコーディング規約「PEP8」
 
-    Pythonには `pep8（ペップエイト） <https://www.python.org/dev/peps/pep-0008/>`_ というコーディング規約があります。
+    Pythonには `PEP8（ペップエイト） <https://www.python.org/dev/peps/pep-0008/>`_ というコーディング規約があります。
     チームで開発をする際、人によってプログラムコードの書き方がバラバラだと読みにくいコードになってしまいます。
-    そのため、pep8のルールに従う習慣を身につけておくとよいでしょう。
+    そのため、PEP8のルールに従う習慣を身につけておくとよいでしょう。
 
-    コードがpep8のルールに従っているかは、 `pycodestyle <http://pep8.readthedocs.io/en/latest/index.html#>`_ というツールで検証できます(以前はツールの名前もpep8でした)。
+    コードがPEP8のルールに従っているかは、 `pycodestyle <http://pep8.readthedocs.io/en/latest/index.html#>`_ というツールで検証できます(以前はツールの名前もpep8でした)。
 
     pycodestyleは ``pip install pycodestyle`` でインストールして使用します。
     ``simple.py`` を検証するには、 ``pycodestyle simple.py`` を実行します。
@@ -112,7 +112,7 @@ Pythonの標準ライブラリ `html.parser <https://docs.python.jp/3/library/ht
 ------------
 上記のコードがどういった内容なのかを解説します。
 
-* 以下のコードはrequestsとbeautifulsoup4をimportして利用できるようにしています。
+* 以下のコードはRequestsとBeautiful Soup 4をimportして利用できるようにしています。
 
 .. code-block:: python
    :caption: モジュールのimport
@@ -133,14 +133,14 @@ Pythonの標準ライブラリ `html.parser <https://docs.python.jp/3/library/ht
 .. code-block:: python
    :caption: ページの内容を取得
 
-       url = 'https://pycon.jp/2016/ja/sponsors/'
+       url = 'https://pycon.jp/2017/ja/sponsors/'
        res = requests.get(url)
        content = res.content
 
-* 次にHTMLをBeautiful Soupに渡して解析します。HTMLの解析についてはもう少し詳しく説明します。
+* 次にHTMLをBeautiful Soup 4に渡して解析します。HTMLの解析についてはもう少し詳しく説明します。
        
 .. code-block:: python
-   :caption: WebページをBeautiful Soupで解析
+   :caption: WebページをBeautiful Soup 4で解析
 
        soup = BeautifulSoup(content, 'html.parser')
        sponsors = soup.find_all('div', class_='sponsor-content')
@@ -160,28 +160,32 @@ Pythonの標準ライブラリ `html.parser <https://docs.python.jp/3/library/ht
 
 HTMLの解析の解説
 ----------------
-Beautiful SoupでHTMLを解析して、値が取り出せましたが、どのように指定しているのでしょうか?
+Beautiful Soup 4でHTMLを解析して、値が取り出せましたが、どのように指定しているのでしょうか?
 スポンサー一覧のHTMLを見てみると、以下のような形式になっています。(:numref:`sponsor-list-html`)
 
 .. _sponsor-list-html:
 
 .. code-block:: html
    :caption: スポンサー一覧のHTML
+   :emphasize-lines: 6,8,12
 
    <div class="span12">
      <h2>Diamond</h2>
      <div class="row">
        <div class="span4">
-         <div class="sponsor" id="sponsor-10">
+         <div class="sponsor" id="sponsor-5">
            <div class="sponsor-content">
              <h3>
-               <a href="http://hunza.jp/">
-                 <img src="/2016/site_media/media/sponsor_files/Hunza_logo.png.150x80_q85.png" alt="株式会社フンザ" />
+               <a href="https://squeeze-inc.co.jp/">
+                 <img src="/2017/site_media/media/sponsor_files/squeeze-logo-horizontal_1.png.150x80_q85.png" alt="株式会社SQUEEZE" />
                </a>
              </h3>
-             <h4>株式会社フンザ</h4>
-             <p><a href="http://hunza.jp/">http://hunza.jp/</a></p>
-             <p><p>フンザは「世の中の文化となるウェブサービスを創る」をビジョンに、国内No.1のC2Cチケット売買サイト「チケットキャンプ」を開発/運営しています。</p></p>
+             <h4>株式会社SQUEEZE</h4>
+             <p><a href="https://squeeze-inc.co.jp/">https://squeeze-inc.co.jp/</a></p>
+             <p>
+               <p>株式会社SQUEEZEでは「価値の詰まった社会を創る」ことをミッションとしております。ICTの力で地域コミュニティが持つ資産の潜在的な「価値」を活かし、社会に提供していくことで「無駄」のない「価値の詰まった」社会を創造していきます。</p>
+               <p>主要事業として、ホテル・旅館・民泊に特化したサービスを提供・運営しています。ホスピタリティテックのリーディングカンパニーとして、人材の再発掘・活用による働き方改革、空き家問題解消による地域活性化、を牽引するナンバーワンのプラットフォームになることを目指しています。</p>
+             </p>
            </div>
          </div>
        </div>
@@ -191,16 +195,19 @@ Beautiful SoupでHTMLを解析して、値が取り出せましたが、どの�
      <h2>Platinum</h2>
        <div class="row">
          <div class="span4">
-           <div class="sponsor" id="sponsor-4">
+           <div class="sponsor" id="sponsor-7">
              <div class="sponsor-content">
                <h3>
-                 <a href="https://www.monotaro.com/">
-                   <img src="/2016/site_media/media/sponsor_files/logo-PyCon.png.150x80_q85.jpg" alt="MonotaRO" />
+                 <a href="https://recruit.monotaro.com/?utm_medium=outside_flier&amp;utm_source=pycon.jp&amp;utm_campaign=PyConJP2017">
+                   <img src="/2017/site_media/media/sponsor_files/logo-PyCon2017.png.150x80_q85.png" alt="株式会社MonotaRO" />
                  </a>
                </h3>
-               <h4>MonotaRO</h4>
-               <p><a href="https://www.monotaro.com/">https://www.monotaro.com/</a></p>
-               <p><p>「ITで、間接資材調達を変革する」<br />モノタロウは、働く現場で必要となる様々な間接資材(最終製品となる原材料を除く全ての資材)約900万点をインターネットで販売しています。<br />様々な現場のニーズにお応えすべく、自社開発の高度な検索システムと精緻なデータベースマーケティングが実現する「お客様ごとの最適化したレコメンドサービス」で、従来の非効率的な間接資材調達を変革し、社会に新しい価値を提供しています。</p></p>
+               <h4>株式会社MonotaRO</h4>
+               <p><a href="https://recruit.monotaro.com/?utm_medium=outside_flier&amp;utm_source=pycon.jp&amp;utm_campaign=PyConJP2017">https://recruit.monotaro.com/?utm_medium=outside_flier&amp;utm_source=pycon.jp&amp;utm_campaign=PyConJP2017</a></p>
+               <p>
+                 <p>「ITで、間接資材調達を変革する」<br />モノタロウは働く現場で必要となる様々な間接資材(最終製品となる原材料を除く全ての資材)約1,000万点をインターネットで販売しています。<br />様々な現場のニーズにお応えすべく、自社開発の高度な検索システムと精緻なデータベースマーケティングが実現する「お客様ごとの最適化したレコメンドサービス」で従来の非効率的な間接資材調達を変革し社会に新しい価値を提供しています。</p>
+               </p>
+             </div>
    (以下続く)
 
 このHTMLを見ると、スポンサーの名前とURLは以下のようにして取得できそうです。
@@ -212,7 +219,7 @@ Beautiful SoupでHTMLを解析して、値が取り出せましたが、どの�
 HTMLの構造がわかったところで、もう一度HTMLを解析しているコードを見てみます。
 
 .. code-block:: python
-   :caption: WebページをBeautiful Soupで解析
+   :caption: WebページをBeautiful Soup 4で解析
 
        soup = BeautifulSoup(content, 'html.parser')
        sponsors = soup.find_all('div', class_='sponsor-content')
@@ -227,7 +234,7 @@ HTMLの構造がわかったところで、もう一度HTMLを解析している
 
 作り変えてみよう
 ================
-Reqeusts や Beautiful Soup の動作を変えて、さまざまなWebページから色んな要素を取得できます。
+ReqeustsやBeautiful Soup 4の動作を変えて、さまざまなWebページから色んな要素を取得できます。
 
 以下にそれぞれのライブラリの簡単な使い方を紹介します。それ以外にもいろいろな使用方法があるので、ドキュメントを参考にしていろいろ作り変えてみてください。
 
@@ -271,15 +278,15 @@ GET に ``?key1=value1&key2=value2`` のようなパラメーター付きでア�
    >>> print(r.url)
    http://httpbin.org/get?key1=value1&key2=value2&key2=value3
 
-Beautiful Soup の主な使い方
----------------------------
-ここでは Beautiful Soup の主な使い方の例をいくつか載せます。
+Beautiful Soup 4の主な使い方
+----------------------------
+ここではBeautiful Soup 4の主な使い方の例をいくつか載せます。
 詳細については以下の公式ドキュメントを参照してください。
 
 :公式ドキュメント: `Beautiful Soup Documentation <https://www.crummy.com/software/BeautifulSoup/bs4/doc/>`_
 
 .. code-block:: pycon
-   :caption: Beautiful Soup の使用例
+   :caption: Beautiful Soup 4の使用例
 
    >>> import requests
    >>> from bs4 import BeautifulSoup
@@ -317,7 +324,7 @@ Beautiful Soup の主な使い方
 ==========
 本節では、Pythonでスクレイピングをする方法を解説しました。
 
-RequestsとBeautiful Soupを使いこなすことにより、さまざまなウェブサイトから情報を取得できるようになります。
+RequestsとBeautiful Soup 4を使いこなすことにより、さまざまなウェブサイトから情報を取得できるようになります。
 
 なお、短時間にWebサイトに大量にアクセスをすると迷惑となるので、そういうことがないようにプログラムを実行するときには注意してください。
 
@@ -328,3 +335,4 @@ Pythonでのスクレイピングについてもいくつか書籍が出てい�
 - `PythonによるWebスクレイピング <https://www.oreilly.co.jp/books/9784873117614/>`_
 - `Pythonクローリング＆スクレイピング ―データ収集・解析のための実践開発ガイド <http://gihyo.jp/book/2017/978-4-7741-8367-1>`_
 - `Pythonによるスクレイピング＆機械学習 開発テクニックBeautifulSoup、scikit-learn、TensorFlowを使ってみよう <http://www.socym.co.jp/book/1079>`_
+- `Pythonエンジニア ファーストブック <http://gihyo.jp/book/2017/978-4-7741-9222-2>`_ (第4章 PythonによるWebスクレイピング)
