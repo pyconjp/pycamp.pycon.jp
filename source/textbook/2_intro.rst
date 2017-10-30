@@ -282,13 +282,14 @@ for文
 .. _for:
 
 .. code-block:: python
-    :caption: for文と関数の実行
+   :caption: for文と関数の実行
+   :emphasize-lines: 4-5
 
-    def fizzbuzz(num):
-        return num
+   def fizzbuzz(num):
+       return num
 
-    for num in range(1, 101):
-        print(fizzbuzz(num))
+   for num in range(1, 101):
+       print(fizzbuzz(num))
 
 
 .. _fizzbuzz-2:
@@ -356,17 +357,21 @@ Pythonで条件による処理の分岐を扱うにはif文を使います。
 .. _if:
 
 .. code-block:: python
-    :caption: fizzbuzz関数を完成させる
+   :caption: fizzbuzz関数を完成させる
+   :emphasize-lines: 2-9
 
-    def fizzbuzz(num):
-        if num % 3 == 0 and num % 5 == 0:
-            return 'FizzBuzz'
-        elif num % 3 == 0:
-            return 'Fizz'
-        elif num % 5 == 0:
-            return 'Buzz'
-        else:
-            return str(num)
+   def fizzbuzz(num):
+       if num % 3 == 0 and num % 5 == 0:
+           return 'FizzBuzz'
+       elif num % 3 == 0:
+           return 'Fizz'
+       elif num % 5 == 0:
+           return 'Buzz'
+       else:
+           return str(num)
+
+   for num in range(1, 101):
+       print(fizzbuzz(num))
 
 紹介していない要素がいくつか登場しています。
 
