@@ -2,6 +2,8 @@
 Pythonのデータ型（コレクション編）
 ==================================
 
+.. index:: Collection
+
 :節サブタイトル: データ型をまとめるコレクションの紹介
 
 Pythonのデータ型のうち、複数のデータ型をひとまとめにして扱えるコレクションを紹介します。
@@ -10,6 +12,9 @@ Pythonのデータ型のうち、複数のデータ型をひとまとめにし�
 ========
 
 本節では次の4つを扱います。リスト（``list``）、タプル（``tuple``）、辞書（``dict``）と集合（``set``）を扱います。
+
+.. index:: list
+    single: Collection; list
 
 リスト（list）
 ==============
@@ -45,6 +50,9 @@ Pythonのデータ型のうち、複数のデータ型をひとまとめにし�
     >>> 'ham' in ['spam', 'ham', 'egg']        # リストに特定の文字列が含まれるか
     True
 
+.. index:: for
+    single: Collection; for
+
 for文
 ---------
 
@@ -69,6 +77,9 @@ for文
    .. raw:: html
 
       <iframe width="800" height="500" frameborder="0" src="http://pythontutor.com/iframe-embed.html#code=for%20animal%20in%20%5B'cat',%20'dog',%20'snake'%5D%3A%0A%20%20%20%20print%28animal%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=false&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+
+.. index:: append()
+    single: Collection; append()
 
 要素の追加
 -----------------
@@ -96,6 +107,9 @@ for文
    .. raw:: html
 
       <iframe width="800" height="500" frameborder="0" src="http://pythontutor.com/iframe-embed.html#code=animals%20%3D%20%5B'cat',%20'dog',%20'snake'%5D%0Aanimals.append%28'elephant'%29%0Aprint%28animals%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=false&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+
+.. index:: comprehension
+    single: Collection; comprehension
 
 リスト内包表記
 ----------------
@@ -143,6 +157,8 @@ for文
 
 * リストの内包表記 http://docs.python.jp/3/tutorial/datastructures.html#list-comprehensions
 
+.. index:: substitute
+    single: Collection; substitute
 
 複数変数への代入
 --------------------------
@@ -173,6 +189,9 @@ for文
 
    ``.split()`` メソッドの第2引数に ``1`` を指定することで、最大1度しか分割しないよう指定しています。
    右辺の要素数が左辺の変数の数より多いか、少ない場合エラー (ValueError) になります。
+
+.. index:: tuple
+    single: Collection; tuple
 
 タプル（tuple）
 ========================
@@ -232,6 +251,9 @@ for文
     >>> 'dog', 'cat'
     ('dog', 'cat')
 
+.. index:: immutable
+    single: Collection; immutable
+
 リストとの違いと使いどころ
 ------------------------------
 
@@ -274,6 +296,9 @@ for文
 :ref:`many-return-value` のような場合、辞書（後述）、専用のクラスのインスタンス、名前付きタプルなどで返しましょう
 （クラスの定義方法、名前付きタプルについては、本チュートリアルでは説明しません）。
 
+.. index:: dict
+    single: Collection; dict
+
 辞書（dict）
 ==============
 
@@ -314,6 +339,9 @@ for文
     >>> user_info
     {'first_name': 'Taro', 'last_name': 'Yamada', 'user_name': 'taro'}
 
+.. index:: in
+    single: Collection; in
+
 in
 ----
 
@@ -328,6 +356,9 @@ in
     True
     >>> 'bio' in user_info
     False
+
+.. index:: get()
+    single: Collection; get()
 
 .get()メソッド
 --------------
@@ -372,6 +403,9 @@ in
     >>> user_info.get('bio', '')
     ''
 
+.. index:: for()
+    single: Collection; for()
+
 for文
 -----
 辞書を ``for`` 文の繰り返し用変数として使用すると、変数にはキーが入ります(:numref:`dict-for`)。
@@ -385,7 +419,7 @@ for文
    >>> for key in user_info:
    ...     print(key)
    ...     print(user_info[key])
-   ... 
+   ...
    user_name
    taro
    last_name
@@ -441,6 +475,9 @@ for文
 
    ``.keys()`` 、 ``.values()`` 、 ``.items()`` の戻り値の型はリストやタプルではなく ``dict_items`` ですが、 ``for`` 文でデータを取り出すことができます。Pythonの ``for`` 文は、「イテレータブルオブジェクト」という連続したデータ構造を表すオブジェクトであれば扱えるため、このような動きになります。
 
+.. index:: set
+    single: Collection; set
+
 集合（set）
 ===============
 
@@ -463,6 +500,9 @@ for文
     {'spam', 'ham'}
     >>> {'spam', 'spam', 'spam'}
     {'spam'}
+
+.. index:: add()
+    single: Collection; add()
 
 .add()メソッド
 --------------
@@ -501,6 +541,9 @@ for文
 
 このように、集合では一意な値が適切に管理されていることがわかります。
 
+.. index:: product
+    single: Collection; product
+
 集合の積と和
 --------------
 
@@ -520,6 +563,9 @@ for文
 
 :numref:`product-of-sets` では、アプリケーションから許可された権限の一覧 ``allowed_permissions`` を使って、ユーザに要求された権限 ``requested_permissions`` のフィルタリングを行う状況を想定しています。
 結果としてユーザに許可された権限は ``'view'`` のみとなりました。
+
+.. index:: sum
+    single: Collection; sum
 
 集合の和も取得できます。
 両方の集合を合わせた集合を取得できます。

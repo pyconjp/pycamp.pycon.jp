@@ -5,12 +5,17 @@
 本節では、Pythonでファイルを読み書きする方法と、
 Pythonファイルの分割と再利用のためモジュールについて説明します。
 
+.. index:: Files
+
 .. _guide-files:
 
 ファイル操作
 ===============
 
 プログラムには何らかの入出力が不可欠です。ここでは入力元、出力先としてファイルを操作する方法を説明します。
+
+.. index:: open()
+    single: Files; open()
 
 ファイルのオープン(書き込みモード)
 ----------------------------------
@@ -45,6 +50,9 @@ Pythonでファイルを開くには ``open()`` 関数を使います。
 
    ファイルが存在する場合は、もとの中身が削除されます。大事なファイルの中身を書き込みモードで消さないように注意してください。
 
+.. index:: write()
+    single: Files; write()
+
 ファイルへの書き込み
 --------------------
 ファイルへ書き込みを行うには、ファイルオブジェクトの ``.write()`` メソッドを使用します。
@@ -71,6 +79,9 @@ Pythonでファイルを開くには ``open()`` 関数を使います。
    Hello Python
    こんにちはPython
 
+.. index:: close()
+    single: File; close()
+
 ファイルのクローズ
 ------------------
 ファイルを開いた後は閉じる必要があります。ファイルを閉じることにより、ファイルを開くために使われていたシステム資源を解放します。
@@ -81,6 +92,9 @@ Pythonでファイルを開くには ``open()`` 関数を使います。
    :caption: ファイルを閉じる
 
    >>> f.close()
+
+.. index:: read()
+    single: File; read()
 
 ファイルの読み込み
 ------------------
@@ -115,7 +129,7 @@ Pythonでファイルを開くには ``open()`` 関数を使います。
    <_io.TextIOWrapper name='pycamp.txt' mode='r' encoding='utf-8'>
 
 .. note::
-   
+
    with文でのファイルオープン
 
    ファイルを扱う際には、 `with文 <http://docs.python.jp/3/reference/compound_stmts.html#with>`_ を使うと便利です。
@@ -134,6 +148,9 @@ Pythonでファイルを開くには ``open()`` 関数を使います。
       >>> print(txt)
       Hello Python
       こんにちはPython
+
+.. index:: append mode
+    single: File; append mode
 
 追記モードでの書き込み
 -------------------------------
@@ -163,6 +180,8 @@ Pythonでファイルを開くには ``open()`` 関数を使います。
    こんにちはPython
    こんにちは世界
 
+.. index:: Module
+
 .. _guide-module:
 
 モジュール
@@ -190,6 +209,9 @@ Pythonでは他のPythonファイルや関数をインポート（import）し�
     def sub(a, b):
         return a - b
 
+.. index:: import
+    single: Module; import
+
 別のファイルをインポートするには ``import`` 文を使います。
 
 Pythonインタープリタを起動して、 ``calc.py`` をインポートしましょう（:numref:`import-calc`）。
@@ -215,6 +237,9 @@ Pythonファイルをインポートすることでモジュール（module）�
     >>> calc.add(1, 2)
     3
 
+.. index:: from
+    single: Module; from
+
 関数のインポート
 -------------------------
 
@@ -230,6 +255,9 @@ Pythonファイルをインポートすることでモジュール（module）�
     >>> from calc import add
     >>> add(1, 2)
     3
+
+.. index:: as
+    single: Module; as
 
 別名をつける
 ----------------
@@ -279,6 +307,8 @@ Pythonファイルをインポートすることでモジュール（module）�
     ...     sub,
     ... )
 
+.. index:: Standard library
+
 標準ライブラリの利用
 =====================================
 
@@ -287,6 +317,9 @@ Python自体も標準でモジュールを提供しています。これら標�
 必要な処理をすべて自分で実装するのでなく、積極的に標準ライブラリを利用しましょう。
 
 標準ライブラリを利用すると重複する実装が減り、コードの記述量を大幅に削減できます。
+
+.. index:: re
+    single: Standard library; re
 
 正規表現モジュール
 ------------------
