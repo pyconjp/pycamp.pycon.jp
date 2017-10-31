@@ -14,6 +14,10 @@ Pythonをはじめましょう！
 - Python を実行するためのコマンドラインの準備
 - Pythonのインストール方法
 
+.. index:: Editor
+    single: Editor; Atom
+    single: Editor; PyCharm
+
 エディタの準備
 ==============
 ソースコードを読み書きするために、エディタを用意します。
@@ -25,6 +29,8 @@ Python の文法に対応しているエディタを使用することをおす�
 - `Atom <https://atom.io/>`_: さまざまなプログラミング言語に対応したエディタ
 - `PyCharm <https://www.jetbrains.com/pycharm/>`_: Pythonに特化したIDE(統合開発環境)
 
+.. index:: Terminal
+
 ターミナルの準備
 ================
 Python を実行するために、ターミナル(macOS)、コマンドプロンプト(Windows)を立ち上げます。
@@ -34,12 +40,17 @@ Python を実行するために、ターミナル(macOS)、コマンドプロン
 
 .. _python-install:
 
+.. index:: Install
+
 Pythonのインストール
 ====================
 
 ここではPythonのインストール方法を説明します。
 
 macOS、Windows、Linuxの3つの環境でのインストール手順を説明します。
+
+.. index::
+    single: Install; macOS
 
 macOSの場合
 -------------------------------------
@@ -49,6 +60,9 @@ macOSでPythonを利用する場合は、Pythonの公式サイトで配布され
 「 `Mac OS X 64-bit/32-bit installer <https://www.python.org/ftp/python/3.6.3/python-3.6.3-macosx10.6.pkg>`_ 」をダウンロードして実行し、Pythonをインストールします。
 
 詳しくはPythonの公式ドキュメントの「 `MacintoshでPythonを使う <http://docs.python.jp/3/using/mac.html>`_ 」を参考にしてください。
+
+.. index::
+    single: Install; Windows
 
 Windowsの場合
 -------------------------------------
@@ -69,6 +83,9 @@ OSによって以下のいずれかのインストーラーをダウンロード
    :width: 400
 
    Python for Windowsのインストール画面
+
+.. index::
+    single: Install; Linux
 
 Linux （Ubuntu Server） での場合
 -------------------------------------
@@ -95,7 +112,7 @@ Ubuntu 17.04 にPython 3.6をインストールするには、apt-getコマン�
 
    $ python3.6 -V
    Python 3.6.1
-    
+
 まとめ
 =============
 本節では、事前準備としてエディタ、コマンドラインとPython のインストール方法を紹介しました。
