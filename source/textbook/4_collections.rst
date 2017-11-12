@@ -520,7 +520,7 @@ for文
     >>> unique_users
     {'dog', 'cat', 'snake'}
 
-集合の長さも ``len()`` 関数で取得できます（:numref:`len-with-set`）。
+集合の要素数も ``len()`` 関数で取得できます（:numref:`len-with-set`）。
 
 .. _len-with-set:
 
@@ -536,7 +536,7 @@ for文
     3
 
 :numref:`len-with-set` で要素が2つの ``unique_users`` という集合を定義し、後に要素を追加しています。
-ここで ``unique_users`` の長さは3です。
+ここで ``unique_users`` の要素数は3です。
 :numref:`len-with-set` では、集合内にすでに存在する ``'snake'`` という要素を ``.add()`` で3 回追加していますが、 ``len()`` 関数の結果は変わりません。
 
 このように、集合では一意な値が適切に管理されていることがわかります。
@@ -569,7 +569,7 @@ for文
 
 集合の和も取得できます。
 両方の集合を合わせた集合を取得できます。
-2つの集合に対してオア（``¦``）演算子を使います（:numref:`sum-of-sets`）。
+2つの集合に対してOR（``¦``）演算子を使います（:numref:`sum-of-sets`）。
 
 .. _sum-of-sets:
 
