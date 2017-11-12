@@ -100,8 +100,8 @@ Ubuntu 17.04 にPython 3.6をインストールするには、apt-getコマン�
 .. code-block:: sh
    :caption: Python 3.6のインストール
 
-   $ sudo apt-get update
-   $ sudo apt-get -y install python3.6 python3.6-dev python3.6-venv
+   $ sudo apt update
+   $ sudo apt -y install python3.6 python3.6-dev python3.6-venv
 
 インストールが完了したらPythonのバージョンが3.6.1になっていることを確認します（:numref:`check-version`）。
 
