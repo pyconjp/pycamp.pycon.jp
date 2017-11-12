@@ -8,6 +8,11 @@ Pythonのデータ型（基本編）
 
 それぞれのデータ型の紹介で、「これだけは知っておくとよいよ」という機能を挙げます。
 
+.. index:: Built-in Types
+    single: Built-in Types; int
+    single: Built-in Types; float
+    single: Built-in Types; str
+
 はじめに
 ========
 本節では整数型（``int``）、浮動小数点型（``float``）、文字列型（``str``）を扱います。
@@ -15,6 +20,9 @@ Pythonのデータ型（基本編）
 データ型については、Pythonの公式ドキュメントも参考にしてください。
 
 * 組み込み型 http://docs.python.jp/3/library/stdtypes.html
+
+.. index:: int
+    single: Built-in Types; int
 
 整数型（int）
 ======================
@@ -70,6 +78,9 @@ Pythonのデータ型（基本編）
     >>> -10 // 4
     -3
 
+.. index:: float
+    single: Built-in Types; float
+
 浮動小数点型（float）
 =========================
 
@@ -91,6 +102,12 @@ Pythonのデータ型（基本編）
 
 浮動小数点型と整数型との計算は浮動小数点型を返します。
 
+.. index:: str
+    single: Built-in Types; str
+
+.. index:: String
+        single: String; str
+
 .. _types-str:
 
 文字列型（str）
@@ -110,6 +127,8 @@ Pythonのデータ型（基本編）
     'Hello,world'
     >>> "Hello,world"
     'Hello,world'
+
+.. index:: escape
 
 文字のエスケープ
 ---------------------
@@ -139,6 +158,9 @@ Pythonのデータ型（基本編）
     >>> print("I'm Hiroki")
     I'm Hiroki
 
+.. index:: triple-quoted strings
+    single: String; triple-quoted
+
 三重クォート
 ----------------------------------
 
@@ -156,6 +178,9 @@ Pythonのデータ型（基本編）
     ... baz
     ... """
     ' foo\nbar\nbaz\n'
+
+.. index:: concatenation
+    single: String; concatenation
 
 文字列の結合と繰り返し
 -----------------------------
@@ -182,6 +207,9 @@ Pythonのデータ型（基本編）
     >>> 'spam' * 5
     'spamspamspamspamspam'
 
+.. index:: index
+    single: String; index
+
 インデックス表記
 ----------------------
 
@@ -207,6 +235,9 @@ Pythonのデータ型（基本編）
     :width: 400
 
     インデックス
+
+.. index:: slice
+    single: String; slice
 
 スライス
 ----------------
@@ -240,6 +271,9 @@ Pythonのスライスを使えば、 :numref:`slice-string` のように、2、3
     >>> 'python'[4:]
     'on'
 
+.. index:: len()
+    single: String; len()
+
 文字列の長さ（len()関数）
 ---------------------------
 
@@ -253,6 +287,9 @@ Pythonのスライスを使えば、 :numref:`slice-string` のように、2、3
 
     >>> len('python')
     6
+
+.. index:: in()
+    single: String; in()
 
 文字列の有無（in）
 ------------------
@@ -271,6 +308,9 @@ Pythonのスライスを使えば、 :numref:`slice-string` のように、2、3
     >>> 'th' in 'python'
     True
 
+.. index:: split()
+    single: String; split()
+
 文字列の分割（.split（）メソッド）
 ----------------------------------
 
@@ -287,6 +327,9 @@ Pythonのスライスを使えば、 :numref:`slice-string` のように、2、3
 
     >>> 'pain-au-chocolat'.split('-')
     ['pain', 'au', 'chocolat']
+
+.. index:: join()
+    single: String; join()
 
 区切り文字による文字列の結合（.join（）メソッド）
 -------------------------------------------------
