@@ -1,6 +1,7 @@
 .. -*- coding: utf-8 -*-
 
 .. _venv-section:
+.. index:: venv
 
 =====================================
  サードパーティ製パッケージと venv
@@ -9,6 +10,8 @@
 :節サブタイトル: 隔離されたPythonの実行環境で便利なサードパーティ製パッケージを利用する。
 
 本節では、Pythonをより便利にするサードパーティ製パッケージのインストール方法と、環境を壊さずにインストールするための venv モジュールの使い方を説明します。
+
+.. index:: PyPI
 
 サードパーティ製パッケージ
 ==========================
@@ -22,9 +25,14 @@ Python は標準ライブラリだけでもいろいろなことができます�
 
    PyPI - the Python Package Index
 
+.. index:: pip
+
 pipコマンド
 -----------
 サードパーティ製パッケージをインストールするには、 **pipコマンド** を使用します。
+
+.. index:: ensurepip
+    single: pip; ensurepip
 
 Python 3.6では ``ensurepip`` という仕組みによって、Pythonのインストール時にpipコマンドがインストールされます。
 
@@ -39,6 +47,9 @@ pipもpipコマンドでアップグレードを行えます。まずは、現�
 **以下はpipコマンドのサンプルです** ここでは実行しないで、以下のvenv環境を作ってから実行しましょう。
 pip コマンドを利用すると以下の様なコマンドで簡単にサードパーティ製パッケージをインストールできます。
 
+.. index:: requests
+    single: pip; requests
+
 .. code-block:: sh
    :caption: pipコマンドでrequestsをインストール
 
@@ -51,13 +62,17 @@ pip コマンドを利用すると以下の様なコマンドで簡単にサー�
     PATH環境変数を確認し、Python3 をインストールしているPATHが設定されているかどうか確認してみてください。
 
 .. _about-venv:
-
+.. index:: venv
+    single: venv; Virtual Environments
+    
 venvとは
 ==========
 
 複数のプロジェクトで異なるサードパーティ製パッケージを利用することはよくあります。その場合、プロジェクトごとにインストールするパッケージを切り替えられると便利です。
 
 venvはプロジェクトごとに隔離されたPythonの仮想環境(Virtual Environments)を作成します。
+
+.. index:: pyvenv
 
 .. note:: pyvenvスクリプトの廃止について
 
@@ -91,6 +106,9 @@ venv環境の有効化
 ----------------
 
 作成した ``venv`` 環境を有効化（activate）します。
+
+.. index:: source
+.. index:: activate
 
 そのためにはbashスクリプトの ``env/bin/activate`` を ``source`` コマンドで実行します（:numref:`venv-activate-linux-or-mac` ）。
 Windowsの場合はバッチファイルを実行します（ :numref:`venv-activate-windows` ）。
@@ -129,6 +147,8 @@ Windowsの場合はバッチファイルを実行します（ :numref:`venv-acti
 
 またPythonパッケージの中にはコマンドとして実行可能なファイルが含まれている場合があります。それらのファイルは ``env/bin`` 配下にインストールされます。
 
+.. index:: deactivate
+
 venv環境の無効化
 ------------------
 ``venv`` 環境を無効化（deactivate）するには、 ``deactivate`` コマンドを実行します（:numref:`venv-deactivate`）。
@@ -148,6 +168,10 @@ venv環境の無効化
      File "<stdin>", line 1, in <module>
     ImportError: No module named requests
     >>> # エラーが出力される
+
+.. index:: freeze
+    single: pip; freeze
+    single: pip; requirements.txt
 
 .. admonition:: コラム: 仮想環境の共有(pip freezeとrequirements.txt)
 
@@ -189,6 +213,8 @@ venv環境の無効化
       (env) $
 
    このようにして、同一の環境をプロジェクトメンバー全体で共有します。
+
+.. index:: conda
 
 conda の場合
 ============

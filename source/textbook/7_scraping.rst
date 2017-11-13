@@ -1,3 +1,5 @@
+.. index:: Scraping
+
 ==================================
 スクレイピング
 ==================================
@@ -14,7 +16,7 @@
 環境構築
 =====================
 
-前章の「 :ref:`about-venv` 」を参考に、venvモジュールを利用して、スクレイピング用のvenv環境を構築します。
+前章の「 :ref:`_about-venv` 」を参考に、venvモジュールを利用して、スクレイピング用のvenv環境を構築します。
 venv環境を ``activate`` コマンドで有効にし、スクレイピングに使用するRequestsとBeautiful Soup 4を ``pip`` コマンドでインストールします。
 
 .. code-block:: sh
@@ -27,6 +29,8 @@ venv環境を ``activate`` コマンドで有効にし、スクレイピング�
    (env) $ pip install requests
    (env) $ pip install beautifulsoup4
 
+.. index:: Requests
+
 Reuqests
 --------
 :URL: http://docs.python-requests.org/en/master/
@@ -34,6 +38,8 @@ Reuqests
 Requests について簡単に紹介します。
 Reqeusts はウェブサイトにアクセスしてHTMLなどのデータを取得するためのライブラリです。
 Pythonの標準ライブラリ `urllib.request <https://docs.python.jp/3/library/urllib.request.html>`_ でも同様のことは行なえますが、より便利な Requests をここでは使用します。
+
+.. index:: Beautiful Soup 4
 
 Beautiful Soup 4
 ----------------
@@ -95,7 +101,8 @@ Pythonの標準ライブラリ `html.parser <https://docs.python.jp/3/library/ht
    株式会社いい生活 http://www.e-seikatsu.info/recruit/graduate/
    :
 
-   
+.. index:: PEP8
+
 .. admonition:: コラム: Pythonのコーディング規約「PEP8」
 
     Pythonには `PEP8（ペップエイト） <https://www.python.org/dev/peps/pep-0008/>`_ というコーディング規約があります。
@@ -129,7 +136,7 @@ Pythonの標準ライブラリ `html.parser <https://docs.python.jp/3/library/ht
    def main():
 
 * Requestsを使用して、Webページの内容(HTML)を取得します。res.contentにHTMLの中身が文字列データとして入っています。
- 
+
 .. code-block:: python
    :caption: ページの内容を取得
 
@@ -138,7 +145,7 @@ Pythonの標準ライブラリ `html.parser <https://docs.python.jp/3/library/ht
        content = res.content
 
 * 次にHTMLをBeautiful Soup 4に渡して解析します。HTMLの解析についてはもう少し詳しく説明します。
-       
+
 .. code-block:: python
    :caption: WebページをBeautiful Soup 4で解析
 
@@ -151,7 +158,7 @@ Pythonの標準ライブラリ `html.parser <https://docs.python.jp/3/library/ht
 
 
 * 最後に、このスクリプトが実行された時に、main()関数を実行するように指定します。
-       
+
 .. code-block:: python
    :caption: main()関数を実行
 
@@ -218,6 +225,8 @@ Beautiful Soup 4でHTMLを解析して、値が取り出せましたが、どの
 
 HTMLの構造がわかったところで、もう一度HTMLを解析しているコードを見てみます。
 
+.. index:: html.parser
+
 .. code-block:: python
    :caption: WebページをBeautiful Soup 4で解析
 
@@ -238,6 +247,8 @@ ReqeustsやBeautiful Soup 4の動作を変えて、さまざまなWebページ�
 
 以下にそれぞれのライブラリの簡単な使い方を紹介します。それ以外にもいろいろな使用方法があるので、ドキュメントを参考にしていろいろ作り変えてみてください。
 
+.. index:: Requests
+
 Requests の主な使い方
 ---------------------
 ここでは Requests の主な使い方の例をいくつか載せます。
@@ -255,6 +266,9 @@ Requests の主な使い方
    >>> r.status_code
    200
 
+.. index:: Requests
+    single: Requests; POST
+
 POST を行う場合は以下のように、POSTのパラメーターを辞書で定義します。
 
 .. code-block:: pycon
@@ -263,6 +277,9 @@ POST を行う場合は以下のように、POSTのパラメーターを辞書�
    >>> payload = {'key1': 'value1', 'key2': 'value2'} # POST するパラメーター
    >>> r = requests.post('http://httpbin.org/post', data=payload)
    >>> print(r.text)
+
+.. index:: Requests
+    single: Requests; GET
 
 GET に ``?key1=value1&key2=value2`` のようなパラメーター付きでアクセスする場合も同様に、辞書で定義します。
 
@@ -282,6 +299,9 @@ Beautiful Soup 4の主な使い方
 ----------------------------
 ここではBeautiful Soup 4の主な使い方の例をいくつか載せます。
 詳細については以下の公式ドキュメントを参照してください。
+
+.. index:: Beautiful Soup
+    single: Beautiful Soup; Documentation
 
 :公式ドキュメント: `Beautiful Soup Documentation <https://www.crummy.com/software/BeautifulSoup/bs4/doc/>`_
 
@@ -307,6 +327,9 @@ Beautiful Soup 4の主な使い方
         res = requests.get(url)
         soup = BeautifulSoup(res.content, 'html.parser')
 
+.. index:: find/find_all
+    single: Beautiful Soup; find()
+    single: Beautiful Soup; find_all()
 
 また、 ``find()`` ``find_all()`` などでタグを探す場合には、タグの属性などを条件として指定できます。
 
