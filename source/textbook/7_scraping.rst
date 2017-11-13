@@ -27,12 +27,12 @@ venv環境を ``activate`` コマンドで有効にし、スクレイピング�
    (env) $ pip install requests
    (env) $ pip install beautifulsoup4
 
-Reuqests
+Requests
 --------
 :URL: http://docs.python-requests.org/en/master/
 
 Requests について簡単に紹介します。
-Reqeusts はウェブサイトにアクセスしてHTMLなどのデータを取得するためのライブラリです。
+Requests はウェブサイトにアクセスしてHTMLなどのデータを取得するためのライブラリです。
 Pythonの標準ライブラリ `urllib.request <https://docs.python.jp/3/library/urllib.request.html>`_ でも同様のことは行なえますが、より便利な Requests をここでは使用します。
 
 Beautiful Soup 4
@@ -234,7 +234,7 @@ HTMLの構造がわかったところで、もう一度HTMLを解析している
 
 作り変えてみよう
 ================
-ReqeustsやBeautiful Soup 4の動作を変えて、さまざまなWebページから色んな要素を取得できます。
+RequestsやBeautiful Soup 4の動作を変えて、さまざまなWebページから色んな要素を取得できます。
 
 以下にそれぞれのライブラリの簡単な使い方を紹介します。それ以外にもいろいろな使用方法があるので、ドキュメントを参考にしていろいろ作り変えてみてください。
 
