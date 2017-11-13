@@ -1,7 +1,8 @@
 .. -*- coding: utf-8 -*-
 
-.. _venv-section:
 .. index:: venv
+
+.. _venv-section:
 
 =====================================
  サードパーティ製パッケージと venv
@@ -61,10 +62,11 @@ pip コマンドを利用すると以下の様なコマンドで簡単にサー�
 
     PATH環境変数を確認し、Python3 をインストールしているPATHが設定されているかどうか確認してみてください。
 
-.. _about-venv:
 .. index:: venv
     single: venv; Virtual Environments
-    
+
+.. _about-venv:
+
 venvとは
 ==========
 

@@ -16,7 +16,7 @@
 環境構築
 =====================
 
-前章の「 :ref:`_about-venv` 」を参考に、venvモジュールを利用して、スクレイピング用のvenv環境を構築します。
+前章の「 :ref:`about-venv` 」を参考に、venvモジュールを利用して、スクレイピング用のvenv環境を構築します。
 venv環境を ``activate`` コマンドで有効にし、スクレイピングに使用するRequestsとBeautiful Soup 4を ``pip`` コマンドでインストールします。
 
 .. code-block:: sh
