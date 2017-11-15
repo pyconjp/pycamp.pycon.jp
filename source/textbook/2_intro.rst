@@ -24,6 +24,8 @@ Pythonインタープリターに入力し結果を確認したり、Pythonフ�
 Pythonについてより詳しくは、後述の節で説明します。
 つまり、ここで説明したことのすべてをいま理解しようとしなくても大丈夫です。次節以降でおさらいをしていきます。
 
+.. index:: interpreter
+
 Pythonインタープリタ
 ------------------------
 
@@ -37,14 +39,16 @@ Pythonインタープリタ
     :caption: Pythonインタープリタの起動
 
     $ python3
-    Python 3.6.3 (v3.6.3:2c5fed86e0, Oct  3 2017, 00:32:08) 
+    Python 3.6.3 (v3.6.3:2c5fed86e0, Oct  3 2017, 00:32:08)
     [GCC 4.2.1 (Apple Inc. build 5666) (dot 3)] on darwin
     Type "help", "copyright", "credits" or "license" for more information.
-    >>> 
+    >>>
 
 初めにPythonインタープリタの情報と、大なり記号3つ（``>>>``）が表示されます。
 
 この(``>>>``)がPythonの対話モードでの入力を促さすプロンプトです。終了するにはCtrl-Dまたは ``quit()`` を入力します（WindowsではCtrl-Z+Enter）。
+
+.. index:: calculator
 
 Pythonを電卓にする
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -79,6 +83,8 @@ Pythonを電卓にする
 
 **変数を作成** とは、データ(ここでは60など)にラベル(ここではwidthなど)を付けて、後で使用できるようにすることです。
 
+.. index:: str
+
 文字列
 ---------------
 
@@ -109,6 +115,8 @@ Pythonを電卓にする
 
    * シーケンス http://docs.python.jp/3/library/stdtypes.html#typesseq
 
+.. index:: list
+
 リスト
 -----------------
 
@@ -126,6 +134,8 @@ Pythonを電卓にする
 
 複数のデータ型と組み合わせて使えるコレクションの1つでもあります。
 
+.. index:: comment
+
 コメント
 -----------------
 
@@ -138,6 +148,8 @@ Pythonを電卓にする
 
     >>> # ここはコメント文
     >>> a = 1  # コードの右側にも書ける
+
+.. index:: function
 
 関数
 -------------
@@ -163,6 +175,8 @@ Pythonでは関数は、 ``def`` を使って以下のように書きます。
     >>> add(1, 3)
     4
 
+.. index:: indent
+
 Python はブロック構造を **インデント** （通常は4つのスペース）で書きます。
 
 C言語のように波括弧（``{ }``）で囲む必要はなく、インデント自体が文の構造となります。
@@ -180,6 +194,7 @@ C言語のように波括弧（``{ }``）で囲む必要はなく、インデン
    このドキュメントをWebブラウザで見ている場合、 ``def`` と ``return`` が同じレベルにあるように見える事があります。
    実際には、 ``return`` の前に、スペース4つが挿入されて、ブロック構造を表しています。
 
+.. index:: Built-in Functions
 
 組み込み関数
 ^^^^^^^^^^^^^^^^^^^^^
@@ -188,6 +203,8 @@ Pythonには標準でいくつか関数が提供されています。これを�
 
 たとえば、指定された小数点を丸めた値を作成する ``round()`` 関数は、 このように使います。
 
+.. index::
+    pair: Built-in Functions; round();
 
 .. code-block:: pycon
     :caption: 組み込み関数round
@@ -198,6 +215,8 @@ Pythonには標準でいくつか関数が提供されています。これを�
 組み込み関数の一覧は、次のドキュメントを参照してください。
 
 * 組み込み関数 http://docs.python.jp/3/library/functions.html
+
+.. index:: fizzBuzz
 
 FizzBuzz
 =====================
@@ -264,6 +283,8 @@ Python ファイルを作成して実行する場合は、 ``print`` 関数が�
 ファイルが存在するフォルダと、ターミナル/コマンドプロンプトの現在位置があっているか注意してください。
 fizzbuzz.pyが見つからない場合は場合は、以下のようなエラーメッセージ(No such file or directory)が表示されます。
 
+.. index:: Error message
+
 .. _exec-fizzbuzz-error:
 
 .. code-block:: guess
@@ -271,6 +292,8 @@ fizzbuzz.pyが見つからない場合は場合は、以下のようなエラー
 
     $ python3 fizzbuzz.py
     can't open file 'fizzbuzz.py': [Errno 2] No such file or directory
+
+.. index:: for
 
 for文
 ----------------
@@ -306,6 +329,8 @@ for文
 
 :numref:`fizzbuzz-2` のように、実行すると1から100までの数字が表示されます。
 
+.. index:: range()
+
 数字を順番に使って処理したい場合、組み込み関数 range() が便利です。
 
 range(1, 101)のように記述すると、1から100までの数字を順番に得ることができ、
@@ -321,7 +346,7 @@ range(1, 101)のように記述すると、1から100までの数字を順番に
    .. raw:: html
 
       <iframe width="800" height="500" frameborder="0" src="http://pythontutor.com/iframe-embed.html#code=def%20fizzbuzz%28num%29%3A%0A%20%20%20%20return%20num%0A%0Afor%20num%20in%20range%281,%20101%29%3A%0A%20%20%20%20print%28fizzbuzz%28num%29%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=false&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
-   
+
 for文は次のように書きます。
 
 .. code-block:: none
@@ -335,6 +360,8 @@ for文は次のように書きます。
 繰り返しのための変数は ``range(1, 101)`` の実行結果（1から100までのイテレータ）です。
 
 関数の結果として数値が順番に返され、ひとつひとつの数字が繰り返し用の変数（``num``）に渡され、 ``for`` のブロックが実行されます
+
+.. index:: if
 
 if文
 ----------------
@@ -370,6 +397,10 @@ Pythonで条件による処理の分岐を扱うにはif文を使います。
 
 紹介していない要素がいくつか登場しています。
 
+.. index::
+    pair: if; elif
+    pair: if; else
+
 ``if`` 文
 ^^^^^^^^^
 
@@ -378,6 +409,10 @@ Pythonで条件による処理の分岐を扱うにはif文を使います。
 ``elif`` 文は、 ``if`` 文の条件が偽の場合に、追加の条件を与えます。追加の条件が真の場合に、 ``elif`` ブロックの処理を実行します。
 
 ``else`` ブロックは、どの条件にも当てはまらない場合に実行されます。
+
+.. index:: ==
+.. index:: and
+.. index:: str()
 
 演算子
 ^^^^^^
