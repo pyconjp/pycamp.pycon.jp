@@ -216,7 +216,7 @@ Pythonには標準でいくつか関数が提供されています。これを�
 
 * 組み込み関数 http://docs.python.jp/3/library/functions.html
 
-.. index:: fizzBuzz
+.. index:: FizzBuzz
 
 FizzBuzz
 =====================

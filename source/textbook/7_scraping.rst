@@ -300,8 +300,8 @@ Beautiful Soup 4の主な使い方
 ここではBeautiful Soup 4の主な使い方の例をいくつか載せます。
 詳細については以下の公式ドキュメントを参照してください。
 
-.. index:: Beautiful Soup
-    single: Beautiful Soup; Documentation
+.. index:: Beautiful Soup 4
+    single: Beautiful Soup 4; Documentation
 
 :公式ドキュメント: `Beautiful Soup Documentation <https://www.crummy.com/software/BeautifulSoup/bs4/doc/>`_
 
@@ -328,8 +328,8 @@ Beautiful Soup 4の主な使い方
         soup = BeautifulSoup(res.content, 'html.parser')
 
 .. index:: find/find_all
-    single: Beautiful Soup; find()
-    single: Beautiful Soup; find_all()
+    single: Beautiful Soup 4; find()
+    single: Beautiful Soup 4; find_all()
 
 また、 ``find()`` ``find_all()`` などでタグを探す場合には、タグの属性などを条件として指定できます。
 
