@@ -92,7 +92,7 @@ Linux （Ubuntu Server） での場合
 
 ここではLinuxとしてUbuntu 17.04にPython3.6をインストールする方法を説明します。
 
-Ubuntu 17.04 にPython 3.6をインストールするには、apt-getコマンドを実行します。
+Ubuntu 17.04 にPython 3.6をインストールするには、 ``apt`` コマンドを実行します。
 さらに必要に応じて、Python 本体のほかに静的ライブラリや開発ツールの入ったパッケージや、以降で使う仮想環境を使うためのパッケージもインストールします（:numref:`ubuntu-install`）。
 
 .. _ubuntu-install:
