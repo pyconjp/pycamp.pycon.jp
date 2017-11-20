@@ -38,9 +38,9 @@ Python を実行するために、ターミナル(macOS)、コマンドプロン
 - macOS では「アプリケーション」→「ユーティリティ」→「ターミナル」を選択します
 - Windows では **Windows+R** キーを押して ``cmd`` と入力します
 
-.. _python-install:
-
 .. index:: Install
+
+.. _python-install:
 
 Pythonのインストール
 ====================
