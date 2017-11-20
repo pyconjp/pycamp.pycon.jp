@@ -10,12 +10,14 @@
 .. contents:: 目次
    :local:
 
+.. index:: Web sites
+
 Webサイト
 =========
 Pythonの使い方などが解説してあるWebサイト
 
 .. list-table::
-   
+
    * - Python 3.6 チュートリアル
      - http://docs.python.jp/3/tutorial/
    * - Python 標準ライブラリ
@@ -25,12 +27,14 @@ Pythonの使い方などが解説してあるWebサイト
    * - Python HOWTO
      - http://docs.python.jp/3/howto/
 
+.. index:: Web sites to learn programming
+
 プログラミング学習
 ------------------
 プログラミング学習のためのWebサイト
 
 .. list-table::
-   
+
    * - PyQ
      - https://pyq.jp/
    * - Paiza
@@ -40,12 +44,14 @@ Pythonの使い方などが解説してあるWebサイト
    * - CheckIO
      - https://checkio.org/
 
+.. index:: Q&A web sites for programming
+
 Q&Aサイト
 ---------
 プログラミングについてのQ&Aサイト
 
 .. list-table::
-   
+
    * - Stack Overflow
      - https://ja.stackoverflow.com/
    * - teratail
@@ -57,12 +63,14 @@ Python プログラムの動作を視覚的に確認できるサイト
 
 * Python Tutor http://pythontutor.com/
 
+.. index:: Books
+
 書籍
 ====
 Pythonやプログラムの学習におすすめの書籍をいくつか紹介します。
 
 * プログラムの絵本
-  
+
   * http://www.ank.co.jp/books/data/2016/program_ehon.html
   * コンピューターとは？から説明
   * 2進数の話などを経て大分後半になってからプログラミングの話が出てくる
@@ -104,6 +112,8 @@ Pythonやプログラムの学習におすすめの書籍をいくつか紹介�
   * http://gihyo.jp/book/2015/978-4-7741-7707-6
   * Pythonの便利に使えるライブラリ情報
 
+.. index:: Community
+
 コミュニティ
 ============
 コミュニティに参加して、仲間を作ることもおすすめです。
@@ -113,6 +123,9 @@ Pythonやプログラムの学習におすすめの書籍をいくつか紹介�
 * PyCon JP http://pycon.jp
 * Python mini Hack-a-thon https://pyhack.connpass.com/
 * PyLadies Tokyo https://pyladies-tokyo.connpass.com/
+
+.. index::
+    pair: Community; slack
 
 コミュニティのチャット
 ----------------------
