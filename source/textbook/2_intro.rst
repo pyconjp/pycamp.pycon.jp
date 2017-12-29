@@ -31,7 +31,7 @@ Pythonインタープリタ
 
 さっそくPythonで遊んでみましょう。
 
-ターミナル(Windowsではコマンドプロンプト)を立ち上げて ``python`` (macOS、Linuxの場合はpython3)と入力し、Pythonインタープリタを対話モードで起動しましょう（:numref:`python-interpreter`）。
+ターミナル(WindowsではPowerShell)を立ち上げて ``python`` (macOS、Linuxの場合はpython3)と入力し、Pythonインタープリタを対話モードで起動しましょう（:numref:`python-interpreter`）。
 
 .. _python-interpreter:
 
@@ -281,7 +281,7 @@ Python ファイルを作成して実行する場合は、 ``print`` 関数が�
     $ python3 fizzbuzz.py
     4
 
-ファイルが存在するフォルダと、ターミナル/コマンドプロンプトの現在位置があっているか注意してください。
+ファイルが存在するフォルダと、ターミナル/PowerShellの現在位置があっているか注意してください。
 fizzbuzz.pyが見つからない場合は場合は、以下のようなエラーメッセージ(No such file or directory)が表示されます。
 
 .. index:: Error message
