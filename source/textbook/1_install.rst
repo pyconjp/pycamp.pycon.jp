@@ -87,6 +87,18 @@ OSによって以下のいずれかのインストーラーをダウンロード
 .. index::
     single: Install; Linux
 
+インストールが完了したらPythonのバージョンが3.6.3になっていることを確認します（:numref:`check-version`）。
+
+.. _check-version-cmd:
+
+.. code-block:: doscon
+   :caption: Pythonのバージョン確認例
+
+   C:\Users\user>python
+   Python 3.6.3 (v3.6.3:2c5fed8, Oct  3 2017, 18:11:49) [MSC v.1900 64 bit (AMD64)] on win32
+   Type "help", "copyright", "credits" or "license" for more information.
+   >>>
+
 Linux （Ubuntu Server） での場合
 -------------------------------------
 
@@ -112,6 +124,19 @@ Ubuntu 17.04 にPython 3.6をインストールするには、 ``apt`` コマン
 
    $ python3.6 -V
    Python 3.6.1
+
+注意事項
+==========
+これ以降の本テキストでは上記手順でインストールしたPython 3.6以降を使用することを前提に記載しています。
+
+Python 2.7等のPython2系やAnacondaでインストールしたPythonでは実習ができません。
+
+Pythonを起動した時に表示される文字をチェックして、下記が問題ないか確認してください。
+
+- Pythonのバージョン(3.6以上であること)
+- Anacondaという文字が表示されないこと
+
+インストールされていない場合は前述の手順でPython3.6のインストールを行ってください。
 
 まとめ
 =============
