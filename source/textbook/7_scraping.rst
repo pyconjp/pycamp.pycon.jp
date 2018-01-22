@@ -24,7 +24,7 @@ venv環境を ``activate`` コマンドで有効にし、スクレイピング�
 
    $ mkdir scraping
    $ cd scraping
-   $ python3 -m venv env
+   $ python3 -m venv env  # Windowsの場合は python -m venv env
    $ source env/bin/activate
    (env) $ pip install requests
    (env) $ pip install beautifulsoup4

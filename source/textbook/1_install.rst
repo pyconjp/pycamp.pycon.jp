@@ -33,10 +33,10 @@ Python の文法に対応しているエディタを使用することをおす�
 
 ターミナルの準備
 ================
-Python を実行するために、ターミナル(macOS)、コマンドプロンプト(Windows)を立ち上げます。
+Python を実行するために、ターミナル(macOS)、PowerShell(Windows)を立ち上げます。
 
 - macOS では「アプリケーション」→「ユーティリティ」→「ターミナル」を選択します
-- Windows では **Windows+R** キーを押して ``cmd`` と入力します
+- Windows では **Windows+R** キーを押して ``powershell`` と入力します
 
 .. index:: Install
 

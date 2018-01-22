@@ -95,11 +95,23 @@ venv環境を作成します。
 
 作成には ``venv`` モジュールを使用します。引数には作成する環境の名前を指定します。
 
+.. _venv-create-linux-or-mac:
+
 .. code-block:: sh
-   :caption: venv環境の作成(macOS、Windows、Linux)
+   :caption: venv環境の作成(macOS、Linux)
 
     $ python3 -m venv env
     $ ls
+    env/
+
+Windowsの場合はスクリプトの実行権限を与えます（`Set-ExecutionPolicy RemoteSigned -Scope CurrentUser` ）。このコマンドは一度実行したら、再び実行する必要はありません。
+
+.. code-block:: sh
+   :caption: venv環境の作成(Windows)
+
+    > Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+    > python -m venv env
+    > ls
     env/
 
 現在のフォルダに、envというディレクトリが作成されます。
@@ -113,7 +125,7 @@ venv環境の有効化
 .. index:: activate
 
 そのためにはbashスクリプトの ``env/bin/activate`` を ``source`` コマンドで実行します（:numref:`venv-activate-linux-or-mac` ）。
-Windowsの場合はバッチファイルを実行します（ :numref:`venv-activate-windows` ）。
+Windowsの場合はスクリプトを実行します（ :numref:`venv-activate-windows` ）。
 
 .. _venv-activate-linux-or-mac:
 
@@ -128,7 +140,7 @@ Windowsの場合はバッチファイルを実行します（ :numref:`venv-acti
 .. code-block:: sh
    :caption:  venv環境の有効化(Windows)
 
-    > env\Scripts\activate.bat
+    > env\Scripts\Activate.ps1
     (env) >
 
 ``venv`` 環境を有効化すると、プロンプトの前に環境名（ここでは ``env`` ）が表示されます。そして、環境変数 ``PATH`` の先頭にenv/binが追加され、 ``venv`` 環境のPythonが実行されるようになります。
@@ -204,7 +216,7 @@ venv環境の無効化
 
       $ git clone some-project-source-code
       $ cd some-project
-      $ python3 -m venv env
+      $ python3 -m venv env  # Windowsの場合は python -m venv env
       $ source env/bin/activate
       (env) $ pip install -r requirements.txt
       Collecting certifi==2017.4.17 (from -r hoge.txt (line 1))
