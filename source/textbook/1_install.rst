@@ -15,7 +15,7 @@ Pythonをはじめましょう！
 - Pythonのインストール方法
 
 .. index:: Editor
-    single: Editor; VS Code
+    single: Editor; Atom
     single: Editor; PyCharm
 
 エディタの準備
@@ -26,7 +26,7 @@ Python の文法に対応しているエディタを使用することをおす�
 
 普段使っているエディタがない人は、以下のいずれかをインストールしてください。
 
-- `VS Code <https://code.visualstudio.com/>`_: さまざまなプログラミング言語に対応したエディタ
+- `Atom <https://atom.io/>`_: さまざまなプログラミング言語に対応したエディタ
 - `PyCharm <https://www.jetbrains.com/pycharm/>`_: Pythonに特化したIDE(統合開発環境)
 
 .. index:: Terminal
@@ -112,7 +112,7 @@ Linux （Ubuntu Server） での場合
 
 ここではLinuxとしてUbuntu 17.04にPython3.6をインストールする方法を説明します。
 
-Ubuntu 17.04 にPython 3.6をインストールするには、apt-getコマンドを実行します。
+Ubuntu 17.04 にPython 3.6をインストールするには、 ``apt`` コマンドを実行します。
 さらに必要に応じて、Python 本体のほかに静的ライブラリや開発ツールの入ったパッケージや、以降で使う仮想環境を使うためのパッケージもインストールします（:numref:`ubuntu-install`）。
 
 .. _ubuntu-install:
