@@ -106,8 +106,6 @@ venv環境を作成します。
 
 Windowsの場合はスクリプトの実行権限を与えます（`Set-ExecutionPolicy RemoteSigned -Scope CurrentUser` ）。このコマンドは一度実行したら、再び実行する必要はありません。
 
-.. _venv-create-windows:
-
 .. code-block:: sh
    :caption: venv環境の作成(Windows)
 
@@ -127,7 +125,7 @@ venv環境の有効化
 .. index:: activate
 
 そのためにはbashスクリプトの ``env/bin/activate`` を ``source`` コマンドで実行します（:numref:`venv-activate-linux-or-mac` ）。
-Windowsの場合はスクリプトファイルを実行します（ :numref:`venv-activate-windows` ）。
+Windowsの場合はスクリプトを実行します（ :numref:`venv-activate-windows` ）。
 
 .. _venv-activate-linux-or-mac:
 
@@ -142,7 +140,7 @@ Windowsの場合はスクリプトファイルを実行します（ :numref:`ven
 .. code-block:: sh
    :caption:  venv環境の有効化(Windows)
 
-    > env\Scripts\activate.ps1
+    > env\Scripts\Activate.ps1
     (env) >
 
 ``venv`` 環境を有効化すると、プロンプトの前に環境名（ここでは ``env`` ）が表示されます。そして、環境変数 ``PATH`` の先頭にenv/binが追加され、 ``venv`` 環境のPythonが実行されるようになります。
