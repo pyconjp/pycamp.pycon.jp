@@ -57,9 +57,19 @@ macOSの場合
 macOSでPythonを利用する場合は、Pythonの公式サイトで配布されているビルド済みのパッケージをインストールします。
 
 「 `Python Releases for Mac OS X <https://www.python.org/downloads/mac-osx/>`_ 」をブラウザで開きます。
-「 `Mac OS X 64-bit/32-bit installer <https://www.python.org/ftp/python/3.6.3/python-3.6.3-macosx10.6.pkg>`_ 」をダウンロードして実行し、Pythonをインストールします。
+「 `Mac OS X 64-bit/32-bit installer <https://www.python.org/ftp/python/3.6.4/python-3.6.4-macosx10.6.pkg>`_ 」をダウンロードして実行し、Pythonをインストールします。
 
 詳しくはPythonの公式ドキュメントの「 `MacintoshでPythonを使う <http://docs.python.jp/3/using/mac.html>`_ 」を参考にしてください。
+
+インストールが完了したらPythonのバージョンが3.6.4になっていることを確認します（:numref:`check-version-mac`）。
+
+.. _check-version-mac:
+
+.. code-block:: bsah
+   :caption: Pythonのバージョンを確認
+
+   $ python3.6 -V
+   Python 3.6.4
 
 .. index::
     single: Install; Windows
@@ -72,8 +82,8 @@ WindowsでPythonを利用する場合は、Pythonの公式サイトで配布さ�
 「 `Python Releases for Windows <https://www.python.org/downloads/windows/>`_ 」をブラウザで開きます。
 OSによって以下のいずれかのインストーラーをダウンロードし、ウィザードに従ってインストールします。
 
-- 64ビット版: `Windows x86-64 executable installer <https://www.python.org/ftp/python/3.6.3/python-3.6.3-amd64.exe>`_
-- 32ビット版: `Windows x86 executable installer <https://www.python.org/ftp/python/3.6.3/python-3.6.3.exe>`_
+- 64ビット版: `Windows x86-64 executable installer <https://www.python.org/ftp/python/3.6.4/python-3.6.4-amd64.exe>`_
+- 32ビット版: `Windows x86 executable installer <https://www.python.org/ftp/python/3.6.4/python-3.6.4.exe>`_
 
 この時、「Add Python 3.6 to PATH」にチェックを入れておきましょう。自動的に必要な環境変数が設定されます（:numref:`windows-install`）。
 
@@ -86,6 +96,16 @@ OSによって以下のいずれかのインストーラーをダウンロード
 
 .. index::
     single: Install; Linux
+
+インストールが完了したらPythonのバージョンが3.6.4になっていることを確認します（:numref:`check-version-win`）。
+
+.. _check-version-win:
+
+.. code-block:: doscon
+   :caption: Pythonのバージョンを確認
+
+   C:\Users\user>python -V
+   Python 3.6.4
 
 Linux （Ubuntu Server） での場合
 -------------------------------------
@@ -108,10 +128,23 @@ Ubuntu 17.04 にPython 3.6をインストールするには、apt-getコマン�
 .. _check-version:
 
 .. code-block:: bash
-   :caption: Pythonのバージョン確認
+   :caption: Pythonのバージョンを確認
 
    $ python3.6 -V
    Python 3.6.1
+
+注意事項
+==========
+これ以降の本テキストでは上記手順でインストールしたPython 3.6以降を使用することを前提に記載しています。
+
+Python 2.7等のPython2系やAnacondaでインストールしたPythonでは実習ができません。
+
+Pythonを起動した時に表示される文字をチェックして、下記が問題ないか確認してください。
+
+- Pythonのバージョン(3.6以上であること)
+- Anacondaという文字が表示されないこと
+
+インストールされていない場合は前述の手順でPython3.6のインストールを行ってください。
 
 まとめ
 =============
