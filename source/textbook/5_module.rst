@@ -4,6 +4,7 @@
 
 本節では、Pythonでファイルを読み書きする方法と、
 Pythonファイルの分割と再利用のためモジュールについて説明します。
+また、Pythonが用意するモジュールである標準ライブラリも紹介します。
 
 .. index:: Files
 
@@ -318,13 +319,59 @@ Python自体も標準でモジュールを提供しています。これら標�
 
 標準ライブラリを利用すると重複する実装が減り、コードの記述量を大幅に削減できます。
 
+.. index:: daetime
+    single: Standard library; datetime
+
+日付を扱うモジュール
+--------------------------------------
+
+標準ライブラリの1つ ``datetime`` モジュールを取り上げます。
+``datetime`` は日付や時刻を簡単に取り扱うことができるモジュールです。
+ここでは例として日付の計算を行います。
+
+``datetime.date()`` コンストラクタを使って日付を意味するオブジェクトを生成できます。
+引数として年、月、日を指定します。
+
+.. code-block:: pycon
+    :caption: datetime.date()コンストラクタ
+
+    >>> import datetime
+    >>> d = datetime.date(2016, 12, 23)
+    >>> print(d.year, d.month, d.day)
+    2016 12 23
+
+また、 ``datetime.date.today()`` メソッドを使うと今日の日付を取得することができます。
+
+.. code-block:: pycon
+    :caption: datetime.date.today()メソッド
+
+    >>> today = datetime.date.today()
+    >>> print(d.year, d.month, d.day)  # 実行する日によって結果が異なる
+    2018 2 17
+
+ここで、自分が生まれてから今日までに何日経過したのかを計算してみましょう。
+自分で実装しようとすると、月ごとに日数が違う、うるう年の計算など面倒な計算が必要となりますが、
+``datetime.date`` を使うと面倒な部分をモジュールが肩代わりしてくれます。
+
+.. code-block:: pycon
+    :caption: datetime.date.today()メソッド
+
+    >>> birthday = datetime.date(2008, 12, 3)  # Python 3.0のリリース日
+    >>> today = datetime.date.today()
+    >>> delta = today - birthday  # 日付や時刻の差を表すdatetime.timedeltaオブジェクト
+    >>> print(delta.days)  # 実行する日によって結果が異なる
+    3363
+
+``datetime`` モジュールは他にも時刻を扱う ``datetime.time``, 日付と時刻両方を扱う ``datetime.datetime`` など日付や時刻の計算に便利な関数がたくさんあります。
+詳しくはPythonの公式ドキュメントの「 `datetimeモジュール <http://docs.python.jp/3/library/datetime.html>`_ 」を参考にしてください。
+
 .. index:: re
     single: Standard library; re
 
 正規表現モジュール
 ------------------
 
-ここでは例として標準ライブラリの1つ ``re`` モジュールをimportして利用します。
+次に標準ライブラリの1つ ``re`` モジュールを扱います。
 ``re`` モジュールはPythonで正規表現を扱うためのモジュールです。
 
 ``re.search()`` 関数を使って、文字列が正規表現にマッチするか調べられます。第1引数に正規表現、第2引数に対象の文字列を渡します（:numref:`re-module`）。
@@ -395,3 +442,4 @@ Pythonの公式ドキュメントの「 `reモジュール <http://docs.python.j
 ==========
 
 本節では、Pythonでファイルを読み書きする方法、Pythonファイルを分割して再利用する方法を解説しました。
+また、標準ライブラリである ``datetime`` モジュールや ``re`` モジュールの紹介をしました。
