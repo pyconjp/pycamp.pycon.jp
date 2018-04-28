@@ -65,7 +65,7 @@ macOSでPythonを利用する場合は、Pythonの公式サイトで配布され
 
 .. _check-version-mac:
 
-.. code-block:: bsah
+.. code-block:: bash
    :caption: Pythonのバージョンを確認
 
    $ python3.6 -V
