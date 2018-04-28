@@ -85,7 +85,7 @@ venvはプロジェクトごとに隔離されたPythonの仮想環境(Virtual E
 
    pyvenvスクリプトが廃止になった経緯は下記URLを参照してください。
 
-   http://docs.python.jp/3/whatsnew/3.6.html#id8
+   https://docs.python.org/ja/3/whatsnew/3.6.html#id8
 
 
 venv環境の作成

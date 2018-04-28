@@ -114,7 +114,7 @@ Pythonを電卓にする
 
    シーケンス型の詳細はPythonの公式ドキュメントを参照してください。
 
-   * シーケンス http://docs.python.jp/3/library/stdtypes.html#typesseq
+   * シーケンス https://docs.python.org/ja/3/library/stdtypes.html#typesseq
 
 .. index:: list
 
@@ -215,7 +215,7 @@ Pythonには標準でいくつか関数が提供されています。これを�
 
 組み込み関数の一覧は、次のドキュメントを参照してください。
 
-* 組み込み関数 http://docs.python.jp/3/library/functions.html
+* 組み込み関数 https://docs.python.org/ja/3/library/functions.html
 
 .. index:: FizzBuzz
 

@@ -133,7 +133,7 @@ Pythonでファイルを開くには ``open()`` 関数を使います。
 
    with文でのファイルオープン
 
-   ファイルを扱う際には、 `with文 <http://docs.python.jp/3/reference/compound_stmts.html#with>`_ を使うと便利です。
+   ファイルを扱う際には、 `with文 <https://docs.python.org/ja/3/reference/compound_stmts.html#with>`_ を使うと便利です。
    ``with`` 文を使うことで、ファイルのクローズを自動で行えます。処理中に例外が発生しても必ずファイルを閉じることができます。
 
    ``with`` 文を使うと、ファイルのオープン、読み込み、クローズの処理は、:numref:`with-statement` のように書き換えられます。
@@ -363,7 +363,7 @@ Python自体も標準でモジュールを提供しています。これら標�
     3363
 
 ``datetime`` モジュールは他にも時刻を扱う ``datetime.time``, 日付と時刻両方を扱う ``datetime.datetime`` など日付や時刻の計算に便利な関数がたくさんあります。
-詳しくはPythonの公式ドキュメントの「 `datetimeモジュール <http://docs.python.jp/3/library/datetime.html>`_ 」を参考にしてください。
+詳しくはPythonの公式ドキュメントの「 `datetimeモジュール <https://docs.python.org/ja/3/library/datetime.html>`_ 」を参考にしてください。
 
 .. index:: re
     single: Standard library; re
@@ -433,9 +433,9 @@ Python自体も標準でモジュールを提供しています。これら標�
 
 
 ``re`` モジュールには、ここで説明していない有効な使い方があります。
-Pythonの公式ドキュメントの「 `reモジュール <http://docs.python.jp/3/library/re.html>`_ 」を参考にしてください。
+Pythonの公式ドキュメントの「 `reモジュール <https://docs.python.org/ja/3/library/re.html>`_ 」を参考にしてください。
 
-また、他のPython標準ライブラリについては、「 `Python標準ライブラリ <http://docs.python.jp/3/library/index.html>`_ 」を参考にしてください。
+また、他のPython標準ライブラリについては、「 `Python標準ライブラリ <https://docs.python.org/ja/3/library/index.html>`_ 」を参考にしてください。
 
 
 まとめ

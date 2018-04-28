@@ -155,7 +155,7 @@ for文
 
 他にも役に立つ書き方があるので、Pythonのドキュメントを参考にしてください。
 
-* リストの内包表記 http://docs.python.jp/3/tutorial/datastructures.html#list-comprehensions
+* リストの内包表記 https://docs.python.org/ja/3/tutorial/datastructures.html#list-comprehensions
 
 .. index:: substitute
     single: Collection; substitute
