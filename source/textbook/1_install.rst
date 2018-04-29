@@ -59,8 +59,8 @@ macOSでPythonを利用する場合は、Pythonの公式サイトで配布され
 「 `Python Release Python 3.6.5 <https://www.python.org/downloads/release/python-365/>`_ 」をブラウザで開きます。
 以下のいずれかをダウンロードして実行し、Pythonをインストールします。
 
-- OS X 10.9以降: `macOS 64-bit/32-bit installer <https://www.python.org/ftp/python/3.6.5/python-3.6.5-macosx10.6.pkg>`_
-- Mac OS X 10.6以降: `macOS 64-bit installer <https://www.python.org/ftp/python/3.6.5/python-3.6.5-macosx10.9.pkg>`_
+- OS X 10.9以降: `macOS 64-bit installer <https://www.python.org/ftp/python/3.6.5/python-3.6.5-macosx10.9.pkg>`_
+- Mac OS X 10.6以降: `macOS 64-bit/32-bit installer <https://www.python.org/ftp/python/3.6.5/python-3.6.5-macosx10.6.pkg>`_
 
 詳しくはPythonの公式ドキュメントの「 `MacintoshでPythonを使う <https://docs.python.org/ja/3/using/mac.html>`_ 」を参考にしてください。
 
