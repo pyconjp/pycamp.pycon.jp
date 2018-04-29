@@ -18,7 +18,7 @@
 ==========================
 Python は標準ライブラリだけでもいろいろなことができますが、さらに便利なサードパーティ製のパッケージも提供されています。
 
-サードパーティ製パッケージは `PyPI <https://pypi.python.org>`_ （the Python Package Index、パイピーアイと読む）というサイトで情報が共有されています。
+サードパーティ製パッケージは `PyPI <https://pypi.org/>`_ （the Python Package Index、パイピーアイと読む）というサイトで情報が共有されています。
 
 .. figure:: images/pypi.png
    :width: 600
@@ -85,7 +85,7 @@ venvはプロジェクトごとに隔離されたPythonの仮想環境(Virtual E
 
    pyvenvスクリプトが廃止になった経緯は下記URLを参照してください。
 
-   http://docs.python.jp/3/whatsnew/3.6.html#id8
+   https://docs.python.org/ja/3/whatsnew/3.6.html#id8
 
 
 venv環境の作成

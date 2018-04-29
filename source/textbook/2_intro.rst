@@ -36,13 +36,13 @@ Pythonインタープリタ
 .. _python-interpreter:
 
 .. code-block:: bash
-    :caption: Pythonインタープリタの起動
+   :caption: Pythonインタープリタの起動
 
-    $ python3
-    Python 3.6.3 (v3.6.3:2c5fed86e0, Oct  3 2017, 00:32:08)
-    [GCC 4.2.1 (Apple Inc. build 5666) (dot 3)] on darwin
-    Type "help", "copyright", "credits" or "license" for more information.
-    >>>
+   $ python3
+   Python 3.6.5 (v3.6.5:f59c0932b4, Mar 28 2018, 05:52:31) 
+   [GCC 4.2.1 Compatible Apple LLVM 6.0 (clang-600.0.57)] on darwin
+   Type "help", "copyright", "credits" or "license" for more information.
+   >>>
 
 初めにPythonインタープリタの情報と、大なり記号3つ（``>>>``）が表示されます。
 
@@ -114,7 +114,7 @@ Pythonを電卓にする
 
    シーケンス型の詳細はPythonの公式ドキュメントを参照してください。
 
-   * シーケンス http://docs.python.jp/3/library/stdtypes.html#typesseq
+   * シーケンス https://docs.python.org/ja/3/library/stdtypes.html#typesseq
 
 .. index:: list
 
@@ -215,7 +215,7 @@ Pythonには標準でいくつか関数が提供されています。これを�
 
 組み込み関数の一覧は、次のドキュメントを参照してください。
 
-* 組み込み関数 http://docs.python.jp/3/library/functions.html
+* 組み込み関数 https://docs.python.org/ja/3/library/functions.html
 
 .. index:: FizzBuzz
 

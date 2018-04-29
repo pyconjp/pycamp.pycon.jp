@@ -19,13 +19,13 @@ Pythonの使い方などが解説してあるWebサイト
 .. list-table::
 
    * - Python 3.6 チュートリアル
-     - http://docs.python.jp/3/tutorial/
+     - https://docs.python.org/ja/3/tutorial/
    * - Python 標準ライブラリ
-     - http://docs.python.jp/3/library/index.html
+     - https://docs.python.org/ja/3/library/index.html
    * - Dive into Python 3 日本語版
      - http://diveintopython3-ja.rdy.jp/
    * - Python HOWTO
-     - http://docs.python.jp/3/howto/
+     - https://docs.python.org/ja/3/howto/
 
 .. index:: Web sites to learn programming
 
@@ -95,7 +95,7 @@ Pythonやプログラムの学習におすすめの書籍をいくつか紹介�
 
 * Python チュートリアル
 
-  * http://docs.python.jp/3/tutorial/index.html
+  * https://docs.python.org/ja/3/tutorial/index.html
   * https://www.oreilly.co.jp/books/9784873117539/
   * Python公式の読み物。オライリー書籍版もあり
   * リファレンスと異なり、説明を多く書いていて、他の言語経験者なら十分読めそう

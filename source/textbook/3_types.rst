@@ -19,7 +19,7 @@ Pythonのデータ型（基本編）
 
 データ型については、Pythonの公式ドキュメントも参考にしてください。
 
-* 組み込み型 http://docs.python.jp/3/library/stdtypes.html
+* 組み込み型 https://docs.python.org/ja/3/library/stdtypes.html
 
 .. index:: int
     single: Built-in Types; int
