@@ -6,23 +6,14 @@
 Python Boot Camp Text
 =====================
 
-
 本テキストは日本各地での初心者向けPythonチュートリアルイベント「Python Boot Camp」で使用するために、
 Pythonの開発環境構築、基礎的な文法や実践応用についてまとめたものです。
 
 - GitHub: https://github.com/pyconjp/bootcamp-text/
 - Read the Docs: https://readthedocs.org/projects/bootcamp-text/
 
-.. toctree::
+.. .. toctree::
    :maxdepth: 2
 
    organize/index
    textbook/index
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`search`
-
