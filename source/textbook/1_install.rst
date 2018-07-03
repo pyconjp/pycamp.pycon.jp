@@ -56,7 +56,7 @@ macOSの場合
 -------------------------------------
 macOSでPythonを利用する場合は、Pythonの公式サイトで配布されているビルド済みのパッケージをインストールします。
 
-「 `Python Release Python 3.6.6 <https://www.python.org/downloads/release/python-3667/>`_ 」をブラウザで開きます。
+「 `Python Release Python 3.6.6 <https://www.python.org/downloads/release/python-366/>`_ 」をブラウザで開きます。
 以下のいずれかをダウンロードして実行し、Pythonをインストールします。
 
 - OS X 10.9以降: `macOS 64-bit installer <https://www.python.org/ftp/python/3.6.6/python-3.6.6-macosx10.9.pkg>`_
