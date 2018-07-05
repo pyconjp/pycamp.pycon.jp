@@ -110,30 +110,18 @@ OSによって以下のいずれかのインストーラーをダウンロード
    C:\Users\user>python -V
    Python 3.6.6
 
-Linux （Ubuntu Server） での場合
+Linux（Ubuntu Server）の場合
 -------------------------------------
 
-ここではLinuxとしてUbuntu 18.04にPython3.6をインストールする方法を説明します。
-
-Ubuntu 18.04 にPython 3.6をインストールするには、 ``apt`` コマンドを実行します。
-さらに必要に応じて、Python 本体のほかに静的ライブラリや開発ツールの入ったパッケージや、以降で使う仮想環境を使うためのパッケージもインストールします（:numref:`ubuntu-install`）。
-
-.. _ubuntu-install:
-
-.. code-block:: sh
-   :caption: Python 3.6のインストール
-
-   $ sudo apt update
-   $ sudo apt -y install python3.6 python3.6-dev python3.6-venv
-
-インストールが完了したらPythonのバージョンが3.6.1になっていることを確認します（:numref:`check-version`）。
+Ubuntu 18.04にはデフォルトでPython 3.6.5がインストールされています。
+以下のコマンドでPythonのバージョンを確認します（:numref:`check-version`）。
 
 .. _check-version:
 
 .. code-block:: bash
    :caption: Pythonのバージョンを確認
 
-   $ python3.6 -V
+   $ python3 -V
    Python 3.6.5
 
 注意事項
