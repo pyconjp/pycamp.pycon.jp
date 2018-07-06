@@ -56,15 +56,15 @@ macOSの場合
 -------------------------------------
 macOSでPythonを利用する場合は、Pythonの公式サイトで配布されているビルド済みのパッケージをインストールします。
 
-「 `Python Release Python 3.6.5 <https://www.python.org/downloads/release/python-365/>`_ 」をブラウザで開きます。
+「 `Python Release Python 3.6.6 <https://www.python.org/downloads/release/python-366/>`_ 」をブラウザで開きます。
 以下のいずれかをダウンロードして実行し、Pythonをインストールします。
 
-- OS X 10.9以降: `macOS 64-bit installer <https://www.python.org/ftp/python/3.6.5/python-3.6.5-macosx10.9.pkg>`_
-- Mac OS X 10.6以降: `macOS 64-bit/32-bit installer <https://www.python.org/ftp/python/3.6.5/python-3.6.5-macosx10.6.pkg>`_
+- OS X 10.9以降: `macOS 64-bit installer <https://www.python.org/ftp/python/3.6.6/python-3.6.6-macosx10.9.pkg>`_
+- Mac OS X 10.6以降: `macOS 64-bit/32-bit installer <https://www.python.org/ftp/python/3.6.6/python-3.6.6-macosx10.6.pkg>`_
 
 詳しくはPythonの公式ドキュメントの「 `MacintoshでPythonを使う <https://docs.python.org/ja/3/using/mac.html>`_ 」を参考にしてください。
 
-インストールが完了したらPythonのバージョンが3.6.5になっていることを確認します（:numref:`check-version-mac`）。
+インストールが完了したらPythonのバージョンが3.6.6になっていることを確認します（:numref:`check-version-mac`）。
 
 .. _check-version-mac:
 
@@ -72,7 +72,7 @@ macOSでPythonを利用する場合は、Pythonの公式サイトで配布され
    :caption: Pythonのバージョンを確認
 
    $ python3.6 -V
-   Python 3.6.5
+   Python 3.6.6
 
 .. index::
     single: Install; Windows
@@ -82,11 +82,11 @@ Windowsの場合
 
 WindowsでPythonを利用する場合は、Pythonの公式サイトで配布されているWindowsインストーラを利用します。
 
-「 `Python Release Python 3.6.5 <https://www.python.org/downloads/release/python-365/>`_ 」をブラウザで開きます。
+「 `Python Release Python 3.6.6 <https://www.python.org/downloads/release/python-366/>`_ 」をブラウザで開きます。
 OSによって以下のいずれかのインストーラーをダウンロードし、ウィザードに従ってインストールします。
 
-- 64ビット版: `Windows x86-64 executable installer <https://www.python.org/ftp/python/3.6.5/python-3.6.5-amd64.exe>`_
-- 32ビット版: `Windows x86 executable installer <https://www.python.org/ftp/python/3.6.5/python-3.6.5.exe>`_
+- 64ビット版: `Windows x86-64 executable installer <https://www.python.org/ftp/python/3.6.6/python-3.6.6-amd64.exe>`_
+- 32ビット版: `Windows x86 executable installer <https://www.python.org/ftp/python/3.6.6/python-3.6.6.exe>`_
 
 この時、「Add Python 3.6 to PATH」にチェックを入れておきましょう。自動的に必要な環境変数が設定されます（:numref:`windows-install`）。
 
@@ -100,7 +100,7 @@ OSによって以下のいずれかのインストーラーをダウンロード
 .. index::
     single: Install; Linux
 
-インストールが完了したらPythonのバージョンが3.6.4になっていることを確認します（:numref:`check-version-win`）。
+インストールが完了したらPythonのバージョンが3.6.6になっていることを確認します（:numref:`check-version-win`）。
 
 .. _check-version-win:
 
@@ -108,33 +108,21 @@ OSによって以下のいずれかのインストーラーをダウンロード
    :caption: Pythonのバージョンを確認
 
    C:\Users\user>python -V
-   Python 3.6.5
+   Python 3.6.6
 
-Linux （Ubuntu Server） での場合
+Linux（Ubuntu Server）の場合
 -------------------------------------
 
-ここではLinuxとしてUbuntu 17.04にPython3.6をインストールする方法を説明します。
-
-Ubuntu 17.04 にPython 3.6をインストールするには、 ``apt`` コマンドを実行します。
-さらに必要に応じて、Python 本体のほかに静的ライブラリや開発ツールの入ったパッケージや、以降で使う仮想環境を使うためのパッケージもインストールします（:numref:`ubuntu-install`）。
-
-.. _ubuntu-install:
-
-.. code-block:: sh
-   :caption: Python 3.6のインストール
-
-   $ sudo apt update
-   $ sudo apt -y install python3.6 python3.6-dev python3.6-venv
-
-インストールが完了したらPythonのバージョンが3.6.1になっていることを確認します（:numref:`check-version`）。
+Ubuntu 18.04にはデフォルトでPython 3.6.5がインストールされています。
+以下のコマンドでPythonのバージョンを確認します（:numref:`check-version`）。
 
 .. _check-version:
 
 .. code-block:: bash
    :caption: Pythonのバージョンを確認
 
-   $ python3.6 -V
-   Python 3.6.1
+   $ python3 -V
+   Python 3.6.5
 
 注意事項
 ==========
