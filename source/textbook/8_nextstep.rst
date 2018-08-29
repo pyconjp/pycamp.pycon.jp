@@ -101,9 +101,9 @@ Pythonやプログラムの学習におすすめの書籍をいくつか紹介�
   * リファレンスと異なり、説明を多く書いていて、他の言語経験者なら十分読めそう
   * このチュートリアルが難しい人は上記4冊を読むと良さそう
 
-* Pythonプロフェッショナルプログラミング第2版
+* Pythonプロフェッショナルプログラミング第3版
 
-  * http://www.shuwasystem.co.jp/products/7980html/4315.html
+  * https://www.shuwasystem.co.jp/products/7980html/5382.html
   * Pythonを使って仕事をしていくためのノウハウ本です
   * 入門から先、Pythonに関連した「環境」をどうあつかっていくのかをまとめています
 
