@@ -35,13 +35,13 @@ Pythonの使い方などが解説してあるWebサイト
 
 .. list-table::
 
-   * - PyQ
+   * - PyQ : Python学習プラットフォーム
      - https://pyq.jp/
-   * - Paiza
+   * - Paiza : ITエンジニア・プログラマ向けの転職・就活・学習サービス
      - https://paiza.jp/
-   * - ProjectEuler
+   * - ProjectEuler : プログラミングのチャレンジングプラットフォーム
      - https://projecteuler.net/
-   * - CheckIO
+   * - CheckIO : Pythonコードを書いてステージを攻略するゲーム
      - https://checkio.org/
 
 .. index:: Q&A web sites for programming
@@ -72,20 +72,28 @@ Pythonやプログラムの学習におすすめの書籍をいくつか紹介�
 * プログラムの絵本
 
   * http://www.ank.co.jp/books/data/2016/program_ehon.html
-  * コンピューターとは？から説明
-  * 2進数の話などを経て大分後半になってからプログラミングの話が出てくる
+  * そもそもコンピューターの中で何が起きているのか、から始まる本で、Pythonは登場しません
+  * OSの役割、バイナリ、コンパイラ、インタプリタ、アセンブラ、メモリ・・といった、コンピューターの基礎知識を紹介
+  * 5章ではプログラミング言語の基本要素、条件分岐や繰り返しといった概念を図解で分かりやすく紹介
 
-* たのしいプログラミング Pythonではじめよう！
+* Pythonの絵本
 
-  * https://estore.ohmsha.co.jp/titles/978427406944P
-  * 子ども向け、プログラミングの仕方から学べる
+  * http://www.ank.co.jp/books/data/2018/python_ehon.html
+  * Pythonの基本を絵で分かりやすく説明
 
-* Pythonスタートブック
+* 独学プログラマー
 
-  * http://gihyo.jp/book/2010/978-4-7741-4229-6
+  * https://shop.nikkeibp.co.jp/front/commodity/0000/C92270/
+  * Pythonを使って「プログラミング全般」の知識を紹介
+  * Pythonのインストール方法についてはほとんど触れず、心構えから始まる
+  * Pythonの文法の他、Git, Bash, 正規表現, データ構造、アルゴリズム、仕事の仕方、といった全般の知識を広く浅く紹介する、独学者のための地図
+
+* Pythonスタートブック［増補改訂版］
+
+  * http://gihyo.jp/book/2018/978-4-7741-9643-5
   * Python入門を超分かりやすい言葉と絵で丁寧に解説
   * プログラミングの考え方についてはあまり触れていない
-  * 2010年の本で、Python2で書かれているため情報が古いことに注意が必要
+  * 2018年にPython3対応版としてリニューアル
 
 * みんなのPython 第4版
 
@@ -101,16 +109,37 @@ Pythonやプログラムの学習におすすめの書籍をいくつか紹介�
   * リファレンスと異なり、説明を多く書いていて、他の言語経験者なら十分読めそう
   * このチュートリアルが難しい人は上記4冊を読むと良さそう
 
+* 退屈なことはPythonにやらせよう
+
+  * https://www.oreilly.co.jp/books/9784873117782/
+  * プログラミングを覚えたら、何ができるようになるのか、実現できることが分かる
+  * 前半はPythonの入門で、プログラムの動作をフローチャート付きで分かりやすく紹介
+  * 後半はExcelやWordのファイル操作、CSV処理、メール送信、Webスクレイピングなど多くの仕事に使えそうな実例でライブラリの使い方を学ぶ構成
+
+
+* Pythonエンジニア ファーストブック
+
+  * http://gihyo.jp/book/2017/978-4-7741-9222-2
+  * スクレイピング、データ分析、Web開発など、仕事でPythonを使って開発する際に必要な知識、開発の流れ、環境の構築などを紹介
+
+* Python ライブラリ厳選レシピ
+
+  * http://gihyo.jp/book/2015/978-4-7741-7707-6
+  * Pythonの便利に使えるライブラリの情報を紹介
+
 * Pythonプロフェッショナルプログラミング第3版
 
   * https://www.shuwasystem.co.jp/products/7980html/5382.html
   * Pythonを使って仕事をしていくためのノウハウ本です
   * 入門から先、Pythonに関連した「環境」をどうあつかっていくのかをまとめています
+  * Webアプリ開発の始め方、チーム開発手法、デプロイの自動化、ドキュメント、自動テスト、など
 
-* Python ライブラリ厳選レシピ
+* エキスパートPythonプログラミング 改訂2版
 
-  * http://gihyo.jp/book/2015/978-4-7741-7707-6
-  * Pythonの便利に使えるライブラリ情報
+  * https://asciidwango.jp/post/171156307275/
+  * 「Pythonを知っている」状態から「Pythonをマスターしている」状態に成長するための本
+  * Pythonの世界でどのように活動していけばいいのかを知るのに適している
+  * 初級中級レベルの話題は扱ってなく、高度な話題や、実践的な情報が満載
 
 .. index:: Community
 
@@ -135,15 +164,20 @@ Pythonやプログラムの学習におすすめの書籍をいくつか紹介�
 
   * Python Boot Camp について話す ``#pycamp`` チャンネルもあります
   * 招待ページ http://pyconjp-fellow.herokuapp.com/
-* python-jp.slack.com
 
-  * 招待ページ https://www.python.jp/community/
+* Python.jp Discord
+
+  * 招待ページ https://www.python.jp/pages/community.html
+
 * pyhack.slack.com(Python mini Hack-a-thon参加者など)
 
   * 招待ページ http://pyhack.herokuapp.com/
+
 * pydata-jp.slack.com(Python + Data を通じて Pythonistaと データ分析者が交流するコミュニティ)
 
   * 招待ページ https://pydata-jp.herokuapp.com/
+
 * PyLadies Japan(女性Pythonistaのコミュニティ)
 
   * `Slackアカウント申請 - PyLadies Japan <https://docs.google.com/forms/d/e/1FAIpQLSelRdBGus7o6MsijTZiTt1kFAoFYQlwYgrBPQOrGVwGlAmHNg/viewform>`_
+
