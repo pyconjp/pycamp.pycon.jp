@@ -87,9 +87,22 @@ venvはプロジェクトごとに隔離されたPythonの仮想環境(Virtual E
 
    https://docs.python.org/ja/3/whatsnew/3.6.html#id8
 
+.. admonition:: コラム: condaの場合
+
+   `Anaconda <https://www.continuum.io/downloads>`_ を使っている場合は **pip** 、 **venv** の代わりに `Conda <http://conda.pydata.org/docs/>`_ というパッケージ管理ツールを使用します。
+
+   condaではそれぞれ以下のコマンドで、サードパーティー製パッケージのインストール、環境の作成、有効化、無効化が行えます。
+
+   .. code-block:: sh
+      :caption: conda コマンドの例
+
+      $ conda create --name env python  # 環境を作成
+      $ source activate env  # 環境の有効化
+      (env) $ conda install requests  # パッケージのインストール
+      (env) $ source deactivate  # 環境の無効化
 
 venv環境の作成
-----------------
+--------------
 
 venv環境を作成します。
 
@@ -100,7 +113,7 @@ venv環境を作成します。
 .. code-block:: sh
    :caption: venv環境の作成(macOS、Linux)
 
-    $ python3 -m venv env
+    $ python3.6 -m venv env
     $ ls
     env/
 
@@ -152,8 +165,8 @@ Windowsの場合はスクリプトを実行します（ :numref:`venv-activate-w
 .. code-block:: sh
    :caption: パッケージのインストール
 
-    (env)$ pip install requests
-    (env)$ python
+    (env) $ pip install requests
+    (env) $ python
     >>> import requests
     >>> # requestsがインポートできる
 
@@ -164,7 +177,7 @@ Windowsの場合はスクリプトを実行します（ :numref:`venv-activate-w
 .. index:: deactivate
 
 venv環境の無効化
-------------------
+----------------
 ``venv`` 環境を無効化（deactivate）するには、 ``deactivate`` コマンドを実行します（:numref:`venv-deactivate`）。
 
 無効化した後、元の環境で ``requests`` をインポートするとエラーとなり、 ``venv`` 環境でのみ ``requests`` がインストールされていることがわかります。
@@ -174,7 +187,7 @@ venv環境の無効化
 .. code-block:: sh
    :caption: venv環境を無効化
 
-    (env)$ deactivate
+    (env) $ deactivate
     $
     $ python
     >>> import requests
@@ -216,7 +229,7 @@ venv環境の無効化
 
       $ git clone some-project-source-code
       $ cd some-project
-      $ python3 -m venv env  # Windowsの場合は python -m venv env
+      $ python3.6 -m venv env  # Windowsの場合は python -m venv env
       $ source env/bin/activate
       (env) $ pip install -r requirements.txt
       Collecting certifi==2017.4.17 (from -r hoge.txt (line 1))
@@ -229,20 +242,6 @@ venv環境の無効化
    このようにして、同一の環境をプロジェクトメンバー全体で共有します。
 
 .. index:: conda
-
-conda の場合
-============
-`Anaconda <https://www.continuum.io/downloads>`_ を使っている場合は **pip** 、 **venv** の代わりに `Conda <http://conda.pydata.org/docs/>`_ というパッケージ管理ツールを使用します。
-
-condaではそれぞれ以下のコマンドで、サードパーティー製パッケージのインストール、環境の作成、有効化、無効化が行えます。
-
-.. code-block:: sh
-   :caption: conda コマンドの例
-
-   $ conda create --name env python # 環境を作成
-   $ source activate env # 環境の有効化
-   (env) $ conda install requests # パッケージのインストール
-   (env) $ source deactivate # 環境の無効化
 
 まとめ
 =======
