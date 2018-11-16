@@ -62,7 +62,7 @@ Pythonの標準ライブラリ `html.parser <https://docs.python.org/ja/3/librar
 
 シンプルなWeb APIのコード
 =========================
-Web APIの例としてconnpassのAPIを実行して、任意のイベント情報の一覧を取得します。
+Web APIの例としてconnpassのAPIを実行して、pythonというキーワードを含んだ2018年12月に開催されるイベント情報を取得します。
 
 * `APIリファレンス - connpass <https://connpass.com/about/api/>`_
 
@@ -73,25 +73,26 @@ Web APIの例としてconnpassのAPIを実行して、任意のイベント情�
 .. code-block:: python
    :caption: events.py
 
-   from datetime import date
    import requests
 
-   # 今日の年月を取得
-   today = date.today()
-   ym = '{:%Y%m}'.format(today)
-   url = 'https://connpass.com/api/v1/event/'
-   params = {
-       'keyword': 'python',
-       'ym': ym,
-   }
-   r = requests.get(url, params=params)
-   event_info = r.json()  # レスポンスのJSONを変換
 
-   print('件数:', event_info['results_returned'])  # 件数を表示
-   for event in event_info['events']:
-       print(event['title'])
-       print(event['started_at'])
+   def main():
+       params = {
+           'keyword': 'python',
+           'ym': '201812',
+       }
+       url = 'https://connpass.com/api/v1/event/'
+       r = requests.get(url, params=params)
+       event_info = r.json()  # レスポンスのJSONを変換
 
+       print('件数:', event_info['results_returned'])  # 件数を表示
+       for event in event_info['events']:
+           print(event['title'])
+           print(event['started_at'])
+
+   if __name__ == '__main__':
+       main()
+           
 このコードを実行すると、以下のようにイベントタイトルと日付の一覧が取得できます(:numref:`exec-events-py`)。
 
 .. _exec-events-py:
@@ -109,6 +110,63 @@ Web APIの例としてconnpassのAPIを実行して、任意のイベント情�
    2018-11-23T14:00:00+09:00
    :
 
+コードの解説
+------------
+上記のコードがどういった内容なのかを解説します。
+
+* 日付を使うのでdatetimeを、またWeb APIを実行するためにrequestをインポートします
+
+.. code-block:: python
+   :caption: モジュールのインポート
+
+   from datetime import date
+   import requests
+
+* メインとなる処理を ``main`` 関数として定義しています。 なお、関数の名前に特に決まりはなく、必ずしも ``main`` である必要はありません。
+
+.. code-block:: python
+   :caption: main()関数の定義
+
+   def main():
+
+* APIのパラメータとしてキーワードに ``python`` を、範囲に ``201812`` を指定します。パラメーターを書き換えれば検索条件が変わります。
+
+.. code-block:: python
+   :caption: パラメーターを作成
+
+       params = {
+           'keyword': 'python',
+           'ym': '201812',
+       }
+
+* ``requests.get()`` にURLとパラメーターを指定して結果を取得します。
+* 結果はJSON形式で返ってくるので、 ``.json()`` メソッドでPythonのデータ型（辞書、リスト等）に変換します。
+
+.. code-block:: python
+   :caption: Web APIを実行して結果を取得
+
+       url = 'https://connpass.com/api/v1/event/'
+       r = requests.get(url, params=params)
+       event_info = r.json()  # レスポンスのJSONを変換
+
+* Pythonデータ型のイベント情報から、件数とイベント名、開催日を取得して出力します。
+
+.. code-block:: python
+   :caption: 件数とイベント名、開催日を出力
+
+       print('件数:', event_info['results_returned'])  # 件数を表示
+       for event in event_info['events']:
+           print(event['title'])
+           print(event['started_at'])
+
+* 最後に、このスクリプトが実行された時に、main()関数を実行するように指定します。
+
+.. code-block:: python
+   :caption: main()関数を実行
+
+   if __name__ == '__main__':
+       main()
+   
 シンプルなスクレイピングのコード
 ================================
 スクレイピングの例として、PyCon JP 2017のスポンサー一覧のページ(https://pycon.jp/2017/ja/sponsors/)からスポンサー名とURLの情報を抜き出します。
