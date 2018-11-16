@@ -31,7 +31,7 @@ Pythonインタープリタ
 
 さっそくPythonで遊んでみましょう。
 
-ターミナル(WindowsではPowerShell)を立ち上げて ``python`` (macOS、Linuxの場合はpython3)と入力し、Pythonインタープリタを対話モードで起動しましょう（:numref:`python-interpreter`）。
+ターミナル(WindowsではPowerShell)を立ち上げて ``python`` (macOS、Linuxの場合は ``python3``)と入力し、Pythonインタープリタを対話モードで起動しましょう（:numref:`python-interpreter`）。
 
 .. _python-interpreter:
 
@@ -39,7 +39,7 @@ Pythonインタープリタ
    :caption: Pythonインタープリタの起動
 
    $ python3
-   Python 3.6.6 (v3.6.6:4cf1f54eb7, Jun 26 2018, 19:50:54) 
+   Python 3.6.7 (v3.6.7:6ec5cf24b7, Oct 20 2018, 03:02:14) 
    [GCC 4.2.1 Compatible Apple LLVM 6.0 (clang-600.0.57)] on darwin
    Type "help", "copyright", "credits" or "license" for more information.
    >>>

@@ -14,13 +14,13 @@
 
 
 環境構築
-=====================
+========
 
 前章の「 :ref:`about-venv` 」を参考に、venvモジュールを利用して、スクレイピング用のvenv環境を構築します。
 venv環境を ``activate`` コマンドで有効にし、スクレイピングに使用するRequestsとBeautiful Soup 4を ``pip`` コマンドでインストールします。
 
 .. code-block:: sh
-   :caption: スクレイピング用のvenv環境を構築
+   :caption: スクレイピング用のvenv環境を構築(macOS、Linux)
 
    $ mkdir scraping
    $ cd scraping
@@ -29,11 +29,21 @@ venv環境を ``activate`` コマンドで有効にし、スクレイピング�
    (env) $ pip install requests
    (env) $ pip install beautifulsoup4
 
+.. code-block:: sh
+   :caption: スクレイピング用のvenv環境を構築(Windows)
+
+   > mkdir scraping
+   > cd scraping
+   > python -m venv env
+   > env\Scripts\Activate.ps1
+   (env) > pip install requests
+   (env) > pip install beautifulsoup4
+
 .. index:: Requests
 
 Requests
 --------
-:URL: http://docs.python-requests.org/en/master/
+:URL: http://docs.python-requests.org/
 
 Requests について簡単に紹介します。
 Requests はウェブサイトにアクセスしてHTMLなどのデータを取得するためのライブラリです。
@@ -344,7 +354,7 @@ Beautiful Soup 4の主な使い方
    5
 
 まとめ
-==========
+======
 本節では、Pythonでスクレイピングをする方法を解説しました。
 
 RequestsとBeautiful Soup 4を使いこなすことにより、さまざまなウェブサイトから情報を取得できるようになります。
@@ -352,7 +362,7 @@ RequestsとBeautiful Soup 4を使いこなすことにより、さまざまな�
 なお、短時間にWebサイトに大量にアクセスをすると迷惑となるので、そういうことがないようにプログラムを実行するときには注意してください。
 
 参考書籍
-==========
+========
 Pythonでのスクレイピングについてもいくつか書籍が出ています。
 
 - `PythonによるWebスクレイピング <https://www.oreilly.co.jp/books/9784873117614/>`_
