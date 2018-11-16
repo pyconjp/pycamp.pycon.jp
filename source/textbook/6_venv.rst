@@ -80,7 +80,7 @@ venvはプロジェクトごとに隔離されたPythonの仮想環境(Virtual E
 
    以前は pyvenvスクリプトを利用したPython実行環境の作成方法を紹介していました。
 
-   ですが、Python3.6 から pyvenvスクリプトが非推奨となり将来的に削除されるので一部説明を変更をいたしました。
+   ですが、Python 3.6 から pyvenvスクリプトが非推奨となり将来的に削除されるので一部説明を変更をいたしました。
    今後は「python -m venv」を利用するようにしてください。
 
    pyvenvスクリプトが廃止になった経緯は下記URLを参照してください。
@@ -113,7 +113,7 @@ venv環境を作成します。
 .. code-block:: sh
    :caption: venv環境の作成(macOS、Linux)
 
-    $ python3.6 -m venv env
+    $ python3 -m venv env
     $ ls
     env/
 
@@ -229,7 +229,7 @@ venv環境の無効化
 
       $ git clone some-project-source-code
       $ cd some-project
-      $ python3.6 -m venv env  # Windowsの場合は python -m venv env
+      $ python3 -m venv env  # Windowsの場合は python -m venv env
       $ source env/bin/activate
       (env) $ pip install -r requirements.txt
       Collecting certifi==2017.4.17 (from -r hoge.txt (line 1))

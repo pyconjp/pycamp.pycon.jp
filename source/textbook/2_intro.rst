@@ -31,14 +31,14 @@ Pythonインタープリタ
 
 さっそくPythonで遊んでみましょう。
 
-ターミナル(WindowsではPowerShell)を立ち上げて ``python`` (macOS、Linuxの場合は ``python3.6``)と入力し、Pythonインタープリタを対話モードで起動しましょう（:numref:`python-interpreter`）。
+ターミナル(WindowsではPowerShell)を立ち上げて ``python`` (macOS、Linuxの場合は ``python3``)と入力し、Pythonインタープリタを対話モードで起動しましょう（:numref:`python-interpreter`）。
 
 .. _python-interpreter:
 
 .. code-block:: bash
    :caption: Pythonインタープリタの起動
 
-   $ python3.6
+   $ python3
    Python 3.6.7 (v3.6.7:6ec5cf24b7, Oct 20 2018, 03:02:14) 
    [GCC 4.2.1 Compatible Apple LLVM 6.0 (clang-600.0.57)] on darwin
    Type "help", "copyright", "credits" or "license" for more information.
@@ -278,7 +278,7 @@ Python ファイルを作成して実行する場合は、 ``print`` 関数が�
 .. code-block:: bash
     :caption: fizzbuzz.pyの実行
 
-    $ python3.6 fizzbuzz.py
+    $ python3 fizzbuzz.py
     4
 
 ファイルが存在するフォルダと、ターミナル/PowerShellの現在位置があっているか注意してください。
@@ -291,7 +291,7 @@ fizzbuzz.pyが見つからない場合は場合は、以下のようなエラー
 .. code-block:: guess
     :caption: fizzbuzz.pyの実行
 
-    $ python3.6 fizzbuzz.py
+    $ python3 fizzbuzz.py
     can't open file 'fizzbuzz.py': [Errno 2] No such file or directory
 
 .. index:: for
@@ -321,7 +321,7 @@ for文
 .. code-block:: bash
     :caption: fizzbuzz.pyの実行(2)
 
-    $ python3.6 fizzbuzz.py
+    $ python3 fizzbuzz.py
     1
     2
     3
@@ -451,7 +451,7 @@ FizzBuzz処理の実装の完了
 .. code-block:: bash
     :caption: 完成したfizzbuzz.pyの実行
 
-    $ python3.6 fizzbuzz.py
+    $ python3 fizzbuzz.py
     1
     2
     Fizz

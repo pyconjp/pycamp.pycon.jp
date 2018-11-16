@@ -71,7 +71,7 @@ macOSでPythonを利用する場合は、Pythonの公式サイトで配布され
 .. code-block:: bash
    :caption: Pythonのバージョンを確認
 
-   $ python3.6 -V
+   $ python3 -V
    Python 3.6.7
 
 .. index::
@@ -121,7 +121,7 @@ Ubuntu 18.04にはデフォルトでPython 3.6.5がインストールされて�
 .. code-block:: bash
    :caption: Pythonのバージョンを確認
 
-   $ python3.6 -V
+   $ python3 -V
    Python 3.6.5
 
 注意事項
