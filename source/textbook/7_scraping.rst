@@ -114,12 +114,11 @@ Web APIの例としてconnpassのAPIを実行して、pythonというキーワ�
 ------------
 上記のコードがどういった内容なのかを解説します。
 
-* 日付を使うのでdatetimeを、またWeb APIを実行するためにrequestをインポートします
+* Web APIを実行するためにrequestをインポートします
 
 .. code-block:: python
    :caption: モジュールのインポート
 
-   from datetime import date
    import requests
 
 * メインとなる処理を ``main`` 関数として定義しています。 なお、関数の名前に特に決まりはなく、必ずしも ``main`` である必要はありません。
