@@ -1,36 +1,37 @@
 .. index:: Scraping
 
-==================================
-スクレイピング
-==================================
+=========================
+ Web API、スクレイピング
+=========================
 
 :節サブタイトル: 自動でデータを収集する方法
 
-スクレイピングとは
-==================
-ウェブサイトから情報を抽出する、コンピュータソフトウェア技術のことをいいます。
+Web APIとスクレイピングとは
+===========================
+**Web API** はインターネット上に用意されているAPIをプログラムから呼び出す技術のことです。
+**スクレイピング** はウェブサイトから情報を抽出する、コンピュータソフトウェア技術のことをいいます。
 
-ここではPythonを使った実用的なプログラムの例として、スクレイピングを行います。
+ここではPythonを使った実用的なプログラムの例として、Web APIとスクレイピングの演習を行います。
 
 
 環境構築
 ========
 
 前章の「 :ref:`about-venv` 」を参考に、venvモジュールを利用して、スクレイピング用のvenv環境を構築します。
-venv環境を ``activate`` コマンドで有効にし、スクレイピングに使用するRequestsとBeautiful Soup 4を ``pip`` コマンドでインストールします。
+venv環境を ``activate`` コマンドで有効にし、Web APIとスクレイピングに使用する **Requests** と **Beautiful Soup 4** を ``pip`` コマンドでインストールします。
 
 .. code-block:: sh
-   :caption: スクレイピング用のvenv環境を構築(macOS、Linux)
+   :caption: 演習用のvenv環境を構築(macOS、Linux)
 
    $ mkdir scraping
    $ cd scraping
-   $ python3 -m venv env  # Windowsの場合は python -m venv env
+   $ python3 -m venv env
    $ source env/bin/activate
    (env) $ pip install requests
    (env) $ pip install beautifulsoup4
 
 .. code-block:: sh
-   :caption: スクレイピング用のvenv環境を構築(Windows)
+   :caption: 演習用のvenv環境を構築(Windows)
 
    > mkdir scraping
    > cd scraping
@@ -59,6 +60,112 @@ Beautiful Soup 4はHTMLやXMLの中身を解析して、任意の情報を取得
 Pythonの標準ライブラリ `html.parser <https://docs.python.org/ja/3/library/html.parser.html>`_ でも同様のことは行なえますが、より便利な Beautiful Soup 4 をここでは使用します。
 なお、beautifulsoupとbeautifulsoup4が存在しますが、新しい **beautifulsoup4** を使うようにしてください。
 
+シンプルなWeb APIのコード
+=========================
+Web APIの例としてconnpassのAPIを実行して、pythonというキーワードを含んだ2018年12月に開催されるイベント情報を取得します。
+
+* `APIリファレンス - connpass <https://connpass.com/about/api/>`_
+
+下記のコードを ``events.py`` という名前で保存します(:numref:`events-py`)。
+
+.. _events-py:
+
+.. code-block:: python
+   :caption: events.py
+
+   import requests
+
+
+   def main():
+       params = {
+           'keyword': 'python',
+           'ym': '201812',
+       }
+       url = 'https://connpass.com/api/v1/event/'
+       r = requests.get(url, params=params)
+       event_info = r.json()  # レスポンスのJSONを変換
+
+       print('件数:', event_info['results_returned'])  # 件数を表示
+       for event in event_info['events']:
+           print(event['title'])
+           print(event['started_at'])
+
+   if __name__ == '__main__':
+       main()
+           
+このコードを実行すると、以下のようにイベントタイトルと日付の一覧が取得できます(:numref:`exec-events-py`)。
+
+.. _exec-events-py:
+
+.. code-block:: bash
+   :caption: connpass APIを実行
+
+   (env) $ python events.py
+   件数: 10
+   【超初心者対象】プログラミング未経験者が初心者になるためのPython体験@池袋
+   2018-11-28T19:00:00+09:00
+   【初心者歓迎】大阪Python もくもく会 #1
+   2018-11-16T19:00:00+09:00
+   [R]『Ｒ統計解析パーフェクトマスター』１冊丸ごと演習会
+   2018-11-23T14:00:00+09:00
+   :
+
+コードの解説
+------------
+上記のコードがどういった内容なのかを解説します。
+
+* Web APIを実行するために ``requests`` をインポートします
+
+.. code-block:: python
+   :caption: モジュールのインポート
+
+   import requests
+
+* メインとなる処理を ``main`` 関数として定義しています。 なお、関数の名前に特に決まりはなく、必ずしも ``main`` である必要はありません。
+
+.. code-block:: python
+   :caption: main()関数の定義
+
+   def main():
+
+* APIのパラメータとしてキーワードに ``python`` を、範囲に ``201812`` を指定します。パラメーターを書き換えれば検索条件が変わります。
+
+.. code-block:: python
+   :caption: パラメーターを作成
+
+       params = {
+           'keyword': 'python',
+           'ym': '201812',
+       }
+
+* ``requests.get()`` にURLとパラメーターを指定して結果を取得します。
+* 結果はJSON形式で返ってくるので、 ``.json()`` メソッドでPythonのデータ型（辞書、リスト等）に変換します。
+
+.. code-block:: python
+   :caption: Web APIを実行して結果を取得
+
+       url = 'https://connpass.com/api/v1/event/'
+       r = requests.get(url, params=params)
+       event_info = r.json()  # レスポンスのJSONを変換
+
+* Pythonデータ型のイベント情報から、件数とイベント名、開催日を取得して出力します。
+
+.. code-block:: python
+   :caption: 件数とイベント名、開催日を出力
+
+       print('件数:', event_info['results_returned'])  # 件数を表示
+       for event in event_info['events']:
+           print(event['title'])
+           print(event['started_at'])
+
+* 最後に、このスクリプトが実行された時に、main()関数を実行するように指定します。
+
+.. code-block:: python
+   :caption: main()関数を実行
+
+   if __name__ == '__main__':
+       main()
+   
 シンプルなスクレイピングのコード
 ================================
 スクレイピングの例として、PyCon JP 2017のスポンサー一覧のページ(https://pycon.jp/2017/ja/sponsors/)からスポンサー名とURLの情報を抜き出します。
@@ -68,7 +175,7 @@ Pythonの標準ライブラリ `html.parser <https://docs.python.org/ja/3/librar
 
    スポンサー一覧ページ
 
-下記コードをsimple.pyという名前で保存します(:numref:`simple-py`)。
+下記コードを ``simple.py`` という名前で保存します(:numref:`simple-py`)。
 
 .. _simple-py:
 
