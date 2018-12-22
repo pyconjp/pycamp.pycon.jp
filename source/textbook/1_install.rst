@@ -16,7 +16,6 @@ Pythonをはじめましょう！
 
 .. index:: Editor
     single: Editor; Atom
-    single: Editor; PyCharm
 
 エディタの準備
 ==============
@@ -24,10 +23,8 @@ Pythonをはじめましょう！
 普段使用しているエディタがある人は、そのエディタを使用して構いません。
 Python の文法に対応しているエディタを使用することをおすすめします。
 
-普段使っているエディタがない人は、以下のいずれかをインストールしてください。
-
-- `Atom <https://atom.io/>`_: さまざまなプログラミング言語に対応したエディタ
-- `PyCharm <https://www.jetbrains.com/pycharm/>`_: Pythonに特化したIDE(統合開発環境)
+普段使っているエディタがない人は、 `Atom <https://atom.io/>`_ をインストールしてください。
+Atomはさまざまなプログラミング言語に対応したエディタで、拡張機能も豊富です。
 
 .. index:: Terminal
 
