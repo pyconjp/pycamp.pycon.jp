@@ -114,7 +114,7 @@ Web APIの例としてconnpassのAPIを実行して、pythonというキーワ�
 ------------
 上記のコードがどういった内容なのかを解説します。
 
-* Web APIを実行するためにrequestをインポートします
+* Web APIを実行するために ``requests`` をインポートします
 
 .. code-block:: python
    :caption: モジュールのインポート
