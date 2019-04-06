@@ -475,6 +475,42 @@ FizzBuzz処理の実装の完了
 
 FizzBuzz はいろいろな方法で実装できます。もっと短く、わかりやすく書くにはどうすればよいか、チャレンジしてみてください。
 
+.. admonition:: コラム: 値には型がある
+
+   Pythonでは整数や文字列、リストなど多種多様な値を使うことができますが、これらを区別して扱うための仕組みがあります。この仕組みのことを ``型`` といいます。
+
+   型ごとにできることとできないことが定義されていて、それぞれの値は型のインスタンスになります。
+   数値の ``100`` は整数型（int）の値で、他の数値と演算することができます。 
+
+   また、ある値の型は他の抽象度が高い型のものとみなすことができるものもあります。
+   たとえば文字列やリストの型は、それぞれ文字列型（str）のとリスト型（list）ですが、ほかに繰返し可能な型（シーケンス）ともいえます。
+
+   型は組み込み関数の ``type()`` 関数や ``isinstance()`` 関数を使って調べることができます。
+
+   .. code-block:: python
+      :caption: 文字列とリストとそれらの型
+
+      >>> n1 = 100
+      >>> s1 = "hello"
+      >>> l1 = [1, 2, 3]
+      >>> type(n1)
+      <class 'int'>
+      >>> type(s1)
+      <class 'str'>
+      >>> type(l1)
+      <class 'list'>
+      >>> isinstance(n1, int)
+      True
+      >>> isinstance(s1, str)
+      True
+      >>> isinstance(l1, list)
+      True
+      >>> import collections.abc
+      >>> isinstance(s1, collections.abc.Sequence)
+      True
+      >>> isinstance(l1, collections.abc.Sequence)
+      True
+
 まとめ
 =============
 本節では、FizzBuzzを通じたPythonの特徴、基本を紹介しました。
