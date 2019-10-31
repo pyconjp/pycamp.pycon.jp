@@ -44,7 +44,7 @@ venv環境を ``activate`` コマンドで有効にし、Web APIとスクレイ�
 
 Requests
 --------
-:URL: http://docs.python-requests.org/
+:URL: http://python-requests.org/
 
 Requests について簡単に紹介します。
 Requests はウェブサイトにアクセスしてHTMLなどのデータを取得するためのライブラリです。
@@ -371,7 +371,7 @@ Requests の主な使い方
 ここでは Requests の主な使い方の例をいくつか載せます。
 詳細については以下の公式ドキュメントを参照してください。
 
-:公式ドキュメント: `Requests: HTTP for Humans <http://docs.python-requests.org/en/master/>`_
+:公式ドキュメント: `Requests: HTTP for Humans <http://python-requests.org/>`_
 
 以下は認証つきのURLにアクセスして、結果を取得する例です。
 
