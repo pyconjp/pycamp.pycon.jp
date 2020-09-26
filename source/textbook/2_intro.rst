@@ -39,8 +39,8 @@ Pythonインタープリタ
    :caption: Pythonインタープリタの起動
 
    $ python3
-   Python 3.6.7 (v3.6.7:6ec5cf24b7, Oct 20 2018, 03:02:14) 
-   [GCC 4.2.1 Compatible Apple LLVM 6.0 (clang-600.0.57)] on darwin
+   Python 3.8.6 (v3.8.6:db455296be, Sep 23 2020, 13:31:39) 
+   [Clang 6.0 (clang-600.0.57)] on darwin
    Type "help", "copyright", "credits" or "license" for more information.
    >>>
 
