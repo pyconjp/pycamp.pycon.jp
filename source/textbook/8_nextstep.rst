@@ -18,7 +18,7 @@ Pythonの使い方などが解説してあるWebサイト
 
 .. list-table::
 
-   * - Python 3.6 チュートリアル
+   * - Python チュートリアル
      - https://docs.python.org/ja/3/tutorial/
    * - Python 標準ライブラリ
      - https://docs.python.org/ja/3/library/index.html
