@@ -219,7 +219,7 @@ TA申込者
   * #pycamp チャネル：Python Boot Camp 全体のチャネル。全体の運営に関する議論や、講師を募ったり、会場提供者とのやりとりなどを行う。
 * Google Drive: `Python Boot Camp用のフォルダ <https://drive.google.com/drive/u/1/folders/0B9xgFsw7nWw9b3pDWHpKRHJ5QmM>`_ でドキュメント共有に活用
 * JIRA: `PyCon JP JIRA <http://pyconjp.atlassian.net>`_ での運営タスク管理
-* Twitter: `@PyConJ <https://twitter.com/pyconj>`_ での告知・拡散用
+* Twitter: `@pyconjapan <https://twitter.com/pyconjapan>`_ での告知・拡散用
 * Facebook: `PyCon JP Facebookページ <https://www.facebook.com/PyConJP/>`_ での告知・拡散用
 * Connpass： `PyCon JPイベントシリーズ <http://pyconjp.connpass.com>`_ でPyCon JPイベントやその他の関連イベントとあわせて管理している。
 * Blogpost: `PyCon JP公式ブログ <https://pyconjp.blogspot.jp>`_ での告知や開催報告レポート用
