@@ -1,3 +1,5 @@
+.. _1_manual:
+
 ================================
  Python Boot Camp 運営マニュアル
 ================================
@@ -8,7 +10,7 @@ Python Boot Camp（略称 PyCamp）の運営をする際の手順をしめす。
 対象利用者
 ==========
 
-* 一般社団法人スタッフ（PyConスタッフ）
+* コアスタッフ
 * 講師
 * 現地スタッフ
 * TA
@@ -16,8 +18,8 @@ Python Boot Camp（略称 PyCamp）の運営をする際の手順をしめす。
 役割分担
 ========
 
-一般社団法人スタッフ（PyConスタッフ）
--------------------------------------
+コアスタッフ
+------------
 
 Python Boot Camp全体の運営・管理を行う。各開催では現地スタッフを運営面からサポートする。
 
@@ -30,6 +32,8 @@ Python Boot Camp全体の運営・管理を行う。各開催では現地スタ�
 * 経費精算で一般社団法人PyCon JP Association会計係と精算を受ける講師・現地スタッフを仲介する
 * イベント後の反省会を開く
 * 各開催、全体の予算の管理する
+
+コアスタッフのマニュアルは :ref:`2_corestaff_manual` を参照。
 
 講師
 ----
@@ -223,6 +227,7 @@ TA申込者
 * Facebook: `PyCon JP Facebookページ <https://www.facebook.com/PyConJP/>`_ での告知・拡散用
 * Connpass： `PyCon JPイベントシリーズ <http://pyconjp.connpass.com>`_ でPyCon JPイベントやその他の関連イベントとあわせて管理している。
 * Blogpost: `PyCon JP公式ブログ <https://pyconjp.blogspot.jp>`_ での告知や開催報告レポート用
+
 
 JIRAの使い方
 ============
