@@ -39,8 +39,8 @@ Pythonインタープリタ
    :caption: Pythonインタープリタの起動
 
    $ python3
-   Python 3.8.6 (v3.8.6:db455296be, Sep 23 2020, 13:31:39) 
-   [Clang 6.0 (clang-600.0.57)] on darwin
+   Python 3.9.8 (v3.9.8:bb3fdcfe95, Nov  5 2021, 16:40:46) 
+   [Clang 13.0.0 (clang-1300.0.29.3)] on darwin
    Type "help", "copyright", "credits" or "license" for more information.
    >>>
 
