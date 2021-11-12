@@ -84,7 +84,7 @@ OSによって以下のいずれかのインストーラーをダウンロード
 - 64ビット版: `Windows installer (64-bit) <https://www.python.org/ftp/python/3.9.8/python-3.9.8-amd64.exe>`_
 - 32ビット版: `Windows installer (32-bit) <https://www.python.org/ftp/python/3.9.8/python-3.9.8.exe>`_
 
-この時、「Add Python 3.9 to PATH」にチェックを入れておきましょう。自動的に必要な環境変数が設定されます（:numref:`windows-install` 画像はPython 3.8.6のものです）。
+この時、「Add Python 3.9 to PATH」にチェックを入れておきましょう。自動的に必要な環境変数が設定されます（:numref:`windows-install` ）。
 
 .. _windows-install:
 
