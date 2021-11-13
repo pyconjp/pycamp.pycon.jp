@@ -35,7 +35,7 @@ pipコマンド
 .. index:: ensurepip
     single: pip; ensurepip
 
-Python 3.9では ``ensurepip`` という仕組みによって、Pythonのインストール時にpipコマンドがインストールされます。
+Python 3.4から ``ensurepip`` という仕組みによって、Pythonのインストール時にpipコマンドがインストールされます。
 
 pipもpipコマンドでアップグレードを行えます。まずは、現在イントールされているpipコマンドを最新にアップグレードしましょう。
 アップグレードは、次のコマンドを実行します。
