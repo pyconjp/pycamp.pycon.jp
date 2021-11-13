@@ -108,7 +108,7 @@ OSによって以下のいずれかのインストーラーをダウンロード
 
 Linux（Ubuntu Server）の場合
 ----------------------------
-Ubuntu 20.04にはデフォルトでPython 3.8.2がインストールされています。
+Ubuntu 20.04にはデフォルトでPython 3.8.10がインストールされています。
 以下のコマンドでPythonのバージョンを確認します（:numref:`check-version`）。
 
 .. _check-version:
@@ -117,7 +117,7 @@ Ubuntu 20.04にはデフォルトでPython 3.8.2がインストールされて�
    :caption: Pythonのバージョンを確認
 
    $ python3 -V
-   Python 3.8.2
+   Python 3.8.10
 
 注意事項
 ========
