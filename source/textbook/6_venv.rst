@@ -35,7 +35,7 @@ pipコマンド
 .. index:: ensurepip
     single: pip; ensurepip
 
-Python 3.8では ``ensurepip`` という仕組みによって、Pythonのインストール時にpipコマンドがインストールされます。
+Python 3.4から ``ensurepip`` という仕組みによって、Pythonのインストール時にpipコマンドがインストールされます。
 
 pipもpipコマンドでアップグレードを行えます。まずは、現在イントールされているpipコマンドを最新にアップグレードしましょう。
 アップグレードは、次のコマンドを実行します。
@@ -170,7 +170,7 @@ Windowsの場合はスクリプトを実行します（ :numref:`venv-activate-w
     >>> import requests
     >>> # requestsがインポートできる
 
-``requests`` が ``env/lib/python3.8/site-packages`` 配下にインストールされます。
+``requests`` が ``env/lib/python3.9/site-packages`` 配下にインストールされます。
 
 またPythonパッケージの中にはコマンドとして実行可能なファイルが含まれている場合があります。それらのファイルは ``env/bin`` 配下にインストールされます。
 

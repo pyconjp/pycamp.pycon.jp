@@ -53,14 +53,14 @@ macOSの場合
 -----------
 macOSでPythonを利用する場合は、Pythonの公式サイトで配布されているビルド済みのパッケージをインストールします。
 
-「 `Python Release Python 3.8.6 <https://www.python.org/downloads/release/python-386/>`_ 」をブラウザで開きます。
+「 `Python Release Python 3.9.8 <https://www.python.org/downloads/release/python-398/>`_ 」をブラウザで開きます。
 以下をダウンロードして実行し、Pythonをインストールします。
 
-- `macOS 64-bit installer <https://www.python.org/ftp/python/3.8.6/python-3.8.6-macosx10.9.pkg>`_
+- `macOS 64-bit universal2 installer <https://www.python.org/ftp/python/3.9.8/python-3.9.8-macos11.pkg>`_
 
 詳しくはPythonの公式ドキュメントの「 `MacintoshでPythonを使う <https://docs.python.org/ja/3/using/mac.html>`_ 」を参考にしてください。
 
-インストールが完了したらPythonのバージョンが3.8.6になっていることを確認します（:numref:`check-version-mac`）。
+インストールが完了したらPythonのバージョンが3.9.8になっていることを確認します（:numref:`check-version-mac`）。
 
 .. _check-version-mac:
 
@@ -68,7 +68,7 @@ macOSでPythonを利用する場合は、Pythonの公式サイトで配布され
    :caption: Pythonのバージョンを確認
 
    $ python3 -V
-   Python 3.8.6
+   Python 3.9.8
 
 .. index::
     single: Install; Windows
@@ -78,25 +78,25 @@ Windowsの場合
 
 WindowsでPythonを利用する場合は、Pythonの公式サイトで配布されているWindowsインストーラを利用します。
 
-「 `Python Release Python 3.8.6 <https://www.python.org/downloads/release/python-386/>`_ 」をブラウザで開きます。
+「 `Python Release Python 3.9.8 <https://www.python.org/downloads/release/python-398/>`_ 」をブラウザで開きます。
 OSによって以下のいずれかのインストーラーをダウンロードし、ウィザードに従ってインストールします。
 
-- 64ビット版: `Windows x86-64 executable installer <https://www.python.org/ftp/python/3.8.6/python-3.8.6-amd64.exe>`_
-- 32ビット版: `Windows x86 executable installer <https://www.python.org/ftp/python/3.8.6/python-3.8.6.exe>`_
+- 64ビット版: `Windows installer (64-bit) <https://www.python.org/ftp/python/3.9.8/python-3.9.8-amd64.exe>`_
+- 32ビット版: `Windows installer (32-bit) <https://www.python.org/ftp/python/3.9.8/python-3.9.8.exe>`_
 
-この時、「Add Python 3.8 to PATH」にチェックを入れておきましょう。自動的に必要な環境変数が設定されます（:numref:`windows-install`）。
+この時、「Add Python 3.9 to PATH」にチェックを入れておきましょう。自動的に必要な環境変数が設定されます（:numref:`windows-install`）。
 
 .. _windows-install:
 
 .. figure:: images/pythonforwindows1.png
-   :width: 400
+   :width: 600
 
    Python for Windowsのインストール画面
 
 .. index::
     single: Install; Linux
 
-インストールが完了したらPythonのバージョンが3.8.6になっていることを確認します（:numref:`check-version-win`）。
+インストールが完了したらPythonのバージョンが3.9.8になっていることを確認します（:numref:`check-version-win`）。
 
 .. _check-version-win:
 
@@ -104,11 +104,11 @@ OSによって以下のいずれかのインストーラーをダウンロード
    :caption: Pythonのバージョンを確認
 
    C:\Users\user>python -V
-   Python 3.8.6
+   Python 3.9.8
 
 Linux（Ubuntu Server）の場合
 ----------------------------
-Ubuntu 20.04にはデフォルトでPython 3.8.2がインストールされています。
+Ubuntu 20.04にはデフォルトでPython 3.8.10がインストールされています。
 以下のコマンドでPythonのバージョンを確認します（:numref:`check-version`）。
 
 .. _check-version:
@@ -117,7 +117,7 @@ Ubuntu 20.04にはデフォルトでPython 3.8.2がインストールされて�
    :caption: Pythonのバージョンを確認
 
    $ python3 -V
-   Python 3.8.2
+   Python 3.8.10
 
 注意事項
 ========
@@ -130,7 +130,7 @@ Pythonを起動した時に表示される文字をチェックして、下記�
 - Pythonのバージョン(3.8以上であること)
 - Anacondaという文字が表示されないこと
 
-インストールされていない場合は前述の手順でPython3.8.6のインストールを行ってください。
+インストールされていない場合は前述の手順でPython3.9.8のインストールを行ってください。
 
 まとめ
 ======
