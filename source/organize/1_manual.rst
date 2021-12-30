@@ -228,6 +228,7 @@ TA申込者
 * Connpass： `PyCon JPイベントシリーズ <http://pyconjp.connpass.com>`_ でPyCon JPイベントやその他の関連イベントとあわせて管理している。
 * Blogpost: `PyCon JP公式ブログ <https://pyconjp.blogspot.jp>`_ での告知や開催報告レポート用
 
+.. _how_to_use_jira:
 
 JIRAの使い方
 ============

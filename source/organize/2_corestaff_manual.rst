@@ -29,9 +29,8 @@ Python Boot Campの開催を立候補した現地スタッフの受け入れ手�
 * 現地スタッフ受け入れ手続き用JIRAチケット作成
 
   * 実際に作成されたJIRAチケット：https://pyconjp.atlassian.net/browse/ISSHA-2003
-* 現地スタッフ立候補者へのSlack招待
 
-JIRAチケットが作成されたら、Slackの#pycamp-core チャンネルで誰がチケットを担当するかを決める。
+JIRAチケットが作成されたら、Slackの#pycamp-core チャンネルで他のコアスタッフと話し合って、誰がチケットを担当するかを決める。
 担当者はJIRAチケット説明の「コアスタッフ担当」に書かれている内容を読んで、現地スタッフ受け入れ手続きを進める。
 
 Python Boot Camp開催決定までに必要なタスク
