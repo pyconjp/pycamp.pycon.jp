@@ -49,6 +49,8 @@ Python Boot Camp開催決定までに必要なタスク
 
 決まり次第、Slackの#pycamp チャンネルにて上記の条件で派遣できる講師を決める。 ``@pycamp-instructors`` にメンションを送ることで講師全員に呼びかけることができる。
 
+.. _create_jira_tickets:
+
 JIRAチケットの作成
 ------------------
 
@@ -67,6 +69,34 @@ Google Drive共有ドライブにフォルダを作成
 https://drive.google.com/drive/u/0/folders/0AHeZnmob9mlbUk9PVA
 
 フォルダ名は「開催年月」の後「開催地」を入れること。例えば、2021年5月に山口県で開催する場合は「202105山口」とする。
+
+connpassイベントページ作成手順
+------------------------------
+
+connpassイベントページは以下の手順で作成する。
+
+1. PyCon JPグループのイベント一覧（https://pyconjp.connpass.com/event/）から直近の「Python Boot Camp in ○○（地域名が入る）」、「Python Boot Camp in ○○（地域名が入る） 懇親会」というタイトルのイベントを探し、イベントタイトルのリンクをクリックし、イベント編集画面を表示する。
+
+.. figure:: images/connpass-pyconjp-group-event-page.png
+   :width: 400
+
+   PyCon JPグループのイベント一覧
+
+2. イベント編集画面の画面上にある「コピーを作成」をクリックする。
+
+.. figure:: images/connpass-edit-event-page.png
+   :width: 400
+
+   イベント編集画面
+
+3. ダイアログが表示されたら「OK」をクリックし、新しいイベントを作成する。
+
+.. figure:: images/connpass-confirm-copy-event.png
+   :width: 400
+
+   「コピーを作成」をクリックすると表示されるダイアログ
+
+4. コピーして作成したイベントを編集して、現地スタッフに渡す。具体的な編集内容は :ref:`create_jira_tickets` で作成したチケット「connpassイベント公開(現地スタッフ)]」を参照すること。
 
 Python Boot Campに関する宣伝活動
 ================================
