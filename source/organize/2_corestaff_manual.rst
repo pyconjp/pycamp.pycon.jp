@@ -123,3 +123,4 @@ Python Boot Campに関する宣伝活動
 
 * PyCon JPポスターセッション
 * Python関連のイベントでのLT
+* Python Boot Camp相談会の開催
