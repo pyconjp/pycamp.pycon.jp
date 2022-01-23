@@ -95,7 +95,24 @@ connpassイベントページは以下の手順で作成する。
 
    「コピーを作成」をクリックすると表示されるダイアログ
 
-4. コピーして作成したイベントを編集して、現地スタッフに渡す。具体的な編集内容は :ref:`create_jira_tickets` で作成したチケット「connpassイベント公開(現地スタッフ)]」を参照すること。
+4. 新しいイベントにアンケートを作成する。
+
+.. figure:: images/connpass-copy-questionnaire-1.png
+   :width: 400
+
+   新しいイベントページの「アンケートを作成・編集する」をクリック
+
+.. figure:: images/connpass-copy-questionnaire-2.png
+   :width: 400
+
+   コピー元のイベントの右にある「複製する」をクリック
+
+.. figure:: images/connpass-copy-questionnaire-3.png
+   :width: 400
+
+   「保存して完了」をクリック
+
+5. コピーして作成したイベントを編集して、現地スタッフに渡す。具体的な編集内容は :ref:`create_jira_tickets` で作成したチケット「connpassイベント公開(現地スタッフ)]」を参照すること。
 
 Python Boot Campに関する宣伝活動
 ================================
