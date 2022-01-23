@@ -13,7 +13,7 @@ Python Boot Camp全体の運営マニュアルは :ref:`1_manual` を参照す�
 
 * Slack - pyconjp.slack.com
 
-  * #pycamp チャンネル：Python Boot Camp 全体のチャンネル。全体の運営に関する議論や、講師を募ったり、会場提供者とのやりとりなどを行う。
+  * #pycamp チャンネル：Python Boot Camp 全体のチャンネル。全体の運営に関する議論や、講師を募ったり、現地スタッフとのやりとりなどを行う。
   * #pycamp-core チャンネル：コアスタッフ同士での連絡を行うためのチャンネル。
 * JIRA: `PyCon JP JIRA <http://pyconjp.atlassian.net>`_ での運営タスク管理。使い方は :ref:`how_to_use_jira` を参照。
 * Google Drive共有ドライブ
