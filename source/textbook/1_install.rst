@@ -60,7 +60,7 @@ macOSでPythonを利用する場合は、Pythonの公式サイトで配布され
 
 詳しくはPythonの公式ドキュメントの「 `MacintoshでPythonを使う <https://docs.python.org/ja/3/using/mac.html>`_ 」を参考にしてください。
 
-インストールが完了したらPythonのバージョンが3.9.9になっていることを確認します（:numref:`check-version-mac`）。
+インストールが完了したらPythonのバージョンが3.10.4になっていることを確認します（:numref:`check-version-mac`）。
 
 .. _check-version-mac:
 
@@ -130,7 +130,7 @@ Pythonを起動した時に表示される文字をチェックして、下記�
 - Pythonのバージョン(3.8以上であること)
 - Anacondaという文字が表示されないこと
 
-インストールされていない場合は前述の手順でPython3.9.9のインストールを行ってください。
+インストールされていない場合は前述の手順でPython3.10.4のインストールを行ってください。
 
 まとめ
 ======

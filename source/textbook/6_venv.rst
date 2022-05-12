@@ -170,7 +170,7 @@ Windowsの場合はスクリプトを実行します（ :numref:`venv-activate-w
     >>> import requests
     >>> # requestsがインポートできる
 
-``requests`` が ``env/lib/python3.9/site-packages`` 配下にインストールされます。
+``requests`` が ``env/lib/python3.10/site-packages`` 配下にインストールされます。
 
 またPythonパッケージの中にはコマンドとして実行可能なファイルが含まれている場合があります。それらのファイルは ``env/bin`` 配下にインストールされます。
 
