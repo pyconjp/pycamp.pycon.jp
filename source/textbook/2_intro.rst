@@ -39,10 +39,9 @@ Pythonインタープリタ
    :caption: Pythonインタープリタの起動
 
    $ python3
-   Python 3.9.9 (v3.9.9:ccb0e6a345, Nov 15 2021, 13:06:05) 
-   [Clang 13.0.0 (clang-1300.0.29.3)] on darwin
+   Python 3.10.4 (v3.10.4:9d38120e33, Mar 23 2022, 17:29:05) [Clang 13.0.0 (clang-1300.0.29.30)] on darwin
    Type "help", "copyright", "credits" or "license" for more information.
-   >>>
+   >>> 
 
 初めにPythonインタープリタの情報と、大なり記号3つ（``>>>``）が表示されます。
 
