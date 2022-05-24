@@ -68,6 +68,7 @@ Python プログラムの動作を視覚的に確認できるサイト
 書籍
 ====
 Pythonやプログラムの学習におすすめの書籍をいくつか紹介します。
+上にある書籍が初心者向け、下にある書籍が中、上級者向けです。
 
 .. list-table::
    :header-rows: 1
@@ -94,12 +95,16 @@ Pythonやプログラムの学習におすすめの書籍をいくつか紹介�
      - `いちばんやさしいPythonの教本 第2版 <https://book.impress.co.jp/books/1119101162>`_
      - 講義+実習のワークショップ形式の入門書。
        会話bot「pybot」を作りながら、徐々にPython文法の基礎を身に付けていく。
-
+       Pythonのインストール、エディタの使い方、コマンドラインの使い方など、初めてプログラミングに触れる方向けに図を多く使い、手順を分かりやすく紹介している。
    * - |tutorial|
      - `Pythonチュートリアル 第4版 <https://www.oreilly.co.jp/books/9784873119359/>`_
      - Python公式の読み物の書籍版。Web上でも `Python チュートリアル <https://docs.python.org/ja/3/tutorial/index.html>`_ が参照できる。
        リファレンスと異なり、説明を多く書いていて、他の言語経験者であれば十分理解できる。
        このチュートリアルが難しい人は上にある入門書を読むと良さそう。
+   * - |jisou|
+     - `自走プログラマー <https://gihyo.jp/book/2020/978-4-297-11197-7>`_
+     - プログラミング入門者が中級者にランクアップするのに必要な知識を、120のトピックで伝える本。
+       実際の現場で起こった問題とその解決方法を元に、設計や開発プロセスのベストプラクティスを紹介。
    * - |jissen|
      - `Python実践レシピ <https://gihyo.jp/book/2022/978-4-297-12576-9>`_
      - Pythonでプログラムを作成するときに役立つ機能とライブラリを網羅した、実践的なレシピ集。
@@ -114,6 +119,7 @@ Pythonやプログラムの学習におすすめの書籍をいくつか紹介�
 .. |startbook| image:: images/book-startbook.jpg
 .. |ichiyasa| image:: images/book-ichiyasa.jpg
 .. |tutorial| image:: images/book-tutorial.jpg
+.. |jisou| image:: images/book-jisou-programmer.jpg
 .. |jissen| image:: images/book-jissen.jpg
 .. |expy| image:: images/book-expy.jpg
    
