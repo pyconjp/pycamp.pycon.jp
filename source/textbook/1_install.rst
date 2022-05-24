@@ -15,7 +15,7 @@ Pythonをはじめましょう！
 - Pythonのインストール方法
 
 .. index:: Editor
-    single: Editor; Atom
+    single: Editor; VS Code
 
 エディタの準備
 ==============
@@ -23,17 +23,23 @@ Pythonをはじめましょう！
 普段使用しているエディタがある人は、そのエディタを使用して構いません。
 Python の文法に対応しているエディタを使用することをおすすめします。
 
-普段使っているエディタがない人は、 `Atom <https://atom.io/>`_ をインストールしてください。
-Atomはさまざまなプログラミング言語に対応したエディタで、拡張機能も豊富です。
+普段使っているエディタがない人は、 `Visual Studio Code <https://code.visualstudio.com/>`_ をインストールしてください。
+Visual Studio Codeはさまざまなプログラミング言語に対応したエディタで、拡張機能も豊富です。
+
+Visual Studio CodeとPython用拡張機能のインストール手順は以下のページを参考にしてください。
+
+* `IDE(エディタ) — Pythonスターターガイド ドキュメント <https://starter-guide.od.pythonic-exam.com/ja/latest/ide/index.html>`_
+* `Visual Studio Codeのインストール: Visual Studio Code でPython入門 【Windows編】 - python.jp <https://www.python.jp/python_vscode/windows/setup/install_vscode.html>`_
 
 .. index:: Terminal
 
 ターミナルの準備
 ================
-Python を実行するために、ターミナル(macOS)、PowerShell(Windows)を立ち上げます。
+Python を実行するために、ターミナル(macOS)、PowerShell(Windows)または、Visual Studio Code 内のターミナルを立ち上げます。
 
 - macOS では「アプリケーション」→「ユーティリティ」→「ターミナル」を選択します
 - Windows では **Windows+R** キーを押して ``powershell`` と入力します
+- Visual Studio Codeではメニューから「表示」→「ターミナル」を選択します
 
 .. index:: Install
 
