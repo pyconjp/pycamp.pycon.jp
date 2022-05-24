@@ -39,6 +39,7 @@ copybutton_prompt_is_regexp = True
 
 # https://github.com/wpilibsuite/sphinxext-opengraph
 ogp_site_url = "https://pycamp.pycon.jp/"
+ogp_image = "https://pycamp.pycon.jp/_static/python-boot-camp-logo.png"
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
