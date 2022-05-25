@@ -61,7 +61,7 @@ Q&Aサイト
 ------
 Python プログラムの動作を視覚的に確認できるサイト
 
-* Python Tutor http://pythontutor.com/
+* Python Tutor https://pythontutor.com/
 
 .. index:: Books
 
