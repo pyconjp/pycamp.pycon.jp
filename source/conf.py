@@ -71,6 +71,20 @@ html_theme = 'bizstyle'
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
+html_last_updated_fmt = '%Y-%m-%d'
+
+html_show_copyright = False
+
 html_logo = 'images/python-boot-camp-logo.png'
 
 html_favicon = 'images/python-boot-camp-logo.ico'
+
+
+
+
+
+
+
+
+
+
