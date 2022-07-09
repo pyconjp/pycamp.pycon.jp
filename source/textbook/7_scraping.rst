@@ -371,7 +371,7 @@ Requests の主な使い方
 ここでは Requests の主な使い方の例をいくつか載せます。
 詳細については以下の公式ドキュメントを参照してください。
 
-:公式ドキュメント: `Requests: HTTP for Humans <http://python-requests.org/>`_
+:公式ドキュメント: `Requests: HTTP for Humans <https://requests.readthedocs.io/en/latest/>`_
 
 以下は認証つきのURLにアクセスして、結果を取得する例です。
 
