@@ -21,3 +21,8 @@ Python Boot Campのテキスト作成には以下の人たちが関わってい�
 * `koedoyoshida <http://github.com/koedoyoshida>`_
 * `max747 <http://github.com/max747>`_
 * `ymyzk <http://github.com/ymyzk>`_
+* `ikura1 <https://github.com/ikura1>_`
+* `hikaruya8 <https://github.com/hikaruya8>`_
+* `kobatomo <https://github.com/KobaTomo/>_`
+* `kuma127 <https://github.com/kuma127>_`
+* `hamukazu <https://github.com/hamukazu>_`
