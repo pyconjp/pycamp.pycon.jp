@@ -1,7 +1,7 @@
 ===========================
  Python Boot Camp について
 ===========================
-`一般社団法人PyCon JP Association <https://www.pycon.jp>`_ 以下の思いで、Python Boot Campを企画しました。
+`一般社団法人PyCon JP Association <https://www.pycon.jp>`_ は、以下の思いで、Python Boot Campを企画しました。
 
 1. 日本国内にPythonを広めたい。
 2. 地域でPythonを学ぶチャンスが無い人に、そのきっかけを作りたい。
