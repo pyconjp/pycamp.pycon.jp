@@ -11,3 +11,4 @@ Python Boot Camp のテキストの扱いや、運営方法についてまとめ
    0_about
    1_manual
    2_corestaff_manual
+   3_contributers
