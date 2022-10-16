@@ -74,19 +74,6 @@ venvとは
 
 venvはプロジェクトごとに隔離されたPythonの仮想環境(Virtual Environments)を作成します。
 
-.. index:: pyvenv
-
-.. note:: pyvenvスクリプトの廃止について
-
-   以前は pyvenvスクリプトを利用したPython実行環境の作成方法を紹介していました。
-
-   ですが、Python 3.6 から pyvenvスクリプトが非推奨となり将来的に削除されるので一部説明を変更をいたしました。
-   今後は「python -m venv」を利用するようにしてください。
-
-   pyvenvスクリプトが廃止になった経緯は下記URLを参照してください。
-
-   https://docs.python.org/ja/3/whatsnew/3.6.html#id8
-
 .. admonition:: コラム: condaの場合
 
    `Anaconda <https://www.continuum.io/downloads>`_ を使っている場合は **pip** 、 **venv** の代わりに `Conda <http://conda.pydata.org/docs/>`_ というパッケージ管理ツールを使用します。
