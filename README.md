@@ -17,3 +17,10 @@ $ . env/bin/activate
 (env) $ make html
 (env) $ open build/html/index.html
 ```
+
+## テキスト修正の提案方法
+
+1. pycamp.pycon.jpリポジトリをforkする
+2. forkしたリポジトリをcloneする
+3. cloneしたリポジトリのmasterに、修正したテキスト内容をpushする
+4. PRを作成する
