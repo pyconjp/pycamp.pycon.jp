@@ -64,7 +64,7 @@ macOSでPythonを利用する場合は、Pythonの公式サイトで配布され
 
 - `macOS 64-bit universal2 installer <https://www.python.org/ftp/python/3.10.4/python-3.10.4-macos11.pkg>`_
 
-詳しくはPythonの公式ドキュメントの「 `MacintoshでPythonを使う <https://docs.python.org/ja/3/using/mac.html>`_ 」を参考にしてください。
+詳しくはPythonの公式ドキュメントの「 `Using Python on a Mac <https://docs.python.org/ja/3/using/mac.html>`_ 」を参考にしてください。
 
 インストールが完了したらPythonのバージョンが3.10.4になっていることを確認します（:numref:`check-version-mac`）。
 
