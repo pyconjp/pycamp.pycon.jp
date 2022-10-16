@@ -10,7 +10,7 @@ Python Boot Camp（略してPyCamp） を開催することで、以下のよう
 
 *  PyCamp参加者同士がつながりPythonコミュニティが立ち上がる
 *  各地のPyCamp参加者がPyCon JP で交わり、Pythonista同士の環が広がる
-*  各地のPythonistaとの連携強化し、ゆくゆくは地域PyConの実施
+*  各地のPythonistaとの連携を強化し、ゆくゆくは地域PyConの実施
 
 
 このテキストの作成趣旨・利用について
