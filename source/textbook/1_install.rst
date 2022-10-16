@@ -129,7 +129,7 @@ Ubuntu 22.04にはデフォルトでPython 3.10.4がインストールされて�
 ========
 これ以降の本テキストでは上記手順でインストールしたPython 3.8以降を使用することを前提に記載しています。
 
-Python 2.7等のPython2系やAnacondaでインストールしたPythonでは実習ができません。
+Python 2.7等のPython2系やAnacondaでインストールしたPython、または `Jupyter <https://jupyter.org/>`_ や `Google Colaboratory <https://colab.research.google.com/?hl=ja>`_ では実習ができません。
 
 Pythonを起動した時に表示される文字をチェックして、下記が問題ないか確認してください。
 
