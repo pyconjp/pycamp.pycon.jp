@@ -14,6 +14,8 @@ Web APIとスクレイピングとは
 ここではPythonを使った実用的なプログラムの例として、Web APIとスクレイピングの演習を行います。
 
 
+.. _scraping-env:
+
 環境構築
 ========
 
@@ -66,7 +68,7 @@ Web APIの例としてconnpassのAPIを実行して、pythonというキーワ�
 
 * `APIリファレンス - connpass <https://connpass.com/about/api/>`_
 
-下記のコードを ``events.py`` という名前で保存します(:numref:`events-py`)。
+下記のコードを :ref:`scraping-env` で作成したscrapingフォルダに、 ``events.py`` という名前で保存します(:numref:`events-py`)。
 
 .. _events-py:
 
@@ -175,7 +177,7 @@ Web APIの例としてconnpassのAPIを実行して、pythonというキーワ�
 
    スポンサー一覧ページ
 
-下記コードを ``simple.py`` という名前で保存します(:numref:`simple-py`)。
+下記コードを :ref:`scraping-env` で作成したscrapingフォルダに、 ``simple.py`` という名前で保存します(:numref:`simple-py`)。
 
 .. _simple-py:
 
