@@ -1,20 +1,16 @@
 ===========================
  Python Boot Camp について
 ===========================
+`一般社団法人PyCon JP Association <https://www.pycon.jp>`_ 以下の思いで、Python Boot Campを企画しました。
 
-日本各地でPythonの環を広げるため初心者向けのチュートリアルを継続して開催しています。 
+1. 日本国内にPythonを広めたい。
+2. 地域でPythonを学ぶチャンスが無い人に、そのきっかけを作りたい。
 
-Python Boot Camp（略してPyCamp） を開催することで、Pythonista（Pythonを使う人）同士のつながりが深まることを目的としています。
+Python Boot Camp（略してPyCamp） を開催することで、以下のようなPythonista（Pythonを使う人）同士のつながりが深まることを目的としています。
 
 *  PyCamp参加者同士がつながりPythonコミュニティが立ち上がる
 *  各地のPyCamp参加者がPyCon JP で交わり、Pythonista同士の環が広がる
 *  各地のPythonistaとの連携強化し、ゆくゆくは地域PyConの実施
-
-一般社団法人PyCon JP Associationは、今後もいっそうのPythonの普及のため、
-以下のような人たちにPythonを知ってもらえる機会を提供できたらという思いで、Python Boot Campを企画しました。
-
-1. 遠方に住んでいるためPyCon JPのチュートリアルに参加できずにいた方
-2. Pythonを使っている人が周りにいなくてなかなか始められなかった方
 
 
 このテキストの作成趣旨・利用について
