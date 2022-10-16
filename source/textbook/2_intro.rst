@@ -287,7 +287,7 @@ fizzbuzz.pyが見つからない場合は場合は、以下のようなエラー
 
 .. _exec-fizzbuzz-error:
 
-.. code-block:: guess
+.. code-block:: text
     :caption: fizzbuzz.pyの実行
 
     $ python3 fizzbuzz.py
