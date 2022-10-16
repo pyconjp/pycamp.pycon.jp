@@ -168,12 +168,12 @@ Web APIの例としてconnpassのAPIを実行して、pythonというキーワ�
    
 シンプルなスクレイピングのコード
 ================================
-スクレイピングの例として、PyCon JP 2017のスポンサー一覧のページ(https://pycon.jp/2017/ja/sponsors/)からスポンサー名とURLの情報を抜き出します。
+スクレイピングの例として、docs.python.orgの組み込み関数一覧のページ(https://docs.python.org/ja/3/library/functions.html)から関数名の情報を抜き出します。
 
-.. figure:: images/sponsor-list.png
+.. figure:: images/func-list.png
    :width: 30%
 
-   スポンサー一覧ページ
+   組み込み関数一覧ページ
 
 下記コードを ``simple.py`` という名前で保存します(:numref:`simple-py`)。
 
@@ -187,22 +187,26 @@ Web APIの例としてconnpassのAPIを実行して、pythonというキーワ�
 
 
    def main():
-       url = 'https://pycon.jp/2017/ja/sponsors/'
+       url = 'https://docs.python.org/ja/3/library/functions.html'
        res = requests.get(url)
        content = res.content
        soup = BeautifulSoup(content, 'html.parser')
-       sponsors = soup.find_all('div', class_='sponsor-content')
-       for sponsor in sponsors:
-           url = sponsor.h3.a['href']
-           name = sponsor.h4.text
-           print(name, url)
+       functions = soup.find_all('dl', class_='py function')
+       print('件数:', len(functions))
+       for func in functions:
+           func_name = func.dt.code.text
+
+           # 上記記述だと@staticmethodの関数名が正しく取れないので、取りたい場合はこちら
+           # func_name = func.dt.find_all('code', class_='sig-name')[0].text
+
+           print(func_name)
 
 
    if __name__ == '__main__':
        main()
 
 
-このコードを実行すると、以下のようにスポンサー名とURLの一覧が取得できます(:numref:`exec-simple-py`)。
+このコードを実行すると、以下のように関数名の一覧が取得できます(:numref:`exec-simple-py`)。
 
 .. _exec-simple-py:
 
@@ -210,12 +214,15 @@ Web APIの例としてconnpassのAPIを実行して、pythonというキーワ�
    :caption: スクレイピングを実行
 
    (env) $ python simple.py
-   株式会社SQUEEZE https://squeeze-inc.co.jp/
-   株式会社MonotaRO https://recruit.monotaro.com/?utm_medium=outside_flier&utm_source=pycon.jp&utm_campaign=PyConJP2017
-   LINE株式会社 https://engineering.linecorp.com/
-   Retty株式会社 http://corp.retty.me/
-   iRidge, Inc. https://iridge.jp/
-   株式会社いい生活 http://www.e-seikatsu.info/recruit/graduate/
+   件数: 52
+   abs
+   aiter
+   all
+   anext
+   any
+   ascii
+   bin
+   breakpoint
    :
 
 .. index:: PEP8
@@ -257,7 +264,7 @@ Web APIの例としてconnpassのAPIを実行して、pythonというキーワ�
 .. code-block:: python
    :caption: ページの内容を取得
 
-       url = 'https://pycon.jp/2017/ja/sponsors/'
+       url = 'https://docs.python.org/ja/3/library/functions.html'
        res = requests.get(url)
        content = res.content
 
@@ -267,11 +274,15 @@ Web APIの例としてconnpassのAPIを実行して、pythonというキーワ�
    :caption: WebページをBeautiful Soup 4で解析
 
        soup = BeautifulSoup(content, 'html.parser')
-       sponsors = soup.find_all('div', class_='sponsor-content')
-       for sponsor in sponsors:
-           url = sponsor.h3.a['href']
-           name = sponsor.h4.text
-           print(name, url)
+       functions = soup.find_all('dl', class_='py function')
+       print('件数:', len(functions))
+       for func in functions:
+           func_name = func.dt.code.text
+
+           # 上記記述だと@staticmethodの関数名が正しく取れないので、取りたい場合はこちら
+           # func_name = func.dt.find_all('code', class_='sig-name')[0].text
+
+           print(func_name)
 
 
 * 最後に、このスクリプトが実行された時に、main()関数を実行するように指定します。
@@ -285,60 +296,79 @@ Web APIの例としてconnpassのAPIを実行して、pythonというキーワ�
 HTMLの解析の解説
 ----------------
 Beautiful Soup 4でHTMLを解析して、値が取り出せましたが、どのように指定しているのでしょうか?
-スポンサー一覧のHTMLを見てみると、以下のような形式になっています。(:numref:`sponsor-list-html`)
+組み込み関数一覧のHTMLを見てみると、以下のような形式になっています。(:numref:`sponsor-list-html`)
 
 .. _sponsor-list-html:
 
 .. code-block:: html
-   :caption: スポンサー一覧のHTML
-   :emphasize-lines: 6,8,12
+   :caption: 組み込み関数一覧のHTML
+   :emphasize-lines: 1,3,19,21
 
-   <div class="span12">
-     <h2>Diamond</h2>
-     <div class="row">
-       <div class="span4">
-         <div class="sponsor" id="sponsor-5">
-           <div class="sponsor-content">
-             <h3>
-               <a href="https://squeeze-inc.co.jp/">
-                 <img src="/2017/site_media/media/sponsor_files/squeeze-logo-horizontal_1.png.150x80_q85.png" alt="株式会社SQUEEZE" />
+   <dl class="py function">
+       <dt id="abs">
+           <code class="sig-name descname">abs</code>
+           <span class="sig-paren">(</span><em class="sig-param">
+           <span class="n">x</span></em>
+           <span class="sig-paren">)</span>
+           <a class="headerlink" href="#abs" title="この定義へのパーマリンク">¶</a>
+       </dt>
+       <dd>
+           <p>数の絶対値を返します。引数は整数、浮動小数点数または 
+               <code class="xref py py-meth docutils literal notranslate">
+                   <span class="pre">__abs__()</span>
+               </code>
+               が実装されたオブジェクトです。引数が複素数なら、その絶対値 (magnitude) が返されます。
+           </p>
+       </dd>
+   </dl>
+
+   <dl class="py function">
+       <dt id="aiter">
+           <code class="sig-name descname">aiter</code>
+           <span class="sig-paren">(</span>
+           <em class="sig-param">
+               <span class="n">async_iterable</span>
+           </em>
+           <span class="sig-paren">)</span>
+           <a class="headerlink" href="#aiter" title="この定義へのパーマリンク">¶</a>
+       </dt>
+       <dd>
+           <p>:term:
+               <a href="#id1">
+                   <span class="problematic" id="id2">`</span>
                </a>
-             </h3>
-             <h4>株式会社SQUEEZE</h4>
-             <p><a href="https://squeeze-inc.co.jp/">https://squeeze-inc.co.jp/</a></p>
-             <p>
-               <p>株式会社SQUEEZEでは「価値の詰まった社会を創る」ことをミッションとしております。ICTの力で地域コミュニティが持つ資産の潜在的な「価値」を活かし、社会に提供していくことで「無駄」のない「価値の詰まった」社会を創造していきます。</p>
-               <p>主要事業として、ホテル・旅館・民泊に特化したサービスを提供・運営しています。ホスピタリティテックのリーディングカンパニーとして、人材の再発掘・活用による働き方改革、空き家問題解消による地域活性化、を牽引するナンバーワンのプラットフォームになることを目指しています。</p>
-             </p>
-           </div>
-         </div>
-       </div>
-     </div>
-   </div>
-   <div class="span12">
-     <h2>Platinum</h2>
-       <div class="row">
-         <div class="span4">
-           <div class="sponsor" id="sponsor-7">
-             <div class="sponsor-content">
-               <h3>
-                 <a href="https://recruit.monotaro.com/?utm_medium=outside_flier&amp;utm_source=pycon.jp&amp;utm_campaign=PyConJP2017">
-                   <img src="/2017/site_media/media/sponsor_files/logo-PyCon2017.png.150x80_q85.png" alt="株式会社MonotaRO" />
-                 </a>
-               </h3>
-               <h4>株式会社MonotaRO</h4>
-               <p><a href="https://recruit.monotaro.com/?utm_medium=outside_flier&amp;utm_source=pycon.jp&amp;utm_campaign=PyConJP2017">https://recruit.monotaro.com/?utm_medium=outside_flier&amp;utm_source=pycon.jp&amp;utm_campaign=PyConJP2017</a></p>
+               asynchronous iterable`から :term:
+               <a href="#id3">
+                   <span class="problematic" id="id4">`</span>
+               </a>
+               asynchronous iterator`を返します。
+               <a href="#id5">
+                   <span class="problematic" id="id6">``</span>
+               </a>x.__aiter__()``を呼び出すのと等価です。
+           </p>
+           <p>なお、:func:
+               <a href="#id1">
+                   <span class="problematic" id="id2">`</span>
+               </a>
+               iter`とは異なり、:func:
+               <a href="#id3">
+                   <span class="problematic" id="id4">`</span>
+               </a>
+               aiter`は第二引数を持ちません。
+           </p>
+           <div class="versionadded">
                <p>
-                 <p>「ITで、間接資材調達を変革する」<br />モノタロウは働く現場で必要となる様々な間接資材(最終製品となる原材料を除く全ての資材)約1,000万点をインターネットで販売しています。<br />様々な現場のニーズにお応えすべく、自社開発の高度な検索システムと精緻なデータベースマーケティングが実現する「お客様ごとの最適化したレコメンドサービス」で従来の非効率的な間接資材調達を変革し社会に新しい価値を提供しています。</p>
+                   <span class="versionmodified added">バージョン 3.10 で追加.</span>
                </p>
-             </div>
+           </div>
+       </dd>
+   </dl>
    (以下続く)
 
-このHTMLを見ると、スポンサーの名前とURLは以下のようにして取得できそうです。
+このHTMLを見ると、関数の名前とURLは以下のようにして取得できそうです。
 
-* 一つのスポンサーの情報は ``<div class="sponsor-content">`` の中に入っている
-* スポンサーのURLは ``<h3>`` タグの中の ``<a>`` タグの ``href`` アトリビュートに入っている
-* スポンサー名は ``<h4>`` タグで囲まれた中に入っている
+* 一つの関数の情報は ``<dl class="py function">`` の中に入っている
+* 関数名は ``<code class="sig-name descname">`` タグで囲まれた中に入っている
 
 HTMLの構造がわかったところで、もう一度HTMLを解析しているコードを見てみます。
 
@@ -348,15 +378,19 @@ HTMLの構造がわかったところで、もう一度HTMLを解析している
    :caption: WebページをBeautiful Soup 4で解析
 
        soup = BeautifulSoup(content, 'html.parser')
-       sponsors = soup.find_all('div', class_='sponsor-content')
-       for sponsor in sponsors:
-           url = sponsor.h3.a['href']
-           name = sponsor.h4.text
-           print(name, url)
+       functions = soup.find_all('dl', class_='py function')
+       print('件数:', len(functions))
+       for func in functions:
+           func_name = func.dt.code.text
 
-まず、 ``soup.find_all()`` メソッドで、全スポンサーの情報が含まれている div 要素を取得しています。
-次に、各スポンサー情報(sponsor変数に入っている)から値を取り出しています。
-最初にURLを取得して、次にスポンサー名を取得しています。
+           # 上記記述だと@staticmethodの関数名が正しく取れないので、取りたい場合はこちら
+           # func_name = func.dt.find_all('code', class_='sig-name')[0].text
+           
+           print(func_name)
+
+まず、 ``soup.find_all()`` メソッドで、全関数の情報が含まれている dl 要素を取得しています。
+次に、各関数情報(func変数に入っている)から値を取り出しています。
+関数名を取得して、出力しています。
 
 作り変えてみよう
 ================
