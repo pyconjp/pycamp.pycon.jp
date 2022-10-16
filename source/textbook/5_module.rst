@@ -319,7 +319,7 @@ Python自体も標準でモジュールを提供しています。これら標�
 
 標準ライブラリを利用すると重複する実装が減り、コードの記述量を大幅に削減できます。
 
-.. index:: daetime
+.. index:: datetime
     single: Standard library; datetime
 
 日付を扱うモジュール
