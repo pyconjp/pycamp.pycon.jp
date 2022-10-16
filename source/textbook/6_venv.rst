@@ -78,7 +78,7 @@ venvはプロジェクトごとに隔離されたPythonの仮想環境(Virtual E
 
    `Anaconda <https://www.continuum.io/downloads>`_ を使っている場合は **pip** 、 **venv** の代わりに `Conda <http://conda.pydata.org/docs/>`_ というパッケージ管理ツールを使用します。
 
-   condaではそれぞれ以下のコマンドで、サードパーティー製パッケージのインストール、環境の作成、有効化、無効化が行えます。
+   condaではそれぞれ以下のコマンドで、サードパーティ製パッケージのインストール、環境の作成、有効化、無効化が行えます。
 
    .. code-block:: sh
       :caption: conda コマンドの例
