@@ -229,11 +229,11 @@ Web APIの例としてconnpassのAPIを実行して、pythonというキーワ�
 
 .. admonition:: コラム: Pythonのコーディング規約「PEP8」
 
-    Pythonには `PEP8（ペップエイト） <https://www.python.org/dev/peps/pep-0008/>`_ というコーディング規約があります。
+    Pythonには `PEP8（ペップエイト） <https://peps.python.org/pep-0008/>`_ というコーディング規約があります。
     チームで開発をする際、人によってプログラムコードの書き方がバラバラだと読みにくいコードになってしまいます。
     そのため、PEP8のルールに従う習慣を身につけておくとよいでしょう。
 
-    コードがPEP8のルールに従っているかは、 `pycodestyle <http://pep8.readthedocs.io/en/latest/index.html#>`_ というツールで検証できます(以前はツールの名前もpep8でした)。
+    コードがPEP8のルールに従っているかは、 `pycodestyle <https://pep8.readthedocs.io/en/latest/>`_ というツールで検証できます(以前はツールの名前もpep8でした)。
 
     pycodestyleは ``pip install pycodestyle`` でインストールして使用します。
     ``simple.py`` を検証するには、 ``pycodestyle simple.py`` を実行します。
@@ -507,6 +507,6 @@ RequestsとBeautiful Soup 4を使いこなすことにより、さまざまな�
 Pythonでのスクレイピングについてもいくつか書籍が出ています。
 
 - `PythonによるWebスクレイピング <https://www.oreilly.co.jp/books/9784873117614/>`_
-- `Pythonクローリング＆スクレイピング ―データ収集・解析のための実践開発ガイド <http://gihyo.jp/book/2017/978-4-7741-8367-1>`_
-- `Pythonによるスクレイピング＆機械学習 開発テクニックBeautifulSoup、scikit-learn、TensorFlowを使ってみよう <http://www.socym.co.jp/book/1079>`_
-- `Pythonエンジニア ファーストブック <http://gihyo.jp/book/2017/978-4-7741-9222-2>`_ (第4章 PythonによるWebスクレイピング)
+- `Pythonクローリング＆スクレイピング ―データ収集・解析のための実践開発ガイド <https://gihyo.jp/book/2017/978-4-7741-8367-1>`_
+- `Pythonによるスクレイピング＆機械学習 開発テクニックBeautifulSoup、scikit-learn、TensorFlowを使ってみよう <https://www.socym.co.jp/book/1079>`_
+- `Pythonエンジニア ファーストブック <https://gihyo.jp/book/2017/978-4-7741-9222-2>`_ (第4章 PythonによるWebスクレイピング)

@@ -23,8 +23,8 @@ Python Boot Camp（略してPyCamp） を開催することで、以下のよう
 権利・ライセンスについてはクリエイティブ・コモンズのCC-BYで管理しています。
 条件や活用していただくときに留意する点については下記ドキュメントを参照ください。
 
-* `クリエイティブ・コモンズ CC-BY 要約 <http://creativecommons.org/licenses/by/4.0/deed.ja>`_
-* `クリエイティブ・コモンズ CC-BY 詳細 <http://creativecommons.org/licenses/by/4.0/legalcode.ja>`_
+* `クリエイティブ・コモンズ CC-BY 要約 <https://creativecommons.org/licenses/by/4.0/deed.ja>`_
+* `クリエイティブ・コモンズ CC-BY 詳細 <https://creativecommons.org/licenses/by/4.0/legalcode.ja>`_
 * `参考：[その他のクリエイティブ・コモンズ　ライセンスの種類 <https://creativecommons.jp/licenses/>`_
 
 内容について誤りやすでに古くなってしまった表記を見つけた際には、修正内容を `githubレポジトリ <https://github.com/pyconjp/bootcamp-text/>`_ にpull requestとしてお送りください。
@@ -33,4 +33,4 @@ Python Boot Camp（略してPyCamp） を開催することで、以下のよう
 ========
 Python Boot Camp の開催実績は下記のページを参照してください。
 
-- `Python Boot Camp(初心者向けPythonチュートリアル) <https://www.pycon.jp/support/bootcamp.html#id5>`_
+- `Python Boot Camp(初心者向けPythonチュートリアル) <https://www.pycon.jp/support/bootcamp.html#id10>`_

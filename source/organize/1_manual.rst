@@ -111,7 +111,7 @@ Python Boot Camp全体の運営・管理を行う。各開催では現地スタ�
 イベント公開
 ------------
 
-#. コアスタッフがconnpassのコピー作成機能（Connpassのヘルプの 「`コピーを作成 <http://help.connpass.com/organizers/event-detail>`_ 」を参照）を使って、前回の開催イベントと懇親会ページを複製し、イベントページ管理者に現地スタッフを追加する。これで現地スタッフも管理者権限でイベントの編集を行うことができるようになる。
+#. コアスタッフがconnpassのコピー作成機能（Connpassのヘルプの 「`コピーを作成 <https://help.connpass.com/organizers/event-detail>`_ 」を参照）を使って、前回の開催イベントと懇親会ページを複製し、イベントページ管理者に現地スタッフを追加する。これで現地スタッフも管理者権限でイベントの編集を行うことができるようになる。
 #. 現地スタッフがイベント・懇親会詳細を編集する。編集する内容は、日時、開催地、会場の規模に応じて参加可能登録人数など。
     * 参加費は一般枠2,000円、学生枠500円とする。
     * TA枠数は４～５人にひとり程度いれば十分だが特に上限は設けない。
@@ -212,7 +212,7 @@ TA申込者
 #. イベント開催後、１週間をめどに現地スタッフはブログシステムから下書きを作成してコアスタッフにレビューを依頼する。
 #. コアスタッフはレビュー後問題なければそのまま公開する。
 
-参考：`過去の開催報告レポートや告知など <https://pyconjp.blogspot.jp/search/label/pycamp>`_
+参考：`過去の開催報告レポートや告知など <https://pyconjp.blogspot.com/search/label/pycamp>`_
 
 
 利用ツールまとめ
@@ -222,11 +222,11 @@ TA申込者
 
   * #pycamp チャネル：Python Boot Camp 全体のチャネル。全体の運営に関する議論や、講師を募ったり、会場提供者とのやりとりなどを行う。
 * Google Drive: `Python Boot Camp用のフォルダ <https://drive.google.com/drive/u/1/folders/0B9xgFsw7nWw9b3pDWHpKRHJ5QmM>`_ でドキュメント共有に活用
-* JIRA: `PyCon JP JIRA <http://pyconjp.atlassian.net>`_ での運営タスク管理
+* JIRA: `PyCon JP JIRA <https://pyconjp.atlassian.net>`_ での運営タスク管理
 * Twitter: `@pyconjapan <https://twitter.com/pyconjapan>`_ での告知・拡散用
 * Facebook: `PyCon JP Facebookページ <https://www.facebook.com/PyConJP/>`_ での告知・拡散用
-* Connpass： `PyCon JPイベントシリーズ <http://pyconjp.connpass.com>`_ でPyCon JPイベントやその他の関連イベントとあわせて管理している。
-* Blogpost: `PyCon JP公式ブログ <https://pyconjp.blogspot.jp>`_ での告知や開催報告レポート用
+* Connpass： `PyCon JPイベントシリーズ <https://pyconjp.connpass.com>`_ でPyCon JPイベントやその他の関連イベントとあわせて管理している。
+* Blogpost: `PyCon JP公式ブログ <https://pyconjp.blogspot.com>`_ での告知や開催報告レポート用
 
 .. _how_to_use_jira:
 
