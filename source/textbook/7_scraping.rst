@@ -367,7 +367,7 @@ Beautiful Soup 4でHTMLを解析して、値が取り出せましたが、どの
 
 このHTMLを見ると、関数の名前とURLは以下のようにして取得できそうです。
 
-* 一つの関数の情報は ``<dl class="py function">`` の中に入っている
+* 1つの関数の情報は ``<dl class="py function">`` の中に入っている
 * 関数名は ``<code class="sig-name descname">`` タグで囲まれた中に入っている
 
 HTMLの構造がわかったところで、もう一度HTMLを解析しているコードを見てみます。
