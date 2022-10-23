@@ -128,7 +128,7 @@ Pythonやプログラムの学習におすすめの書籍をいくつか紹介�
 みなさんの地域でコミュニティを立ち上げることもおすすめです。
 
 * python.jp https://www.python.jp/
-* PyCon JP http://pycon.jp
+* PyCon JP https://pycon.jp
 * Python mini Hack-a-thon https://pyhack.connpass.com/
 * PyLadies Tokyo https://pyladies-tokyo.connpass.com/
 
@@ -142,7 +142,7 @@ Pythonやプログラムの学習におすすめの書籍をいくつか紹介�
 * pyconjp-fellow.slack.com(PyCon JPに興味のある人達)
 
   * Python Boot Camp について話す ``#pycamp`` チャンネルもあります
-  * 招待ページ http://pyconjp-fellow.herokuapp.com/
+  * 招待ページ https://pyconjp-fellow.herokuapp.com/
 
 * Python.jp Discord
 
@@ -150,7 +150,7 @@ Pythonやプログラムの学習におすすめの書籍をいくつか紹介�
 
 * pyhack.slack.com(Python mini Hack-a-thon参加者など)
 
-  * 招待ページ http://pyhack.herokuapp.com/
+  * 招待ページ https://pyhack.herokuapp.com/
 
 * pydata-jp.slack.com(Python + Data を通じて Pythonistaと データ分析者が交流するコミュニティ)
 
