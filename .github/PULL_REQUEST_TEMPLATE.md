@@ -8,6 +8,6 @@
 - [ ] hogehoge
 - [ ] fugafuga
 
-contributorに追加を希望する場合は、以下にチェックを入れて`build/html/organize/3_contributers.html`に自分の名前を入れた変更をこのPull Requestに加えること
+contributorに追加を希望する場合は、以下にチェックを入れて`source/organize/3_contributers.rst`に自分の名前を入れた変更をこのPull Requestに加えること
 
 - [ ] contributorに追加を希望する
