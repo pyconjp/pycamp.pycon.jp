@@ -168,10 +168,10 @@ Web APIの例としてconnpassのAPIを実行して、pythonというキーワ�
    
 シンプルなスクレイピングのコード
 ================================
-スクレイピングの例として、docs.python.orgの組み込み関数一覧のページ(https://docs.python.org/ja/3/library/functions.html)から関数名の情報を抜き出します。
+スクレイピングの例として、docs.python.orgの組み込み関数一覧のページ(https://docs.python.org/ja/3.10/library/functions.html)から関数名の情報を抜き出します。
 
 .. figure:: images/func-list.png
-   :width: 30%
+   :width: 50%
 
    組み込み関数一覧ページ
 
@@ -187,7 +187,7 @@ Web APIの例としてconnpassのAPIを実行して、pythonというキーワ�
 
 
    def main():
-       url = 'https://docs.python.org/ja/3/library/functions.html'
+       url = 'https://docs.python.org/ja/3.10/library/functions.html'
        res = requests.get(url)
        content = res.content
        soup = BeautifulSoup(content, 'html.parser')
@@ -264,7 +264,7 @@ Web APIの例としてconnpassのAPIを実行して、pythonというキーワ�
 .. code-block:: python
    :caption: ページの内容を取得
 
-       url = 'https://docs.python.org/ja/3/library/functions.html'
+       url = 'https://docs.python.org/ja/3.10/library/functions.html'
        res = requests.get(url)
        content = res.content
 
