@@ -142,15 +142,15 @@ Pythonやプログラムの学習におすすめの書籍をいくつか紹介�
 * pyconjp-fellow.slack.com(PyCon JPに興味のある人達)
 
   * Python Boot Camp について話す ``#pycamp`` チャンネルもあります
-  * 招待ページ https://pyconjp-fellow.herokuapp.com/
+  * `PyCon JP Fellow Slack招待ページ <https://join.slack.com/t/pyconjp-fellow/shared_invite/zt-p4hb9t0m-CyPNgr7MX16wBqE9y_ZAZA>`_
 
 * Python.jp Discord
 
-  * 招待ページ https://www.python.jp/pages/community.html
+  * `Python.jp Discordサーバ登録ページ <https://www.python.jp/discord/index.html>`_
 
 * pyhack.slack.com(Python mini Hack-a-thon参加者など)
 
-  * 招待ページ https://pyhack.herokuapp.com/
+  * `pyhack Slack招待ページ <https://join.slack.com/t/pyhack/shared_invite/zt-1j3v4er5g-B0QUOjWIa_cc5zVnyDd~ag>`_
 
 * pydata-jp.slack.com(Python + Data を通じて Pythonistaと データ分析者が交流するコミュニティ)
 
