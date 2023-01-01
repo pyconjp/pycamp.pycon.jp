@@ -62,7 +62,7 @@ numfig = True
 
 myst_enable_extensions = [
     "colon_fence",
-    "substitution",
+    "linkify",
 ]
 
 # -- Options for HTML output -------------------------------------------------
