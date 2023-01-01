@@ -1,12 +1,10 @@
----
-"\u7BC0\u30B5\u30D6\u30BF\u30A4\u30C8\u30EB": "\u30A8\u30C7\u30A3\u30BF\u3001\u30B3\
-  \u30DE\u30F3\u30C9\u30E9\u30A4\u30F3\u306E\u6E96\u5099\u3001Python\u306E\u30A4\u30F3\
-  \u30B9\u30C8\u30FC\u30EB\u65B9\u6CD5\u306E\u7D39\u4ECB"
----
-
 (guide-install)=
 
 # Pythonをはじめる前に
+
+```{admonition} 節サブタイトル
+エディタ、コマンドラインの準備、Pythonのインストール方法の紹介
+```
 
 Pythonをはじめましょう！
 

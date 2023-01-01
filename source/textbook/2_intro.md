@@ -1,11 +1,10 @@
----
-"\u7BC0\u30B5\u30D6\u30BF\u30A4\u30C8\u30EB": "\u5B9F\u8DF5\u3092\u901A\u3057\u305F\
-  Python\u306E\u7279\u5FB4\u3068\u57FA\u672C\u306E\u7D39\u4ECB"
----
-
 (guide-intro)=
 
 # Pythonをはじめよう
+
+```{admonition} 節サブタイトル
+実践を通したPythonの特徴と基本の紹介
+```
 
 Pythonの特徴と基本を紹介します。
 ただ紹介するだけではなく、簡単なプログラムを実装しつつ実践的に学んでいきます。
@@ -313,7 +312,7 @@ can't open file 'fizzbuzz.py': [Errno 2] No such file or directory
 
 `for` 文を使って繰り返し処理を実装しましょう（{numref}`for`）。
 
-(id10)=
+(for)=
 
 ```{code-block} python
 :caption: "for\u6587\u3068\u95A2\u6570\u306E\u5B9F\u884C"
@@ -394,7 +393,7 @@ Pythonで条件による処理の分岐を扱うにはif文を使います。
 
 `fizzbuzz()` 関数は、 {numref}`if` のようになります。
 
-(id11)=
+(if)=
 
 ```{code-block} python
 :caption: "fizzbuzz\u95A2\u6570\u3092\u5B8C\u6210\u3055\u305B\u308B"
