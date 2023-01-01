@@ -60,6 +60,10 @@ exclude_patterns = []
 
 numfig = True
 
+myst_enable_extensions = [
+    "colon_fence",
+    "substitution",
+]
 
 # -- Options for HTML output -------------------------------------------------
 
