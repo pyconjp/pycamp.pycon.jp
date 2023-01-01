@@ -31,7 +31,7 @@
 (type-int)=
 
 ```{code-block} pycon
-:caption: "\u6574\u6570\u578B"
+:caption: "整数型"
 
 >>> 2 + 2
 4
@@ -52,7 +52,7 @@
 (divide-int)=
 
 ```{code-block} pycon
-:caption: "\u6574\u6570\u578B\u540C\u58EB\u306E\u5546"
+:caption: "整数型同士の商"
 
 >>> 10 / 3
 3.3333333333333335
@@ -68,7 +68,7 @@
 (double-slash)=
 
 ```{code-block} pycon
-:caption: "//\u3067\u306E\u5272\u308A\u7B97"
+:caption: "//での割り算"
 
 >>> 10 // 3
 3
@@ -90,7 +90,7 @@
 (type-float)=
 
 ```{code-block} pycon
-:caption: "\u6D6E\u52D5\u5C0F\u6570\u70B9\u578B"
+:caption: "浮動小数点型"
 
 >>> 5.0
 5.0
@@ -120,7 +120,7 @@
 (type-str)=
 
 ```{code-block} pycon
-:caption: "\u6587\u5B57\u5217\u578B"
+:caption: "文字列型"
 
 >>> 'Hello,world'
 'Hello,world'
@@ -140,7 +140,7 @@
 (escape-string)=
 
 ```{code-block} pycon
-:caption: "\u6587\u5B57\u5217\u4E2D\u306E\u30A8\u30B9\u30B1\u30FC\u30D7"
+:caption: "文字列中のエスケープ"
 
 >>> print('I\'m Hiroki')
 I'm Hiroki
@@ -154,8 +154,7 @@ world
 (single-quote)=
 
 ```{code-block} pycon
-:caption: "\u30B7\u30F3\u30B0\u30EB\u30AF\u30A9\u30FC\u30C8\u3092\u542B\u3080\u6587\
-:  \u5B57\u5217"
+:caption: "シングルクォートを含む文字列"
 
 >>> print("I'm Hiroki")
 I'm Hiroki
@@ -173,7 +172,7 @@ I'm Hiroki
 (triple-quote)=
 
 ```{code-block} pycon
-:caption: "\u4E09\u91CD\u30AF\u30A9\u30FC\u30C8"
+:caption: "三重クォート"
 
 >>> """ foo
 ... bar
@@ -196,7 +195,7 @@ I'm Hiroki
 (join-string)=
 
 ```{code-block} pycon
-:caption: "\u6587\u5B57\u5217\u306E\u7D50\u5408"
+:caption: "文字列の結合"
 
 >>> 'Mt.' + 'Fuji'
 'Mt.Fuji'
@@ -205,7 +204,7 @@ I'm Hiroki
 (multi-string)=
 
 ```{code-block} pycon
-:caption: "\u6587\u5B57\u5217\u306E\u7E70\u308A\u8FD4\u3057"
+:caption: "文字列の繰り返し"
 
 >>> 'spam' * 5
 'spamspamspamspamspam'
@@ -221,7 +220,7 @@ I'm Hiroki
 (string-index)=
 
 ```{code-block} pycon
-:caption: "\u6587\u5B57\u5217\u304B\u30891\u6587\u5B57\u53D6\u308A\u51FA\u3057"
+:caption: "文字列から1文字取り出し"
 
 >>> 'python'[1]
 'y'
@@ -251,7 +250,7 @@ Pythonのスライスを使えば、 {numref}`slice-string` のように、2、3
 (slice-string)=
 
 ```{code-block} pycon
-:caption: "\u6587\u5B57\u5217\u306E\u30B9\u30E9\u30A4\u30B9"
+:caption: "文字列のスライス"
 
 >>> 'python'[2:5]
 'tho'
@@ -268,7 +267,7 @@ Pythonのスライスを使えば、 {numref}`slice-string` のように、2、3
 (slice-stirng2)=
 
 ```{code-block} pycon
-:caption: "\u5148\u982D\u672B\u5C3E\u304B\u3089\u306E\u30B9\u30E9\u30A4\u30B9"
+:caption: "先頭末尾からのスライス"
 
 >>> 'python'[:3]
 'pyt'
@@ -287,7 +286,7 @@ Pythonのスライスを使えば、 {numref}`slice-string` のように、2、3
 (guide-len)=
 
 ```{code-block} pycon
-:caption: "\u6587\u5B57\u5217\u9577\u306E\u53D6\u5F97"
+:caption: "文字列長の取得"
 
 >>> len('python')
 6
@@ -303,8 +302,7 @@ Pythonのスライスを使えば、 {numref}`slice-string` のように、2、3
 (guide-in)=
 
 ```{code-block} pycon
-:caption: "\u6587\u5B57\u5217\u4E2D\u306B\u3042\u308B\u6587\u5B57\u5217\u304C\u5B58\
-:  \u5728\u3059\u308B\u304B\u306E\u30C1\u30A7\u30C3\u30AF"
+:caption: "文字列中にある文字列が存在するかのチェック"
 
 >>> 't' in 'python'
 True
@@ -328,7 +326,7 @@ True
 (guide-split)=
 
 ```{code-block} pycon
-:caption: "\u6587\u5B57\u5217\u306E\u5206\u5272"
+:caption: "文字列の分割"
 
 >>> 'pain-au-chocolat'.split('-')
 ['pain', 'au', 'chocolat']
@@ -346,7 +344,7 @@ True
 (guide-join)=
 
 ```{code-block} pycon
-:caption: "\u6587\u5B57\u5217\u306E\u7D50\u5408"
+:caption: "文字列の結合"
 
 >>> '-'.join(['pain', 'de', 'campagne'])
 'pain-de-campagne'

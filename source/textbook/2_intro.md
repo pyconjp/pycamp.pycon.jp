@@ -35,7 +35,7 @@ Pythonについてより詳しくは、後述の節で説明します。
 (python-interpreter)=
 
 ```{code-block} bash
-:caption: "Python\u30A4\u30F3\u30BF\u30FC\u30D7\u30EA\u30BF\u306E\u8D77\u52D5"
+:caption: "Pythonインタープリタの起動"
 
  $ python
  Python 3.10.8 (tags/v3.10.8:aaaf517, Oct 11 2022, 16:50:30) [MSC v.1933 64 bit (AMD64)] on win32
@@ -57,7 +57,7 @@ Pythonについてより詳しくは、後述の節で説明します。
 (python-calc)=
 
 ```{code-block} pycon
-:caption: "\u56DB\u5247\u6F14\u7B97\u3068\u4EE3\u5165"
+:caption: "四則演算と代入"
 
 >>> 2 + 2
 4
@@ -95,7 +95,7 @@ Pythonについてより詳しくは、後述の節で説明します。
 (string-type)=
 
 ```{code-block} pycon
-:caption: "\u6587\u5B57\u5217\u578B"
+:caption: "文字列型"
 
 >>> 'Hello,world'
 'Hello,world'
@@ -127,7 +127,7 @@ Pythonについてより詳しくは、後述の節で説明します。
 (list)=
 
 ```{code-block} pycon
-:caption: "\u30EA\u30B9\u30C8"
+:caption: "リスト"
 
 >>> ['Hello', 3]
 ['Hello', 3]
@@ -147,7 +147,7 @@ Pythonについてより詳しくは、後述の節で説明します。
 (python-comment)=
 
 ```{code-block} pycon
-:caption: "\u30B3\u30E1\u30F3\u30C8\u306E\u66F8\u304D\u65B9"
+:caption: "コメントの書き方"
 
 >>> # ここはコメント文
 >>> a = 1  # コードの右側にも書ける
@@ -171,7 +171,7 @@ def ＜関数名＞(＜引数の変数名＞):
 (function-def)=
 
 ```{code-block} pycon
-:caption: "\u95A2\u6570\u5B9A\u7FA9\u3068\u547C\u3073\u51FA\u3057"
+:caption: "関数定義と呼び出し"
 
 >>> def add(a, b):
 ...     return a + b
@@ -213,7 +213,7 @@ Pythonには標準でいくつか関数が提供されています。これを�
 ```
 
 ```{code-block} pycon
-:caption: "\u7D44\u307F\u8FBC\u307F\u95A2\u6570round"
+:caption: "組み込み関数round"
 
 >>> round(10.4)
 10
@@ -237,7 +237,7 @@ FizzBuzzとは、複数の人が集まって行うゲームです。
 1から15までの答えを並べると次のようになります。
 
 ```{code-block} none
-:caption: "FizzBuzz\u306E15\u307E\u3067\u306E\u56DE\u7B54"
+:caption: "FizzBuzzの15までの回答"
 
 1, 2, Fizz, 4, Buzz, Fizz, 7, 8, Fizz, Buzz, 11, Fizz, 13, 14, FizzBuzz
 ```
@@ -282,7 +282,7 @@ Python ファイルを作成して実行する場合は、 `print` 関数が必�
 (exec-fizzbuzz)=
 
 ```{code-block} bash
-:caption: "fizzbuzz.py\u306E\u5B9F\u884C"
+:caption: "fizzbuzz.pyの実行"
 
 $ python3 fizzbuzz.py
 4
@@ -297,7 +297,7 @@ fizzbuzz.pyが見つからない場合は場合は、以下のようなエラー
 (exec-fizzbuzz-error)=
 
 ```{code-block} text
-:caption: "fizzbuzz.py\u306E\u5B9F\u884C"
+:caption: "fizzbuzz.pyの実行"
 
 $ python3 fizzbuzz.py
 can't open file 'fizzbuzz.py': [Errno 2] No such file or directory
@@ -315,7 +315,7 @@ can't open file 'fizzbuzz.py': [Errno 2] No such file or directory
 (for)=
 
 ```{code-block} python
-:caption: "for\u6587\u3068\u95A2\u6570\u306E\u5B9F\u884C"
+:caption: "for文と関数の実行"
 :emphasize-lines: 4-5
 
 def fizzbuzz(num):
@@ -328,7 +328,7 @@ for num in range(1, 101):
 (fizzbuzz-2)=
 
 ```{code-block} bash
-:caption: "fizzbuzz.py\u306E\u5B9F\u884C(2)"
+:caption: "fizzbuzz.pyの実行(2)"
 
 $ python3 fizzbuzz.py
 1
@@ -394,7 +394,7 @@ Pythonで条件による処理の分岐を扱うにはif文を使います。
 (if)=
 
 ```{code-block} python
-:caption: "fizzbuzz\u95A2\u6570\u3092\u5B8C\u6210\u3055\u305B\u308B"
+:caption: "fizzbuzz関数を完成させる"
 :emphasize-lines: 2-9
 
 def fizzbuzz(num):
@@ -458,7 +458,7 @@ for num in range(1, 101):
 (fizzbuzz-out)=
 
 ```{code-block} bash
-:caption: "\u5B8C\u6210\u3057\u305Ffizzbuzz.py\u306E\u5B9F\u884C"
+:caption: "完成したfizzbuzz.pyの実行"
 
 $ python3 fizzbuzz.py
 1
@@ -497,8 +497,7 @@ Pythonでは整数や文字列、リストなど多種多様な値を使うこ�
 型は組み込み関数の `type()` 関数や `isinstance()` 関数を使って調べることができます。
 
 ```{code-block} python
-:caption: "\u6587\u5B57\u5217\u3068\u30EA\u30B9\u30C8\u3068\u305D\u308C\u3089\u306E\
-:  \u578B"
+:caption: "文字列とリストとそれらの型"
 
 >>> n1 = 100
 >>> s1 = "hello"

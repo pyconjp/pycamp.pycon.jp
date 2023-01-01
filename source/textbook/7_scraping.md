@@ -20,7 +20,7 @@
 venv環境を `activate` コマンドで有効にし、Web APIとスクレイピングに使用する **Requests** と **Beautiful Soup 4** を `pip` コマンドでインストールします。
 
 ```{code-block} sh
-:caption: "\u6F14\u7FD2\u7528\u306Evenv\u74B0\u5883\u3092\u69CB\u7BC9(macOS\u3001Linux)"
+:caption: "演習用のvenv環境を構築(macOS、Linux)"
 
 $ mkdir scraping
 $ cd scraping
@@ -31,7 +31,7 @@ $ source env/bin/activate
 ```
 
 ```{code-block} sh
-:caption: "\u6F14\u7FD2\u7528\u306Evenv\u74B0\u5883\u3092\u69CB\u7BC9(Windows)"
+:caption: "演習用のvenv環境を構築(Windows)"
 
 > mkdir scraping
 > cd scraping
@@ -98,7 +98,7 @@ if __name__ == '__main__':
 (exec-events-py)=
 
 ```{code-block} bash
-:caption: "connpass API\u3092\u5B9F\u884C"
+:caption: "connpass APIを実行"
 
 (env) $ python events.py
 件数: 10
@@ -118,7 +118,7 @@ if __name__ == '__main__':
 - Web APIを実行するために `requests` をインポートします
 
 ```{code-block} python
-:caption: "\u30E2\u30B8\u30E5\u30FC\u30EB\u306E\u30A4\u30F3\u30DD\u30FC\u30C8"
+:caption: "モジュールのインポート"
 
 import requests
 ```
@@ -126,7 +126,7 @@ import requests
 - メインとなる処理を `main` 関数として定義しています。 なお、関数の名前に特に決まりはなく、必ずしも `main` である必要はありません。
 
 ```{code-block} python
-:caption: "main()\u95A2\u6570\u306E\u5B9A\u7FA9"
+:caption: "main()関数の定義"
 
 def main():
 ```
@@ -134,7 +134,7 @@ def main():
 - APIのパラメーターとしてキーワードに `python` を、範囲に `201812` を指定します。パラメーターを書き換えれば検索条件が変わります。
 
 ```{code-block} python
-:caption: "\u30D1\u30E9\u30E1\u30FC\u30BF\u30FC\u3092\u4F5C\u6210"
+:caption: "パラメーターを作成"
 
     params = {
         'keyword': 'python',
@@ -146,7 +146,7 @@ def main():
 - 結果はJSON形式で返ってくるので、 `.json()` メソッドでPythonのデータ型（辞書、リスト等）に変換します。
 
 ```{code-block} python
-:caption: "Web API\u3092\u5B9F\u884C\u3057\u3066\u7D50\u679C\u3092\u53D6\u5F97"
+:caption: "Web APIを実行して結果を取得"
 
     url = 'https://connpass.com/api/v1/event/'
     r = requests.get(url, params=params)
@@ -156,8 +156,7 @@ def main():
 - Pythonデータ型のイベント情報から、件数とイベント名、開催日を取得して出力します。
 
 ```{code-block} python
-:caption: "\u4EF6\u6570\u3068\u30A4\u30D9\u30F3\u30C8\u540D\u3001\u958B\u50AC\u65E5\
-:  \u3092\u51FA\u529B"
+:caption: "件数とイベント名、開催日を出力"
 
     print('件数:', event_info['results_returned'])  # 件数を表示
     for event in event_info['events']:
@@ -168,7 +167,7 @@ def main():
 - 最後に、このスクリプトが実行された時に、main()関数を実行するように指定します。
 
 ```{code-block} python
-:caption: "main()\u95A2\u6570\u3092\u5B9F\u884C"
+:caption: "main()関数を実行"
 
 if __name__ == '__main__':
     main()
@@ -220,7 +219,7 @@ if __name__ == '__main__':
 (exec-simple-py)=
 
 ```{code-block} bash
-:caption: "\u30B9\u30AF\u30EC\u30A4\u30D4\u30F3\u30B0\u3092\u5B9F\u884C"
+:caption: "スクレイピングを実行"
 
 (env) $ python simple.py
 件数: 52
@@ -256,7 +255,7 @@ pycodestyleは `pip install pycodestyle` でインストールして使用しま
 - 以下のコードはRequestsとBeautiful Soup 4をimportして利用できるようにしています。
 
 ```{code-block} python
-:caption: "\u30E2\u30B8\u30E5\u30FC\u30EB\u306Eimport"
+:caption: "モジュールのimport"
 
 import requests
 from bs4 import BeautifulSoup
@@ -266,7 +265,7 @@ from bs4 import BeautifulSoup
   なお、関数の名前に特に決まりはなく、必ずしも `main` である必要はありません。
 
 ```{code-block} python
-:caption: "main()\u95A2\u6570\u306E\u5B9A\u7FA9"
+:caption: "main()関数の定義"
 
 def main():
 ```
@@ -274,7 +273,7 @@ def main():
 - Requestsを使用して、Webページの内容(HTML)を取得します。res.contentにHTMLの中身が文字列データとして入っています。
 
 ```{code-block} python
-:caption: "\u30DA\u30FC\u30B8\u306E\u5185\u5BB9\u3092\u53D6\u5F97"
+:caption: "ページの内容を取得"
 
     url = 'https://docs.python.org/ja/3.10/library/functions.html'
     res = requests.get(url)
@@ -284,7 +283,7 @@ def main():
 - 次にHTMLをBeautiful Soup 4に渡して解析します。HTMLの解析についてはもう少し詳しく説明します。
 
 ```{code-block} python
-:caption: "Web\u30DA\u30FC\u30B8\u3092Beautiful Soup 4\u3067\u89E3\u6790"
+:caption: "WebページをBeautiful Soup 4で解析"
 
     soup = BeautifulSoup(content, 'html.parser')
     functions = soup.find_all('dl', class_='py function')
@@ -301,7 +300,7 @@ def main():
 - 最後に、このスクリプトが実行された時に、main()関数を実行するように指定します。
 
 ```{code-block} python
-:caption: "main()\u95A2\u6570\u3092\u5B9F\u884C"
+:caption: "main()関数を実行"
 
 if __name__ == '__main__':
     main()
@@ -315,7 +314,7 @@ Beautiful Soup 4でHTMLを解析して、値が取り出せましたが、どの
 (sponsor-list-html)=
 
 ```{code-block} html
-:caption: "\u7D44\u307F\u8FBC\u307F\u95A2\u6570\u4E00\u89A7\u306EHTML"
+:caption: "組み込み関数一覧のHTML"
 :emphasize-lines: 1,3,19,21
 
 <dl class="py function">
@@ -391,7 +390,7 @@ HTMLの構造がわかったところで、もう一度HTMLを解析している
 ```
 
 ```{code-block} python
-:caption: "Web\u30DA\u30FC\u30B8\u3092Beautiful Soup 4\u3067\u89E3\u6790"
+:caption: "WebページをBeautiful Soup 4で解析"
 
     soup = BeautifulSoup(content, 'html.parser')
     functions = soup.find_all('dl', class_='py function')
@@ -426,7 +425,7 @@ RequestsやBeautiful Soup 4の動作を変えて、さまざまなWebページ�
 以下は認証つきのURLにアクセスして、結果を取得する例です。
 
 ```{code-block} pycon
-:caption: "\u8A8D\u8A3C\u4ED8\u304DURL\u306B\u30A2\u30AF\u30BB\u30B9\u3059\u308B"
+:caption: "認証付きURLにアクセスする"
 
 >>> import requests
 >>> r = requests.get('https://api.github.com/user', auth=('user', 'pass'))
@@ -440,7 +439,7 @@ RequestsやBeautiful Soup 4の動作を変えて、さまざまなWebページ�
 POST を行う場合は以下のように、POSTのパラメーターを辞書で定義します。
 
 ```{code-block} pycon
-:caption: "requests \u3067 POST \u3059\u308B"
+:caption: "requests で POST する"
 
 >>> payload = {'key1': 'value1', 'key2': 'value2'} # POST するパラメーター
 >>> r = requests.post('http://httpbin.org/post', data=payload)
@@ -453,8 +452,7 @@ POST を行う場合は以下のように、POSTのパラメーターを辞書�
 GET に `?key1=value1&key2=value2` のようなパラメーター付きでアクセスする場合も同様に、辞書で定義します。
 
 ```{code-block} pycon
-:caption: "requests \u3067\u30D1\u30E9\u30E1\u30FC\u30BF\u30FC\u4ED8\u3067 GET \u3059\
-:  \u308B"
+:caption: "requests でパラメーター付で GET する"
 
 >>> payload = {'key1': 'value1', 'key2': 'value2'}
 >>> r = requests.get('http://httpbin.org/get', params=payload)
@@ -475,7 +473,7 @@ http://httpbin.org/get?key1=value1&key2=value2&key2=value3
 ```
 
 ```{code-block} pycon
-:caption: "Beautiful Soup 4\u306E\u4F7F\u7528\u4F8B"
+:caption: "Beautiful Soup 4の使用例"
 
 >>> import requests
 >>> from bs4 import BeautifulSoup
@@ -503,7 +501,7 @@ http://httpbin.org/get?key1=value1&key2=value2&key2=value3
 また、 `find()` `find_all()` などでタグを探す場合には、タグの属性などを条件として指定できます。
 
 ```{code-block} pycon
-:caption: "find/find_all \u306E\u4F7F\u7528\u4F8B"
+:caption: "find/find_all の使用例"
 
 >>> len(soup.find_all('h1')) # 指定したタグを検索
 3

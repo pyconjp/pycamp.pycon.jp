@@ -25,7 +25,7 @@ Pythonのデータ型のうち、複数のデータ型をひとまとめにし�
 (define-list)=
 
 ```{code-block} pycon
-:caption: "\u30EA\u30B9\u30C8\u306E\u5B9A\u7FA9"
+:caption: "リストの定義"
 
 >>> ['spam', 'egg', 0.5]
 ['spam', 'egg', 0.5]
@@ -36,7 +36,7 @@ Pythonのデータ型のうち、複数のデータ型をひとまとめにし�
 (use-list)=
 
 ```{code-block} pycon
-:caption: "\u30EA\u30B9\u30C8\u306E\u57FA\u672C\u7684\u306A\u4F7F\u3044\u65B9"
+:caption: "リストの基本的な使い方"
 
 >>> ['spam', 'ham'] + ['egg']              # リストの結合
 ['spam', 'ham', 'egg']
@@ -62,7 +62,7 @@ True
 (for-list)=
 
 ```{code-block} pycon
-:caption: "for\u6587\u3068\u30EA\u30B9\u30C8"
+:caption: "for文とリスト"
 
 >>> for animal in ['cat', 'dog', 'snake']:
 ...     print(animal)
@@ -89,7 +89,7 @@ snake
 (list-append)=
 
 ```{code-block} pycon
-:caption: "\u30EA\u30B9\u30C8\u3078\u306E\u8981\u7D20\u8FFD\u52A0"
+:caption: "リストへの要素追加"
 
 >>> animals = ['cat', 'dog', 'snake']
 >>> animals.append('elephant')
@@ -119,7 +119,7 @@ snake
 (general-for)=
 
 ```{code-block} pycon
-:caption: "\u4E00\u822C\u7684\u306Afor\u6587"
+:caption: "一般的なfor文"
 
 >>> ret = []
 >>> for animal in animals:
@@ -134,7 +134,7 @@ snake
 (list-comprehension)=
 
 ```{code-block} pycon
-:caption: "\u30EA\u30B9\u30C8\u5185\u5305\u8868\u8A18"
+:caption: "リスト内包表記"
 
 >>> [len(animal) for animal in animals]
 [3, 3, 5, 8]
@@ -167,8 +167,7 @@ snake
 (multi-substitute)=
 
 ```{code-block} pycon
-:caption: "\u30B7\u30FC\u30B1\u30F3\u30B9\u578B\u304B\u3089\u8907\u6570\u5909\u6570\
-:  \u3078\u306E\u4EE3\u5165"
+:caption: "シーケンス型から複数変数への代入"
 
 >>> dog, cat = ['dog', 'cat']
 >>> dog
@@ -191,7 +190,7 @@ snake
 (define-tuple)=
 
 ```{code-block} pycon
-:caption: "\u30BF\u30D7\u30EB\u306E\u5B9A\u7FA9"
+:caption: "タプルの定義"
 
 >>> ('spam', 'ham', 4)
 ('spam', 'ham', 4)
@@ -202,7 +201,7 @@ snake
 (use-tuple)=
 
 ```{code-block} pycon
-:caption: "\u30BF\u30D7\u30EB\u306E\u57FA\u672C\u7684\u306A\u4F7F\u3044\u65B9"
+:caption: "タプルの基本的な使い方"
 
 >>> ('spam', 'ham') + ('egg',)             # タプルの結合
 ('spam', 'ham', 'egg')
@@ -224,7 +223,7 @@ True
 (single-tuple)=
 
 ```{code-block} pycon
-:caption: "1\u8981\u7D20\u306E\u30BF\u30D7\u30EB"
+:caption: "1要素のタプル"
 
 >>> ('spam',)
 ('spam',)
@@ -237,7 +236,7 @@ True
 (omit-parenthesis-tuple)=
 
 ```{code-block} pycon
-:caption: "\u62EC\u5F27\u3092\u7701\u7565\u3057\u305F\u30BF\u30D7\u30EB"
+:caption: "括弧を省略したタプル"
 
 >>> 'dog', 'cat'
 ('dog', 'cat')
@@ -261,7 +260,7 @@ True
 (return-tuple)=
 
 ```{code-block} pycon
-:caption: "\u30BF\u30D7\u30EB\u3092\u8FD4\u3059\u95A2\u6570"
+:caption: "タプルを返す関数"
 
 >>> def head_splitter(seq):
 ...     return seq[0], seq[1:]
@@ -278,8 +277,7 @@ True
 (many-return-value)=
 
 ```{code-block} pycon
-:caption: "\u8981\u7D20\u6570\u306E\u591A\u3044\u30BF\u30D7\u30EB\u3092\u8FD4\u3059\
-:  \u95A2\u6570"
+:caption: "要素数の多いタプルを返す関数"
 
 >>> def bad_implementation():
 ...     return 'username', 'user_password', 'user_id', 'user_permission1', 'user_permission2'
@@ -305,7 +303,7 @@ True
 (guide-dict)=
 
 ```{code-block} pycon
-:caption: "\u8F9E\u66F8"
+:caption: "辞書"
 
 >>> user_info = {'user_name': 'taro', 'last_name': 'Yamada'}
 >>> user_info
@@ -317,7 +315,7 @@ True
 (get-dict-value)=
 
 ```{code-block} pycon
-:caption: "\u8F9E\u66F8\u304B\u3089\u306E\u5024\u306E\u53D6\u308A\u51FA\u3057"
+:caption: "辞書からの値の取り出し"
 
 >>> user_info['user_name']
 'taro'
@@ -328,7 +326,7 @@ True
 (set-dict-value)=
 
 ```{code-block} pycon
-:caption: "\u8F9E\u66F8\u3078\u306E\u5024\u306E\u8A2D\u5B9A"
+:caption: "辞書への値の設定"
 
 >>> user_info['first_name'] = 'Taro'
 >>> user_info
@@ -345,7 +343,7 @@ True
 (dict-in)=
 
 ```{code-block} pycon
-:caption: "\u8F9E\u66F8\u306Ein"
+:caption: "辞書のin"
 
 >>> 'user_name' in user_info
 True
@@ -363,7 +361,7 @@ False
 (dict-keyerror)=
 
 ```{code-block} pycon
-:caption: "\u5B58\u5728\u3057\u306A\u3044\u30AD\u30FC\u306E\u53C2\u7167"
+:caption: "存在しないキーの参照"
 
 >>> user_info['bio']
 Traceback (most recent call last):
@@ -376,7 +374,7 @@ KeyError: 'bio'
 (get-from-dict)=
 
 ```{code-block} pycon
-:caption: "\u5B58\u5728\u3057\u306A\u3044\u30AD\u30FC\u3078\u306Eget"
+:caption: "存在しないキーへのget"
 
 >>> user_info.get('user_name')
 'taro'
@@ -395,7 +393,7 @@ None
 (get-with-default)=
 
 ```{code-block} pycon
-:caption: "\u30C7\u30D5\u30A9\u30EB\u30C8\u5024\u4ED8\u304D\u306Eget"
+:caption: "デフォルト値付きのget"
 
 >>> user_info.get('bio', '')
 ''
@@ -411,7 +409,7 @@ None
 (dict-for)=
 
 ```{code-block} pycon
-:caption: "\u8F9E\u66F8\u3092\u4F7F\u7528\u3057\u305Ffor\u6587"
+:caption: "辞書を使用したfor文"
 
 >>> user_info = {'user_name': 'taro', 'last_name': 'Yamada'}
 >>> for key in user_info:
@@ -443,8 +441,7 @@ Yamada
 (get-all-items)=
 
 ```{code-block} pycon
-:caption: "\u8F9E\u66F8\u5185\u306E\u3059\u3079\u3066\u306E\u30AD\u30FC\u3068\u5024\
-:  \u3092\u53D6\u5F97"
+:caption: "辞書内のすべてのキーと値を取得"
 
 >>> d = {'foo': 'spam', 'bar': 'ham'}
 >>> d.items()
@@ -458,7 +455,7 @@ dict_items([('foo', 'spam'), ('bar', 'ham')])
 (for-with-dict-items)=
 
 ```{code-block} pycon
-:caption: "for\u6587\u3067\u8F9E\u66F8\u306E\u30AD\u30FC\u3068\u5024\u3092\u4F7F\u3046"
+:caption: "for文で辞書のキーと値を使う"
 
 >>> d = {'foo': 'spam', 'bar': 'ham'}
 >>> for key, value in d.items():
@@ -492,7 +489,7 @@ bar ham
 (define-set)=
 
 ```{code-block} pycon
-:caption: "\u96C6\u5408\u306E\u5B9A\u7FA9"
+:caption: "集合の定義"
 
 >>> {'spam', 'ham'}
 {'spam', 'ham'}
@@ -511,7 +508,7 @@ bar ham
 (set-add-method)=
 
 ```{code-block} pycon
-:caption: "\u96C6\u5408\u3078\u306E\u8981\u7D20\u306E\u8FFD\u52A0"
+:caption: "集合への要素の追加"
 
 >>> unique_users = {'dog', 'cat'}
 >>> unique_users.add('snake')
@@ -524,7 +521,7 @@ bar ham
 (len-with-set)=
 
 ```{code-block} pycon
-:caption: "\u96C6\u5408\u306B\u3088\u308B\u30E6\u30CB\u30FC\u30AF\u6570\u7BA1\u7406"
+:caption: "集合によるユニーク数管理"
 
 >>> len(unique_users)
 3
@@ -553,7 +550,7 @@ bar ham
 (product-of-sets)=
 
 ```{code-block} pycon
-:caption: "2\u96C6\u5408\u306E\u7A4D"
+:caption: "2集合の積"
 
 >>> allowed_permissions = {'edit', 'view'}
 >>> requested_permissions = {'view', 'delete'}
@@ -574,7 +571,7 @@ bar ham
 (sum-of-sets)=
 
 ```{code-block} pycon
-:caption: "2\u3064\u306E\u96C6\u5408\u306E\u548C"
+:caption: "2つの集合の和"
 
 >>> editor = {'edit', 'comment'}
 >>> reviewer = {'comment', 'approve'}

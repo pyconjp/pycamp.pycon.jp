@@ -43,7 +43,7 @@ pipもpipコマンドでアップグレードを行えます。まずは、現�
 アップグレードは、次のコマンドを実行します。
 
 ```{code-block} sh
-:caption: "pip\u3092\u30A2\u30C3\u30D7\u30B0\u30EC\u30FC\u30C9"
+:caption: "pipをアップグレード"
 
 $ pip install pip --upgrade
 ```
@@ -55,8 +55,7 @@ pip コマンドを利用すると以下の様なコマンドで簡単にサー�
 ```
 
 ```{code-block} sh
-:caption: "pip\u30B3\u30DE\u30F3\u30C9\u3067requests\u3092\u30A4\u30F3\u30B9\u30C8\u30FC\
-:  \u30EB"
+:caption: "pipコマンドでrequestsをインストール"
 
 $ pip install requests
 ```
@@ -84,7 +83,7 @@ venvはプロジェクトごとに隔離されたPythonの仮想環境(Virtual E
 condaではそれぞれ以下のコマンドで、サードパーティ製パッケージのインストール、環境の作成、有効化、無効化が行えます。
 
 ```{code-block} sh
-:caption: "conda \u30B3\u30DE\u30F3\u30C9\u306E\u4F8B"
+:caption: "conda コマンドの例"
 
 $ conda create --name env python  # 環境を作成
 $ source activate env  # 環境の有効化
@@ -102,7 +101,7 @@ venv環境を作成します。
 (venv-create-linux-or-mac)=
 
 ```{code-block} sh
-:caption: "venv\u74B0\u5883\u306E\u4F5C\u6210(macOS\u3001Linux)"
+:caption: "venv環境の作成(macOS、Linux)"
 
  $ python3 -m venv env
  $ ls
@@ -112,7 +111,7 @@ venv環境を作成します。
 Windowsの場合はスクリプトの実行権限を与えます（`Set-ExecutionPolicy RemoteSigned -Scope CurrentUser` ）。このコマンドは一度実行したら、再び実行する必要はありません。
 
 ```{code-block} sh
-:caption: "venv\u74B0\u5883\u306E\u4F5C\u6210(Windows)"
+:caption: "venv環境の作成(Windows)"
 
  > Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
  > python -m venv env
@@ -138,7 +137,7 @@ Windowsの場合はスクリプトを実行します（ {numref}`venv-activate-w
 (venv-activate-linux-or-mac)=
 
 ```{code-block} sh
-:caption: "venv\u74B0\u5883\u306E\u6709\u52B9\u5316(macOS\u3001Linux)"
+:caption: "venv環境の有効化(macOS、Linux)"
 
  $ source env/bin/activate
  (env) $
@@ -147,7 +146,7 @@ Windowsの場合はスクリプトを実行します（ {numref}`venv-activate-w
 (venv-activate-windows)=
 
 ```{code-block} sh
-:caption: "venv\u74B0\u5883\u306E\u6709\u52B9\u5316(Windows)"
+:caption: "venv環境の有効化(Windows)"
 
  > env\Scripts\Activate.ps1
  (env) >
@@ -160,7 +159,7 @@ Windowsの場合はスクリプトを実行します（ {numref}`venv-activate-w
 (venv-install-requests)=
 
 ```{code-block} sh
-:caption: "\u30D1\u30C3\u30B1\u30FC\u30B8\u306E\u30A4\u30F3\u30B9\u30C8\u30FC\u30EB"
+:caption: "パッケージのインストール"
 
  (env) $ pip install requests
  (env) $ python
@@ -184,7 +183,7 @@ Windowsの場合はスクリプトを実行します（ {numref}`venv-activate-w
 (venv-deactivate)=
 
 ```{code-block} sh
-:caption: "venv\u74B0\u5883\u3092\u7121\u52B9\u5316"
+:caption: "venv環境を無効化"
 
  (env) $ deactivate
  $

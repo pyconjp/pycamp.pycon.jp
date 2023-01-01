@@ -35,7 +35,7 @@ Pythonでファイルを開くには `open()` 関数を使います。
 (file-open)=
 
 ```{code-block} pycon
-:caption: "\u30D5\u30A1\u30A4\u30EB\u3092\u958B\u304F"
+:caption: "ファイルを開く"
 
 >>> f = open('pycamp.txt', 'w', encoding='utf-8')
 >>> f
@@ -63,7 +63,7 @@ Pythonでファイルを開くには `open()` 関数を使います。
 (write-string)=
 
 ```{code-block} pycon
-:caption: "\u30D5\u30A1\u30A4\u30EB\u3078\u66F8\u304D\u8FBC\u307F"
+:caption: "ファイルへ書き込み"
 
 >>> f.write('Hello')
 5
@@ -76,7 +76,7 @@ Pythonでファイルを開くには `open()` 関数を使います。
 {numref}`file-open`、{numref}`write-string` の結果、実行環境直下に `pycamp.txt` というファイルが次のような内容で作成されます。
 
 ```{code-block} none
-:caption: "\u65B0\u898F\u4F5C\u6210\u3055\u308C\u305Fpycamp.txt\u306E\u5185\u5BB9"
+:caption: "新規作成されたpycamp.txtの内容"
 
 Hello Python
 こんにちはPython
@@ -92,7 +92,7 @@ Hello Python
 ファイルを閉じるには、ファイルオブジェクトの `.close()` メソッドを呼び出します。
 
 ```{code-block} pycon
-:caption: "\u30D5\u30A1\u30A4\u30EB\u3092\u9589\u3058\u308B"
+:caption: "ファイルを閉じる"
 
 >>> f.close()
 ```
@@ -108,7 +108,7 @@ Hello Python
 (read-file)=
 
 ```{code-block} pycon
-:caption: "\u30D5\u30A1\u30A4\u30EB\u5185\u5BB9\u306E\u8AAD\u307F\u8FBC\u307F"
+:caption: "ファイル内容の読み込み"
 
 >>> f = open('pycamp.txt', 'r', encoding='utf-8')
 >>> f
@@ -127,8 +127,7 @@ Hello Python
 (read-file2)=
 
 ```{code-block} pycon
-:caption: "\u7B2C2\u5F15\u6570\u3092\u7701\u7565\u3057\u3066\u30D5\u30A1\u30A4\u30EB\
-:  \u3092\u958B\u304F"
+:caption: "第2引数を省略してファイルを開く"
 
 >>> f = open('pycamp.txt', encoding='utf-8')
 >>> f
@@ -146,7 +145,7 @@ with文でのファイルオープン
 (with-statement)=
 
 ```{code-block} pycon
-:caption: "\u30D5\u30A1\u30A4\u30EB\u30AA\u30FC\u30D7\u30F3\u3068with\u6587"
+:caption: "ファイルオープンとwith文"
 
 >>> with open('pycamp.txt', encoding='utf-8') as f:
 ...     txt = f.read()
@@ -172,8 +171,7 @@ Hello Python
 (append-mode)=
 
 ```{code-block} pycon
-:caption: "\u8FFD\u8A18\u30E2\u30FC\u30C9\u3067\u30D5\u30A1\u30A4\u30EB\u3092\u958B\
-:  \u304F"
+:caption: "追記モードでファイルを開く"
 
 >>> f = open('pycamp.txt', 'a', encoding='utf-8')
 >>> f.write('こんにちは世界\n')
@@ -183,7 +181,7 @@ Hello Python
 {numref}`append-mode` の結果、追記後の `pycamp.txt` の内容は次のようになります
 
 ```{code-block} none
-:caption: "\u8FFD\u8A18\u3055\u308C\u305Fpycamp.txt\u306E\u5185\u5BB9"
+:caption: "追記されたpycamp.txtの内容"
 
 Hello Python
 こんにちはPython
@@ -210,7 +208,7 @@ Pythonでは他のPythonファイルや関数をインポート（import）し�
 (calc-py)=
 
 ```{code-block} python
-:caption: "add()\u3001sub()\u95A2\u6570\u306E\u5B9A\u7FA9\uFF08calc.py\uFF09"
+:caption: "add()、sub()関数の定義（calc.py）"
 
 def add(a, b):
     return a + b
@@ -230,7 +228,7 @@ Pythonインタープリタを起動して、 `calc.py` をインポートしま
 (import-calc)=
 
 ```{code-block} pycon
-:caption: "calc\u306E\u30A4\u30F3\u30DD\u30FC\u30C8"
+:caption: "calcのインポート"
 
 >>> import calc
 ```
@@ -244,7 +242,7 @@ Pythonファイルをインポートすることでモジュール（module）�
 (call-calc-add)=
 
 ```{code-block} pycon
-:caption: "\u5225\u30E2\u30B8\u30E5\u30FC\u30EB\u306E\u95A2\u6570\u3092\u5229\u7528"
+:caption: "別モジュールの関数を利用"
 
 >>> calc.add(1, 2)
 3
@@ -262,7 +260,7 @@ Pythonファイルをインポートすることでモジュール（module）�
 (import-function)=
 
 ```{code-block} pycon
-:caption: "\u95A2\u6570\u306E\u30A4\u30F3\u30DD\u30FC\u30C8"
+:caption: "関数のインポート"
 
 >>> from calc import add
 >>> add(1, 2)
@@ -283,8 +281,7 @@ Pythonファイルをインポートすることでモジュール（module）�
 (import-as)=
 
 ```{code-block} pycon
-:caption: "\u30A4\u30F3\u30DD\u30FC\u30C8\u5BFE\u8C61\u306B\u5225\u540D\u3092\u3064\
-:  \u3051\u308B"
+:caption: "インポート対象に別名をつける"
 
 >>> import calc as c
 >>> c.add(1, 2)
@@ -299,7 +296,7 @@ Pythonファイルをインポートすることでモジュール（module）�
 (import-functions)=
 
 ```{code-block} pycon
-:caption: "\u8907\u6570\u306E\u5BFE\u8C61\u3092\u30A4\u30F3\u30DD\u30FC\u30C8"
+:caption: "複数の対象をインポート"
 
 >>> from calc import add, sub
 >>> add(1, 2)
@@ -314,8 +311,7 @@ Pythonファイルをインポートすることでモジュール（module）�
 (import-functions2)=
 
 ```{code-block} pycon
-:caption: "\u62EC\u5F27\u3092\u4F7F\u3063\u305F\u8907\u6570\u306E\u30A4\u30F3\u30DD\
-:  \u30FC\u30C8"
+:caption: "括弧を使った複数のインポート"
 
 >>> from calc import (
 ...     add,
@@ -347,7 +343,7 @@ Python自体も標準でモジュールを提供しています。これら標�
 引数として年、月、日を指定します。
 
 ```{code-block} pycon
-:caption: "datetime.date()\u30B3\u30F3\u30B9\u30C8\u30E9\u30AF\u30BF"
+:caption: "datetime.date()コンストラクタ"
 
 >>> import datetime
 >>> d = datetime.date(2016, 12, 23)
@@ -358,7 +354,7 @@ Python自体も標準でモジュールを提供しています。これら標�
 また、 `datetime.date.today()` メソッドを使うと今日の日付を取得することができます。
 
 ```{code-block} pycon
-:caption: "datetime.date.today()\u30E1\u30BD\u30C3\u30C9"
+:caption: "datetime.date.today()メソッド"
 
 >>> today = datetime.date.today()
 >>> print(today)  # 実行する日によって結果が異なる
@@ -370,7 +366,7 @@ Python自体も標準でモジュールを提供しています。これら標�
 `datetime.date` を使うと面倒な部分をモジュールが肩代わりしてくれます。
 
 ```{code-block} pycon
-:caption: "datetime.date.today()\u30E1\u30BD\u30C3\u30C9"
+:caption: "datetime.date.today()メソッド"
 
 >>> birthday = datetime.date(2008, 12, 3)  # Python 3.0のリリース日
 >>> today = datetime.date.today()
@@ -395,7 +391,7 @@ Python自体も標準でモジュールを提供しています。これら標�
 (re-module)=
 
 ```{code-block} pycon
-:caption: "re\u30E2\u30B8\u30E5\u30FC\u30EB\u306E\u5229\u7528"
+:caption: "reモジュールの利用"
 
 >>> import re
 >>> m = re.search('(P(yth|l)|Z)o[pn]e?', 'Python')
@@ -409,8 +405,7 @@ Python自体も標準でモジュールを提供しています。これら標�
 (match-object)=
 
 ```{code-block} pycon
-:caption: "\u6B63\u898F\u8868\u73FE\u306B\u30DE\u30C3\u30C1\u3057\u305F\u6587\u5B57\
-:  \u5217\u306E\u53D6\u5F97"
+:caption: "正規表現にマッチした文字列の取得"
 
 >>> m.group()
 'Python'
@@ -422,8 +417,7 @@ Python自体も標準でモジュールを提供しています。これら標�
 (match-group)=
 
 ```{code-block} pycon
-:caption: "\u30B0\u30EB\u30FC\u30D7\u3092\u6307\u5B9A\u3057\u3066\u6587\u5B57\u5217\
-:  \u306E\u53D6\u5F97"
+:caption: "グループを指定して文字列の取得"
 
 >>> m = re.search('py(thon)', 'python')
 >>> m.group()
@@ -439,8 +433,7 @@ Python自体も標準でモジュールを提供しています。これら標�
 (not-match)=
 
 ```{code-block} pycon
-:caption: "\u6B63\u898F\u8868\u73FE\u306B\u30DE\u30C3\u30C1\u3057\u306A\u3044\u5834\
-:  \u5408"
+:caption: "正規表現にマッチしない場合"
 
 >>> re.search('py', 'ruby')
 >>>
