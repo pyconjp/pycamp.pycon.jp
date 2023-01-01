@@ -72,7 +72,7 @@ macOSでPythonを利用する場合は、Pythonの公式サイトで配布され
 (check-version-mac)=
 
 ```{code-block} bash
-:caption: "Python\u306E\u30D0\u30FC\u30B8\u30E7\u30F3\u3092\u78BA\u8A8D"
+:caption: Pythonのバージョンを確認
 
 $ python3 -V
 Python 3.10.8
@@ -95,11 +95,11 @@ OSによって以下のいずれかのインストーラーをダウンロード
 
 (windows-install)=
 
-:::{figure} images/pythonforwindows1.png
+```{figure} images/pythonforwindows1.png
 :width: 600
 
 Python for Windowsのインストール画面
-:::
+```
 
 ```{index} single: Install; Linux
 ```
@@ -109,7 +109,7 @@ Python for Windowsのインストール画面
 (check-version-win)=
 
 ```{code-block} doscon
-:caption: "Python\u306E\u30D0\u30FC\u30B8\u30E7\u30F3\u3092\u78BA\u8A8D"
+:caption: Pythonのバージョンを確認
 
 C:\Users\user>python -V
 Python 3.10.8
@@ -123,7 +123,7 @@ Ubuntu 22.04にはデフォルトでPython 3.10.8がインストールされて�
 (check-version)=
 
 ```{code-block} bash
-:caption: "Python\u306E\u30D0\u30FC\u30B8\u30E7\u30F3\u3092\u78BA\u8A8D"
+:caption: Pythonのバージョンを確認
 
 $ python3 -V
 Python 3.10.8

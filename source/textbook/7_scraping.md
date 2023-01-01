@@ -178,11 +178,11 @@ if __name__ == '__main__':
 
 スクレイピングの例として、docs.python.orgの組み込み関数一覧のページ(<https://docs.python.org/ja/3.10/library/functions.html>)から関数名の情報を抜き出します。
 
-:::{figure} images/func-list.png
+```{figure} images/func-list.png
 :width: 50%
 
 組み込み関数一覧ページ
-:::
+```
 
 下記コードを `simple.py` という名前で保存します({numref}`simple-py`)。
 
@@ -238,7 +238,7 @@ breakpoint
 ```{index} PEP8
 ```
 
-:::{admonition} コラム: Pythonのコーディング規約「PEP8」
+```{admonition} コラム: Pythonのコーディング規約「PEP8」
 Pythonには [PEP8（ペップエイト）](https://peps.python.org/pep-0008/) というコーディング規約があります。
 チームで開発をする際、人によってプログラムコードの書き方がバラバラだと読みにくいコードになってしまいます。
 そのため、PEP8のルールに従う習慣を身につけておくとよいでしょう。
@@ -247,7 +247,7 @@ Pythonには [PEP8（ペップエイト）](https://peps.python.org/pep-0008/) �
 
 pycodestyleは `pip install pycodestyle` でインストールして使用します。
 `simple.py` を検証するには、 `pycodestyle simple.py` を実行します。
-:::
+```
 
 ### コードの解説
 

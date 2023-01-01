@@ -108,14 +108,14 @@ Pythonについてより詳しくは、後述の節で説明します。
 
 文字列は順序を持つシーケンス型の1つです。
 
-:::{admonition} コラム: シーケンス型
-シーケンス型は順序を持つ型で、Python標準では他にもリスト( `list` )型、タプル( `tuple` )型、レンジ( `range` )型などがあります。
+```{admonition} コラム: シーケンス型
+シーケンス型は順序を持つ型で、Python標準では他にもリスト(`list`)型、タプル(`tuple`)型、レンジ(`range`)型などがあります。
 シーケンス型は後ほど説明するインデックスによる取得もサポートしています。
 
 シーケンス型の詳細はPythonの公式ドキュメントを参照してください。
 
-- シーケンス <https://docs.python.org/ja/3/library/stdtypes.html#typesseq>
-:::
+- シーケンス (https://docs.python.org/ja/3/library/stdtypes.html#typesseq)
+```
 
 ```{index} list
 ```
@@ -195,10 +195,10 @@ C言語のように波括弧（`{ }`）で囲む必要はなく、インデン�
 
 {numref}`function-def` のように引数がある場合は、括弧内に引数を渡します。1と3を足した値、4が返されています。
 
-:::{admonition} コラム: インデントの表示
+```{admonition} コラム: インデントの表示
 このドキュメントをWebブラウザで見ている場合、 `def` と `return` が同じレベルにあるように見える事があります。
 実際には、 `return` の前に、スペース4つが挿入されて、ブロック構造を表しています。
-:::
+```
 
 ```{index} Built-in Functions
 ```
@@ -352,13 +352,11 @@ range(1, 101)のように記述すると、1から100までの数字を順番に
 
 現時点の `fizzbuzz()` 関数は与えられた引数をそのまま返す実装なので、これで問題ありません。
 
-:::{hint}
+```{hint}
 [for文の動作を確認(Python Tutor)](https://pythontutor.com/live.html#code=def%20fizzbuzz%28num%29%3A%0A%20%20%20%20return%20num%0A%0Afor%20num%20in%20range%281,%20101%29%3A%0A%20%20%20%20print%28fizzbuzz%28num%29%29%0A&cumulative=false&curInstr=502&heapPrimitives=false&mode=display&origin=opt-live.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false)
 
-```{raw} html
 <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=def%20fizzbuzz%28num%29%3A%0A%20%20%20%20return%20num%0A%0Afor%20num%20in%20range%281,%20101%29%3A%0A%20%20%20%20print%28fizzbuzz%28num%29%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=false&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
 ```
-:::
 
 for文は次のように書きます。
 
@@ -445,13 +443,11 @@ for num in range(1, 101):
 
 引数を文字列に変換して返します。
 
-:::{hint}
+```{hint}
 [if文の動作を確認(Python Tutor)](https://pythontutor.com/live.html#code=def%20fizzbuzz%28num%29%3A%0A%20%20%20%20if%20num%20%25%203%20%3D%3D%200%20and%20num%20%25%205%20%3D%3D%200%3A%0A%20%20%20%20%20%20%20%20return%20'FizzBuzz'%0A%20%20%20%20elif%20num%20%25%203%20%3D%3D%200%3A%0A%20%20%20%20%20%20%20%20return%20'Fizz'%0A%20%20%20%20elif%20num%20%25%205%20%3D%3D%200%3A%0A%20%20%20%20%20%20%20%20return%20'Buzz'%0A%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20return%20str%28num%29%0A%0Afor%20num%20in%20range%281,%20101%29%3A%0A%20%20%20%20print%28fizzbuzz%28num%29%29%0A&cumulative=false&curInstr=763&heapPrimitives=false&mode=display&origin=opt-live.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false)
 
-```{raw} html
 <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=def%20fizzbuzz%28num%29%3A%0A%20%20%20%20if%20num%20%25%203%20%3D%3D%200%20and%20num%20%25%205%20%3D%3D%200%3A%0A%20%20%20%20%20%20%20%20return%20'FizzBuzz'%0A%20%20%20%20elif%20num%20%25%203%20%3D%3D%200%3A%0A%20%20%20%20%20%20%20%20return%20'Fizz'%0A%20%20%20%20elif%20num%20%25%205%20%3D%3D%200%3A%0A%20%20%20%20%20%20%20%20return%20'Buzz'%0A%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20return%20str%28num%29%0A%0Afor%20num%20in%20range%281,%20101%29%3A%0A%20%20%20%20print%28fizzbuzz%28num%29%29%0A&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=false&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
 ```
-:::
 
 ### FizzBuzz処理の実装の完了
 

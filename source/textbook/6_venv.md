@@ -20,12 +20,12 @@ Python は標準ライブラリだけでもいろいろなことができます�
 
 サードパーティ製パッケージは [PyPI](https://pypi.org/) （the Python Package Index、パイピーアイと読む）というサイトで情報が共有されています。
 
-:::{figure} images/pypi.png
+```{figure} images/pypi.png
 :alt: PyPI - the Python Package Index
 :width: 600
 
 PyPI - the Python Package Index
-:::
+```
 
 ```{index} pip
 ```
@@ -63,9 +63,9 @@ $ pip install requests
 
 次に、独立したPython環境を構築する **venv** モジュールについて説明します。
 
-:::{admonition} コラム: Windows環境でpip実行時にエラーになる場合
+```{admonition} コラム: Windows環境でpip実行時にエラーになる場合
 PATH環境変数を確認し、Python3 をインストールしているPATHが設定されているかどうか確認してみてください。
-:::
+```
 
 ```{index} venv single: venv; Virtual Environments
 ```
@@ -209,8 +209,7 @@ pipにはそのための機能があります。
 ファイル名としては **requirements.txt** がよく知られている名前なので、他の人にパッケージの一覧が入っているという意図が伝わりやすいです。
 
 ```{code-block} sh
-:caption: "pip freeze \u30B3\u30DE\u30F3\u30C9\u3067\u30D1\u30C3\u30B1\u30FC\u30B8\u306E\
-:  \u60C5\u5831\u3092\u66F8\u304D\u51FA\u3059"
+:caption: pip freeze コマンドでパッケージの情報を書き出す
 
 (env) $ pip install requests
 (env) $ pip freeze > requirements.txt
@@ -225,7 +224,7 @@ urllib3==1.21.1
 プロジェクトの他のメンバーは、ソースコードをダウンロードした後、以下の手順で仮想環境に同じパッケージをインストールします。
 
 ```{code-block} sh
-:caption: "pip install \u3067\u540C\u3058\u74B0\u5883\u3092\u4F5C\u308B"
+:caption:  pip install で同じ環境を作る
 
 $ git clone some-project-source-code
 $ cd some-project

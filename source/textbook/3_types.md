@@ -235,11 +235,11 @@ I'm Hiroki
 
 (index-image)=
 
-:::{figure} images/indexing.png
+```{figure} images/indexing.png
 :width: 400
 
 インデックス
-:::
+```
 
 ```{index} slice single: String; slice
 ```
