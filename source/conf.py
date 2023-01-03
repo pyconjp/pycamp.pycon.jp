@@ -65,6 +65,8 @@ myst_enable_extensions = [
     "linkify",
 ]
 
+myst_linkify_fuzzy_links = False
+
 # -- Options for HTML output -------------------------------------------------
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for

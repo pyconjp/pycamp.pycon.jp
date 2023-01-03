@@ -46,6 +46,9 @@ $ source env/bin/activate
 
 ### Requests
 
+
+* URL: https://requests.readthedocs.io/
+
 Requests について簡単に紹介します。
 Requests はウェブサイトにアクセスしてHTMLなどのデータを取得するためのライブラリです。
 Pythonの標準ライブラリ [urllib.request](https://docs.python.org/ja/3/library/urllib.request.html) でも同様のことは行なえますが、より便利な Requests をここでは使用します。
@@ -54,6 +57,8 @@ Pythonの標準ライブラリ [urllib.request](https://docs.python.org/ja/3/lib
 ```
 
 ### Beautiful Soup 4
+
+* URL: https://www.crummy.com/software/BeautifulSoup/bs4/doc/
 
 Beautiful Soup 4はHTMLやXMLの中身を解析して、任意の情報を取得するためのライブラリです。
 Pythonの標準ライブラリ [html.parser](https://docs.python.org/ja/3/library/html.parser.html) でも同様のことは行なえますが、より便利な Beautiful Soup 4 をここでは使用します。
@@ -419,6 +424,9 @@ RequestsやBeautiful Soup 4の動作を変えて、さまざまなWebページ�
 
 ### Requests の主な使い方
 
+* **公式ドキュメント**: [Requests: HTTP for Humans](https://requests.readthedocs.io/)
+
+
 ここでは Requests の主な使い方の例をいくつか載せます。
 詳細については以下の公式ドキュメントを参照してください。
 
@@ -465,6 +473,8 @@ http://httpbin.org/get?key1=value1&key2=value2&key2=value3
 ```
 
 ### Beautiful Soup 4の主な使い方
+
+* **公式ドキュメント**: [Beautiful Soup Documentation](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
 
 ここではBeautiful Soup 4の主な使い方の例をいくつか載せます。
 詳細については以下の公式ドキュメントを参照してください。
