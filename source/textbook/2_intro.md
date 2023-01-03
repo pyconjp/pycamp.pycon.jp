@@ -45,7 +45,7 @@ Pythonについてより詳しくは、後述の節で説明します。
 
 初めにPythonインタープリタの情報と、大なり記号3つ（`>>>`）が表示されます。
 
-この(`>>>`)がPythonの対話モードでの入力をうながすプロンプトです。終了するにはCtrl-Dまたは `quit()` を入力します（WindowsではCtrl-Z+Enter）。
+この(`>>>`)がPythonの対話モードでの入力をうながすプロンプトです。終了するには {kbd}`Ctrl`-{kbd}`D`または `quit()` を入力します（Windowsでは{kbd}`Ctrl`-{kbd}`Z`+{kbd}`Enter`）。
 
 ```{index} calculator
 ```
