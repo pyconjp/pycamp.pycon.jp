@@ -1,0 +1,27 @@
+# 貢献者一覧
+
+Python Boot Campのテキスト作成には以下の人たちが関わっています。
+
+- [takanory](https://github.com/takanory)
+- [Akira-Taniguchi](https://github.com/Akira-Taniguchi)
+- [ryu22e](https://github.com/ryu22e)
+- [terapyon](https://github.com/terapyon)
+- [shimizukawa](https://github.com/shimizukawa)
+- [ryokamiya](https://github.com/ryokamiya)
+- [HayaoSuzuki](https://github.com/HayaoSuzuki)
+- [kazweda](https://github.com/kazweda)
+- [rhoboro](https://github.com/rhoboro)
+- [jbking](https://github.com/jbking)
+- [kashewnuts](https://github.com/kashewnuts)
+- [qt-luigi](https://github.com/qt-luigi)
+- [tell-k](https://github.com/tell-k)
+- [drillan](https://github.com/drillan)
+- [koedoyoshida](https://github.com/koedoyoshida)
+- [max747](https://github.com/max747)
+- [ymyzk](https://github.com/ymyzk)
+- [ikura1](https://github.com/ikura1)
+- [hikaruya8](https://github.com/hikaruya8)
+- [kobatomo](https://github.com/KobaTomo/)
+- [kuma127](https://github.com/kuma127)
+- [hamukazu](https://github.com/hamukazu)
+- [Takeshi_Izawa](https://github.com/zxb04116)
