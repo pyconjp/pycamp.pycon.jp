@@ -424,11 +424,10 @@ RequestsやBeautiful Soup 4の動作を変えて、さまざまなWebページ�
 
 ### Requests の主な使い方
 
-* **公式ドキュメント**: [Requests: HTTP for Humans](https://requests.readthedocs.io/)
-
-
 ここでは Requests の主な使い方の例をいくつか載せます。
 詳細については以下の公式ドキュメントを参照してください。
+
+* **公式ドキュメント**: [Requests: HTTP for Humans](https://requests.readthedocs.io/)
 
 以下は認証つきのURLにアクセスして、結果を取得する例です。
 
@@ -474,10 +473,10 @@ http://httpbin.org/get?key1=value1&key2=value2&key2=value3
 
 ### Beautiful Soup 4の主な使い方
 
-* **公式ドキュメント**: [Beautiful Soup Documentation](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
-
 ここではBeautiful Soup 4の主な使い方の例をいくつか載せます。
 詳細については以下の公式ドキュメントを参照してください。
+
+* **公式ドキュメント**: [Beautiful Soup Documentation](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
 
 ```{index} Beautiful Soup 4 single: Beautiful Soup 4; Documentation
 ```
