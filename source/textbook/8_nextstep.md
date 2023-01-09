@@ -14,13 +14,13 @@ Pythonの使い方などが解説してあるWebサイト
 
 ```{list-table}
 * - Python チュートリアル
-  - https://docs.python.org/ja/3/tutorial/
+  - <https://docs.python.org/ja/3/tutorial/>
 * - Python 標準ライブラリ
-  - https://docs.python.org/ja/3/library/index.html
+  - <https://docs.python.org/ja/3/library/index.html>
 * - Dive into Python 3 日本語版
-  - http://diveintopython3-ja.rdy.jp/
+  - <http://diveintopython3-ja.rdy.jp/>
 * - Python HOWTO
-  - https://docs.python.org/ja/3/howto/
+  - <https://docs.python.org/ja/3/howto/>
 ```
 
 ```{index} Web sites to learn programming
@@ -33,13 +33,13 @@ Pythonの使い方などが解説してあるWebサイト
 ```{list-table}
 
 * - PyQ : Python学習プラットフォーム
-  - https://pyq.jp/
+  - <https://pyq.jp/>
 * - Paiza : ITエンジニア・プログラマ向けの転職・就活・学習サービス
-  - https://paiza.jp/
+  - <https://paiza.jp/>
 * - ProjectEuler : プログラミングのチャレンジングプラットフォーム
-  - https://projecteuler.net/
+  - <https://projecteuler.net/>
 * - CheckIO : Pythonコードを書いてステージを攻略するゲーム
-  - https://checkio.org/
+  - <https://checkio.org/>
 ```
 
 ```{index} Q&A web sites for programming
@@ -51,9 +51,9 @@ Pythonの使い方などが解説してあるWebサイト
 
 ```{list-table}
 * - Stack Overflow
-  - https://ja.stackoverflow.com/
+  - <https://ja.stackoverflow.com/>
 * - teratail
-  - https://teratail.com/
+  - <https://teratail.com/>
 ```
 
 ### その他
@@ -98,7 +98,7 @@ Pythonやプログラムの学習におすすめの書籍をいくつか紹介�
     Pythonのインストール、エディタの使い方、コマンドラインの使い方など、初めてプログラミングに触れる方向けに図を多く使い、手順を分かりやすく紹介している。
 * - ![Pythonチュートリアル 第4版](images/book-tutorial.jpg)
   - [Pythonチュートリアル 第4版](https://www.oreilly.co.jp/books/9784873119359/)
-  - Python公式の読み物の書籍版。Web上でも `Python チュートリアル <https://docs.python.org/ja/3/tutorial/index.html>`_ が参照できる。
+  - Python公式の読み物の書籍版。Web上でも [Python チュートリアル](https://docs.python.org/ja/3/tutorial/index.html) が参照できる。
     リファレンスと異なり、説明を多く書いていて、他の言語経験者であれば十分理解できる。
     このチュートリアルが難しい人は上にある入門書を読むと良さそう。
 * - ![自走プログラマー](images/book-jisou-programmer.jpg)
@@ -123,10 +123,10 @@ Pythonやプログラムの学習におすすめの書籍をいくつか紹介�
 コミュニティに参加して、仲間を作ることもおすすめです。
 みなさんの地域でコミュニティを立ち上げることもおすすめです。
 
-- python.jp <https://www.python.jp/>
-- PyCon JP <https://pycon.jp>
-- Python mini Hack-a-thon <https://pyhack.connpass.com/>
-- PyLadies Tokyo <https://pyladies-tokyo.connpass.com/>
+- python.jp: <https://www.python.jp/>
+- PyCon JP: <https://pycon.jp>
+- Python mini Hack-a-thon: <https://pyhack.connpass.com/>
+- PyLadies Tokyo: <https://pyladies-tokyo.connpass.com/>
 
 ```{index} pair: Community; slack
 ```
