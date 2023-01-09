@@ -60,14 +60,10 @@ exclude_patterns = []
 
 numfig = True
 
-# see: https://myst-parser.readthedocs.io/en/latest/syntax/optional.html#syntax-extensions
+# see: https://myst-parser.readthedocs.io/en/latest/syntax/optional.html
 myst_enable_extensions = [
     "colon_fence",
-    "linkify",
 ]
-
-# see: https://myst-parser.readthedocs.io/en/latest/syntax/optional.html#linkify
-myst_linkify_fuzzy_links = False
 
 # -- Options for HTML output -------------------------------------------------
 
