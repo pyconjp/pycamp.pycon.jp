@@ -114,7 +114,7 @@ Pythonについてより詳しくは、後述の節で説明します。
 
 シーケンス型の詳細はPythonの公式ドキュメントを参照してください。
 
-- シーケンス (https://docs.python.org/ja/3/library/stdtypes.html#typesseq)
+- シーケンス (<https://docs.python.org/ja/3/library/stdtypes.html#typesseq>)
 ```
 
 ```{index} list
