@@ -85,7 +85,7 @@ Pythonでファイルを開くには `open()` 関数を使います。
 (file-close)=
 
 ```{code-block} pycon
-:caption: "ファイルを閉じる" 
+:caption: "ファイルを閉じる"
 
 >>> f.close()
 ```
