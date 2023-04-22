@@ -73,15 +73,6 @@ Pythonでファイルを開くには `open()` 関数を使います。
 12
 ```
 
-{numref}`file-open`、{numref}`write-string` の結果、実行環境直下に `pycamp.txt` というファイルが次のような内容で作成されます。
-
-```{code-block} none
-:caption: "新規作成されたpycamp.txtの内容"
-
-Hello Python
-こんにちはPython
-```
-
 ```{index} close() single: File; close()
 ```
 
@@ -91,11 +82,23 @@ Hello Python
 
 ファイルを閉じるには、ファイルオブジェクトの `.close()` メソッドを呼び出します。
 
+(file-close)=
+
 ```{code-block} pycon
 :caption: "ファイルを閉じる"
 
 >>> f.close()
 ```
+
+{numref}`file-open`、{numref}`write-string`、{numref}`file-close` の結果、実行環境直下に `pycamp.txt` というファイルが次のような内容で作成されます。
+
+```{code-block} none
+:caption: "新規作成されたpycamp.txtの内容"
+
+Hello Python
+こんにちはPython
+```
+
 
 ```{index} read() single: File; read()
 ```
