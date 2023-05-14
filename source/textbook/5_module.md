@@ -399,7 +399,7 @@ Python自体も標準でモジュールを提供しています。これら標�
 >>> import re
 >>> m = re.search('(P(yth|l)|Z)o[pn]e?', 'Python')
 >>> m
-<_sre.SRE_Match object; span=(0, 6), match='Python'>
+<re.Match object; span=(0, 6), match='Python'>
 ```
 
 正規表現にマッチした場合、 `re.search()` は結果を表すマッチオブジェクトを返します。
