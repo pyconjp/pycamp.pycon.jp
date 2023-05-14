@@ -295,7 +295,7 @@ True
 
 辞書もリスト、タプルと同じコレクションです。
 
-辞書はリストとは違い、各要素に順番を持ちません。代わりにキー（key）と、対応する値（value）を持ちます。
+辞書の各要素はキー（key）と、対応する値（value）を持ち、Python 3.7 以降では要素の挿入順が保持されます。
 
 辞書を定義するには波括弧（`{}`）で各要素を囲み、コロン（`:`）でキーと値を書きます（{numref}`guide-dict`）。
 値と次のキーの間はカンマ（`,`）で区切ります。
@@ -307,7 +307,7 @@ True
 
 >>> user_info = {'user_name': 'taro', 'last_name': 'Yamada'}
 >>> user_info
-{'last_name': 'Yamada', 'user_name': 'taro'}
+{'user_name': 'taro', 'last_name': 'Yamada'}
 ```
 
 {numref}`guide-dict` の `user_info` から `'user_name'` の値を取り出す処理は、 {numref}`get-dict-value` になります。
@@ -330,7 +330,7 @@ True
 
 >>> user_info['first_name'] = 'Taro'
 >>> user_info
-{'first_name': 'Taro', 'last_name': 'Yamada', 'user_name': 'taro'}
+{'user_name': 'taro', 'last_name': 'Yamada', 'first_name': 'Taro'}
 ```
 
 ```{index} in single: Collection; in
