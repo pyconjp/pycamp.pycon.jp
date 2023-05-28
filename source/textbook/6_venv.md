@@ -63,7 +63,7 @@ $ pip install requests
 次に、独立したPython環境を構築する **venv** モジュールについて説明します。
 
 ```{admonition} コラム: Windows環境でpip実行時にエラーになる場合
-PATH環境変数を確認し、Python3 をインストールしているPATHが設定されているかどうか確認してみてください。
+PATH環境変数を確認し、Python 3 をインストールしているPATHが設定されているかどうか確認してみてください。
 ```
 
 ```{index} venv single: venv; Virtual Environments
