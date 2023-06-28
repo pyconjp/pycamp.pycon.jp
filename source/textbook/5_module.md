@@ -179,6 +179,7 @@ Hello Python
 >>> f = open('pycamp.txt', 'a', encoding='utf-8')
 >>> f.write('こんにちは世界\n')
 8
+>>> f.close()
 ```
 
 {numref}`append-mode` の結果、追記後の `pycamp.txt` の内容は次のようになります
