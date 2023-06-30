@@ -66,7 +66,7 @@ Pythonの標準ライブラリ [html.parser](https://docs.python.org/ja/3/librar
 
 ## シンプルなWeb APIのコード
 
-Web APIの例としてconnpassのAPIを実行して、pythonというキーワードを含んだ2018年12月に開催されるイベント情報を取得します。
+Web APIの例としてconnpassのAPIを実行して、pythonというキーワードを含んだ2023年5月に開催されるイベント情報を取得します。
 
 - [APIリファレンス - connpass](https://connpass.com/about/api/)
 
@@ -74,29 +74,8 @@ Web APIの例としてconnpassのAPIを実行して、pythonというキーワ�
 
 (events-py)=
 
-```{code-block} python
+```{literalinclude} events.py
 :caption: events.py
-
-import requests
-
-
-def main():
-    params = {
-        'keyword': 'python',
-        'ym': '202305',
-    }
-    url = 'https://connpass.com/api/v1/event/'
-    user_agent = "Mozilla/5.0"  # デフォルトのUser-Agentだと403 Forbiddenとなる
-    r = requests.get(url, params=params, headers={"User-Agent": user_agent})
-    event_info = r.json()  # レスポンスのJSONを変換
-
-    print('件数:', event_info['results_returned'])  # 件数を表示
-    for event in event_info['events']:
-        print(event['title'])
-        print(event['started_at'])
-
-if __name__ == '__main__':
-    main()
 ```
 
 このコードを実行すると、以下のようにイベントタイトルと日付の一覧が取得できます({numref}`exec-events-py`)。
@@ -108,12 +87,12 @@ if __name__ == '__main__':
 
 (env) $ python events.py
 件数: 10
-【超初心者対象】プログラミング未経験者が初心者になるためのPython体験@池袋
-2018-11-28T19:00:00+09:00
-【初心者歓迎】大阪Python もくもく会 #1
-2018-11-16T19:00:00+09:00
-[R]『Ｒ統計解析パーフェクトマスター』１冊丸ごと演習会
-2018-11-23T14:00:00+09:00
+【音声のみ】第188回プログラミング初学者歓迎もくもく会＋交流会
+2023-05-08T19:00:00+09:00
+【第15回・WeWork原宿】もくもくスキルアップしよっ会
+2023-05-27T13:00:00+09:00
+3D何でも勉強会 #2
+2023-05-27T14:00:00+09:00
 :
 ```
 
@@ -123,60 +102,45 @@ if __name__ == '__main__':
 
 - Web APIを実行するために `requests` をインポートします
 
-```{code-block} python
-:caption: "モジュールのインポート"
-
-import requests
+```{literalinclude} events.py
+:caption: モジュールのインポート
+:lines: 1
 ```
 
 - メインとなる処理を `main` 関数として定義しています。 なお、関数の名前に特に決まりはなく、必ずしも `main` である必要はありません。
 
-```{code-block} python
-:caption: "main()関数の定義"
-
-def main():
+```{literalinclude} events.py
+:caption: main()関数の定義
+:lines: 4
 ```
 
-- APIのパラメーターとしてキーワードに `python` を、範囲に `201812` を指定します。パラメーターを書き換えれば検索条件が変わります。
+- APIのパラメーターとしてキーワードに `python` を、範囲に `202305` を指定します。パラメーターを書き換えれば検索条件が変わります。
 
-```{code-block} python
-:caption: "パラメーターを作成"
-
-    params = {
-        'keyword': 'python',
-        'ym': '201812',
-    }
+```{literalinclude} events.py
+:caption: パラメーターを作成
+:lines: 5-8
 ```
 
 - `requests.get()` にURLとパラメーターを指定して結果を取得します。
 - 結果はJSON形式で返ってくるので、 `.json()` メソッドでPythonのデータ型（辞書、リスト等）に変換します。
 
-```{code-block} python
-:caption: "Web APIを実行して結果を取得"
-
-    url = 'https://connpass.com/api/v1/event/'
-    r = requests.get(url, params=params)
-    event_info = r.json()  # レスポンスのJSONを変換
+```{literalinclude} events.py
+:caption: Web APIを実行して結果を取得
+:lines: 9-12
 ```
 
 - Pythonデータ型のイベント情報から、件数とイベント名、開催日を取得して出力します。
 
-```{code-block} python
-:caption: "件数とイベント名、開催日を出力"
-
-    print('件数:', event_info['results_returned'])  # 件数を表示
-    for event in event_info['events']:
-        print(event['title'])
-        print(event['started_at'])
+```{literalinclude} events.py
+:caption: 件数とイベント名、開催日を出力
+:lines: 14-17
 ```
 
 - 最後に、このスクリプトが実行された時に、main()関数を実行するように指定します。
 
-```{code-block} python
-:caption: "main()関数を実行"
-
-if __name__ == '__main__':
-    main()
+```{literalinclude} events.py
+:caption: main()関数を実行
+:lines: 20-21
 ```
 
 ## シンプルなスクレイピングのコード
@@ -189,35 +153,12 @@ if __name__ == '__main__':
 組み込み関数一覧ページ
 ```
 
-下記コードを `simple.py` という名前で保存します({numref}`simple-py`)。
+下記コードを `funcs.py` という名前で保存します({numref}`funcs-py`)。
 
-(simple-py)=
+(funcs-py)=
 
-```{code-block} python
-:caption: simple.py
-
-import requests
-from bs4 import BeautifulSoup
-
-
-def main():
-    url = 'https://docs.python.org/ja/3.10/library/functions.html'
-    res = requests.get(url)
-    content = res.content
-    soup = BeautifulSoup(content, 'html.parser')
-    functions = soup.find_all('dl', class_='py function')
-    print('件数:', len(functions))
-    for func in functions:
-        func_name = func.dt.code.text
-
-        # 上記記述だと@staticmethodの関数名が正しく取れないので、取りたい場合はこちら
-        # func_name = func.dt.find_all('code', class_='sig-name')[0].text
-
-        print(func_name)
-
-
-if __name__ == '__main__':
-    main()
+```{literalinclude} funcs.py
+:caption: funcs.py
 ```
 
 このコードを実行すると、以下のように関数名の一覧が取得できます({numref}`exec-simple-py`)。
@@ -227,7 +168,7 @@ if __name__ == '__main__':
 ```{code-block} bash
 :caption: "スクレイピングを実行"
 
-(env) $ python simple.py
+(env) $ python funcs.py
 件数: 52
 abs
 aiter
@@ -260,56 +201,38 @@ pycodestyleは `pip install pycodestyle` でインストールして使用しま
 
 - 以下のコードはRequestsとBeautiful Soup 4をimportして利用できるようにしています。
 
-```{code-block} python
-:caption: "モジュールのimport"
-
-import requests
-from bs4 import BeautifulSoup
+```{literalinclude} funcs.py
+:caption: モジュールのimport
+:lines: 1-2
 ```
 
 - メインとなる処理を `main` 関数として定義しています。
   なお、関数の名前に特に決まりはなく、必ずしも `main` である必要はありません。
 
-```{code-block} python
-:caption: "main()関数の定義"
-
-def main():
+```{literalinclude} funcs.py
+:caption: main()関数の定義
+:lines: 5
 ```
 
 - Requestsを使用して、Webページの内容(HTML)を取得します。res.contentにHTMLの中身が文字列データとして入っています。
 
-```{code-block} python
-:caption: "ページの内容を取得"
-
-    url = 'https://docs.python.org/ja/3.10/library/functions.html'
-    res = requests.get(url)
-    content = res.content
+```{literalinclude} funcs.py
+:caption: ページの内容を取得
+:lines: 6-8
 ```
 
 - 次にHTMLをBeautiful Soup 4に渡して解析します。HTMLの解析についてはもう少し詳しく説明します。
 
-```{code-block} python
-:caption: "WebページをBeautiful Soup 4で解析"
-
-    soup = BeautifulSoup(content, 'html.parser')
-    functions = soup.find_all('dl', class_='py function')
-    print('件数:', len(functions))
-    for func in functions:
-        func_name = func.dt.code.text
-
-        # 上記記述だと@staticmethodの関数名が正しく取れないので、取りたい場合はこちら
-        # func_name = func.dt.find_all('code', class_='sig-name')[0].text
-
-        print(func_name)
+```{literalinclude} funcs.py
+:caption: WebページをBeautiful Soup 4で解析
+:lines: 9-18
 ```
 
 - 最後に、このスクリプトが実行された時に、main()関数を実行するように指定します。
 
-```{code-block} python
-:caption: "main()関数を実行"
-
-if __name__ == '__main__':
-    main()
+```{literalinclude} funcs.py
+:caption: main()関数を実行
+:lines: 21-22
 ```
 
 ### HTMLの解析の解説
@@ -395,19 +318,9 @@ HTMLの構造がわかったところで、もう一度HTMLを解析している
 ```{index} html.parser
 ```
 
-```{code-block} python
-:caption: "WebページをBeautiful Soup 4で解析"
-
-    soup = BeautifulSoup(content, 'html.parser')
-    functions = soup.find_all('dl', class_='py function')
-    print('件数:', len(functions))
-    for func in functions:
-        func_name = func.dt.code.text
-
-        # 上記記述だと@staticmethodの関数名が正しく取れないので、取りたい場合はこちら
-        # func_name = func.dt.find_all('code', class_='sig-name')[0].text
-
-        print(func_name)
+```{literalinclude} funcs.py
+:caption: WebページをBeautiful Soup 4で解析
+:lines: 9-18
 ```
 
 まず、 `soup.find_all()` メソッドで、全関数の情報が含まれている dl 要素を取得しています。
