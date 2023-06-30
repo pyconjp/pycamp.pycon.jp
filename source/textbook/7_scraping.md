@@ -161,9 +161,9 @@ Web APIの例としてconnpassのAPIを実行して、pythonというキーワ�
 :caption: funcs.py
 ```
 
-このコードを実行すると、以下のように関数名の一覧が取得できます({numref}`exec-simple-py`)。
+このコードを実行すると、以下のように関数名の一覧が取得できます({numref}`exec-funcs-py`)。
 
-(exec-simple-py)=
+(exec-funcs-py)=
 
 ```{code-block} bash
 :caption: "スクレイピングを実行"
@@ -192,7 +192,7 @@ Pythonには [PEP8（ペップエイト）](https://peps.python.org/pep-0008/) �
 コードがPEP8のルールに従っているかは、 [pycodestyle](https://pep8.readthedocs.io/en/latest/) というツールで検証できます(以前はツールの名前もpep8でした)。
 
 pycodestyleは `pip install pycodestyle` でインストールして使用します。
-`simple.py` を検証するには、 `pycodestyle simple.py` を実行します。
+`funcs.py` を検証するには、 `pycodestyle funcs.py` を実行します。
 ```
 
 ### コードの解説
