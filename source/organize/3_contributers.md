@@ -3,6 +3,7 @@
 Python Boot Campのテキスト作成には以下の人たちが関わっています。
 
 - [takanory](https://github.com/takanory)
+- [hirokiky](https://github.com/hirokiky)
 - [Akira-Taniguchi](https://github.com/Akira-Taniguchi)
 - [ryu22e](https://github.com/ryu22e)
 - [terapyon](https://github.com/terapyon)
