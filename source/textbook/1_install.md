@@ -39,7 +39,7 @@ Visual Studio CodeとPython用拡張機能のインストール手順は以下�
 Python を実行するために、ターミナル(macOS)、PowerShell(Windows)または、Visual Studio Code 内のターミナルを立ち上げます。
 
 - macOS では「アプリケーション」→「ユーティリティ」→「ターミナル」を選択します
-- Windows では **Windows+R** キーを押して `powershell` と入力します
+- Windows では **Windows+R** キーを押して `powershell` と入力します（このテキストではコマンドプロンプトは使いません）
 - Visual Studio Codeではメニューから「表示」→「ターミナル」を選択します
 
 ```{index} Install
