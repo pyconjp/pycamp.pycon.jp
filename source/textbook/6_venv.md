@@ -77,6 +77,13 @@ PATH環境変数を確認し、Python 3 をインストールしているPATHが
 
 venvはプロジェクトごとに隔離されたPythonの仮想環境(Virtual Environments)を作成します。
 
+```{figure} images/venv-image.png
+:alt: venvのイメージ
+:width: 600
+
+venvのイメージ
+```
+
 :::{admonition} コラム: condaの場合
 [Anaconda](https://www.anaconda.com/products/distribution) を使っている場合は **pip** 、 **venv** の代わりに [Conda](https://docs.conda.io/en/latest/) というパッケージ管理ツールを使用します。
 
