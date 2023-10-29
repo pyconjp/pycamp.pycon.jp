@@ -26,3 +26,4 @@ Python Boot Campのテキスト作成には以下の人たちが関わってい�
 - [kuma127](https://github.com/kuma127)
 - [hamukazu](https://github.com/hamukazu)
 - [Takeshi_Izawa](https://github.com/zxb04116)
+- [onishi_feuer](https://github.com/crucis-onishi)
