@@ -16,6 +16,27 @@ Pythonファイルの分割と再利用のためモジュールについて説�
 ```{index} open() single: Files; open()
 ```
 
+### 作業用フォルダの作成
+
+作業前に、ファイル操作で利用するフォルダ「pycamp」を作成します。
+
+ * Windowsの場合：「C:\users\名前\」の下に「pycamp」フォルダをします。
+ * Macの場合：/Users/名前/」の下に「pycamp」フォルダを作成します。
+
+```{code-block} pycon
+:caption: "作業用フォルダの作成"
+
+>>> mkdir pycamp
+```
+
+作成したpycamp フォルダに移動します。
+
+```{code-block} pycon
+:caption: "作業用フォルダへ移動"
+
+>>> cd pycamp
+```
+
 ### ファイルのオープン(書き込みモード)
 
 まずはPythonでファイルに書き込んでみます。
