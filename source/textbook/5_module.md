@@ -33,7 +33,7 @@ MacOS、Linuxの場合：「/Users/名前/」の下に「pycamp」フォルダ�
 Windowsの場合：「C:\users\名前\」の下に「pycamp」フォルダを作成します。
 
 ```{code-block} pycon
-:caption: "作業用フォルダの作成(WindowsPowerShellの場合)"
+:caption: "作業用フォルダの作成(Windowsの場合)"
 
 >>> cd ~
 >>> mkdir pycamp
