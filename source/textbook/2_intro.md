@@ -284,7 +284,7 @@ Python ファイルを作成して実行する場合は、 `print` 関数が必�
 ```{code-block} bash
 :caption: "fizzbuzz.pyの実行"
 
-$ python3 fizzbuzz.py
+$ python fizzbuzz.py  # macOS、Linuxの場合はpython3（以下同様）
 4
 ```
 
@@ -299,7 +299,7 @@ fizzbuzz.pyが見つからない場合は場合は、以下のようなエラー
 ```{code-block} text
 :caption: "fizzbuzz.pyの実行"
 
-$ python3 fizzbuzz.py
+$ python fizzbuzz.py
 can't open file 'fizzbuzz.py': [Errno 2] No such file or directory
 ```
 
@@ -330,7 +330,7 @@ for num in range(1, 101):
 ```{code-block} bash
 :caption: "fizzbuzz.pyの実行(2)"
 
-$ python3 fizzbuzz.py
+$ python fizzbuzz.py
 1
 2
 3
@@ -460,7 +460,7 @@ for num in range(1, 101):
 ```{code-block} bash
 :caption: "完成したfizzbuzz.pyの実行"
 
-$ python3 fizzbuzz.py
+$ python fizzbuzz.py
 1
 2
 Fizz
