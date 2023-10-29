@@ -52,7 +52,7 @@ ogp_social_cards = {
 if sys.platform == "darwin":
     ogp_social_cards["font"] = "Hiragino Maru Gothic Pro"
 elif sys.platform == "win32":
-    ogp_social_cards["font"] = "MS PGothic"
+    ogp_social_cards["font"] = "MS Gothic"
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
