@@ -11,7 +11,7 @@
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
 # import os
-# import sys
+import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
 
@@ -40,8 +40,19 @@ copybutton_prompt_is_regexp = True
 
 # https://github.com/wpilibsuite/sphinxext-opengraph
 ogp_site_url = "https://pycamp.pycon.jp/"
-ogp_image = "https://pycamp.pycon.jp/_static/python-boot-camp-logo.png"
-ogp_use_first_image = True
+
+# https://sphinxext-opengraph.readthedocs.io/en/latest/socialcards.html
+ogp_social_cards = {
+    "enable": True,
+    "image": "images/python-boot-camp-logo.png",
+    "font": "Noto Sans CJK JP",
+}
+
+# font settings for macOS and Windows
+if sys.platform == "darwin":
+    ogp_social_cards["font"] = "Hiragino Sans"
+elif sys.platform == "win32":
+    ogp_social_cards["font"] = "MS PGothic"
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
