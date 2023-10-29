@@ -20,17 +20,13 @@ Pythonファイルの分割と再利用のためモジュールについて説�
 
 作業前に、ファイル操作で利用するフォルダ「pycamp」を作成します。
 
-MacOS、Linuxの場合：「/Users/名前/」の下に「pycamp」フォルダを作成します。
-
 ```{code-block} pycon
-:caption: "作業用フォルダの作成(MacOS、Linuxの場合)"
+:caption: "作業用フォルダの作成(macOS、Linuxの場合)"
 
 >>> cd ~/
 >>> mkdir pycamp
 >>> cd pycamp
 ```
-
-Windowsの場合：「C:\users\名前\」の下に「pycamp」フォルダを作成します。
 
 ```{code-block} pycon
 :caption: "作業用フォルダの作成(Windowsの場合)"
