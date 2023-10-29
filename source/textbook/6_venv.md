@@ -55,9 +55,9 @@ pip コマンドを利用すると以下の様なコマンドで簡単にサー�
 ```
 
 ```{code-block} sh
-:caption: "pipコマンドでrequestsをインストール"
+:caption: "pipコマンドで (パッケージ名) をインストール"
 
-$ pip install requests
+$ pip install パッケージ名
 ```
 
 次に、独立したPython環境を構築する **venv** モジュールについて説明します。
