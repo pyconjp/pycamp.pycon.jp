@@ -70,7 +70,7 @@ Web APIの例としてconnpassのAPIを実行して、pythonというキーワ�
 
 - [APIリファレンス - connpass](https://connpass.com/about/api/)
 
-下記のコードを `events.py` という名前で保存します({numref}`events-py`)。
+下記のコードを `events.py` という名前で、先ほど作成したscrapingフォルダ内に保存します({numref}`events-py`)。
 
 (events-py)=
 
@@ -160,7 +160,7 @@ Web APIにデータを送ったり、受け取ったりするときによく使�
 組み込み関数一覧ページ
 ```
 
-下記コードを `funcs.py` という名前で保存します({numref}`funcs-py`)。
+下記コードを `funcs.py` という名前で、scrapingフォルダ内に保存します({numref}`funcs-py`)。
 
 (funcs-py)=
 
