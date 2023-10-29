@@ -143,6 +143,13 @@ Web APIの例としてconnpassのAPIを実行して、pythonというキーワ�
 :lines: 20-21
 ```
 
+```{index} JSON形式
+```
+
+```{admonition} コラム: JSON形式
+Web APIにデータを送ったり、受け取ったりするときによく使われるデータの形式です。JavaScript Object Notationという、JavaScriptのオブジェクト表記法を使っています。この表記法は項目名と値のペアをテキストで記述したもので、階層構造にも対応しています。人間が簡単に読み取れて、コンピュータからも扱いやすいため、Pythonを含めさまざまな言語で活用されています。
+```
+
 ## シンプルなスクレイピングのコード
 
 スクレイピングの例として、docs.python.orgの組み込み関数一覧のページ(<https://docs.python.org/ja/3.10/library/functions.html>)から関数名の情報を抜き出します。
