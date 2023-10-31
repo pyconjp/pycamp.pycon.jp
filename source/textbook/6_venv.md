@@ -43,10 +43,20 @@ pipもpipコマンドでアップグレードを行えます。まずは、現�
 アップグレードは、次のコマンドを実行します。
 
 ```{code-block} sh
-:caption: "pipをアップグレード"
+:caption: "pipをアップグレード(macOS、Linux)"
 
 $ pip install pip --upgrade
 ```
+
+Windowsの場合、このコマンドを実行すると現在入っているpipが削除されたうえに最新バージョンのpipのインストールに失敗してpipが使えなくなることがたまに発生します。以下のコマンドを使ってください。
+
+```{code-block} sh
+:caption: "pipをアップグレード(Windows)"
+
+ > python -m pip install --upgrade pip
+```
+
+
 
 **以下はpipコマンドのサンプルです** ここでは実行しないで、以下のvenv環境を作ってから実行しましょう。
 pip コマンドを利用すると以下の様なコマンドで簡単にサードパーティ製パッケージをインストールできます。
