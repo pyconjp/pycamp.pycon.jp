@@ -66,35 +66,32 @@ Pythonの標準ライブラリ [html.parser](https://docs.python.org/ja/3/librar
 
 ## シンプルなWeb APIのコード
 
-Web APIの例としてconnpassのAPIを実行して、pythonというキーワードを含んだ2023年5月に開催されるイベント情報を取得します。
+Web APIの例として、NASA（アメリカ航空宇宙局）の「今日の天文写真API」を実行して、素敵な天文写真を鑑賞しましょう。
 
-- [APIリファレンス - connpass](https://connpass.com/about/api/)
+- [NASA APIs](https://api.nasa.gov)
 
-下記のコードを `events.py` という名前で、先ほど作成したscrapingフォルダ内に保存します({numref}`events-py`)。
+下記のコードを `apod.py` という名前で、先ほど作成したscrapingフォルダ内に保存します（{numref}`apod-py`）。
 
-(events-py)=
+(apod-py)=
 
-```{literalinclude} events.py
-:caption: events.py
+```{literalinclude} apod.py
+:caption: apod.py
 ```
 
-このコードを実行すると、以下のようにイベントタイトルと日付の一覧が取得できます({numref}`exec-events-py`)。
+このコードを実行すると、Python 3.11がリリースされた2022年10月24日に掲載された天文写真に関する情報を取得できます（{numref}`exec-apod-py`）。
 
-(exec-events-py)=
+(exec-apod-py)=
 
 ```{code-block} bash
-:caption: "connpass APIを実行"
+:caption: "今日の天文写真APIを実行"
 
-(env) $ python events.py
-件数: 10
-【音声のみ】第188回プログラミング初学者歓迎もくもく会＋交流会
-2023-05-08T19:00:00+09:00
-【第15回・WeWork原宿】もくもくスキルアップしよっ会
-2023-05-27T13:00:00+09:00
-3D何でも勉強会 #2
-2023-05-27T14:00:00+09:00
-:
+(.env) $ python apod.py
+タイトル Clouds Around Galaxy Andromeda
+日付 2022-10-24
+URL:  https://apod.nasa.gov/apod/image/2210/M31Clouds_Fryhover_960.jpg
 ```
+
+素敵なアンドロメダ銀河の写真ですね！
 
 ### コードの解説
 
@@ -102,45 +99,45 @@ Web APIの例としてconnpassのAPIを実行して、pythonというキーワ�
 
 - Web APIを実行するために `requests` をインポートします
 
-```{literalinclude} events.py
+```{literalinclude} apod.py
 :caption: モジュールのインポート
 :lines: 1
 ```
 
 - メインとなる処理を `main` 関数として定義しています。 なお、関数の名前に特に決まりはなく、必ずしも `main` である必要はありません。
 
-```{literalinclude} events.py
+```{literalinclude} apod.py
 :caption: main()関数の定義
 :lines: 4
 ```
 
-- APIのパラメーターとしてキーワードに `python` を、範囲に `202305` を指定します。パラメーターを書き換えれば検索条件が変わります。
+- APIのパラメーターとして日付に `"2022-10-24"` を、APIキーに `"DEMO_KEY"` を指定します。パラメーターを書き換えれば検索条件が変わります。Web APIを実行する際はAPIキーが必要になるケースが大半です。 `"DEMO_KEY"` はその名の通りデモ用のAPIキーなので、必要に応じてAPIキーを取得しましょう。
 
-```{literalinclude} events.py
+```{literalinclude} apod.py
 :caption: パラメーターを作成
-:lines: 5-8
+:lines: 5
 ```
 
 - `requests.get()` にURLとパラメーターを指定して結果を取得します。
 - 結果はJSON形式で返ってくるので、 `.json()` メソッドでPythonのデータ型（辞書、リスト等）に変換します。
 
-```{literalinclude} events.py
+```{literalinclude} apod.py
 :caption: Web APIを実行して結果を取得
-:lines: 9-12
+:lines: 8
 ```
 
-- Pythonデータ型のイベント情報から、件数とイベント名、開催日を取得して出力します。
+- Pythonデータ型の天文写真に関する情報から、タイトル、日付、URLを取得して出力します。
 
-```{literalinclude} events.py
+```{literalinclude} apod.py
 :caption: 件数とイベント名、開催日を出力
-:lines: 14-17
+:lines: 11-13
 ```
 
-- 最後に、このスクリプトが実行された時に、main()関数を実行するように指定します。
+- 最後に、このスクリプトが実行された時に、 `main()` 関数を実行するように指定します。
 
-```{literalinclude} events.py
+```{literalinclude} apod.py
 :caption: main()関数を実行
-:lines: 20-21
+:lines: 16-17
 ```
 
 ```{index} JSON形式
