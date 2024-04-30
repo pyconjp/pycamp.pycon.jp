@@ -66,32 +66,33 @@ Pythonの標準ライブラリ [html.parser](https://docs.python.org/ja/3/librar
 
 ## シンプルなWeb APIのコード
 
-Web APIの例として、NASA（アメリカ航空宇宙局）の「今日の天文写真API」を実行して、素敵な天文写真を鑑賞しましょう。
+Web APIの例として、[SWAPI.INFO](https://swapi.info)の「Star Wars API」でスターウォーズの映画に関する情報を入手してみましょう。
 
-- [NASA APIs](https://api.nasa.gov)
+- [Star Wars API](https://swapi.info/api/)
 
-下記のコードを `apod.py` という名前で、先ほど作成したscrapingフォルダ内に保存します（{numref}`apod-py`）。
+下記のコードを `films.py` という名前で、先ほど作成したscrapingフォルダ内に保存します（{numref}`films-py`）。
 
-(apod-py)=
+(films-py)=
 
-```{literalinclude} apod.py
-:caption: apod.py
+```{literalinclude} films.py
+:caption: films.py
 ```
 
-このコードを実行すると、Python 3.11がリリースされた2022年10月24日に掲載された天文写真に関する情報を取得できます（{numref}`exec-apod-py`）。
+このコードを実行すると、スターウォーズの旧三部作、新三部作のタイトルと公開日時の一覧を取得できます。（{numref}`exec-films-py`）。
 
-(exec-apod-py)=
+(exec-films-py)=
 
 ```{code-block} bash
-:caption: "今日の天文写真APIを実行"
+:caption: "Star Wars APIを実行"
 
-(.env) $ python apod.py
-タイトル Clouds Around Galaxy Andromeda
-日付 2022-10-24
-URL:  https://apod.nasa.gov/apod/image/2210/M31Clouds_Fryhover_960.jpg
+(.env) $ python films.py
+Episode 4: A New Hope (1977-05-25)
+Episode 5: The Empire Strikes Back (1980-05-17)
+Episode 6: Return of the Jedi (1983-05-25)
+Episode 1: The Phantom Menace (1999-05-19)
+Episode 2: Attack of the Clones (2002-05-16)
+Episode 3: Revenge of the Sith (2005-05-19)
 ```
-
-素敵なアンドロメダ銀河の写真ですね！
 
 ### コードの解説
 
@@ -99,45 +100,45 @@ URL:  https://apod.nasa.gov/apod/image/2210/M31Clouds_Fryhover_960.jpg
 
 - Web APIを実行するために `requests` をインポートします
 
-```{literalinclude} apod.py
+```{literalinclude} films.py
 :caption: モジュールのインポート
 :lines: 1
 ```
 
 - メインとなる処理を `main` 関数として定義しています。 なお、関数の名前に特に決まりはなく、必ずしも `main` である必要はありません。
 
-```{literalinclude} apod.py
+```{literalinclude} films.py
 :caption: main()関数の定義
 :lines: 4
 ```
 
-- APIのパラメーターとして日付に `"2022-10-24"` を、APIキーに `"DEMO_KEY"` を指定します。パラメーターを書き換えれば検索条件が変わります。Web APIを実行する際はAPIキーが必要になるケースが大半です。 `"DEMO_KEY"` はその名の通りデモ用のAPIキーなので、必要に応じてAPIキーを取得しましょう。
+- APIのエンドポイントとなるURLを設定します。映画以外にも登場人物や乗り物、惑星などの情報を取得できるので、興味がある方はドキュメントを読んで試してみてください。
 
-```{literalinclude} apod.py
-:caption: パラメーターを作成
+```{literalinclude} films.py
+:caption: APIのエンドポイントURLの設定
 :lines: 5
 ```
 
 - `requests.get()` にURLとパラメーターを指定して結果を取得します。
 - 結果はJSON形式で返ってくるので、 `.json()` メソッドでPythonのデータ型（辞書、リスト等）に変換します。
 
-```{literalinclude} apod.py
+```{literalinclude} films.py
 :caption: Web APIを実行して結果を取得
-:lines: 8
+:lines: 7-8
 ```
 
-- Pythonデータ型の天文写真に関する情報から、タイトル、日付、URLを取得して出力します。
+- Pythonデータ型の映画に関する情報から、エピソード番号、タイトル、公開日付を取得して出力します。
 
-```{literalinclude} apod.py
-:caption: 件数とイベント名、開催日を出力
-:lines: 11-13
+```{literalinclude} films.py
+:caption: エピソード番号、タイトル、公開日付の出力
+:lines: 10-11
 ```
 
 - 最後に、このスクリプトが実行された時に、 `main()` 関数を実行するように指定します。
 
-```{literalinclude} apod.py
+```{literalinclude} films.py
 :caption: main()関数を実行
-:lines: 16-17
+:lines: 14-15
 ```
 
 ```{index} JSON形式
@@ -145,6 +146,20 @@ URL:  https://apod.nasa.gov/apod/image/2210/M31Clouds_Fryhover_960.jpg
 
 ```{admonition} コラム: JSON形式
 Web APIにデータを送ったり、受け取ったりするときによく使われるデータの形式です。JavaScript Object Notationという、JavaScriptのオブジェクト表記法を使っています。この表記法は項目名と値のペアをテキストで記述したもので、階層構造にも対応しています。人間が簡単に読み取れて、コンピュータからも扱いやすいため、Pythonを含めさまざまな言語で活用されています。
+```
+
+### 新たなるWeb API
+
+今回紹介したStar Wars API以外にも興味深いWeb APIがたくさんあります。
+気になるWeb APIがあれば、是非試してみましょう。
+
+```{list-table}
+* - NASA API
+  - <https://api.nasa.gov>
+* - PokeAPI
+  - <https://pokeapi.co>
+* - 国立国会図書館サーチ API
+  - <https://ndlsearch.ndl.go.jp/help/api/>
 ```
 
 ## シンプルなスクレイピングのコード
