@@ -66,34 +66,33 @@ Pythonの標準ライブラリ [html.parser](https://docs.python.org/ja/3/librar
 
 ## シンプルなWeb APIのコード
 
-Web APIの例としてconnpassのAPIを実行して、pythonというキーワードを含んだ2023年5月に開催されるイベント情報を取得します。
+Web APIの例として、[SWAPI.INFO](https://swapi.info)の「Star Wars API」で映画『スター・ウォーズ』シリーズに関する情報を入手してみましょう。
 
-- [APIリファレンス - connpass](https://connpass.com/about/api/)
+- [Star Wars API](https://swapi.info/api/)
 
-下記のコードを `events.py` という名前で、先ほど作成したscrapingフォルダ内に保存します({numref}`events-py`)。
+下記のコードを `films.py` という名前で、先ほど作成したscrapingフォルダ内に保存します（{numref}`films-py`）。
 
-(events-py)=
+(films-py)=
 
-```{literalinclude} events.py
-:caption: events.py
+```{literalinclude} films.py
+:caption: films.py
 ```
 
-このコードを実行すると、以下のようにイベントタイトルと日付の一覧が取得できます({numref}`exec-events-py`)。
+このコードを実行すると、『スター・ウォーズ』シリーズの旧三部作、新三部作のタイトルと公開日時の一覧を取得できます。（{numref}`exec-films-py`）。
+なお、『スター・ウォーズ』シリーズは制作順序とエピソード番号の順序が異なるので注意しましょう。
 
-(exec-events-py)=
+(exec-films-py)=
 
 ```{code-block} bash
-:caption: "connpass APIを実行"
+:caption: "Star Wars APIを実行"
 
-(env) $ python events.py
-件数: 10
-【音声のみ】第188回プログラミング初学者歓迎もくもく会＋交流会
-2023-05-08T19:00:00+09:00
-【第15回・WeWork原宿】もくもくスキルアップしよっ会
-2023-05-27T13:00:00+09:00
-3D何でも勉強会 #2
-2023-05-27T14:00:00+09:00
-:
+(env) $ python films.py
+Episode 4: A New Hope (1977-05-25)
+Episode 5: The Empire Strikes Back (1980-05-17)
+Episode 6: Return of the Jedi (1983-05-25)
+Episode 1: The Phantom Menace (1999-05-19)
+Episode 2: Attack of the Clones (2002-05-16)
+Episode 3: Revenge of the Sith (2005-05-19)
 ```
 
 ### コードの解説
@@ -102,45 +101,45 @@ Web APIの例としてconnpassのAPIを実行して、pythonというキーワ�
 
 - Web APIを実行するために `requests` をインポートします
 
-```{literalinclude} events.py
+```{literalinclude} films.py
 :caption: モジュールのインポート
 :lines: 1
 ```
 
 - メインとなる処理を `main` 関数として定義しています。 なお、関数の名前に特に決まりはなく、必ずしも `main` である必要はありません。
 
-```{literalinclude} events.py
+```{literalinclude} films.py
 :caption: main()関数の定義
 :lines: 4
 ```
 
-- APIのパラメーターとしてキーワードに `python` を、範囲に `202305` を指定します。パラメーターを書き換えれば検索条件が変わります。
+- APIのエンドポイントとなるURLを設定します。映画以外にも登場人物や乗り物、惑星などの情報を取得できるので、興味がある方はドキュメントを読んで試してみてください。
 
-```{literalinclude} events.py
-:caption: パラメーターを作成
-:lines: 5-8
+```{literalinclude} films.py
+:caption: APIのエンドポイントURLの設定
+:lines: 5
 ```
 
 - `requests.get()` にURLとパラメーターを指定して結果を取得します。
 - 結果はJSON形式で返ってくるので、 `.json()` メソッドでPythonのデータ型（辞書、リスト等）に変換します。
 
-```{literalinclude} events.py
+```{literalinclude} films.py
 :caption: Web APIを実行して結果を取得
-:lines: 9-12
+:lines: 7-8
 ```
 
-- Pythonデータ型のイベント情報から、件数とイベント名、開催日を取得して出力します。
+- Pythonデータ型の映画に関する情報から、エピソード番号、タイトル、公開日付を取得して出力します。
 
-```{literalinclude} events.py
-:caption: 件数とイベント名、開催日を出力
-:lines: 14-17
+```{literalinclude} films.py
+:caption: エピソード番号、タイトル、公開日付の出力
+:lines: 10-11
 ```
 
-- 最後に、このスクリプトが実行された時に、main()関数を実行するように指定します。
+- 最後に、このスクリプトが実行された時に、 `main()` 関数を実行するように指定します。
 
-```{literalinclude} events.py
+```{literalinclude} films.py
 :caption: main()関数を実行
-:lines: 20-21
+:lines: 14-15
 ```
 
 ```{index} JSON形式
@@ -149,6 +148,31 @@ Web APIの例としてconnpassのAPIを実行して、pythonというキーワ�
 ```{admonition} コラム: JSON形式
 Web APIにデータを送ったり、受け取ったりするときによく使われるデータの形式です。JavaScript Object Notationという、JavaScriptのオブジェクト表記法を使っています。この表記法は項目名と値のペアをテキストで記述したもので、階層構造にも対応しています。人間が簡単に読み取れて、コンピュータからも扱いやすいため、Pythonを含めさまざまな言語で活用されています。
 ```
+
+### 新たなるWeb API
+
+今回紹介したStar Wars API以外にも興味深いWeb APIがたくさんあります。
+いくつか紹介します。
+
+```{list-table}
+:header-rows: 1
+
+* - 名称
+  - Webサイト
+  - 内容
+* - NASA API
+  - <https://api.nasa.gov>
+  - NASA（アメリカ航空宇宙局）が所有するデータが扱えるAPI
+* - PokeAPI
+  - <https://pokeapi.co>
+  - ゲームソフト『ポケットモンスター』シリーズに関するデータを取得できるAPI
+* - 国立国会図書館サーチ API
+  - <https://ndlsearch.ndl.go.jp/help/api/>
+  - 国立国会図書館の所蔵検索APIや書影検索API
+```
+
+また、[Public-APIs](https://github.com/n0shake/Public-APIs)には種類別にWeb APIがリストアップされています。
+気になるWeb APIがあれば、是非試してみましょう。
 
 ## シンプルなスクレイピングのコード
 
