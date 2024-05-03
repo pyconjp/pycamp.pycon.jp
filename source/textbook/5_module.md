@@ -315,7 +315,7 @@ Pythonファイルをインポートすることでモジュール（module）�
 ### 複数の対象をインポート
 
 `calc` モジュールから `add()` 、 `sub()` 関数を一度にインポートするには、
-`import` 文でカンマ区切りでインポート対象を指定します({numref}`import-functions`)。
+`import` 文でインポート対象をカンマ区切りで指定します({numref}`import-functions`)。
 
 (import-functions)=
 
