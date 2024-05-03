@@ -66,7 +66,7 @@ Pythonの標準ライブラリ [html.parser](https://docs.python.org/ja/3/librar
 
 ## シンプルなWeb APIのコード
 
-Web APIの例として、[SWAPI.INFO](https://swapi.info)の「Star Wars API」でスターウォーズの映画に関する情報を入手してみましょう。
+Web APIの例として、[SWAPI.INFO](https://swapi.info)の「Star Wars API」で映画『スター・ウォーズ』シリーズに関する情報を入手してみましょう。
 
 - [Star Wars API](https://swapi.info/api/)
 
@@ -78,14 +78,15 @@ Web APIの例として、[SWAPI.INFO](https://swapi.info)の「Star Wars API」�
 :caption: films.py
 ```
 
-このコードを実行すると、スターウォーズの旧三部作、新三部作のタイトルと公開日時の一覧を取得できます。（{numref}`exec-films-py`）。
+このコードを実行すると、『スター・ウォーズ』シリーズの旧三部作、新三部作のタイトルと公開日時の一覧を取得できます。（{numref}`exec-films-py`）。
+なお、『スター・ウォーズ』シリーズは制作順序とエピソード番号の順序が異なるので注意しましょう。
 
 (exec-films-py)=
 
 ```{code-block} bash
 :caption: "Star Wars APIを実行"
 
-(.env) $ python films.py
+(env) $ python films.py
 Episode 4: A New Hope (1977-05-25)
 Episode 5: The Empire Strikes Back (1980-05-17)
 Episode 6: Return of the Jedi (1983-05-25)
@@ -151,16 +152,27 @@ Web APIにデータを送ったり、受け取ったりするときによく使�
 ### 新たなるWeb API
 
 今回紹介したStar Wars API以外にも興味深いWeb APIがたくさんあります。
-気になるWeb APIがあれば、是非試してみましょう。
+いくつか紹介します。
 
 ```{list-table}
+:header-rows: 1
+
+* - 名称
+  - Webサイト
+  - 内容
 * - NASA API
   - <https://api.nasa.gov>
+  - NASA（アメリカ航空宇宙局）が所有するデータが扱えるAPI
 * - PokeAPI
   - <https://pokeapi.co>
+  - ゲームソフト『ポケットモンスター』シリーズに関するデータを取得できるAPI
 * - 国立国会図書館サーチ API
   - <https://ndlsearch.ndl.go.jp/help/api/>
+  - 国立国会図書館の所蔵検索APIや書影検索API
 ```
+
+また、[Public-APIs](https://github.com/n0shake/Public-APIs)には種類別にWeb APIがリストアップされています。
+気になるWeb APIがあれば、是非試してみましょう。
 
 ## シンプルなスクレイピングのコード
 
