@@ -419,10 +419,6 @@ http://httpbin.org/get?key1=value1&key2=value2&key2=value3
 <a href="#content" title="Skip to content">Skip to content</a>
 >>> len(soup.find_all('a')) # 全ての a タグを取得しt len() で件数を取得
 164
-
-     url = 'https://www.python.org/news/'
-     res = requests.get(url)
-     soup = BeautifulSoup(res.content, 'html.parser')
 ```
 
 ```{index} find/find_all single: Beautiful Soup 4; find() single: Beautiful Soup 4; find_all()

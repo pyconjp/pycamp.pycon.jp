@@ -83,7 +83,7 @@ Python 3.10.8
 
 ### Windowsの場合
 
-WindowsでPythonを利用する場合は、Pythonの公式サイトで配布されているWindowsインストーラを利用します。
+WindowsでPythonを利用する場合は、Pythonの公式サイトで配布されているWindowsインストーラーを利用します。
 
 「 [Python Release Python 3.10.8](https://www.python.org/downloads/release/python-3108/) 」をブラウザで開きます。
 OSによって以下のいずれかのインストーラーをダウンロードし、ウィザードに従ってインストールします。
