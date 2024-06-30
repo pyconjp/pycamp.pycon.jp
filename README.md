@@ -6,6 +6,15 @@
 * Read the Docs のプロジェクトページ: Read https://readthedocs.org/projects/bootcamp-text/
 * www.pycon.jp の説明ページ: https://www.pycon.jp/support/bootcamp.html
 
+## ビルド環境準備
+
+Ubuntu環境でのフォントインストール
+```
+$ sudo apt update
+$ sudo apt install fonts-noto-cjk
+$ rm -rf ~/.cache/matplotlib
+```
+
 ## How to build
 
 ```
