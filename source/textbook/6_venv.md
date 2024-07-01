@@ -34,30 +34,6 @@ PyPI - the Python Package Index
 
 サードパーティ製パッケージをインストールするには、 **pipコマンド** を使用します。
 
-```{index} ensurepip single: pip; ensurepip
-```
-
-Python 3.4から `ensurepip` という仕組みによって、Pythonのインストール時にpipコマンドがインストールされます。
-
-pipもpipコマンドでアップグレードを行えます。まずは、現在インストールされているpipコマンドを最新にアップグレードしましょう。
-アップグレードは、次のコマンドを実行します。
-
-```{code-block} sh
-:caption: "pipをアップグレード(macOS、Linux)"
-
-$ pip install pip --upgrade
-```
-
-Windowsの場合、このコマンドを実行すると現在入っているpipが削除されたうえに最新バージョンのpipのインストールに失敗してpipが使えなくなることがたまに発生します。以下のコマンドを使ってください。
-
-```{code-block} sh
-:caption: "pipをアップグレード(Windows)"
-
- > python -m pip install --upgrade pip
-```
-
-
-
 **以下はpipコマンドのサンプルです** ここでは実行しないで、以下のvenv環境を作ってから実行しましょう。
 pip コマンドを利用すると以下の様なコマンドで簡単にサードパーティ製パッケージをインストールできます。
 
@@ -75,6 +51,30 @@ $ pip install パッケージ名
 ```{admonition} コラム: Windows環境でpip実行時にエラーになる場合
 PATH環境変数を確認し、Python 3 をインストールしているPATHが設定されているかどうか確認してみてください。
 ```
+
+<!--
+# pip自体のアップグレードが必要なケースが以前より減っているため、
+# 入門テキストで紹介しなくても良いと思います。
+-->
+
+````{admonition} コラム: pip自身のアップグレード
+pip自身もpipコマンドでアップグレードを行えます。
+アップグレードは、次のコマンドを実行します。
+
+```{code-block} sh
+:caption: "pipをアップグレード(macOS、Linux)"
+
+$ pip install pip --upgrade
+```
+
+Windowsの場合、このコマンドを実行すると現在入っているpipが削除されたうえに最新バージョンのpipのインストールに失敗してpipが使えなくなることがたまに発生します。以下のコマンドを使ってください。
+
+```{code-block} sh
+:caption: "pipをアップグレード(Windows)"
+
+ > python -m pip install --upgrade pip
+```
+````
 
 ```{index} venv single: venv; Virtual Environments
 ```
