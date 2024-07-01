@@ -8,7 +8,15 @@ def main():
     films = response.json()
 
     for film in films:
-        print(f"Episode {film['episode_id']}: {film['title']} ({film['release_date']})")
+        print(
+            "Episode "
+            + film["episode_id"]
+            + ": "
+            + film["title"]
+            + " ("
+            + film["release_date"]
+            + ")"
+        )
 
 
 if __name__ == "__main__":

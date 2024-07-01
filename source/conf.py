@@ -88,6 +88,8 @@ html_theme = 'furo'
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
+html_css_files = ['custom.css']
+
 html_last_updated_fmt = '%Y-%m-%d'
 
 html_show_copyright = False
