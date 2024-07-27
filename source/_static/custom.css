@@ -1,3 +1,4 @@
+/* コードの番号とタイトルの間に " : " を追加 */
 .caption-number::after {
   content: ':';
 }
