@@ -1,6 +1,6 @@
-furo==2024.7.18
+furo==2024.8.6
 matplotlib==3.9.1
-myst-parser==3.0.1
-Sphinx==7.4.7
+myst-parser==4.0.0
+Sphinx==8.0.2
 sphinx-copybutton==0.5.2
 sphinxext-opengraph==0.9.1
