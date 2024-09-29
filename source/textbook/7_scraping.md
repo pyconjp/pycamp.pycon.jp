@@ -200,15 +200,16 @@ Web APIにデータを送ったり、受け取ったりするときによく使�
 :caption: "スクレイピングを実行"
 
 (env) $ python funcs.py
-件数: 52
-abs
-aiter
-all
-anext
-any
-ascii
-bin
-breakpoint
+件数: 71
+abs()
+aiter()
+all()
+anext()
+any()
+ascii()
+bin()
+bool()
+breakpoint()
 :
 ```
 
