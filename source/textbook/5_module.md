@@ -163,13 +163,23 @@ with文でのファイルオープン
 ファイルを扱う際には、 [with文](https://docs.python.org/ja/3/reference/compound_stmts.html#with) を使うと便利です。
 `with` 文を使うことで、ファイルのクローズを自動で行えます。処理中に例外が発生しても必ずファイルを閉じることができます。
 
-`with` 文を使うと、ファイルのオープン、読み込み、クローズの処理は、{numref}`with-statement` のように書き換えられます。
+`with` 文を使うと、ファイルのオープン、書き込み、読み込み、クローズの処理は、{numref}`with-statement` のように書き換えられます。
 
 (with-statement)=
 
 ```{code-block} pycon
 :caption: "ファイルオープンとwith文"
 
+>>> # 書き込み
+>>> with open('pycamp.txt', 'w', encoding='utf-8') as f:
+...     f.write('Hello')
+...     f.write(' Python\n')
+...     f.write('こんにちはPython\n')
+...
+5
+8
+12
+>>> # 読み込み
 >>> with open('pycamp.txt', encoding='utf-8') as f:
 ...     txt = f.read()
 ...
