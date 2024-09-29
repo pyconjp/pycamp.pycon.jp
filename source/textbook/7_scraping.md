@@ -176,7 +176,7 @@ Web APIにデータを送ったり、受け取ったりするときによく使�
 
 ## シンプルなスクレイピングのコード
 
-スクレイピングの例として、docs.python.orgの組み込み関数一覧のページ(<https://docs.python.org/ja/3.10/library/functions.html>)から関数名の情報を抜き出します。
+スクレイピングの例として、docs.python.orgの組み込み関数一覧のページ(<https://docs.python.org/ja/3.12/library/functions.html>)から関数名の情報を抜き出します。
 
 ```{figure} images/func-list.png
 :width: 50%
@@ -257,14 +257,14 @@ pycodestyleは `pip install pycodestyle` でインストールして使用しま
 
 ```{literalinclude} funcs.py
 :caption: WebページをBeautiful Soup 4で解析
-:lines: 9-18
+:lines: 9-20
 ```
 
 - 最後に、このスクリプトが実行された時に、main()関数を実行するように指定します。
 
 ```{literalinclude} funcs.py
 :caption: main()関数を実行
-:lines: 21-22
+:lines: 23-24
 ```
 
 ### HTMLの解析の解説
@@ -276,74 +276,30 @@ Beautiful Soup 4でHTMLを解析して、値が取り出せましたが、どの
 
 ```{code-block} html
 :caption: "組み込み関数一覧のHTML"
-:emphasize-lines: 1,3,19,21
+:emphasize-lines: 1,10
 
-<dl class="py function">
-    <dt id="abs">
-        <code class="sig-name descname">abs</code>
-        <span class="sig-paren">(</span><em class="sig-param">
-        <span class="n">x</span></em>
-        <span class="sig-paren">)</span>
-        <a class="headerlink" href="#abs" title="この定義へのパーマリンク">¶</a>
-    </dt>
-    <dd>
-        <p>数の絶対値を返します。引数は整数、浮動小数点数または
-            <code class="xref py py-meth docutils literal notranslate">
-                <span class="pre">__abs__()</span>
-            </code>
-            が実装されたオブジェクトです。引数が複素数なら、その絶対値 (magnitude) が返されます。
-        </p>
-    </dd>
-</dl>
-
-<dl class="py function">
-    <dt id="aiter">
-        <code class="sig-name descname">aiter</code>
-        <span class="sig-paren">(</span>
-        <em class="sig-param">
-            <span class="n">async_iterable</span>
-        </em>
-        <span class="sig-paren">)</span>
-        <a class="headerlink" href="#aiter" title="この定義へのパーマリンク">¶</a>
-    </dt>
-    <dd>
-        <p>:term:
-            <a href="#id1">
-                <span class="problematic" id="id2">`</span>
-            </a>
-            asynchronous iterable`から :term:
-            <a href="#id3">
-                <span class="problematic" id="id4">`</span>
-            </a>
-            asynchronous iterator`を返します。
-            <a href="#id5">
-                <span class="problematic" id="id6">``</span>
-            </a>x.__aiter__()``を呼び出すのと等価です。
-        </p>
-        <p>なお、:func:
-            <a href="#id1">
-                <span class="problematic" id="id2">`</span>
-            </a>
-            iter`とは異なり、:func:
-            <a href="#id3">
-                <span class="problematic" id="id4">`</span>
-            </a>
-            aiter`は第二引数を持ちません。
-        </p>
-        <div class="versionadded">
-            <p>
-                <span class="versionmodified added">バージョン 3.10 で追加.</span>
-            </p>
-        </div>
-    </dd>
-</dl>
+<table class="docutils align-default">
+<thead>
+    <tr class="row-odd"><th class="head" colspan="4"><p>組み込み関数</p></th>
+    </tr>
+</thead>
+<tbody>
+    <tr class="row-even"><td><div class="line-block">
+    <div class="line"><strong>A</strong></div>
+    <div class="line">
+        <a class="reference internal" href="#abs" title="abs">
+        <code class="xref py py-func docutils literal notranslate">
+            <span class="pre">abs()</span>
+        </code>
+        </a>
+    </div>
 (以下続く)
 ```
 
 このHTMLを見ると、関数の名前とURLは以下のようにして取得できそうです。
 
-- 1つの関数の情報は `<dl class="py function">` の中に入っている
-- 関数名は `<code class="sig-name descname">` タグで囲まれた中に入っている
+- テーブル`<table class="docutils">`を見つける
+- 見つけたテーブル内の全ての`<a class="reference internal">`要素を見つける
 
 HTMLの構造がわかったところで、もう一度HTMLを解析しているコードを見てみます。
 
@@ -352,11 +308,11 @@ HTMLの構造がわかったところで、もう一度HTMLを解析している
 
 ```{literalinclude} funcs.py
 :caption: WebページをBeautiful Soup 4で解析
-:lines: 9-18
+:lines: 9-20
 ```
 
-まず、 `soup.find_all()` メソッドで、全関数の情報が含まれている dl 要素を取得しています。
-次に、各関数情報(func変数に入っている)から値を取り出しています。
+まず、 `soup.find()` メソッドで、全関数の情報が含まれている テーブルを取得しています。
+次に、`find_all()` メソッドを使い、各関数情報(func変数に入っている)から値を取り出しています。
 関数名を取得して、出力しています。
 
 ## 作り変えてみよう
