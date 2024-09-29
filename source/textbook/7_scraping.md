@@ -176,7 +176,7 @@ Web APIにデータを送ったり、受け取ったりするときによく使�
 
 ## シンプルなスクレイピングのコード
 
-スクレイピングの例として、docs.python.orgの組み込み関数一覧のページ(<https://docs.python.org/ja/3.10/library/functions.html>)から関数名の情報を抜き出します。
+スクレイピングの例として、docs.python.orgの組み込み関数一覧のページ(<https://docs.python.org/ja/3.12/library/functions.html>)から関数名の情報を抜き出します。
 
 ```{figure} images/func-list.png
 :width: 50%
@@ -331,7 +331,7 @@ Beautiful Soup 4でHTMLを解析して、値が取り出せましたが、どの
         </p>
         <div class="versionadded">
             <p>
-                <span class="versionmodified added">バージョン 3.10 で追加.</span>
+                <span class="versionmodified added">バージョン 3.12 で追加.</span>
             </p>
         </div>
     </dd>
