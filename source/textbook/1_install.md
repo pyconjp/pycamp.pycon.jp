@@ -127,7 +127,7 @@ Ubuntu 24.04にはデフォルトでPython 3.12がインストールされてい
 :caption: Pythonのバージョンを確認
 
 $ python3 -V
-Python 3.12.6
+Python 3.12.3
 ```
 
 ## 注意事項
