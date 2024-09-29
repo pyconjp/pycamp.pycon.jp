@@ -18,7 +18,7 @@ $ rm -rf ~/.cache/matplotlib
 ### コンテナ環境を利用したビルド環境準備
 - この手順は必須ではありません
 - コンテナ環境を利用して、貢献者同士の開発環境を統一することができる  
-設定ファイルは [.devcontainer/devcontainer.json](https://github.com/pyconjp/pycamp.pycon.jp/blob/master/.devcontainer/devcontainer.json)
+設定ファイルは [.devcontainer/devcontainer.json](.devcontainer/devcontainer.json)
 
 - Visual Studio Codeの拡張機能を利用する場合 (ローカル環境)  
 [Visual Studio Code を使用して Docker コンテナーを開発環境として使用する - Training | Microsoft Learn](https://learn.microsoft.com/ja-jp/training/modules/use-docker-container-dev-env-vs-code/)
