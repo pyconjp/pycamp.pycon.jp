@@ -38,8 +38,8 @@ Pythonについてより詳しくは、後述の節で説明します。
 :caption: "Pythonインタープリタの起動"
 
  $ python
- Python 3.10.8 (tags/v3.10.8:aaaf517, Oct 11 2022, 16:50:30) [MSC v.1933 64 bit (AMD64)] on win32
- Type "help", "copyright", "credits" or "license" for more information.
+Python 3.12.6 (main, Jun  6 2024, 18:26:44) [Clang 15.0.0 (clang-1500.3.9.4)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
  >>>
 ```
 
@@ -271,11 +271,11 @@ print(fizzbuzz(4))
 
 この `fizzbuzz()` 関数はなにも処理をせず引数をそのまま返します。これから処理を追加していくので安心してください。
 
-`print` 関数を使っているのは実行結果を表示するためです。
+`print()` 関数を使っているのは実行結果を表示するためです。
 
 対話モードでは、変数の値や関数の戻り値を変数に代入しない場合に、自動的に値を表示してくれました。
 
-Python ファイルを作成して実行する場合は、 `print` 関数が必要です。
+Python ファイルを作成して実行する場合は、 `print()` 関数が必要です。
 
 `fizzbuzz.py` を実行するには、 `python` コマンドに引数として渡します（{numref}`exec-fizzbuzz`）。
 
@@ -353,9 +353,9 @@ range(1, 101)のように記述すると、1から100までの数字を順番に
 現時点の `fizzbuzz()` 関数は与えられた引数をそのまま返す実装なので、これで問題ありません。
 
 ```{hint}
-[for文の動作を確認(Python Tutor)](https://pythontutor.com/live.html#code=def%20fizzbuzz%28num%29%3A%0A%20%20%20%20return%20num%0A%0Afor%20num%20in%20range%281,%20101%29%3A%0A%20%20%20%20print%28fizzbuzz%28num%29%29%0A&cumulative=false&curInstr=502&heapPrimitives=false&mode=display&origin=opt-live.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false)
+[for文の動作を確認(Python Tutor)](https://pythontutor.com/render.html#code=def%20fizzbuzz%28num%29%3A%0A%20%20%20%20return%20num%0A%0Afor%20num%20in%20range%281,%20101%29%3A%0A%20%20%20%20print%28fizzbuzz%28num%29%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=311&rawInputLstJSON=%5B%5D&textReferences=false)
 
-<iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=def%20fizzbuzz%28num%29%3A%0A%20%20%20%20return%20num%0A%0Afor%20num%20in%20range%281,%20101%29%3A%0A%20%20%20%20print%28fizzbuzz%28num%29%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=false&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+<iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=def%20fizzbuzz%28num%29%3A%0A%20%20%20%20return%20num%0A%0Afor%20num%20in%20range%281,%20101%29%3A%0A%20%20%20%20print%28fizzbuzz%28num%29%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=311&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
 ```
 
 for文は次のように書きます。
@@ -444,9 +444,9 @@ for num in range(1, 101):
 引数を文字列に変換して返します。
 
 ```{hint}
-[if文の動作を確認(Python Tutor)](https://pythontutor.com/live.html#code=def%20fizzbuzz%28num%29%3A%0A%20%20%20%20if%20num%20%25%203%20%3D%3D%200%20and%20num%20%25%205%20%3D%3D%200%3A%0A%20%20%20%20%20%20%20%20return%20'FizzBuzz'%0A%20%20%20%20elif%20num%20%25%203%20%3D%3D%200%3A%0A%20%20%20%20%20%20%20%20return%20'Fizz'%0A%20%20%20%20elif%20num%20%25%205%20%3D%3D%200%3A%0A%20%20%20%20%20%20%20%20return%20'Buzz'%0A%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20return%20str%28num%29%0A%0Afor%20num%20in%20range%281,%20101%29%3A%0A%20%20%20%20print%28fizzbuzz%28num%29%29%0A&cumulative=false&curInstr=763&heapPrimitives=false&mode=display&origin=opt-live.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false)
+[if文の動作を確認(Python Tutor)](https://pythontutor.com/render.html#code=def%20fizzbuzz%28num%29%3A%0A%20%20%20%20if%20num%20%25%203%20%3D%3D%200%20and%20num%20%25%205%20%3D%3D%200%3A%0A%20%20%20%20%20%20%20%20return%20'FizzBuzz'%0A%20%20%20%20elif%20num%20%25%203%20%3D%3D%200%3A%0A%20%20%20%20%20%20%20%20return%20'Fizz'%0A%20%20%20%20elif%20num%20%25%205%20%3D%3D%200%3A%0A%20%20%20%20%20%20%20%20return%20'Buzz'%0A%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20return%20str%28num%29%0A%0Afor%20num%20in%20range%281,%20101%29%3A%0A%20%20%20%20print%28fizzbuzz%28num%29%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=311&rawInputLstJSON=%5B%5D&textReferences=false)
 
-<iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=def%20fizzbuzz%28num%29%3A%0A%20%20%20%20if%20num%20%25%203%20%3D%3D%200%20and%20num%20%25%205%20%3D%3D%200%3A%0A%20%20%20%20%20%20%20%20return%20'FizzBuzz'%0A%20%20%20%20elif%20num%20%25%203%20%3D%3D%200%3A%0A%20%20%20%20%20%20%20%20return%20'Fizz'%0A%20%20%20%20elif%20num%20%25%205%20%3D%3D%200%3A%0A%20%20%20%20%20%20%20%20return%20'Buzz'%0A%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20return%20str%28num%29%0A%0Afor%20num%20in%20range%281,%20101%29%3A%0A%20%20%20%20print%28fizzbuzz%28num%29%29%0A&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=false&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+<iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=def%20fizzbuzz%28num%29%3A%0A%20%20%20%20if%20num%20%25%203%20%3D%3D%200%20and%20num%20%25%205%20%3D%3D%200%3A%0A%20%20%20%20%20%20%20%20return%20'FizzBuzz'%0A%20%20%20%20elif%20num%20%25%203%20%3D%3D%200%3A%0A%20%20%20%20%20%20%20%20return%20'Fizz'%0A%20%20%20%20elif%20num%20%25%205%20%3D%3D%200%3A%0A%20%20%20%20%20%20%20%20return%20'Buzz'%0A%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20return%20str%28num%29%0A%0Afor%20num%20in%20range%281,%20101%29%3A%0A%20%20%20%20print%28fizzbuzz%28num%29%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=311&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
 ```
 
 ### FizzBuzz処理の実装の完了
