@@ -28,3 +28,4 @@ Python Boot Campのテキスト作成には以下の人たちが関わってい�
 - [Takeshi_Izawa](https://github.com/zxb04116)
 - [onishi_feuer](https://github.com/crucis-onishi)
 - [soogie](https://github.com/soogie)
+- [yuki2kisaragi](https://github.com/yuki2kisaragi)
