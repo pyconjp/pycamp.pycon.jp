@@ -117,12 +117,7 @@ Python 3.12.6
 
 ### Linux（Ubuntu Server）の場合
 
-Ubuntu 22.04にはデフォルトでPython 3.10.8がインストールされています。
-以下のコマンドで Python 3.12.6をインストールします。
-```{code-block} bash
-:caption: Pythonのインストール
-apt -y install python3.12 python3.12-venv
-```
+Ubuntu 24.04にはデフォルトでPython 3.12がインストールされています。
 
 以下のコマンドでPythonのバージョンを確認します（{numref}`check-version`）。
 
