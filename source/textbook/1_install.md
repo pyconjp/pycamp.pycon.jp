@@ -132,13 +132,13 @@ Python 3.12.6
 
 ## 注意事項
 
-これ以降の本テキストでは上記手順でインストールしたPython 3.8以降を使用することを前提に記載しています。
+これ以降の本テキストでは上記手順でインストールしたPython 3.12を使用することを前提に記載しています。
 
 Python 2.7等のPython 2系やAnacondaでインストールしたPython、または [Jupyter](https://jupyter.org/) や [Google Colaboratory](https://colab.research.google.com/?hl=ja) では実習ができません。
 
 Pythonを起動した時に表示される文字をチェックして、下記が問題ないか確認してください。
 
-- Pythonのバージョン(3.8以上であること)
+- Pythonのバージョン(3.10以降を推奨、3.12で説明します)
 - Anacondaという文字が表示されないこと
 
 インストールされていない場合は前述の手順でPython 3.12.6のインストールを行ってください。
