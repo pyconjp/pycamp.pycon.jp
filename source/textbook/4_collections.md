@@ -181,119 +181,10 @@ snake
 ```{index} tuple single: Collection; tuple
 ```
 
-## タプル（tuple）
-
-タプルはリストと同じコレクションの1つです。
-
-タプルを定義するには括弧（`( )`）を使い、含める要素をカンマ（`,`）で区切ります（{numref}`define-tuple`）。
-
-(define-tuple)=
-
-```{code-block} pycon
-:caption: "タプルの定義"
-
->>> ('spam', 'ham', 4)
-('spam', 'ham', 4)
-```
-
-タプルもリスト、文字列と同様に、結合やスライスが使えます（{numref}`use-tuple`）。
-
-(use-tuple)=
-
-```{code-block} pycon
-:caption: "タプルの基本的な使い方"
-
->>> ('spam', 'ham') + ('egg',)             # タプルの結合
-('spam', 'ham', 'egg')
->>> ('spam',) * 5                          # タプルの繰り返し
-('spam', 'spam', 'spam', 'spam', 'spam')
->>> ('spam', 'ham', 'egg')[0]              # タプルの0番目を取得する
-'spam'
->>> ('spam', 'ham', 'egg')[1:]             # タプルのスライス(1番目以降)
-('ham', 'egg')
->>> len(('spam', 'ham', 'egg'))            # タプルの長さ
-3
->>> 'ham' in ('spam', 'ham', 'egg')        # タプルに特定の文字列が含まれるか
-True
-```
-
-要素が1つのタプルを定義する際にもカンマが必要な点に注意してください。
-これは、処理の優先順位を決める括弧と区別するためです（{numref}`single-tuple`）。
-
-(single-tuple)=
-
-```{code-block} pycon
-:caption: "1要素のタプル"
-
->>> ('spam',)
-('spam',)
->>> ('spam')
-'spam'
-```
-
-また、括弧を省略してタプルを定義できます（{numref}`omit-parenthesis-tuple`）。
-
-(omit-parenthesis-tuple)=
-
-```{code-block} pycon
-:caption: "括弧を省略したタプル"
-
->>> 'dog', 'cat'
-('dog', 'cat')
-```
-
-```{index} immutable single: Collection; immutable
-```
-
-### リストとの違いと使いどころ
-
-リストと違いタプルは不変（immutable）な値です。
-リストの `.append()` のような破壊的な操作は存在しません。
-`.append()` のような処理を行いたい場合は、タプルの結合により新しいタプルを作るしかありません。
-
-タプルは、関数の戻り値や不変としたい設定用の値に使います。
-
-関数からタプルを返すと、簡単に複数の値を戻り値として返すことができます。
-
-シーケンス（リスト、タプルや文字列）を受け取り、初めの要素と残りの要素に分割する関数を、 {numref}`return-tuple` に示します。
-
-(return-tuple)=
-
-```{code-block} pycon
-:caption: "タプルを返す関数"
-
->>> def head_splitter(seq):
-...     return seq[0], seq[1:]
-...
->>> head, tail = head_splitter(['head', 'body', 'tail'])
->>> head
-'head'
->>> tail
-['body', 'tail']
-```
-
-戻り値の順番に意味が必要になるため、要素の多いタプルを返すのは避けましょう（{numref}`many-return-value`）。
-
-(many-return-value)=
-
-```{code-block} pycon
-:caption: "要素数の多いタプルを返す関数"
-
->>> def bad_implementation():
-...     return 'username', 'user_password', 'user_id', 'user_permission1', 'user_permission2'
-...
->>> username, user_password, user_id, user_permission1, user_permission2 = bad_implementation()
-```
-
-{ref}`many-return-value` のような場合、辞書（後述）、専用のクラスのインスタンス、名前付きタプルなどで返しましょう
-（クラスの定義方法、名前付きタプルについては、本チュートリアルでは説明しません）。
-
-```{index} dict single: Collection; dict
-```
 
 ## 辞書（dict）
 
-辞書もリスト、タプルと同じコレクションです。
+辞書はリストと同じコレクションです。
 
 辞書の各要素はキー（key）と、対応する値（value）を持ち、Python 3.7 以降では要素の挿入順が保持されます。
 
@@ -474,6 +365,115 @@ bar ham
 ```{index} set single: Collection; set
 ```
 
+## タプル（tuple）
+
+タプルもリスト、辞書と同じコレクションの1つです。
+
+タプルを定義するには括弧（`( )`）を使い、含める要素をカンマ（`,`）で区切ります（{numref}`define-tuple`）。
+
+(define-tuple)=
+
+```{code-block} pycon
+:caption: "タプルの定義"
+
+>>> ('spam', 'ham', 4)
+('spam', 'ham', 4)
+```
+
+タプルもリスト、文字列と同様に、結合やスライスが使えます（{numref}`use-tuple`）。
+
+(use-tuple)=
+
+```{code-block} pycon
+:caption: "タプルの基本的な使い方"
+
+>>> ('spam', 'ham') + ('egg',)             # タプルの結合
+('spam', 'ham', 'egg')
+>>> ('spam',) * 5                          # タプルの繰り返し
+('spam', 'spam', 'spam', 'spam', 'spam')
+>>> ('spam', 'ham', 'egg')[0]              # タプルの0番目を取得する
+'spam'
+>>> ('spam', 'ham', 'egg')[1:]             # タプルのスライス(1番目以降)
+('ham', 'egg')
+>>> len(('spam', 'ham', 'egg'))            # タプルの長さ
+3
+>>> 'ham' in ('spam', 'ham', 'egg')        # タプルに特定の文字列が含まれるか
+True
+```
+
+要素が1つのタプルを定義する際にもカンマが必要な点に注意してください。
+これは、処理の優先順位を決める括弧と区別するためです（{numref}`single-tuple`）。
+
+(single-tuple)=
+
+```{code-block} pycon
+:caption: "1要素のタプル"
+
+>>> ('spam',)
+('spam',)
+>>> ('spam')
+'spam'
+```
+
+また、括弧を省略してタプルを定義できます（{numref}`omit-parenthesis-tuple`）。
+
+(omit-parenthesis-tuple)=
+
+```{code-block} pycon
+:caption: "括弧を省略したタプル"
+
+>>> 'dog', 'cat'
+('dog', 'cat')
+```
+
+```{index} immutable single: Collection; immutable
+```
+
+### リストとの違いと使いどころ
+
+リストと違いタプルは不変（immutable）な値です。
+リストの `.append()` のような破壊的な操作は存在しません。
+`.append()` のような処理を行いたい場合は、タプルの結合により新しいタプルを作るしかありません。
+
+タプルは、関数の戻り値や不変としたい設定用の値に使います。
+
+関数からタプルを返すと、簡単に複数の値を戻り値として返すことができます。
+
+シーケンス（リスト、タプルや文字列）を受け取り、初めの要素と残りの要素に分割する関数を、 {numref}`return-tuple` に示します。
+
+(return-tuple)=
+
+```{code-block} pycon
+:caption: "タプルを返す関数"
+
+>>> def head_splitter(seq):
+...     return seq[0], seq[1:]
+...
+>>> head, tail = head_splitter(['head', 'body', 'tail'])
+>>> head
+'head'
+>>> tail
+['body', 'tail']
+```
+
+戻り値の順番に意味が必要になるため、要素の多いタプルを返すのは避けましょう（{numref}`many-return-value`）。
+
+(many-return-value)=
+
+```{code-block} pycon
+:caption: "要素数の多いタプルを返す関数"
+
+>>> def bad_implementation():
+...     return 'username', 'user_password', 'user_id', 'user_permission1', 'user_permission2'
+...
+>>> username, user_password, user_id, user_permission1, user_permission2 = bad_implementation()
+```
+
+{ref}`many-return-value` のような場合、辞書（後述）、専用のクラスのインスタンス、名前付きタプルなどで返しましょう
+（クラスの定義方法、名前付きタプルについては、本チュートリアルでは説明しません）。
+
+```{index} dict single: Collection; dict
+```
 ## 集合（set）
 
 集合型（set）はコレクション型の1つです。
