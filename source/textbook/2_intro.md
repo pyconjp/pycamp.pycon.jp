@@ -353,9 +353,9 @@ range(1, 101)のように記述すると、1から100までの数字を順番に
 現時点の `fizzbuzz()` 関数は与えられた引数をそのまま返す実装なので、これで問題ありません。
 
 ```{hint}
-[for文の動作を確認(Python Tutor)](https://pythontutor.com/live.html#code=def%20fizzbuzz%28num%29%3A%0A%20%20%20%20return%20num%0A%0Afor%20num%20in%20range%281,%20101%29%3A%0A%20%20%20%20print%28fizzbuzz%28num%29%29%0A&cumulative=false&curInstr=502&heapPrimitives=false&mode=display&origin=opt-live.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false)
+[for文の動作を確認(Python Tutor)](https://pythontutor.com/render.html#code=def%20fizzbuzz%28num%29%3A%0A%20%20%20%20return%20num%0A%0Afor%20num%20in%20range%281,%20101%29%3A%0A%20%20%20%20print%28fizzbuzz%28num%29%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=311&rawInputLstJSON=%5B%5D&textReferences=false)
 
-<iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=def%20fizzbuzz%28num%29%3A%0A%20%20%20%20return%20num%0A%0Afor%20num%20in%20range%281,%20101%29%3A%0A%20%20%20%20print%28fizzbuzz%28num%29%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=false&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+<iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=def%20fizzbuzz%28num%29%3A%0A%20%20%20%20return%20num%0A%0Afor%20num%20in%20range%281,%20101%29%3A%0A%20%20%20%20print%28fizzbuzz%28num%29%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=311&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
 ```
 
 for文は次のように書きます。
