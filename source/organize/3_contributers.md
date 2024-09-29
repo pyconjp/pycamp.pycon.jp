@@ -33,3 +33,4 @@ Python Boot Campのテキスト作成には以下の人たちが関わってい�
 - [yuki2kisaragi](https://github.com/yuki2kisaragi)
 - [naoyasugigta](https://github.com/naoyasugita)
 - [Sasamoto Ken](https://github.com/kenchang198)
+- [HDisc](https://github.com/HDisc)
