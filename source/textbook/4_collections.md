@@ -73,9 +73,9 @@ snake
 ```
 
 ```{hint}
-[listのfor文での繰り返し動作を確認](https://pythontutor.com/live.html#code=for%20animal%20in%20%5B'cat',%20'dog',%20'snake'%5D%3A%0A%20%20%20%20print%28animal%29&cumulative=false&curInstr=7&heapPrimitives=false&mode=display&origin=opt-live.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false)
+[listのfor文での繰り返し動作を確認](https://pythontutor.com/render.html#code=for%20animal%20in%20%5B'cat',%20'dog',%20'snake'%5D%3A%0A%20%20%20%20print%28animal%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=311&rawInputLstJSON=%5B%5D&textReferences=false)
 
-<iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=for%20animal%20in%20%5B'cat',%20'dog',%20'snake'%5D%3A%0A%20%20%20%20print%28animal%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=false&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+<iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=for%20animal%20in%20%5B'cat',%20'dog',%20'snake'%5D%3A%0A%20%20%20%20print%28animal%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=311&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
 ```
 
 ```{index} append() single: Collection; append()
@@ -101,9 +101,9 @@ snake
 `.append()` メソッドによって、 `animals` というリストの内容が変更されます。
 
 ```{hint}
-[listへの要素の追加の動作を確認](https://pythontutor.com/live.html#code=animals%20%3D%20%5B'cat',%20'dog',%20'snake'%5D%0Aanimals.append%28'elephant'%29%0Aprint%28animals%29&cumulative=false&curInstr=0&heapPrimitives=false&mode=display&origin=opt-live.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false)
+[listへの要素の追加の動作を確認](https://pythontutor.com/render.html#code=animals%20%3D%20%5B'cat',%20'dog',%20'snake'%5D%0Aanimals.append%28'elephant'%29%0Aprint%28animals%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=311&rawInputLstJSON=%5B%5D&textReferences=false)
 
-<iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=animals%20%3D%20%5B'cat',%20'dog',%20'snake'%5D%0Aanimals.append%28'elephant'%29%0Aprint%28animals%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=false&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+<iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=animals%20%3D%20%5B'cat',%20'dog',%20'snake'%5D%0Aanimals.append%28'elephant'%29%0Aprint%28animals%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=311&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
 ```
 
 ```{index} comprehension single: Collection; comprehension
@@ -423,9 +423,9 @@ Yamada
 ```
 
 ```{hint}
-[辞書のfor文の動作を確認](https://pythontutor.com/live.html#code=user_info%20%3D%20%7B'user_name'%3A%20'taro',%20'last_name'%3A%20'Yamada'%7D%0Afor%20key%20in%20user_info%3A%0A%20%20%20%20print%28key%29%0A%20%20%20%20print%28user_info%5Bkey%5D%29%0A&cumulative=false&curInstr=0&heapPrimitives=false&mode=display&origin=opt-live.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false)
+[辞書のfor文の動作を確認](https://pythontutor.com/render.html#code=user_info%20%3D%20%7B'user_name'%3A%20'taro',%20'last_name'%3A%20'Yamada'%7D%0Afor%20key%20in%20user_info%3A%0A%20%20%20%20print%28key%29%0A%20%20%20%20print%28user_info%5Bkey%5D%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=311&rawInputLstJSON=%5B%5D&textReferences=false)
 
-<iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=user_info%20%3D%20%7B'user_name'%3A%20'taro',%20'last_name'%3A%20'Yamada'%7D%0Afor%20key%20in%20user_info%3A%0A%20%20%20%20print%28key%29%0A%20%20%20%20print%28user_info%5Bkey%5D%29%0A&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=false&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+<iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=user_info%20%3D%20%7B'user_name'%3A%20'taro',%20'last_name'%3A%20'Yamada'%7D%0Afor%20key%20in%20user_info%3A%0A%20%20%20%20print%28key%29%0A%20%20%20%20print%28user_info%5Bkey%5D%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=311&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
 ```
 
 ### .keys()メソッド、.values()メソッド、.items()メソッド
