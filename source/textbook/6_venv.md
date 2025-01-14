@@ -242,7 +242,7 @@ urllib3==1.21.1
 ```{code-block} sh
 :caption:  pip install で同じ環境を作る
 
-$ git clone some-project-source-code
+$ git clone https://github.com/pyconjp/some-project.git
 $ cd some-project
 $ python3 -m venv env  # Windowsの場合は python -m venv env
 $ source env/bin/activate
