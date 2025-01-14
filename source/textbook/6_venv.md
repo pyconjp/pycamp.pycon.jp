@@ -207,8 +207,8 @@ Windowsの場合はスクリプトを実行します（ {numref}`venv-activate-w
  $ python
  >>> import requests
  Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
- ImportError: No module named requests
+   File "<stdin>", line 1, in <module>
+ ModuleNotFoundError: No module named 'requests'
  >>> # エラーが出力される
 ```
 
