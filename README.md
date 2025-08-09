@@ -31,7 +31,7 @@ $ rm -rf ~/.cache/matplotlib
 ```
 $ git clone git@github.com:pyconjp/pycamp.pycon.jp.git
 $ cd pycamp.pycon.jp
-$ python3.12 -m venv env
+$ python3.13 -m venv env
 $ . env/bin/activate
 (env) $ pip install -r requirements.txt
 (env) $ make html
