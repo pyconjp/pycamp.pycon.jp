@@ -28,7 +28,7 @@ Python Boot Camp全体の運営・管理を行う。各開催では現地スタ�
 * 開催候補日を設定する
 * 講師を探す
 * コアスタッフ・現地スタッフとの事前打ち合わせ
-* PyCon JPのFacebook、Twitter公式アカウントの管理・運用する
+* PyCon JPのFacebook、X(旧Twitter)公式アカウントの管理・運用する
 * 経費精算で一般社団法人PyCon JP Association会計係と精算を受ける講師・現地スタッフを仲介する
 * イベント後の反省会を開く
 * 各開催、全体の予算の管理する
@@ -120,7 +120,7 @@ Python Boot Camp全体の運営・管理を行う。各開催では現地スタ�
         * これは会場費などがかからなかった場合も同様。
         * 会場によっては有料開催の場合は会場費がかかる場合もある。これまでの開催ではそのような場合でも、有料開催として別途会場費を支払った。
 #. Connpassイベントの編集が完了次第、 現地スタッフがイベントを公開する。懇親会会場など、公開に際して絶対必須ではないものは「未定」でも早めから公開するほうが、より多くの人にイベント開催を知ってもらえる。過去の開催経験から **最低１ヶ月前から告知するようにする** 。
-#. コアスタッフはイベントの告知をFacebookとTwitterのPyCon JP公式アカウントから行う。公式アカウントの定期ポストは `Google Spreadsheet <https://docs.google.com/spreadsheets/d/1lpa9p_dCyTckREf09-oA2C6ZAMACCrgD9W3HQSKeoSI/edit>`_ のツールから設定する。
+#. コアスタッフはイベントの告知をFacebookとX(旧Twitter)のPyCon JP公式アカウントから行う。公式アカウントの定期ポストは `Google Spreadsheet <https://docs.google.com/spreadsheets/d/1lpa9p_dCyTckREf09-oA2C6ZAMACCrgD9W3HQSKeoSI/edit>`_ のツールから設定する。
 #. 現地スタッフは地域のコミュニティネットワークなど、活用できるつてなどを使って宣伝する。
 
 
@@ -232,7 +232,7 @@ TA申込者
   * #pycamp チャネル：Python Boot Camp 全体のチャネル。全体の運営に関する議論や、講師を募ったり、会場提供者とのやりとりなどを行う。
 * Google Drive: `Python Boot Camp用のフォルダ <https://drive.google.com/drive/u/1/folders/0B9xgFsw7nWw9b3pDWHpKRHJ5QmM>`_ でドキュメント共有に活用
 * JIRA: `PyCon JP JIRA <https://pyconjp.atlassian.net>`_ での運営タスク管理
-* Twitter: `@pyconjapan <https://twitter.com/pyconjapan>`_ での告知・拡散用
+* X(旧Twitter): `@pyconjapan <https://x.com/pyconjapan>`_ での告知・拡散用
 * Facebook: `PyCon JP Facebookページ <https://www.facebook.com/PyConJP/>`_ での告知・拡散用
 * Connpass： `PyCon JPイベントシリーズ <https://pyconjp.connpass.com>`_ でPyCon JPイベントやその他の関連イベントとあわせて管理している。
 * Blogpost: `PyCon JP公式ブログ <https://pyconjp.blogspot.com>`_ での告知や開催報告レポート用
