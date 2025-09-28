@@ -38,3 +38,4 @@ Python Boot Campのテキスト作成には以下の人たちが関わってい�
 - [m-tsuru](https://github.com/m-tsuru)
 - [yutaka](https://github.com/yutaka-nakamura-pascalia)
 - [Makino](https://github.com/MikiMakino)
+- [Katsumi](https://github.com/l-plantarum)

@@ -346,11 +346,15 @@ $ python fizzbuzz.py
 
 数字を順番に使って処理したい場合、組み込み関数 range() が便利です。
 
-range(1, 101)のように記述すると、1から100までの数字を順番に得ることができ、
-
+range(1, 101)のように記述すると、1から第2引数を超えない最大値である100までの数列が得られ、
 結果として `fizzbuzz()` 関数には1 から100までの数字が順に与えられています。
 
 現時点の `fizzbuzz()` 関数は与えられた引数をそのまま返す実装なので、これで問題ありません。
+C/Java/JavaScript等をご存じの方は、以下のforループと同じ処理になるとご理解ください。
+
+```{code-block} javascript
+for (num = 0; num < 101; num++) {
+```
 
 ```{hint}
 [for文の動作を確認(Python Tutor)](https://pythontutor.com/render.html#code=def%20fizzbuzz%28num%29%3A%0A%20%20%20%20return%20num%0A%0Afor%20num%20in%20range%281,%20101%29%3A%0A%20%20%20%20print%28fizzbuzz%28num%29%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=311&rawInputLstJSON=%5B%5D&textReferences=false)
