@@ -184,7 +184,7 @@ Windowsの場合はスクリプトを実行します（ {numref}`venv-activate-w
  >>> # requestsがインポートできる
 ```
 
-`requests` が `env/lib/python3.12/site-packages` 配下にインストールされます。
+`requests` が `env/lib/python3.13/site-packages` 配下にインストールされます。
 
 またPythonパッケージの中にはコマンドとして実行可能なファイルが含まれている場合があります。それらのファイルは `env/bin` 配下にインストールされます。
 
