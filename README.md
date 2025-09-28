@@ -26,7 +26,7 @@ $ rm -rf ~/.cache/matplotlib
 - GitHub Codespacesを使用する場合 (リモート環境)  
 [GitHub Codespacesのクイックスタート](https://docs.github.com/ja/codespaces/getting-started/quickstart)
 
-## How to build
+## How to build(Linuxまたはwsl)
 
 ```
 $ git clone git@github.com:pyconjp/pycamp.pycon.jp.git
@@ -37,6 +37,19 @@ $ . env/bin/activate
 (env) $ make html
 (env) $ open build/html/index.html
 ```
+
+## How to build(windows powershell)
+
+```
+$ git clone git@github.com:pyconjp/pycamp.pycon.jp.git
+$ cd pycamp.pycon.jp
+$ py -3.13 -m venv env
+$ .\env\Scripts\Activate.ps1
+(env) $ pip install -r requirements.txt
+(env) $ make html
+(env) $ start  build/html/index.html
+```
+
 
 ## テキスト修正の提案方法
 
@@ -52,3 +65,10 @@ $ . env/bin/activate
   * MySTの記述ルールについては[myst-parser](https://myst-parser.readthedocs.io/)を参照してください
   * とはいえ、directiveを使わないのであれば通常のmarkdownと同じです
 * それ以外のページはreStructuredTextで記述しています
+
+
+# 注意: 最新の Sphinx は Python 3.11 以上が必要。3.10 以下では環境構築が不可。
+以下のエラーが発生する。
+ERROR: Could not find a version that satisfies the requirement Sphinx==8.2.3 (from versions: 0.1.61611, 0.1.61798, 0.1.61843, ・・・・・省略
+ERROR: No matching distribution found for Sphinx==8.2.3
+
