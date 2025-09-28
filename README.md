@@ -26,7 +26,7 @@ $ rm -rf ~/.cache/matplotlib
 - GitHub Codespacesを使用する場合 (リモート環境)  
 [GitHub Codespacesのクイックスタート](https://docs.github.com/ja/codespaces/getting-started/quickstart)
 
-## How to build(Linuxまたはwsl)
+## How to build(macOSまたはLinux)
 
 ```
 $ git clone git@github.com:pyconjp/pycamp.pycon.jp.git
@@ -35,7 +35,7 @@ $ python3.13 -m venv env
 $ . env/bin/activate
 (env) $ pip install -r requirements.txt
 (env) $ make html
-(env) $ open build/html/index.html
+(env) $ python -m http.server -d build/html # http://127.0.0.1:8000/ をブラウザで開くとHTMLの内容を確認できる
 ```
 
 ## How to build(windows powershell)
@@ -47,7 +47,7 @@ $ py -3.13 -m venv env
 $ .\env\Scripts\Activate.ps1
 (env) $ pip install -r requirements.txt
 (env) $ make html
-(env) $ start  build/html/index.html
+(env) $ python -m http.server -d build/html # http://127.0.0.1:8000/ をブラウザで開くとHTMLの内容を確認できる
 ```
 
 
