@@ -60,14 +60,13 @@ macOS、Windows、Linuxの3つの環境でのインストール手順を説明�
 
 macOSでPythonを利用する場合は、Pythonの公式サイトで配布されているビルド済みのパッケージをインストールします。
 
-「 [Python Release Python 3.12.6](https://www.python.org/downloads/release/python-3126/) 」をブラウザで開きます。
 以下をダウンロードして実行し、Pythonをインストールします。
 
-- [macOS 64-bit universal2 installer](https://www.python.org/ftp/python/3.12.6/python-3.12.6-macos11.pkg)
+- [macOS 64-bit universal2 installer](https://www.python.org/ftp/python/3.13.7/python-3.13.7-macos11.pkg)
 
 詳しくはPythonの公式ドキュメントの「 [Using Python on a Mac](https://docs.python.org/ja/3/using/mac.html) 」を参考にしてください。
 
-インストールが完了したらPythonのバージョンが3.12.6になっていることを確認します（{numref}`check-version-mac`）。
+インストールが完了したらPythonのバージョンが3.13.7になっていることを確認します（{numref}`check-version-mac`）。
 
 (check-version-mac)=
 
@@ -75,7 +74,7 @@ macOSでPythonを利用する場合は、Pythonの公式サイトで配布され
 :caption: Pythonのバージョンを確認
 
 $ python3 -V
-Python 3.12.6
+Python 3.13.7
 ```
 
 ```{index} single: Install; Windows
@@ -85,11 +84,12 @@ Python 3.12.6
 
 WindowsでPythonを利用する場合は、Pythonの公式サイトで配布されているWindowsインストーラーを利用します。
 
-「 [Python Release Python 3.12.6](https://www.python.org/downloads/release/python-3126/) 」をブラウザで開きます。
-OSによって以下のいずれかのインストーラーをダウンロードし、ウィザードに従ってインストールします。
 
-- 64ビット版: [Windows installer (64-bit)](https://www.python.org/ftp/python/3.12.6/python-3.12.6-amd64.exe)
-- 32ビット版: [Windows installer (32-bit)](https://www.python.org/ftp/python/3.12.6/python-3.12.6.exe)
+OSのアーキテクチャによって以下のいずれかのインストーラーをダウンロードし、ウィザードに従ってインストールします。
+
+- 64ビット版 (AMD64): [Windows installer (64-bit)](https://www.python.org/ftp/python/3.13.7/python-3.13.7-amd64.exe)
+- 64ビット版 (ARM64): [Windows installer (ARM64)](https://www.python.org/ftp/python/3.13.7/python-3.13.7-arm64.exe)
+- 32ビット版 (x86): [Windows installer (32-bit)](https://www.python.org/ftp/python/3.13.6/python-3.13.7.exe)
 
 この時、「Add python.exe to PATH」にチェックを入れておきましょう。自動的に必要な環境変数が設定されます（{numref}`windows-install`）。
 
@@ -104,7 +104,7 @@ Python for Windowsのインストール画面
 ```{index} single: Install; Linux
 ```
 
-インストールが完了したらPythonのバージョンが3.12.6になっていることを確認します（{numref}`check-version-win`）。
+インストールが完了したらPythonのバージョンが3.13.7になっていることを確認します（{numref}`check-version-win`）。
 
 (check-version-win)=
 
@@ -112,12 +112,12 @@ Python for Windowsのインストール画面
 :caption: Pythonのバージョンを確認
 
 C:\Users\user>python -V
-Python 3.12.6
+Python 3.13.7
 ```
 
 ### Linux（Ubuntu Server）の場合
 
-Ubuntu 24.04にはデフォルトでPython 3.12がインストールされています。
+Ubuntu 25.04にはデフォルトでPython 3.13がインストールされています。
 
 以下のコマンドでPythonのバージョンを確認します（{numref}`check-version`）。
 
@@ -127,21 +127,21 @@ Ubuntu 24.04にはデフォルトでPython 3.12がインストールされてい
 :caption: Pythonのバージョンを確認
 
 $ python3 -V
-Python 3.12.3
+Python 3.13.7
 ```
 
 ## 注意事項
 
-これ以降の本テキストでは上記手順でインストールしたPython 3.12を使用することを前提に記載しています。
+これ以降の本テキストでは上記手順でインストールしたPython 3.13を使用することを前提に記載しています。
 
 Python 2.7等のPython 2系やAnacondaでインストールしたPython、または [Jupyter](https://jupyter.org/) や [Google Colaboratory](https://colab.research.google.com/?hl=ja) では実習ができません。
 
 Pythonを起動した時に表示される文字をチェックして、下記が問題ないか確認してください。
 
-- Pythonのバージョン(3.10以降を推奨、3.12で説明します)
+- Pythonのバージョン(3.10以降を推奨、3.13で説明します)
 - Anacondaという文字が表示されないこと
 
-インストールされていない場合は前述の手順でPython 3.12.6のインストールを行ってください。
+インストールされていない場合は前述の手順でPython 3.13.7のインストールを行ってください。
 
 ## まとめ
 
