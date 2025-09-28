@@ -89,8 +89,8 @@ Pythonやプログラムの学習におすすめの書籍をいくつか紹介�
   - [Pythonスタートブック［増補改訂版］](https://gihyo.jp/book/2018/978-4-7741-9643-5)
   - Python入門を超分かりやすい言葉と絵で丁寧に解説。
     プログラミングの考え方についてはあまり触れていない。
-* - ![いちばんやさしいPythonの教本 第2版](images/book-ichiyasa.jpg)
-  - [いちばんやさしいPythonの教本 第2版](https://book.impress.co.jp/books/1119101162)
+* - ![いちばんやさしいPythonの教本 第3版](images/book-ichiyasa.jpg)
+  - [いちばんやさしいPythonの教本 第3版](https://book.impress.co.jp/books/1124101167)
   - 講義+実習のワークショップ形式の入門書。
     会話bot「pybot」を作りながら、徐々にPython文法の基礎を身に付けていく。
     Pythonのインストール、エディタの使い方、コマンドラインの使い方など、初めてプログラミングに触れる方向けに図を多く使い、手順を分かりやすく紹介している。
