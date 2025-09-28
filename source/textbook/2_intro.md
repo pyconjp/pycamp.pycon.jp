@@ -38,7 +38,7 @@ Pythonについてより詳しくは、後述の節で説明します。
 :caption: "Pythonインタープリタの起動"
 
  $ python
-Python 3.12.6 (main, Jun  6 2024, 18:26:44) [Clang 15.0.0 (clang-1500.3.9.4)] on darwin
+Python 3.13.7 (main, Aug 14 2025, 11:12:11) [Clang 17.0.0 (clang-1700.3.19.1)] on darwin
 Type "help", "copyright", "credits" or "license" for more information.
  >>>
 ```

@@ -176,7 +176,7 @@ Web APIにデータを送ったり、受け取ったりするときによく使�
 
 ## シンプルなスクレイピングのコード
 
-スクレイピングの例として、docs.python.orgの組み込み関数一覧のページ(<https://docs.python.org/ja/3.12/library/functions.html>)から関数名の情報を抜き出します。
+スクレイピングの例として、docs.python.orgの組み込み関数一覧のページ(<https://docs.python.org/ja/3.13/library/functions.html>)から関数名の情報を抜き出します。
 
 ```{figure} images/func-list.png
 :width: 50%
