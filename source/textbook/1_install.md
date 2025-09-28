@@ -89,7 +89,7 @@ OSのアーキテクチャによって以下のいずれかのインストーラ
 
 - 64ビット版 (AMD64): [Windows installer (64-bit)](https://www.python.org/ftp/python/3.13.7/python-3.13.7-amd64.exe)
 - 64ビット版 (ARM64): [Windows installer (ARM64)](https://www.python.org/ftp/python/3.13.7/python-3.13.7-arm64.exe)
-- 32ビット版 (x86): [Windows installer (32-bit)](https://www.python.org/ftp/python/3.13.6/python-3.13.7.exe)
+- 32ビット版 (x86): [Windows installer (32-bit)](https://www.python.org/ftp/python/3.13.7/python-3.13.7.exe)
 
 この時、「Add python.exe to PATH」にチェックを入れておきましょう。自動的に必要な環境変数が設定されます（{numref}`windows-install`）。
 
