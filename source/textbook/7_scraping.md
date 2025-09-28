@@ -132,14 +132,14 @@ Episode 3: Revenge of the Sith (2005-05-19)
 
 ```{literalinclude} films.py
 :caption: エピソード番号、タイトル、公開日付の出力
-:lines: 10-11
+:lines: 10-19
 ```
 
 - 最後に、このスクリプトが実行された時に、 `main()` 関数を実行するように指定します。
 
 ```{literalinclude} films.py
 :caption: main()関数を実行
-:lines: 14-15
+:lines: 22-23
 ```
 
 ```{index} JSON形式
