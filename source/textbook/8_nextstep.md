@@ -17,8 +17,6 @@ Pythonの使い方などが解説してあるWebサイト
   - <https://docs.python.org/ja/3/tutorial/>
 * - Python 標準ライブラリ
   - <https://docs.python.org/ja/3/library/index.html>
-* - Dive into Python 3 日本語版
-  - <http://diveintopython3-ja.rdy.jp/>
 * - Python HOWTO
   - <https://docs.python.org/ja/3/howto/>
 ```
