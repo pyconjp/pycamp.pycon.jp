@@ -265,7 +265,7 @@ KeyError: 'bio'
 (get-from-dict)=
 
 ```{code-block} pycon
-:caption: "存在しないキーへのget"
+:caption: "存在しないキーへのget()メソッドの呼び出し"
 
 >>> user_info.get('user_name')
 'taro'
@@ -284,7 +284,7 @@ None
 (get-with-default)=
 
 ```{code-block} pycon
-:caption: "デフォルト値付きのget"
+:caption: "デフォルト値付きのget()メソッドの呼び出し"
 
 >>> user_info.get('bio', '')
 ''
