@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # 1. リポジトリのコードをチェックアウト
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4.3.0
 
       # 2. markdownlint を実行し、ファイルを自動修正
       - name: Run markdownlint and fix
@@ -24,7 +24,7 @@ jobs:
 
       # 3. 変更されたファイルをコミット＆プッシュ
       - name: Commit and push changes
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@b863ae1933cb653a53c021fe36dbb774e1fb9403 # v5.2.0
         with:
           # コミットメッセージ
           commit_message: "style: Apply markdownlint changes [skip ci]"
