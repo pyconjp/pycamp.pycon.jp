@@ -181,7 +181,6 @@ snake
 ```{index} tuple single: Collection; tuple
 ```
 
-
 ## 辞書（dict）
 
 辞書はリストと同じコレクションです。
@@ -509,6 +508,7 @@ True
 
 ```{index} dict single: Collection; dict
 ```
+
 ## 集合（set）
 
 集合型（set）はコレクション型の1つです。
