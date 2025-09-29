@@ -1,0 +1,34 @@
+name: Deploy to Server
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  markdownlint:
+    name: markdownlint-cli2-action
+    runs-on: ubuntu-latest
+    steps:
+      # 1. リポジトリのコードをチェックアウト
+      - uses: actions/checkout@v4
+
+      # 2. markdownlint を実行し、ファイルを自動修正
+      - name: Run markdownlint and fix
+        uses: DavidAnson/markdownlint-cli2-action@992badcdf24e3b8eb7e87ff9287fe931bcb00c6e # v20.0.0
+        with:
+          globs: |
+            source/organize/**/*.md
+            source/textbook/**/*.md
+          fix: true
+          config: '.markdownlint-cli2.jsonc'
+
+      # 3. 変更されたファイルをコミット＆プッシュ
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          # コミットメッセージ
+          commit_message: "style: Apply markdownlint changes [skip ci]"
+          # コミットするユーザー名
+          commit_user_name: "github-actions[bot]"
+          # コミットするメールアドレス
+          commit_user_email: "github-actions[bot]@users.noreply.github.com"
