@@ -119,7 +119,6 @@ Hello Python
 こんにちはPython
 ```
 
-
 ```{index} read() single: File; read()
 ```
 
@@ -187,6 +186,7 @@ with文でのファイルオープン
 Hello Python
 こんにちはPython
 ```
+
 :::
 
 ```{index} append mode single: File; append mode
