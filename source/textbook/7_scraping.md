@@ -270,9 +270,9 @@ pycodestyleは `pip install pycodestyle` でインストールして使用しま
 ### HTMLの解析の解説
 
 Beautiful Soup 4でHTMLを解析して、値が取り出せましたが、どのように指定しているのでしょうか?
-組み込み関数一覧のHTMLを見てみると、以下のような形式になっています。({numref}`sponsor-list-html`)
+組み込み関数一覧のHTMLを見てみると、以下のような形式になっています。({numref}`functions-list-html`)
 
-(sponsor-list-html)=
+(functions-list-html)=
 
 ```{code-block} html
 :caption: "組み込み関数一覧のHTML"

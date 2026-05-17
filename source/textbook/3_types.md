@@ -262,9 +262,9 @@ Pythonのスライスを使えば、 {numref}`slice-string` のように、2、3
 
 {numref}`slice-string` の場合、「インデックスが2の位置の `'t'` から始まり、インデックスが5の位置の `'n'` 以降を切り捨てた」文字列、 `'tho'` が返されます。
 
-また先頭や末尾を含む文字列のスライスは、 {numref}`slice-stirng2` のように切り出し、切り捨て位置を省略して指定します。
+また先頭や末尾を含む文字列のスライスは、 {numref}`slice-string2` のように切り出し、切り捨て位置を省略して指定します。
 
-(slice-stirng2)=
+(slice-string2)=
 
 ```{code-block} pycon
 :caption: "先頭末尾からのスライス"
@@ -280,7 +280,7 @@ Pythonのスライスを使えば、 {numref}`slice-string` のように、2、3
 
 ### 文字列の長さ（len()関数）
 
-&#12288;文字列の長さを調べるには、 `len()` 関数を使います。
+文字列の長さを調べるには、 `len()` 関数を使います。
 戻り値は整数型です（{numref}`guide-len`）。
 
 (guide-len)=
