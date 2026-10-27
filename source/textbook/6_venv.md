@@ -103,9 +103,9 @@ condaではそれぞれ以下のコマンドで、サードパーティ製パッ
 :caption: "conda コマンドの例"
 
 $ conda create --name env python  # 環境を作成
-$ source activate env  # 環境の有効化
+$ conda activate env  # 環境の有効化
 (env) $ conda install requests  # パッケージのインストール
-(env) $ source deactivate  # 環境の無効化
+(env) $ conda deactivate  # 環境の無効化
 ```
 :::
 

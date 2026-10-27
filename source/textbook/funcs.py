@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 
 
 def main():
-    url = 'https://docs.python.org/ja/3.12/library/functions.html'
+    url = 'https://docs.python.org/ja/3.13/library/functions.html'
     res = requests.get(url)
     content = res.content
     soup = BeautifulSoup(content, 'html.parser')
