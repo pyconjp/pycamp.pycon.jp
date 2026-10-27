@@ -46,7 +46,6 @@ $ source env/bin/activate
 
 ### Requests
 
-
 * URL: <https://requests.readthedocs.io/>
 
 Requests について簡単に紹介します。
@@ -68,7 +67,7 @@ Pythonの標準ライブラリ [html.parser](https://docs.python.org/ja/3/librar
 
 Web APIの例として、[SWAPI.INFO](https://swapi.info)の「Star Wars API」で映画『スター・ウォーズ』シリーズに関する情報を入手してみましょう。
 
-- [Star Wars API](https://swapi.info/api/)
+* [Star Wars API](https://swapi.info/api/)
 
 下記のコードを `films.py` という名前で、先ほど作成したscrapingフォルダ内に保存します（{numref}`films-py`）。
 
@@ -99,43 +98,43 @@ Episode 3: Revenge of the Sith (2005-05-19)
 
 上記のコードがどういった内容なのかを解説します。
 
-- Web APIを実行するために `requests` をインポートします
+* Web APIを実行するために `requests` をインポートします
 
 ```{literalinclude} films.py
 :caption: モジュールのインポート
 :lines: 1
 ```
 
-- メインとなる処理を `main` 関数として定義しています。 なお、関数の名前に特に決まりはなく、必ずしも `main` である必要はありません。
+* メインとなる処理を `main` 関数として定義しています。 なお、関数の名前に特に決まりはなく、必ずしも `main` である必要はありません。
 
 ```{literalinclude} films.py
 :caption: main()関数の定義
 :lines: 4
 ```
 
-- APIのエンドポイントとなるURLを設定します。映画以外にも登場人物や乗り物、惑星などの情報を取得できるので、興味がある方はドキュメントを読んで試してみてください。
+* APIのエンドポイントとなるURLを設定します。映画以外にも登場人物や乗り物、惑星などの情報を取得できるので、興味がある方はドキュメントを読んで試してみてください。
 
 ```{literalinclude} films.py
 :caption: APIのエンドポイントURLの設定
 :lines: 5
 ```
 
-- `requests.get()` にURLとパラメーターを指定して結果を取得します。
-- 結果はJSON形式で返ってくるので、 `.json()` メソッドでPythonのデータ型（辞書、リスト等）に変換します。
+* `requests.get()` にURLとパラメーターを指定して結果を取得します。
+* 結果はJSON形式で返ってくるので、 `.json()` メソッドでPythonのデータ型（辞書、リスト等）に変換します。
 
 ```{literalinclude} films.py
 :caption: Web APIを実行して結果を取得
 :lines: 7-8
 ```
 
-- Pythonデータ型の映画に関する情報から、エピソード番号、タイトル、公開日付を取得して出力します。
+* Pythonデータ型の映画に関する情報から、エピソード番号、タイトル、公開日付を取得して出力します。
 
 ```{literalinclude} films.py
 :caption: エピソード番号、タイトル、公開日付の出力
 :lines: 10-19
 ```
 
-- 最後に、このスクリプトが実行された時に、 `main()` 関数を実行するように指定します。
+* 最後に、このスクリプトが実行された時に、 `main()` 関数を実行するように指定します。
 
 ```{literalinclude} films.py
 :caption: main()関数を実行
@@ -231,14 +230,14 @@ pycodestyleは `pip install pycodestyle` でインストールして使用しま
 
 上記のコードがどういった内容なのかを解説します。
 
-- 以下のコードはRequestsとBeautiful Soup 4をimportして利用できるようにしています。
+* 以下のコードはRequestsとBeautiful Soup 4をimportして利用できるようにしています。
 
 ```{literalinclude} funcs.py
 :caption: モジュールのimport
 :lines: 1-2
 ```
 
-- メインとなる処理を `main` 関数として定義しています。
+* メインとなる処理を `main` 関数として定義しています。
   なお、関数の名前に特に決まりはなく、必ずしも `main` である必要はありません。
 
 ```{literalinclude} funcs.py
@@ -246,21 +245,21 @@ pycodestyleは `pip install pycodestyle` でインストールして使用しま
 :lines: 5
 ```
 
-- Requestsを使用して、Webページの内容(HTML)を取得します。res.contentにHTMLの中身が文字列データとして入っています。
+* Requestsを使用して、Webページの内容(HTML)を取得します。res.contentにHTMLの中身が文字列データとして入っています。
 
 ```{literalinclude} funcs.py
 :caption: ページの内容を取得
 :lines: 6-8
 ```
 
-- 次にHTMLをBeautiful Soup 4に渡して解析します。HTMLの解析についてはもう少し詳しく説明します。
+* 次にHTMLをBeautiful Soup 4に渡して解析します。HTMLの解析についてはもう少し詳しく説明します。
 
 ```{literalinclude} funcs.py
 :caption: WebページをBeautiful Soup 4で解析
 :lines: 9-20
 ```
 
-- 最後に、このスクリプトが実行された時に、main()関数を実行するように指定します。
+* 最後に、このスクリプトが実行された時に、main()関数を実行するように指定します。
 
 ```{literalinclude} funcs.py
 :caption: main()関数を実行
@@ -298,8 +297,8 @@ Beautiful Soup 4でHTMLを解析して、値が取り出せましたが、どの
 
 このHTMLを見ると、関数の名前とURLは以下のようにして取得できそうです。
 
-- テーブル`<table class="docutils">`を見つける
-- 見つけたテーブル内の全ての`<a class="reference internal">`要素を見つける
+* テーブル`<table class="docutils">`を見つける
+* 見つけたテーブル内の全ての`<a class="reference internal">`要素を見つける
 
 HTMLの構造がわかったところで、もう一度HTMLを解析しているコードを見てみます。
 
@@ -430,7 +429,7 @@ RequestsとBeautiful Soup 4を使いこなすことにより、さまざまな�
 
 Pythonでのスクレイピングについてもいくつか書籍が出ています。
 
-- [PythonによるWebスクレイピング](https://www.oreilly.co.jp/books/9784873117614/)
-- [Pythonクローリング＆スクレイピング ―データ収集・解析のための実践開発ガイド](https://gihyo.jp/book/2017/978-4-7741-8367-1)
-- [Pythonによるスクレイピング＆機械学習 開発テクニックBeautifulSoup、scikit-learn、TensorFlowを使ってみよう](https://www.socym.co.jp/book/1079)
-- [Pythonエンジニア ファーストブック](https://gihyo.jp/book/2017/978-4-7741-9222-2) (第4章 PythonによるWebスクレイピング)
+* [PythonによるWebスクレイピング](https://www.oreilly.co.jp/books/9784873117614/)
+* [Pythonクローリング＆スクレイピング ―データ収集・解析のための実践開発ガイド](https://gihyo.jp/book/2017/978-4-7741-8367-1)
+* [Pythonによるスクレイピング＆機械学習 開発テクニックBeautifulSoup、scikit-learn、TensorFlowを使ってみよう](https://www.socym.co.jp/book/1079)
+* [Pythonエンジニア ファーストブック](https://gihyo.jp/book/2017/978-4-7741-9222-2) (第4章 PythonによるWebスクレイピング)

@@ -84,7 +84,6 @@ Python 3.13.7
 
 WindowsでPythonを利用する場合は、Pythonの公式サイトで配布されているWindowsインストーラーを利用します。
 
-
 OSのアーキテクチャによって以下のいずれかのインストーラーをダウンロードし、ウィザードに従ってインストールします。
 
 - 64ビット版 (AMD64): [Windows installer (64-bit)](https://www.python.org/ftp/python/3.13.7/python-3.13.7-amd64.exe)

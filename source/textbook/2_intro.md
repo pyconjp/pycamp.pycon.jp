@@ -246,7 +246,7 @@ FizzBuzzとは、複数の人が集まって行うゲームです。
 
 FizzBuzzは簡単な問題ですが、実装する言語の制御文(繰り返し、条件分岐)を使いこなす必要があり、言語入門の第一歩としてちょうどよい題材です
 
-% FizzBuzz Question/Test について書くかどうか http://blog.codinghorror.com/why-cant-programmers-program/_
+% FizzBuzz Question/Test について書くかどうか <http://blog.codinghorror.com/why-cant-programmers-program/>_
 
 ### Pythonファイル
 
@@ -524,6 +524,7 @@ True
 >>> isinstance(l1, collections.abc.Sequence)
 True
 ```
+
 :::
 
 ## まとめ
