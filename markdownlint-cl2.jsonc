@@ -1,0 +1,13 @@
+
+{
+  "config": {
+    "line-length": false,
+    "no-hard-tabs": false,
+    "no-trailing-punctuation": false,
+    "no-inline-html": false,
+    "no-bare-urls": false,
+    "no-space-in-emphasis":false,
+    "link-fragments":false
+  },
+  "ignores": [".git", "node_modules"]
+}
